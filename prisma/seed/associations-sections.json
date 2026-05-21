@@ -1,0 +1,177 @@
+{
+  "page_header": {
+    "eyebrow": "Associations & Industry Partnerships",
+    "heading": "Global Networks,",
+    "highlight": "Delivered Worldwide",
+    "description": "Collaborating with local and international freight networks — to provide secure and reliable logistics services since 2015."
+  },
+  "partners_grid": {
+    "eyebrow": "CREDIBILITY & TRUST",
+    "heading": "Our Memberships",
+    "highlight": "& Certifications",
+    "description": "Recognized and verified by the world's leading trade bodies, ensuring every shipment benefits from industry-grade compliance and reliability.",
+    "partners": [
+      {
+        "name": "FFFAI",
+        "description": "Federation of Freight Forwarders' Associations in India — active member since 2022.",
+        "logo": "/assets/img/members/Federation-of-Freight-Forwarders-Associations-in-India-(FFFAI).png",
+        "badge": "Verified Member"
+      },
+      {
+        "name": "EGLN",
+        "description": "Elite Global Logistics Network — premium-tier freight partnerships worldwide.",
+        "logo": "/assets/img/members/Elite-Global-Logistics-Network.png",
+        "badge": "Elite Network"
+      },
+      {
+        "name": "Cross Ocean",
+        "description": "Specialized global network for complex and oversized cargo movements.",
+        "logo": "/assets/img/members/Cross Ocean Member-1.png",
+        "badge": "Global Partner"
+      },
+      {
+        "name": "Parnity",
+        "description": "Modern digital networking platform for top-tier global freight forwarders.",
+        "logo": "/assets/img/members/parnity-member.jpg",
+        "badge": "Digital Network"
+      },
+      {
+        "name": "IATA",
+        "description": "International Air Transport Association — certified compliance and air cargo safety.",
+        "logo": "/assets/img/members/IATAlogo.svg",
+        "badge": "Certified"
+      },
+      {
+        "name": "WCA World",
+        "description": "The world's largest and most powerful network of independent freight forwarders.",
+        "logo": "/assets/img/members/wca-world.png",
+        "badge": "Network Member"
+      },
+      {
+        "name": "FIATA",
+        "description": "International Federation of Freight Forwarders Associations — global standards body.",
+        "logo": "/assets/img/members/fiata.svg",
+        "badge": "International Body"
+      },
+      {
+        "name": "ISO 9001:2015",
+        "description": "Certified Quality Management System ensuring consistent global logistics performance.",
+        "logo": "/assets/img/members/ISO_9001-2015.svg",
+        "badge": "ISO Certified"
+      }
+    ]
+  },
+  "partners_marquee": {
+    "eyebrow": "Trusted By Industry Leaders",
+    "headingPrefix": "Our Partners",
+    "headingHighlight": "",
+    "headingSuffix": "",
+    "headingBreak": false,
+    "heading": "Our Partners",
+    "description": "Collaborating with India's leading manufacturers and enterprises to deliver seamless logistics solutions.",
+    "partners": [
+      {
+        "name": "Amara Raja",
+        "logo": "/assets/img/members/Partners/Amara_Raja.png"
+      },
+      {
+        "name": "JK Tyre",
+        "logo": "/assets/img/members/Partners/JK-Tyre-logo.png"
+      },
+      {
+        "name": "NLC India",
+        "logo": "/assets/img/members/Partners/NLC_India_Limited.svg.png"
+      },
+      {
+        "name": "FCL",
+        "logo": "/assets/img/members/Partners/fcl.jpeg"
+      },
+      {
+        "name": "MP Birla",
+        "logo": "/assets/img/members/Partners/mpbirla.jpeg"
+      },
+      {
+        "name": "Ramco",
+        "logo": "/assets/img/members/Partners/ramco.png"
+      },
+      {
+        "name": "Value Ingredients",
+        "logo": "/assets/img/members/Partners/value-ingredients.png"
+      }
+    ]
+  },
+  "premium_presence": {
+    "heading": "Global",
+    "headingHighlight": "Coverage",
+    "description": "Our strategic presence across major global hubs ensures seamless logistics connectivity. Click on a region to explore our port network.",
+    "regions": [
+      { "name": "AFRICA", "image": "/assets/img/regions/Africa.png", "lon": 20, "lat": 5, "zoom": 2.8 },
+      { "name": "AMERICA", "image": "/assets/img/regions/America.png", "lon": -85, "lat": 20, "zoom": 2.2 },
+      { "name": "ASIA PACIFIC", "image": "/assets/img/regions/Asia.png", "lon": 110, "lat": 25, "zoom": 3.2 },
+      { "name": "EUROPE", "image": "/assets/img/regions/Europe.png", "lon": 15, "lat": 50, "zoom": 4.5 },
+      { "name": "MIDDLE EAST", "image": "/assets/img/regions/Middle-East.png", "lon": 45, "lat": 25, "zoom": 5.5 },
+      { "name": "AUSTRALIA", "image": "/assets/img/regions/Australia.jpg", "lon": 135, "lat": -25, "zoom": 5.0 }
+    ]
+  },
+  "associations_advantages": {
+    "eyebrow": "Client Advantages",
+    "heading": "Why Our Associations",
+    "highlight": "Matter to Your Business",
+    "description": "Our verified memberships and global partnerships translate directly into measurable benefits for your shipments — from faster transit times to complete risk mitigation.",
+    "features": [
+      {
+        "title": "Priority Handling",
+        "description": "Benefit from our verified status across FFFAI, IATA, and WCA for faster customs processing and priority port handling at every major gateway.",
+        "icon": "fa-regular fa-bolt"
+      },
+      {
+        "title": "Vetted & Trusted Networks",
+        "description": "Every international partner is rigorously vetted for financial strength, operational reliability, and compliance — giving you maximum cargo security.",
+        "icon": "fa-regular fa-shield-check"
+      },
+      {
+        "title": "Local Expert Support Worldwide",
+        "description": "Direct access to on-ground expertise in every major port city worldwide through our certified network of 150+ global agents.",
+        "icon": "fa-regular fa-headset"
+      },
+      {
+        "title": "ISO 9001:2015 Quality Assurance",
+        "description": "Our certified Quality Management System ensures every shipment is handled with documented precision, compliance, and zero-compromise standards.",
+        "icon": "fa-regular fa-certificate"
+      }
+    ],
+    "stats": [
+      { "number": "10", "suffix": "+", "label": "Years of Industry Membership" },
+      { "number": "50", "suffix": "+", "label": "Global Network Partners" },
+      { "number": "20", "suffix": "+", "label": "Countries Covered" },
+      { "number": "150", "suffix": "+", "label": "Certified Agents Worldwide" }
+    ]
+  },
+  "associations_cta": {
+    "badge": "Global Logistics Partner",
+    "heading": "Ready to Move Cargo",
+    "highlight": "Confidence?",
+    "description": "Partner with TSV Global Solutions and leverage our extensive network of verified associations, certified agents, and industry-leading memberships for seamless worldwide logistics.",
+    "btn1Text": "Request a Quote",
+    "btn1Url": "/contact",
+    "btn2Text": "Learn About Us",
+    "btn2Url": "/about",
+    "trustItems": [
+      {
+        "title": "Fast Response Time",
+        "description": "We respond to all freight enquiries within 2 business hours.",
+        "icon": "fa-regular fa-clock"
+      },
+      {
+        "title": "Secure & Compliant",
+        "description": "ISO 9001:2015 certified operations with full regulatory compliance.",
+        "icon": "fa-regular fa-lock"
+      },
+      {
+        "title": "Truly Global Reach",
+        "description": "Active agents and vetted partners across 20+ countries worldwide.",
+        "icon": "fa-regular fa-earth-asia"
+      }
+    ]
+  }
+}

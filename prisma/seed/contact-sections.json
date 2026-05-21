@@ -1,0 +1,51 @@
+{
+  "page_header": {
+    "eyebrow": "Contact Us!",
+    "heading": "Your Trusted Partner in",
+    "highlight": "Global Logistics!",
+    "description": "11+ years of excellence in international freight forwarding, customs brokerage & project cargo solutions."
+  },
+  "google_map": {
+    "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2652.7904457742366!2d80.20593812777972!3d13.018775613931664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267007dff635f%3A0x759fc3f15f047ba2!2sTSV%20Global%20Solutions%20Private%20Limited!5e0!3m2!1sen!2sin!4v1767159390244!5m2!1sen!2sin"
+  },
+  "contact_grid": {
+    "form": {
+      "eyebrow": "Send Us Mail",
+      "heading": "Feel Free To",
+      "highlight": "Write",
+      "description": "Logistics involves the efficient planning management and coordination of the movement of goods services and information."
+    },
+    "info": {
+      "eyebrow": "Need Any Help?",
+      "heading": "Get In Touch",
+      "highlight": "With Us!",
+      "description": "Logistics involves the efficient management and coordination of the movement of goods.",
+      "list": [
+        {
+          "title": "Have any question?",
+          "value": "+91 96001 32975",
+          "icon": "fa-light fa-phone-volume",
+          "delay": "100ms"
+        },
+        {
+          "title": "Write us email",
+          "value": "cs@tsvglobal.com",
+          "icon": "fa-light fa-envelope-open-text",
+          "delay": "300ms"
+        },
+        {
+          "title": "Head Office :",
+          "value": "No. 101, Ground floor, NSIC STBP Industrial Estate, Ekkatuthangal, Chennai, Tamil Nadu 600032",
+          "icon": "fa-light fa-location-dot",
+          "delay": "500ms"
+        },
+        {
+          "title": "Branch Office :",
+          "value": "Foundation Tower, Office #57, Ground Floor, Sector-11, CBD Belapur, Navi Mumbai - 400614",
+          "icon": "fa-light fa-location-dot",
+          "delay": "500ms"
+        }
+      ]
+    }
+  }
+}

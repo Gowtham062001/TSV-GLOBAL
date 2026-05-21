@@ -1,0 +1,3233 @@
+[
+  {
+    "title": "TSV GLOBAL SOLUTIONS PVT LTD",
+    "slug": "project-cargo",
+    "sections": [
+      {
+        "type": "header",
+        "label": "Page Header",
+        "content": {
+          "subHeading": "Project Cargo",
+          "heading": "Specialized Project Cargo, <br>Delivered <span>Worldwide</span>",
+          "description": "End-to-end planning and execution for complex industrial freight — from heavy capital equipment to\n                    recycling units."
+        }
+      },
+      {
+        "type": "service_overview",
+        "label": "Service Overview",
+        "content": {
+          "image": "/assets/img/Services/PROJECT%20CARGO/WhatsApp%20Image%202026-03-05%20at%202.43.35%20PM.jpeg",
+          "imageAlt": "TSV GLOBAL SOLUTIONS PVT LTD",
+          "badge": "Project Cargo",
+          "badgeIcon": "fa-regular fa-boxes-stacked",
+          "subHeading": "Project Cargo",
+          "heading": "What We Move",
+          "paragraphs": [
+            "TSV Global Solutions specializes in the movement of complex,\n                        high-value industrial cargo that requires precision planning, specialized equipment, and expert\n                        coordination at every stage of the journey.",
+            "From heavy CAPEX machinery to large-scale recycling and industrial\n                        fan installations — we manage every detail from origin factory to final destination, covering\n                        all modes of transport, customs formalities, and port operations."
+          ],
+          "featureList": [
+            {
+              "icon": "fa-solid fa-boxes-stacked",
+              "text": "CAPEX\n                            Handling"
+            },
+            {
+              "icon": "fa-solid fa-fan",
+              "text": "Industrial Fans"
+            },
+            {
+              "icon": "fa-solid fa-recycle",
+              "text": "Recycling Units"
+            },
+            {
+              "icon": "fa-solid fa-ship",
+              "text": "Multi-modal FCL\n                            &amp; LCL Freight Solutions"
+            },
+            {
+              "icon": "fa-solid fa-file-lines",
+              "text": "Complete\n                            Documentation &amp; Customs Clearance"
+            }
+          ],
+          "ctaText": "Request a Quote",
+          "ctaUrl": "/contact"
+        }
+      },
+      {
+        "type": "our_advantage",
+        "label": "Our Advantage",
+        "content": {
+          "subHeading": "Our Advantage",
+          "heading": "Why Choose <span class=\"hl\">TSV Global Solutions?</span>",
+          "cards": [
+            {
+              "title": "Global Network",
+              "description": "A powerful web of international partners, agents, and shipping line contracts ensures your\n                            cargo reaches 150+ global destinations with ease.",
+              "icon": "fa-regular fa-globe",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "Secure &amp; Compliant",
+              "description": "ISO-certified processes and rigorous compliance\n                            standards protect your cargo and ensure all customs regulations are meticulously followed.",
+              "icon": "fa-regular fa-shield-check",
+              "accentColor": "#1a1a2e"
+            },
+            {
+              "title": "On-Time Delivery",
+              "description": "We are committed to strict on-time performance — optimizing every route, mode, and schedule\n                            to keep your supply chain running without interruption.",
+              "icon": "fa-regular fa-clock",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "NVOCC Expertise",
+              "description": "As a licensed NVOCC, we issue our own House Bills of Lading for both FCL and LCL shipments,\n                            offering flexible and competitive ocean freight solutions.",
+              "icon": "logis logis-cruise",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "ODC &amp; Project Cargo",
+              "description": "Specialized handling of over-dimensional &amp; heavy-lift cargo with a dedicated project\n                            team, custom equipment, and end-to-end coordination.",
+              "icon": "logis logis-truck-2",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "24/7 Support",
+              "description": "Your dedicated account manager and our support desk are available around the clock to give\n                            you real-time updates and immediate assistance.",
+              "icon": "fa-regular fa-headset",
+              "accentColor": "#c1000a"
+            }
+          ]
+        }
+      },
+      {
+        "type": "handling_process",
+        "label": "Step By Step",
+        "content": {
+          "subHeading": "Step By Step",
+          "heading": "Our Handling <span class=\"hl\">Process</span>",
+          "steps": [
+            {
+              "number": "01",
+              "title": "Consultation",
+              "subLabel": "(Planning)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "We engage with you to understand\n                            your cargo type, volume, origin, destination, and timelines — then recommend the most\n                            efficient and cost-effective logistics solution."
+              ]
+            },
+            {
+              "number": "02",
+              "title": "Documentation",
+              "subLabel": "(Documentation)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "All shipping documents — Bill of\n                            Lading, Commercial Invoice, Packing List, and Customs Declarations — are meticulously\n                            prepared and verified for accuracy before shipment."
+              ]
+            },
+            {
+              "number": "03",
+              "title": "Transit &amp; Tracking",
+              "subLabel": "(Transit)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "Your cargo moves via the most\n                            suitable mode — ocean, air, or road — with live tracking and proactive milestone updates at\n                            every key checkpoint during transit."
+              ]
+            },
+            {
+              "number": "04",
+              "title": "Delivery &amp; Handover",
+              "subLabel": "(Delivery)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "Cargo is safely delivered and\n                            handed over with full documentation. Our customs team ensures swift clearance and seamless\n                            last-mile delivery to your facility."
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "type": "photo_gallery",
+        "label": "Our Work",
+        "content": {
+          "subHeading": "Our Work",
+          "heading": "Photo Gallery",
+          "images": [
+            {
+              "url": "/assets/img/Services/PROJECT%20CARGO/WhatsApp%20Image%202026-03-05%20at%202.43.35%20PM.jpeg",
+              "alt": "Project Cargo Operations",
+              "caption": "Project Cargo Operations"
+            },
+            {
+              "url": "/assets/img/Services/PROJECT%20CARGO/WhatsApp%20Image%202026-03-05%20at%202.43.36%20PM.jpeg",
+              "alt": "CAPEX & Industrial Freight",
+              "caption": "CAPEX &amp; Industrial Freight"
+            },
+            {
+              "url": "/assets/img/Services/PROJECT%20CARGO/WhatsApp%20Image%202026-03-05%20at%202.43.36%20PM%20(1).jpeg",
+              "alt": "Industrial Equipment Handling",
+              "caption": "Industrial Equipment Handling"
+            },
+            {
+              "url": "/assets/img/Services/PROJECT%20CARGO/WhatsApp%20Image%202026-03-05%20at%202.43.37%20PM.jpeg",
+              "alt": "Project Cargo Coordination",
+              "caption": "Project Cargo Coordination"
+            },
+            {
+              "url": "/assets/img/Services/PROJECT%20CARGO/WhatsApp%20Image%202026-03-05%20at%202.43.37%20PM%20(1).jpeg",
+              "alt": "Port Operations",
+              "caption": "Port Operations"
+            }
+          ]
+        }
+      },
+      {
+        "type": "faq",
+        "label": "Have Questions?",
+        "content": {
+          "subHeading": "Have Questions?",
+          "heading": "Frequently Asked Questions",
+          "faq": [
+            {
+              "question": "What is NVOCC and how does TSV Global operate as one?",
+              "answer": "NVOCC (Non-Vessel\n                                    Operating Common Carrier) is a licensed freight consolidator that issues its own\n                                    House Bills of Lading without owning physical vessels. TSV Global Solutions is a\n                                    licensed NVOCC, allowing us to consolidate cargo (LCL) and book full containers\n                                    (FCL) with major shipping lines, offering you competitive rates and flexible booking\n                                    options worldwide."
+            },
+            {
+              "question": "What types of cargo does TSV Global handle?",
+              "answer": "We handle a wide range of\n                                    cargo categories including General Cargo, Project Cargo, Over-Dimensional Cargo\n                                    (ODC), Hazardous Materials (Dangerous Goods), Perishable Goods,\n                                    Temperature-Controlled Cargo, and Heavy-Lift Equipment. Our specialized teams ensure\n                                    safe and compliant handling for every cargo type."
+            },
+            {
+              "question": "How can I track my shipment in real-time?",
+              "answer": "Once your shipment is\n                                    booked, you will receive a unique tracking reference number. Our operations team\n                                    provides regular status updates via email or WhatsApp at every key milestone —\n                                    vessel departure, arrival at port, customs clearance, and final delivery. A\n                                    dedicated account manager is also available 24/7 for any queries."
+            },
+            {
+              "question": "Does TSV Global handle customs clearance as well?",
+              "answer": "Yes. TSV Global has an\n                                    in-house customs brokerage team with CHA (Customs House Agent) licensing. We handle\n                                    end-to-end customs documentation for both import and export shipments, ensuring\n                                    compliance with Indian Customs regulations and fast clearance with minimal demurrage\n                                    or detention charges."
+            },
+            {
+              "question": "What are your service coverage areas and ports of operation?",
+              "answer": "We operate out of all\n                                    major Indian seaports including Chennai, Mumbai (JNPT), Kolkata, Mundra, and Vizag,\n                                    as well as key international airports. Our global agent network covers 150+\n                                    destinations across Asia, Europe, the Middle East, Americas, and Africa — ensuring\n                                    comprehensive worldwide coverage."
+            },
+            {
+              "question": "How do I get a freight quote from TSV Global?",
+              "answer": "Getting a quote is\n                                    simple! Use our <a href=\"../contact.html\" style=\"color:#c1000a;font-weight:600;\">Contact Us</a> page to submit your\n                                    enquiry with cargo details (origin, destination, weight, dimensions, and commodity).\n                                    Our sales team will respond within 24 hours with a competitive, customized quotation\n                                    tailored to your specific requirements."
+            }
+          ]
+        }
+      },
+      {
+        "type": "cta",
+        "label": "CTA",
+        "content": {
+          "heading": "Ready to Transport <span class=\"hl\">Your Cargo?</span>",
+          "subHeading": "Get Started Today",
+          "description": "Connect with our\n                            expert logistics team today to get a customized, cost-effective shipping solution designed\n                            around your specific business needs.",
+          "primaryBtnText": "Get a Free Quote",
+          "primaryBtnUrl": "/contact"
+        }
+      }
+    ]
+  },
+  {
+    "title": "TSV GLOBAL SOLUTIONS PVT LTD",
+    "slug": "custom-clearance",
+    "sections": [
+      {
+        "type": "header",
+        "label": "Page Header",
+        "content": {
+          "subHeading": "Service Details",
+          "heading": "Expert Logistics, <br>Delivered <span>Worldwide</span>",
+          "description": "11+ years of NVOCC, freight forwarding &amp; project cargo expertise — <br>handling every shipment\n                    with precision and care."
+        }
+      },
+      {
+        "type": "service_overview",
+        "label": "Service Overview",
+        "content": {
+          "image": "/assets/img/Services/CUSTOMS%20CLEARENCE/WhatsApp%20Image%202026-01-07%20at%205.57.51%20PM.jpeg",
+          "imageAlt": "TSV GLOBAL SOLUTIONS PVT LTD",
+          "badge": "Custom Clearance",
+          "badgeIcon": "fa-regular fa-file-lines",
+          "subHeading": "Service Overview",
+          "heading": "Service Description",
+          "paragraphs": [
+            "TSV Global Solutions provides comprehensive, end-to-end logistics\n                        services tailored to meet the unique demands of each client. From international ocean freight\n                        consolidation to project and over-dimensional cargo, we handle every shipment with the highest\n                        levels of care, precision, and professionalism.",
+            "Our expert operations team works 24/7 to ensure your cargo moves\n                        seamlessly across borders, leveraging deep industry relationships, advanced tracking systems,\n                        and an extensive global agent network to guarantee on-time delivery every time."
+          ],
+          "featureList": [
+            {
+              "icon": "fa-solid fa-check",
+              "text": "FCL &amp; LCL Ocean Freight Consolidation"
+            },
+            {
+              "icon": "fa-solid fa-check",
+              "text": "Multi-modal Transport (Air, Sea &amp; Road)"
+            },
+            {
+              "icon": "fa-solid fa-check",
+              "text": "ISO Certified Quality &amp; Compliance"
+            },
+            {
+              "icon": "fa-solid fa-check",
+              "text": "11+ Years of International Expertise"
+            },
+            {
+              "icon": "fa-solid fa-check",
+              "text": "Real-time Shipment Tracking &amp; Updates"
+            }
+          ],
+          "ctaText": "Request a Quote",
+          "ctaUrl": "/contact"
+        }
+      },
+      {
+        "type": "our_advantage",
+        "label": "Our Advantage",
+        "content": {
+          "subHeading": "Our Advantage",
+          "heading": "Why Choose <span class=\"hl\">TSV Global Solutions?</span>",
+          "cards": [
+            {
+              "title": "Global Network",
+              "description": "A powerful web of international partners, agents, and shipping line contracts ensures your\n                            cargo reaches 150+ global destinations with ease.",
+              "icon": "fa-regular fa-globe",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "Secure &amp; Compliant",
+              "description": "ISO-certified processes and rigorous compliance\n                            standards protect your cargo and ensure all customs regulations are meticulously followed.",
+              "icon": "fa-regular fa-shield-check",
+              "accentColor": "#1a1a2e"
+            },
+            {
+              "title": "On-Time Delivery",
+              "description": "We are committed to strict on-time performance — optimizing every route, mode, and schedule\n                            to keep your supply chain running without interruption.",
+              "icon": "fa-regular fa-clock",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "NVOCC Expertise",
+              "description": "As a licensed NVOCC, we issue our own House Bills of Lading for both FCL and LCL shipments,\n                            offering flexible and competitive ocean freight solutions.",
+              "icon": "logis logis-cruise",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "ODC &amp; Project Cargo",
+              "description": "Specialized handling of over-dimensional &amp; heavy-lift cargo with a dedicated project\n                            team, custom equipment, and end-to-end coordination.",
+              "icon": "logis logis-truck-2",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "24/7 Support",
+              "description": "Your dedicated account manager and our support desk are available around the clock to give\n                            you real-time updates and immediate assistance.",
+              "icon": "fa-regular fa-headset",
+              "accentColor": "#c1000a"
+            }
+          ]
+        }
+      },
+      {
+        "type": "handling_process",
+        "label": "Step By Step",
+        "content": {
+          "subHeading": "Step By Step",
+          "heading": "Our Handling <span class=\"hl\">Process</span>",
+          "steps": [
+            {
+              "number": "01",
+              "title": "Consultation",
+              "subLabel": "(Planning)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "We engage with you to understand\n                            your cargo type, volume, origin, destination, and timelines — then recommend the most\n                            efficient and cost-effective logistics solution."
+              ]
+            },
+            {
+              "number": "02",
+              "title": "Documentation",
+              "subLabel": "(Documentation)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "All shipping documents — Bill of\n                            Lading, Commercial Invoice, Packing List, and Customs Declarations — are meticulously\n                            prepared and verified for accuracy before shipment."
+              ]
+            },
+            {
+              "number": "03",
+              "title": "Transit &amp; Tracking",
+              "subLabel": "(Transit)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "Your cargo moves via the most\n                            suitable mode — ocean, air, or road — with live tracking and proactive milestone updates at\n                            every key checkpoint during transit."
+              ]
+            },
+            {
+              "number": "04",
+              "title": "Delivery &amp; Handover",
+              "subLabel": "(Delivery)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "Cargo is safely delivered and\n                            handed over with full documentation. Our customs team ensures swift clearance and seamless\n                            last-mile delivery to your facility."
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "type": "photo_gallery",
+        "label": "Our Work",
+        "content": {
+          "subHeading": "Our Work",
+          "heading": "Photo Gallery",
+          "images": [
+            {
+              "url": "/assets/img/Services/CUSTOMS%20CLEARENCE/WhatsApp%20Image%202026-01-07%20at%205.57.51%20PM.jpeg",
+              "alt": "Customs Clearance Operations",
+              "caption": "Customs Clearance Operations"
+            },
+            {
+              "url": "/assets/img/Services/CUSTOMS%20CLEARENCE/WhatsApp%20Image%202026-01-17%20at%204.58.48%20PM.jpeg",
+              "alt": "Import Documentation",
+              "caption": "Import Documentation"
+            },
+            {
+              "url": "/assets/img/Services/CUSTOMS%20CLEARENCE/WhatsApp%20Image%202026-01-21%20at%202.49.56%20PM.jpeg",
+              "alt": "Export Clearance",
+              "caption": "Export Clearance"
+            },
+            {
+              "url": "/assets/img/Services/CUSTOMS%20CLEARENCE/WhatsApp%20Image%202026-01-31%20at%205.55.32%20PM.jpeg",
+              "alt": "Port Clearance Process",
+              "caption": "Port Clearance Process"
+            },
+            {
+              "url": "/assets/img/Services/CUSTOMS%20CLEARENCE/WhatsApp%20Image%202026-02-07%20at%207.05.21%20PM.jpeg",
+              "alt": "Customs Documentation",
+              "caption": "Customs Documentation"
+            },
+            {
+              "url": "/assets/img/Services/CUSTOMS%20CLEARENCE/WhatsApp%20Image%202026-02-14%20at%203.30.17%20PM.jpeg",
+              "alt": "BOE Filing Operations",
+              "caption": "BOE Filing Operations"
+            },
+            {
+              "url": "/assets/img/Services/CUSTOMS%20CLEARENCE/WhatsApp%20Image%202026-02-21%20at%2012.36.33%20PM.jpeg",
+              "alt": "CBIC Compliance",
+              "caption": "CBIC Compliance"
+            },
+            {
+              "url": "/assets/img/Services/CUSTOMS%20CLEARENCE/WhatsApp%20Image%202026-02-28%20at%202.26.18%20PM.jpeg",
+              "alt": "Cargo Release Process",
+              "caption": "Cargo Release Process"
+            }
+          ]
+        }
+      },
+      {
+        "type": "faq",
+        "label": "Have Questions?",
+        "content": {
+          "subHeading": "Have Questions?",
+          "heading": "Frequently Asked Questions",
+          "faq": [
+            {
+              "question": "What is NVOCC and how does TSV Global operate as one?",
+              "answer": "NVOCC (Non-Vessel\n                                    Operating Common Carrier) is a licensed freight consolidator that issues its own\n                                    House Bills of Lading without owning physical vessels. TSV Global Solutions is a\n                                    licensed NVOCC, allowing us to consolidate cargo (LCL) and book full containers\n                                    (FCL) with major shipping lines, offering you competitive rates and flexible booking\n                                    options worldwide."
+            },
+            {
+              "question": "What types of cargo does TSV Global handle?",
+              "answer": "We handle a wide range of\n                                    cargo categories including General Cargo, Project Cargo, Over-Dimensional Cargo\n                                    (ODC), Hazardous Materials (Dangerous Goods), Perishable Goods,\n                                    Temperature-Controlled Cargo, and Heavy-Lift Equipment. Our specialized teams ensure\n                                    safe and compliant handling for every cargo type."
+            },
+            {
+              "question": "How can I track my shipment in real-time?",
+              "answer": "Once your shipment is\n                                    booked, you will receive a unique tracking reference number. Our operations team\n                                    provides regular status updates via email or WhatsApp at every key milestone —\n                                    vessel departure, arrival at port, customs clearance, and final delivery. A\n                                    dedicated account manager is also available 24/7 for any queries."
+            },
+            {
+              "question": "Does TSV Global handle customs clearance as well?",
+              "answer": "Yes. TSV Global has an\n                                    in-house customs brokerage team with CHA (Customs House Agent) licensing. We handle\n                                    end-to-end customs documentation for both import and export shipments, ensuring\n                                    compliance with Indian Customs regulations and fast clearance with minimal demurrage\n                                    or detention charges."
+            },
+            {
+              "question": "What are your service coverage areas and ports of operation?",
+              "answer": "We operate out of all\n                                    major Indian seaports including Chennai, Mumbai (JNPT), Kolkata, Mundra, and Vizag,\n                                    as well as key international airports. Our global agent network covers 150+\n                                    destinations across Asia, Europe, the Middle East, Americas, and Africa — ensuring\n                                    comprehensive worldwide coverage."
+            },
+            {
+              "question": "How do I get a freight quote from TSV Global?",
+              "answer": "Getting a quote is\n                                    simple! Use our <a href=\"../contact.html\" style=\"color:#c1000a;font-weight:600;\">Contact Us</a> page to submit your\n                                    enquiry with cargo details (origin, destination, weight, dimensions, and commodity).\n                                    Our sales team will respond within 24 hours with a competitive, customized quotation\n                                    tailored to your specific requirements."
+            }
+          ]
+        }
+      },
+      {
+        "type": "cta",
+        "label": "CTA",
+        "content": {
+          "heading": "Ready to Transport <span class=\"hl\">Your Cargo?</span>",
+          "subHeading": "Get Started Today",
+          "description": "Connect with our\n                            expert logistics team today to get a customized, cost-effective shipping solution designed\n                            around your specific business needs.",
+          "primaryBtnText": "Get a Free Quote",
+          "primaryBtnUrl": "/contact"
+        }
+      }
+    ]
+  },
+  {
+    "title": "TSV GLOBAL SOLUTIONS PVT LTD",
+    "slug": "nvocc",
+    "sections": [
+      {
+        "type": "header",
+        "label": "Page Header",
+        "content": {
+          "subHeading": "Service Details",
+          "heading": "Expert Logistics, <br>Delivered <span>Worldwide</span>",
+          "description": "11+ years of NVOCC, freight forwarding &amp; project cargo expertise — <br>handling every shipment\n                    with precision and care."
+        }
+      },
+      {
+        "type": "service_overview",
+        "label": "Service Overview",
+        "content": {
+          "image": "/assets/img/cargo_operations.png",
+          "imageAlt": "TSV GLOBAL SOLUTIONS PVT LTD",
+          "badge": "NVOCC Services",
+          "badgeIcon": "fa-regular fa-ship",
+          "subHeading": "Service Overview",
+          "heading": "Service Description",
+          "paragraphs": [
+            "TSV Global Solutions provides comprehensive, end-to-end logistics\n                        services tailored to meet the unique demands of each client. From international ocean freight\n                        consolidation to project and over-dimensional cargo, we handle every shipment with the highest\n                        levels of care, precision, and professionalism.",
+            "Our expert operations team works 24/7 to ensure your cargo moves\n                        seamlessly across borders, leveraging deep industry relationships, advanced tracking systems,\n                        and an extensive global agent network to guarantee on-time delivery every time."
+          ],
+          "featureList": [
+            {
+              "icon": "fa-solid fa-check",
+              "text": "FCL &amp; LCL Ocean Freight Consolidation"
+            },
+            {
+              "icon": "fa-solid fa-check",
+              "text": "Multi-modal Transport (Air, Sea &amp; Road)"
+            },
+            {
+              "icon": "fa-solid fa-check",
+              "text": "ISO Certified Quality &amp; Compliance"
+            },
+            {
+              "icon": "fa-solid fa-check",
+              "text": "11+ Years of International Expertise"
+            },
+            {
+              "icon": "fa-solid fa-check",
+              "text": "Real-time Shipment Tracking &amp; Updates"
+            }
+          ],
+          "ctaText": "Request a Quote",
+          "ctaUrl": "/contact"
+        }
+      },
+      {
+        "type": "our_advantage",
+        "label": "Our Advantage",
+        "content": {
+          "subHeading": "Our Advantage",
+          "heading": "Why Choose <span class=\"hl\">TSV Global Solutions?</span>",
+          "cards": [
+            {
+              "title": "Global Network",
+              "description": "A powerful web of international partners, agents, and shipping line contracts ensures your\n                            cargo reaches 150+ global destinations with ease.",
+              "icon": "fa-regular fa-globe",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "Secure &amp; Compliant",
+              "description": "ISO-certified processes and rigorous compliance\n                            standards protect your cargo and ensure all customs regulations are meticulously followed.",
+              "icon": "fa-regular fa-shield-check",
+              "accentColor": "#1a1a2e"
+            },
+            {
+              "title": "On-Time Delivery",
+              "description": "We are committed to strict on-time performance — optimizing every route, mode, and schedule\n                            to keep your supply chain running without interruption.",
+              "icon": "fa-regular fa-clock",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "NVOCC Expertise",
+              "description": "As a licensed NVOCC, we issue our own House Bills of Lading for both FCL and LCL shipments,\n                            offering flexible and competitive ocean freight solutions.",
+              "icon": "logis logis-cruise",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "ODC &amp; Project Cargo",
+              "description": "Specialized handling of over-dimensional &amp; heavy-lift cargo with a dedicated project\n                            team, custom equipment, and end-to-end coordination.",
+              "icon": "logis logis-truck-2",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "24/7 Support",
+              "description": "Your dedicated account manager and our support desk are available around the clock to give\n                            you real-time updates and immediate assistance.",
+              "icon": "fa-regular fa-headset",
+              "accentColor": "#c1000a"
+            }
+          ]
+        }
+      },
+      {
+        "type": "handling_process",
+        "label": "Step By Step",
+        "content": {
+          "subHeading": "Step By Step",
+          "heading": "Our Handling <span class=\"hl\">Process</span>",
+          "steps": [
+            {
+              "number": "01",
+              "title": "Consultation",
+              "subLabel": "(Planning)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "We engage with you to understand\n                            your cargo type, volume, origin, destination, and timelines — then recommend the most\n                            efficient and cost-effective logistics solution."
+              ]
+            },
+            {
+              "number": "02",
+              "title": "Documentation",
+              "subLabel": "(Documentation)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "All shipping documents — Bill of\n                            Lading, Commercial Invoice, Packing List, and Customs Declarations — are meticulously\n                            prepared and verified for accuracy before shipment."
+              ]
+            },
+            {
+              "number": "03",
+              "title": "Transit &amp; Tracking",
+              "subLabel": "(Transit)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "Your cargo moves via the most\n                            suitable mode — ocean, air, or road — with live tracking and proactive milestone updates at\n                            every key checkpoint during transit."
+              ]
+            },
+            {
+              "number": "04",
+              "title": "Delivery &amp; Handover",
+              "subLabel": "(Delivery)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "Cargo is safely delivered and\n                            handed over with full documentation. Our customs team ensures swift clearance and seamless\n                            last-mile delivery to your facility."
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "type": "photo_gallery",
+        "label": "Our Work",
+        "content": {
+          "subHeading": "Our Work",
+          "heading": "Photo Gallery",
+          "images": [
+            {
+              "url": "/assets/img/cargo_operations.png",
+              "alt": "Cargo Operations",
+              "caption": "Cargo Operations"
+            },
+            {
+              "url": "/assets/img/port_handling.png",
+              "alt": "Port Handling",
+              "caption": "Port Handling"
+            },
+            {
+              "url": "/assets/img/freight_forwarding.png",
+              "alt": "Freight Forwarding",
+              "caption": "Freight Forwarding"
+            },
+            {
+              "url": "/assets/img/project_cargo.png",
+              "alt": "Project Cargo",
+              "caption": "Project Cargo"
+            },
+            {
+              "url": "/assets/img/custom_clearance.png",
+              "alt": "Custom Clearance",
+              "caption": "Custom Clearance"
+            }
+          ]
+        }
+      },
+      {
+        "type": "faq",
+        "label": "Have Questions?",
+        "content": {
+          "subHeading": "Have Questions?",
+          "heading": "Frequently Asked Questions",
+          "faq": [
+            {
+              "question": "What is NVOCC and how does TSV Global operate as one?",
+              "answer": "NVOCC (Non-Vessel\n                                    Operating Common Carrier) is a licensed freight consolidator that issues its own\n                                    House Bills of Lading without owning physical vessels. TSV Global Solutions is a\n                                    licensed NVOCC, allowing us to consolidate cargo (LCL) and book full containers\n                                    (FCL) with major shipping lines, offering you competitive rates and flexible booking\n                                    options worldwide."
+            },
+            {
+              "question": "What types of cargo does TSV Global handle?",
+              "answer": "We handle a wide range of\n                                    cargo categories including General Cargo, Project Cargo, Over-Dimensional Cargo\n                                    (ODC), Hazardous Materials (Dangerous Goods), Perishable Goods,\n                                    Temperature-Controlled Cargo, and Heavy-Lift Equipment. Our specialized teams ensure\n                                    safe and compliant handling for every cargo type."
+            },
+            {
+              "question": "How can I track my shipment in real-time?",
+              "answer": "Once your shipment is\n                                    booked, you will receive a unique tracking reference number. Our operations team\n                                    provides regular status updates via email or WhatsApp at every key milestone —\n                                    vessel departure, arrival at port, customs clearance, and final delivery. A\n                                    dedicated account manager is also available 24/7 for any queries."
+            },
+            {
+              "question": "Does TSV Global handle customs clearance as well?",
+              "answer": "Yes. TSV Global has an\n                                    in-house customs brokerage team with CHA (Customs House Agent) licensing. We handle\n                                    end-to-end customs documentation for both import and export shipments, ensuring\n                                    compliance with Indian Customs regulations and fast clearance with minimal demurrage\n                                    or detention charges."
+            },
+            {
+              "question": "What are your service coverage areas and ports of operation?",
+              "answer": "We operate out of all\n                                    major Indian seaports including Chennai, Mumbai (JNPT), Kolkata, Mundra, and Vizag,\n                                    as well as key international airports. Our global agent network covers 150+\n                                    destinations across Asia, Europe, the Middle East, Americas, and Africa — ensuring\n                                    comprehensive worldwide coverage."
+            },
+            {
+              "question": "How do I get a freight quote from TSV Global?",
+              "answer": "Getting a quote is\n                                    simple! Use our <a href=\"../contact.html\" style=\"color:#c1000a;font-weight:600;\">Contact Us</a> page to submit your\n                                    enquiry with cargo details (origin, destination, weight, dimensions, and commodity).\n                                    Our sales team will respond within 24 hours with a competitive, customized quotation\n                                    tailored to your specific requirements."
+            }
+          ]
+        }
+      },
+      {
+        "type": "cta",
+        "label": "CTA",
+        "content": {
+          "heading": "Ready to Transport <span class=\"hl\">Your Cargo?</span>",
+          "subHeading": "Get Started Today",
+          "description": "Connect with our\n                            expert logistics team today to get a customized, cost-effective shipping solution designed\n                            around your specific business needs.",
+          "primaryBtnText": "Get a Free Quote",
+          "primaryBtnUrl": "/contact"
+        }
+      }
+    ]
+  },
+  {
+    "title": "TSV GLOBAL SOLUTIONS PVT LTD",
+    "slug": "over-dimensional-cargo",
+    "sections": [
+      {
+        "type": "header",
+        "label": "Page Header",
+        "content": {
+          "subHeading": "Over Dimensional Cargo (ODC)",
+          "heading": "Over Dimensional Cargo, <br>Moved with <span>Precision</span>",
+          "description": "Expert handling of over-sized, heavy-lift, and abnormal-load cargo across all transport modes."
+        }
+      },
+      {
+        "type": "service_overview",
+        "label": "Service Overview",
+        "content": {
+          "image": "/assets/img/Services/ODC%20CARGO/Breakbulk%20-%20Photo%201.jpeg",
+          "imageAlt": "TSV GLOBAL SOLUTIONS PVT LTD",
+          "badge": "ODC Cargo",
+          "badgeIcon": "logis logis-truck-2",
+          "subHeading": "ODC Cargo",
+          "heading": "What We Move",
+          "paragraphs": [
+            "Over-Dimensional Cargo (ODC) requires specialized route surveys,\n                        permits, and equipment. TSV Global Solutions has deep expertise in planning and executing the\n                        movement of large machinery, construction equipment, and rig components that go far beyond\n                        standard freight limits.",
+            "Our dedicated ODC team handles route feasibility, police escorts,\n                        lowbed transportation, and port-to-plant coordination for the heaviest and most complex cargo\n                        movements."
+          ],
+          "featureList": [
+            {
+              "icon": "logis logis-truck-2",
+              "text": "Excavators &amp; Earthmoving Machinery"
+            },
+            {
+              "icon": "fa-solid fa-helmet-safety",
+              "text": "Construction Equipment"
+            },
+            {
+              "icon": "fa-solid fa-gear",
+              "text": "RIG Machines &amp;\n                            Drilling Equipment"
+            },
+            {
+              "icon": "fa-solid fa-triangle-exclamation",
+              "text": "Dangerous Goods (DG Cargo)"
+            },
+            {
+              "icon": "fa-solid fa-route",
+              "text": "Route Survey &amp;\n                            Permit Management"
+            }
+          ],
+          "ctaText": "Request a Quote",
+          "ctaUrl": "/contact"
+        }
+      },
+      {
+        "type": "our_advantage",
+        "label": "Our Advantage",
+        "content": {
+          "subHeading": "Our Advantage",
+          "heading": "Why Choose <span class=\"hl\">TSV Global Solutions?</span>",
+          "cards": [
+            {
+              "title": "Global Network",
+              "description": "A powerful web of international partners, agents, and shipping line contracts ensures your\n                            cargo reaches 150+ global destinations with ease.",
+              "icon": "fa-regular fa-globe",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "Secure &amp; Compliant",
+              "description": "ISO-certified processes and rigorous compliance\n                            standards protect your cargo and ensure all customs regulations are meticulously followed.",
+              "icon": "fa-regular fa-shield-check",
+              "accentColor": "#1a1a2e"
+            },
+            {
+              "title": "On-Time Delivery",
+              "description": "We are committed to strict on-time performance — optimizing every route, mode, and schedule\n                            to keep your supply chain running without interruption.",
+              "icon": "fa-regular fa-clock",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "NVOCC Expertise",
+              "description": "As a licensed NVOCC, we issue our own House Bills of Lading for both FCL and LCL shipments,\n                            offering flexible and competitive ocean freight solutions.",
+              "icon": "logis logis-cruise",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "ODC &amp; Project Cargo",
+              "description": "Specialized handling of over-dimensional &amp; heavy-lift cargo with a dedicated project\n                            team, custom equipment, and end-to-end coordination.",
+              "icon": "logis logis-truck-2",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "24/7 Support",
+              "description": "Your dedicated account manager and our support desk are available around the clock to give\n                            you real-time updates and immediate assistance.",
+              "icon": "fa-regular fa-headset",
+              "accentColor": "#c1000a"
+            }
+          ]
+        }
+      },
+      {
+        "type": "handling_process",
+        "label": "Step By Step",
+        "content": {
+          "subHeading": "Step By Step",
+          "heading": "Our Handling <span class=\"hl\">Process</span>",
+          "steps": [
+            {
+              "number": "01",
+              "title": "Consultation",
+              "subLabel": "(Planning)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "We engage with you to understand\n                            your cargo type, volume, origin, destination, and timelines — then recommend the most\n                            efficient and cost-effective logistics solution."
+              ]
+            },
+            {
+              "number": "02",
+              "title": "Documentation",
+              "subLabel": "(Documentation)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "All shipping documents — Bill of\n                            Lading, Commercial Invoice, Packing List, and Customs Declarations — are meticulously\n                            prepared and verified for accuracy before shipment."
+              ]
+            },
+            {
+              "number": "03",
+              "title": "Transit &amp; Tracking",
+              "subLabel": "(Transit)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "Your cargo moves via the most\n                            suitable mode — ocean, air, or road — with live tracking and proactive milestone updates at\n                            every key checkpoint during transit."
+              ]
+            },
+            {
+              "number": "04",
+              "title": "Delivery &amp; Handover",
+              "subLabel": "(Delivery)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "Cargo is safely delivered and\n                            handed over with full documentation. Our customs team ensures swift clearance and seamless\n                            last-mile delivery to your facility."
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "type": "photo_gallery",
+        "label": "Our Work",
+        "content": {
+          "subHeading": "Our Work",
+          "heading": "Photo Gallery",
+          "images": [
+            {
+              "url": "/assets/img/Services/ODC%20CARGO/Breakbulk%20-%20Photo%201.jpeg",
+              "alt": "Break Bulk Operations",
+              "caption": "Break Bulk Operations"
+            },
+            {
+              "url": "/assets/img/Services/ODC%20CARGO/Breakbulk%20Photo%202.jpeg",
+              "alt": "ODC Cargo Loading",
+              "caption": "ODC Cargo Loading"
+            },
+            {
+              "url": "/assets/img/Services/ODC%20CARGO/Break%20Bulk%20Photo%203.jpeg",
+              "alt": "Heavy Cargo Handling",
+              "caption": "Heavy Cargo Handling"
+            },
+            {
+              "url": "/assets/img/Services/ODC%20CARGO/Escavators/95bfc45e-70cd-48fa-a323-8fa7a00fdba0.jpg",
+              "alt": "Excavator Transport",
+              "caption": "Excavator Transport"
+            },
+            {
+              "url": "/assets/img/Services/ODC%20CARGO/Escavators/df6e983c-1c00-4eb0-a5a3-86f0191af277.jpg",
+              "alt": "Excavator Shipment",
+              "caption": "Excavator Shipment"
+            },
+            {
+              "url": "/assets/img/Services/ODC%20CARGO/Netherlands%20to%20Hyderabad%20Via%20Mumbai%20Break%20Bulk/Netherlands%20to%20Hyderabad%20Via%20Mumbai%20Nhavasheva.jpg",
+              "alt": "Netherlands–Mumbai Break Bulk",
+              "caption": "Netherlands–Mumbai Break Bulk"
+            },
+            {
+              "url": "/assets/img/Services/ODC%20CARGO/Rigs/c879815b-6cbd-4566-ab4d-9c53c8982283.jpg",
+              "alt": "RIG Equipment Transport",
+              "caption": "RIG Equipment Transport"
+            },
+            {
+              "url": "/assets/img/Services/ODC%20CARGO/ODC%20Chennai%20to%20Chittakong.png",
+              "alt": "ODC Chennai to Chittagong",
+              "caption": "ODC Chennai to Chittagong"
+            }
+          ]
+        }
+      },
+      {
+        "type": "faq",
+        "label": "Have Questions?",
+        "content": {
+          "subHeading": "Have Questions?",
+          "heading": "Frequently Asked Questions",
+          "faq": [
+            {
+              "question": "What is NVOCC and how does TSV Global operate as one?",
+              "answer": "NVOCC (Non-Vessel\n                                    Operating Common Carrier) is a licensed freight consolidator that issues its own\n                                    House Bills of Lading without owning physical vessels. TSV Global Solutions is a\n                                    licensed NVOCC, allowing us to consolidate cargo (LCL) and book full containers\n                                    (FCL) with major shipping lines, offering you competitive rates and flexible booking\n                                    options worldwide."
+            },
+            {
+              "question": "What types of cargo does TSV Global handle?",
+              "answer": "We handle a wide range of\n                                    cargo categories including General Cargo, Project Cargo, Over-Dimensional Cargo\n                                    (ODC), Hazardous Materials (Dangerous Goods), Perishable Goods,\n                                    Temperature-Controlled Cargo, and Heavy-Lift Equipment. Our specialized teams ensure\n                                    safe and compliant handling for every cargo type."
+            },
+            {
+              "question": "How can I track my shipment in real-time?",
+              "answer": "Once your shipment is\n                                    booked, you will receive a unique tracking reference number. Our operations team\n                                    provides regular status updates via email or WhatsApp at every key milestone —\n                                    vessel departure, arrival at port, customs clearance, and final delivery. A\n                                    dedicated account manager is also available 24/7 for any queries."
+            },
+            {
+              "question": "Does TSV Global handle customs clearance as well?",
+              "answer": "Yes. TSV Global has an\n                                    in-house customs brokerage team with CHA (Customs House Agent) licensing. We handle\n                                    end-to-end customs documentation for both import and export shipments, ensuring\n                                    compliance with Indian Customs regulations and fast clearance with minimal demurrage\n                                    or detention charges."
+            },
+            {
+              "question": "What are your service coverage areas and ports of operation?",
+              "answer": "We operate out of all\n                                    major Indian seaports including Chennai, Mumbai (JNPT), Kolkata, Mundra, and Vizag,\n                                    as well as key international airports. Our global agent network covers 150+\n                                    destinations across Asia, Europe, the Middle East, Americas, and Africa — ensuring\n                                    comprehensive worldwide coverage."
+            },
+            {
+              "question": "How do I get a freight quote from TSV Global?",
+              "answer": "Getting a quote is\n                                    simple! Use our <a href=\"../contact.html\" style=\"color:#c1000a;font-weight:600;\">Contact Us</a> page to submit your\n                                    enquiry with cargo details (origin, destination, weight, dimensions, and commodity).\n                                    Our sales team will respond within 24 hours with a competitive, customized quotation\n                                    tailored to your specific requirements."
+            }
+          ]
+        }
+      },
+      {
+        "type": "cta",
+        "label": "CTA",
+        "content": {
+          "heading": "Ready to Transport <span class=\"hl\">Your Cargo?</span>",
+          "subHeading": "Get Started Today",
+          "description": "Connect with our\n                            expert logistics team today to get a customized, cost-effective shipping solution designed\n                            around your specific business needs.",
+          "primaryBtnText": "Get a Free Quote",
+          "primaryBtnUrl": "/contact"
+        }
+      }
+    ]
+  },
+  {
+    "title": "TSV GLOBAL SOLUTIONS PVT LTD",
+    "slug": "transportation",
+    "sections": [
+      {
+        "type": "header",
+        "label": "Page Header",
+        "content": {
+          "subHeading": "Service Details",
+          "heading": "Expert Logistics, <br>Delivered <span>Worldwide</span>",
+          "description": "11+ years of NVOCC, freight forwarding &amp; project cargo expertise — <br>handling every shipment\n                    with precision and care."
+        }
+      },
+      {
+        "type": "service_overview",
+        "label": "Service Overview",
+        "content": {
+          "image": "/assets/img/Services/TRANSPORTATION/WhatsApp%20Image%202026-03-05%20at%202.44.39%20PM.jpeg",
+          "imageAlt": "TSV GLOBAL SOLUTIONS PVT LTD",
+          "badge": "Transportation",
+          "badgeIcon": "fa-regular fa-truck",
+          "subHeading": "Service Overview",
+          "heading": "Service Description",
+          "paragraphs": [
+            "TSV Global Solutions provides comprehensive, end-to-end logistics\n                        services tailored to meet the unique demands of each client. From international ocean freight\n                        consolidation to project and over-dimensional cargo, we handle every shipment with the highest\n                        levels of care, precision, and professionalism.",
+            "Our expert operations team works 24/7 to ensure your cargo moves\n                        seamlessly across borders, leveraging deep industry relationships, advanced tracking systems,\n                        and an extensive global agent network to guarantee on-time delivery every time."
+          ],
+          "featureList": [
+            {
+              "icon": "fa-solid fa-check",
+              "text": "FCL &amp; LCL Ocean Freight Consolidation"
+            },
+            {
+              "icon": "fa-solid fa-check",
+              "text": "Multi-modal Transport (Air, Sea &amp; Road)"
+            },
+            {
+              "icon": "fa-solid fa-check",
+              "text": "ISO Certified Quality &amp; Compliance"
+            },
+            {
+              "icon": "fa-solid fa-check",
+              "text": "11+ Years of International Expertise"
+            },
+            {
+              "icon": "fa-solid fa-check",
+              "text": "Real-time Shipment Tracking &amp; Updates"
+            }
+          ],
+          "ctaText": "Request a Quote",
+          "ctaUrl": "/contact"
+        }
+      },
+      {
+        "type": "our_advantage",
+        "label": "Our Advantage",
+        "content": {
+          "subHeading": "Our Advantage",
+          "heading": "Why Choose <span class=\"hl\">TSV Global Solutions?</span>",
+          "cards": [
+            {
+              "title": "Global Network",
+              "description": "A powerful web of international partners, agents, and shipping line contracts ensures your\n                            cargo reaches 150+ global destinations with ease.",
+              "icon": "fa-regular fa-globe",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "Secure &amp; Compliant",
+              "description": "ISO-certified processes and rigorous compliance\n                            standards protect your cargo and ensure all customs regulations are meticulously followed.",
+              "icon": "fa-regular fa-shield-check",
+              "accentColor": "#1a1a2e"
+            },
+            {
+              "title": "On-Time Delivery",
+              "description": "We are committed to strict on-time performance — optimizing every route, mode, and schedule\n                            to keep your supply chain running without interruption.",
+              "icon": "fa-regular fa-clock",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "NVOCC Expertise",
+              "description": "As a licensed NVOCC, we issue our own House Bills of Lading for both FCL and LCL shipments,\n                            offering flexible and competitive ocean freight solutions.",
+              "icon": "logis logis-cruise",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "ODC &amp; Project Cargo",
+              "description": "Specialized handling of over-dimensional &amp; heavy-lift cargo with a dedicated project\n                            team, custom equipment, and end-to-end coordination.",
+              "icon": "logis logis-truck-2",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "24/7 Support",
+              "description": "Your dedicated account manager and our support desk are available around the clock to give\n                            you real-time updates and immediate assistance.",
+              "icon": "fa-regular fa-headset",
+              "accentColor": "#c1000a"
+            }
+          ]
+        }
+      },
+      {
+        "type": "handling_process",
+        "label": "Step By Step",
+        "content": {
+          "subHeading": "Step By Step",
+          "heading": "Our Handling <span class=\"hl\">Process</span>",
+          "steps": [
+            {
+              "number": "01",
+              "title": "Consultation",
+              "subLabel": "(Planning)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "We engage with you to understand\n                            your cargo type, volume, origin, destination, and timelines — then recommend the most\n                            efficient and cost-effective logistics solution."
+              ]
+            },
+            {
+              "number": "02",
+              "title": "Documentation",
+              "subLabel": "(Documentation)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "All shipping documents — Bill of\n                            Lading, Commercial Invoice, Packing List, and Customs Declarations — are meticulously\n                            prepared and verified for accuracy before shipment."
+              ]
+            },
+            {
+              "number": "03",
+              "title": "Transit &amp; Tracking",
+              "subLabel": "(Transit)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "Your cargo moves via the most\n                            suitable mode — ocean, air, or road — with live tracking and proactive milestone updates at\n                            every key checkpoint during transit."
+              ]
+            },
+            {
+              "number": "04",
+              "title": "Delivery &amp; Handover",
+              "subLabel": "(Delivery)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "Cargo is safely delivered and\n                            handed over with full documentation. Our customs team ensures swift clearance and seamless\n                            last-mile delivery to your facility."
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "type": "photo_gallery",
+        "label": "Our Work",
+        "content": {
+          "subHeading": "Our Work",
+          "heading": "Photo Gallery",
+          "images": [
+            {
+              "url": "/assets/img/Services/TRANSPORTATION/WhatsApp%20Image%202026-03-05%20at%202.44.39%20PM.jpeg",
+              "alt": "Transportation Operations",
+              "caption": "Transportation Operations"
+            },
+            {
+              "url": "/assets/img/Services/TRANSPORTATION/WhatsApp%20Image%202026-03-05%20at%202.44.40%20PM.jpeg",
+              "alt": "Sea Freight - FCL",
+              "caption": "Sea Freight - FCL"
+            },
+            {
+              "url": "/assets/img/Services/TRANSPORTATION/WhatsApp%20Image%202026-03-05%20at%202.44.40%20PM%20(1).jpeg",
+              "alt": "Port Handling",
+              "caption": "Port Handling"
+            },
+            {
+              "url": "/assets/img/Services/TRANSPORTATION/WhatsApp%20Image%202026-03-05%20at%202.44.41%20PM.jpeg",
+              "alt": "Container Operations",
+              "caption": "Container Operations"
+            },
+            {
+              "url": "/assets/img/Services/TRANSPORTATION/WhatsApp%20Image%202026-03-05%20at%202.44.41%20PM%20(1).jpeg",
+              "alt": "Vessel Loading",
+              "caption": "Vessel Loading"
+            },
+            {
+              "url": "/assets/img/Services/TRANSPORTATION/WhatsApp%20Image%202026-03-05%20at%202.44.42%20PM.jpeg",
+              "alt": "Road Transport",
+              "caption": "Road Transport"
+            },
+            {
+              "url": "/assets/img/Services/TRANSPORTATION/SEA-IMPORT/WhatsApp%20Image%202026-03-03%20at%203.20.46%20PM%20(2).jpeg",
+              "alt": "Sea Import",
+              "caption": "Sea Import"
+            },
+            {
+              "url": "/assets/img/Services/TRANSPORTATION/SEA-IMPORT/WhatsApp%20Image%202026-03-03%20at%203.20.48%20PM.jpeg",
+              "alt": "Sea Import Clearance",
+              "caption": "Sea Import Clearance"
+            }
+          ]
+        }
+      },
+      {
+        "type": "faq",
+        "label": "Have Questions?",
+        "content": {
+          "subHeading": "Have Questions?",
+          "heading": "Frequently Asked Questions",
+          "faq": [
+            {
+              "question": "What is NVOCC and how does TSV Global operate as one?",
+              "answer": "NVOCC (Non-Vessel\n                                    Operating Common Carrier) is a licensed freight consolidator that issues its own\n                                    House Bills of Lading without owning physical vessels. TSV Global Solutions is a\n                                    licensed NVOCC, allowing us to consolidate cargo (LCL) and book full containers\n                                    (FCL) with major shipping lines, offering you competitive rates and flexible booking\n                                    options worldwide."
+            },
+            {
+              "question": "What types of cargo does TSV Global handle?",
+              "answer": "We handle a wide range of\n                                    cargo categories including General Cargo, Project Cargo, Over-Dimensional Cargo\n                                    (ODC), Hazardous Materials (Dangerous Goods), Perishable Goods,\n                                    Temperature-Controlled Cargo, and Heavy-Lift Equipment. Our specialized teams ensure\n                                    safe and compliant handling for every cargo type."
+            },
+            {
+              "question": "How can I track my shipment in real-time?",
+              "answer": "Once your shipment is\n                                    booked, you will receive a unique tracking reference number. Our operations team\n                                    provides regular status updates via email or WhatsApp at every key milestone —\n                                    vessel departure, arrival at port, customs clearance, and final delivery. A\n                                    dedicated account manager is also available 24/7 for any queries."
+            },
+            {
+              "question": "Does TSV Global handle customs clearance as well?",
+              "answer": "Yes. TSV Global has an\n                                    in-house customs brokerage team with CHA (Customs House Agent) licensing. We handle\n                                    end-to-end customs documentation for both import and export shipments, ensuring\n                                    compliance with Indian Customs regulations and fast clearance with minimal demurrage\n                                    or detention charges."
+            },
+            {
+              "question": "What are your service coverage areas and ports of operation?",
+              "answer": "We operate out of all\n                                    major Indian seaports including Chennai, Mumbai (JNPT), Kolkata, Mundra, and Vizag,\n                                    as well as key international airports. Our global agent network covers 150+\n                                    destinations across Asia, Europe, the Middle East, Americas, and Africa — ensuring\n                                    comprehensive worldwide coverage."
+            },
+            {
+              "question": "How do I get a freight quote from TSV Global?",
+              "answer": "Getting a quote is\n                                    simple! Use our <a href=\"../contact.html\" style=\"color:#c1000a;font-weight:600;\">Contact Us</a> page to submit your\n                                    enquiry with cargo details (origin, destination, weight, dimensions, and commodity).\n                                    Our sales team will respond within 24 hours with a competitive, customized quotation\n                                    tailored to your specific requirements."
+            }
+          ]
+        }
+      },
+      {
+        "type": "cta",
+        "label": "CTA",
+        "content": {
+          "heading": "Ready to Transport <span class=\"hl\">Your Cargo?</span>",
+          "subHeading": "Get Started Today",
+          "description": "Connect with our\n                            expert logistics team today to get a customized, cost-effective shipping solution designed\n                            around your specific business needs.",
+          "primaryBtnText": "Get a Free Quote",
+          "primaryBtnUrl": "/contact"
+        }
+      }
+    ]
+  },
+  {
+    "title": "TSV GLOBAL SOLUTIONS PVT LTD",
+    "slug": "batteries",
+    "sections": [
+      {
+        "type": "header",
+        "label": "Page Header",
+        "content": {
+          "subHeading": "Batteries Logistics",
+          "heading": "Battery Cargo, <br>Handled with <span>Expert Care</span>",
+          "description": "Compliant and safe logistics for Lead Acid, Lithium Batteries, and Lithium Cells — classified as\n                    Dangerous Goods."
+        }
+      },
+      {
+        "type": "service_overview",
+        "label": "Service Overview",
+        "content": {
+          "image": "/assets/img/Services/BATTERY/Battery-1.jpeg",
+          "imageAlt": "TSV GLOBAL SOLUTIONS PVT LTD",
+          "badge": "Battery Logistics",
+          "badgeIcon": "fa-regular fa-battery-full",
+          "subHeading": "Industry Services",
+          "heading": "Battery Freight Solutions",
+          "paragraphs": [
+            "Batteries are classified as Dangerous Goods (DG) under IMDG and IATA\n                        regulations, requiring strict compliance at every stage. TSV Global Solutions has certified\n                        expertise in handling and transporting all types of batteries — from large industrial lead-acid\n                        units to compact lithium cells.",
+            "We manage all DG documentation, UN number declarations, proper\n                        packaging specifications (UN 3480, UN 3481, UN 2794, UN 2800), and carrier approvals required\n                        for safe and compliant international movement."
+          ],
+          "featureList": [
+            {
+              "icon": "fa-solid fa-battery-full",
+              "text": "Lead Acid\n                            Batteries (Industrial &amp; Automotive)"
+            },
+            {
+              "icon": "fa-solid fa-bolt",
+              "text": "Lithium Batteries\n                            (UN 3480 / UN 3481)"
+            },
+            {
+              "icon": "fa-solid fa-circle-bolt",
+              "text": "Lithium\n                            Cells (Packed with or without Equipment)"
+            },
+            {
+              "icon": "fa-solid fa-file-lines",
+              "text": "Full DG\n                            Documentation &amp; MSDS Compliance"
+            },
+            {
+              "icon": "fa-solid fa-shield-check",
+              "text": "IMDG / IATA\n                            Certified Packaging &amp; Labelling"
+            }
+          ],
+          "ctaText": "Request a Quote",
+          "ctaUrl": "/contact"
+        }
+      },
+      {
+        "type": "our_advantage",
+        "label": "Our Advantage",
+        "content": {
+          "subHeading": "Our Advantage",
+          "heading": "Why Choose <span class=\"hl\">TSV Global Solutions?</span>",
+          "cards": [
+            {
+              "title": "Global Network",
+              "description": "A powerful web of international partners, agents, and shipping line contracts ensures your\n                            cargo reaches 150+ global destinations with ease.",
+              "icon": "fa-regular fa-globe",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "Secure &amp; Compliant",
+              "description": "ISO-certified processes and rigorous compliance\n                            standards protect your cargo and ensure all customs regulations are meticulously followed.",
+              "icon": "fa-regular fa-shield-check",
+              "accentColor": "#1a1a2e"
+            },
+            {
+              "title": "On-Time Delivery",
+              "description": "We are committed to strict on-time performance — optimizing every route, mode, and schedule\n                            to keep your supply chain running without interruption.",
+              "icon": "fa-regular fa-clock",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "NVOCC Expertise",
+              "description": "As a licensed NVOCC, we issue our own House Bills of Lading for both FCL and LCL shipments,\n                            offering flexible and competitive ocean freight solutions.",
+              "icon": "logis logis-cruise",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "ODC &amp; Project Cargo",
+              "description": "Specialized handling of over-dimensional &amp; heavy-lift cargo with a dedicated project\n                            team, custom equipment, and end-to-end coordination.",
+              "icon": "logis logis-truck-2",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "24/7 Support",
+              "description": "Your dedicated account manager and our support desk are available around the clock to give\n                            you real-time updates and immediate assistance.",
+              "icon": "fa-regular fa-headset",
+              "accentColor": "#c1000a"
+            }
+          ]
+        }
+      },
+      {
+        "type": "handling_process",
+        "label": "Step By Step",
+        "content": {
+          "subHeading": "Step By Step",
+          "heading": "Our Handling <span class=\"hl\">Process</span>",
+          "steps": [
+            {
+              "number": "01",
+              "title": "Consultation",
+              "subLabel": "(Planning)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "We engage with you to understand\n                            your cargo type, volume, origin, destination, and timelines — then recommend the most\n                            efficient and cost-effective logistics solution."
+              ]
+            },
+            {
+              "number": "02",
+              "title": "Documentation",
+              "subLabel": "(Documentation)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "All shipping documents — Bill of\n                            Lading, Commercial Invoice, Packing List, and Customs Declarations — are meticulously\n                            prepared and verified for accuracy before shipment."
+              ]
+            },
+            {
+              "number": "03",
+              "title": "Transit &amp; Tracking",
+              "subLabel": "(Transit)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "Your cargo moves via the most\n                            suitable mode — ocean, air, or road — with live tracking and proactive milestone updates at\n                            every key checkpoint during transit."
+              ]
+            },
+            {
+              "number": "04",
+              "title": "Delivery &amp; Handover",
+              "subLabel": "(Delivery)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "Cargo is safely delivered and\n                            handed over with full documentation. Our customs team ensures swift clearance and seamless\n                            last-mile delivery to your facility."
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "type": "photo_gallery",
+        "label": "Our Work",
+        "content": {
+          "subHeading": "Our Work",
+          "heading": "Photo Gallery",
+          "images": [
+            {
+              "url": "/assets/img/Services/BATTERY/Battery-1.jpeg",
+              "alt": "Battery Cargo Handling",
+              "caption": "Battery Cargo Handling"
+            },
+            {
+              "url": "/assets/img/Services/BATTERY/Battery-2.jpeg",
+              "alt": "Lead Acid Battery Freight",
+              "caption": "Lead Acid Battery Freight"
+            },
+            {
+              "url": "/assets/img/Services/BATTERY/Battery-3.jpeg",
+              "alt": "Lithium Battery Shipment",
+              "caption": "Lithium Battery Shipment"
+            },
+            {
+              "url": "/assets/img/Services/BATTERY/Battery-4.jpeg",
+              "alt": "DG Battery Compliance",
+              "caption": "DG Battery Compliance"
+            }
+          ]
+        }
+      },
+      {
+        "type": "faq",
+        "label": "Have Questions?",
+        "content": {
+          "subHeading": "Have Questions?",
+          "heading": "Frequently Asked Questions",
+          "faq": [
+            {
+              "question": "What is NVOCC and how does TSV Global operate as one?",
+              "answer": "NVOCC (Non-Vessel\n                                    Operating Common Carrier) is a licensed freight consolidator that issues its own\n                                    House Bills of Lading without owning physical vessels. TSV Global Solutions is a\n                                    licensed NVOCC, allowing us to consolidate cargo (LCL) and book full containers\n                                    (FCL) with major shipping lines, offering you competitive rates and flexible booking\n                                    options worldwide."
+            },
+            {
+              "question": "What types of cargo does TSV Global handle?",
+              "answer": "We handle a wide range of\n                                    cargo categories including General Cargo, Project Cargo, Over-Dimensional Cargo\n                                    (ODC), Hazardous Materials (Dangerous Goods), Perishable Goods,\n                                    Temperature-Controlled Cargo, and Heavy-Lift Equipment. Our specialized teams ensure\n                                    safe and compliant handling for every cargo type."
+            },
+            {
+              "question": "How can I track my shipment in real-time?",
+              "answer": "Once your shipment is\n                                    booked, you will receive a unique tracking reference number. Our operations team\n                                    provides regular status updates via email or WhatsApp at every key milestone —\n                                    vessel departure, arrival at port, customs clearance, and final delivery. A\n                                    dedicated account manager is also available 24/7 for any queries."
+            },
+            {
+              "question": "Does TSV Global handle customs clearance as well?",
+              "answer": "Yes. TSV Global has an\n                                    in-house customs brokerage team with CHA (Customs House Agent) licensing. We handle\n                                    end-to-end customs documentation for both import and export shipments, ensuring\n                                    compliance with Indian Customs regulations and fast clearance with minimal demurrage\n                                    or detention charges."
+            },
+            {
+              "question": "What are your service coverage areas and ports of operation?",
+              "answer": "We operate out of all\n                                    major Indian seaports including Chennai, Mumbai (JNPT), Kolkata, Mundra, and Vizag,\n                                    as well as key international airports. Our global agent network covers 150+\n                                    destinations across Asia, Europe, the Middle East, Americas, and Africa — ensuring\n                                    comprehensive worldwide coverage."
+            },
+            {
+              "question": "How do I get a freight quote from TSV Global?",
+              "answer": "Getting a quote is\n                                    simple! Use our <a href=\"../contact.html\" style=\"color:#c1000a;font-weight:600;\">Contact Us</a> page to submit your\n                                    enquiry with cargo details (origin, destination, weight, dimensions, and commodity).\n                                    Our sales team will respond within 24 hours with a competitive, customized quotation\n                                    tailored to your specific requirements."
+            }
+          ]
+        }
+      },
+      {
+        "type": "cta",
+        "label": "CTA",
+        "content": {
+          "heading": "Ready to Transport <span class=\"hl\">Your Cargo?</span>",
+          "subHeading": "Get Started Today",
+          "description": "Connect with our\n                            expert logistics team today to get a customized, cost-effective shipping solution designed\n                            around your specific business needs.",
+          "primaryBtnText": "Get a Free Quote",
+          "primaryBtnUrl": "/contact"
+        }
+      }
+    ]
+  },
+  {
+    "title": "TSV GLOBAL SOLUTIONS PVT LTD",
+    "slug": "chemicals",
+    "sections": [
+      {
+        "type": "header",
+        "label": "Page Header",
+        "content": {
+          "subHeading": "Chemical Cargo Logistics",
+          "heading": "Chemical Freight, <br>Handled with <span>Compliance</span>",
+          "description": "IMDG-compliant logistics for chemical powders and hazardous material cargo — safe, documented, and\n                    reliable."
+        }
+      },
+      {
+        "type": "service_overview",
+        "label": "Service Overview",
+        "content": {
+          "image": "/assets/img/Services/CHEMICAL/WhatsApp%20Image%202026-03-05%20at%201.27.42%20PM.jpeg",
+          "imageAlt": "TSV GLOBAL SOLUTIONS PVT LTD",
+          "badge": "Chemical Logistics",
+          "badgeIcon": "fa-regular fa-flask",
+          "subHeading": "Industry Services",
+          "heading": "Chemical Logistics Solutions",
+          "paragraphs": [
+            "Chemical cargo — particularly powders, liquids, and other classified\n                        substances — requires strict IMDG compliance, precise packaging, and carrier approvals to ensure\n                        safety and legal movement across international borders.",
+            "TSV Global Solutions manages all aspects of chemical freight: DG\n                        classification, MSDS review, UN number compliance, approved container selection, carrier\n                        nomination, and customs documentation for seamless import and export."
+          ],
+          "featureList": [
+            {
+              "icon": "fa-solid fa-flask",
+              "text": "Chemical Powder\n                            (Dry Bulk &amp; Packaged)"
+            },
+            {
+              "icon": "fa-solid fa-triangle-exclamation",
+              "text": "DG\n                            Cargo – IMDG Classified Goods"
+            },
+            {
+              "icon": "fa-solid fa-vial",
+              "text": "MSDS Review &amp; UN\n                            Number Compliance"
+            },
+            {
+              "icon": "fa-solid fa-shield-check",
+              "text": "Approved\n                            Carrier Nomination &amp; Segregation"
+            },
+            {
+              "icon": "fa-solid fa-file-lines",
+              "text": "Full Customs\n                            &amp; Hazmat Documentation"
+            }
+          ],
+          "ctaText": "Request a Quote",
+          "ctaUrl": "/contact"
+        }
+      },
+      {
+        "type": "our_advantage",
+        "label": "Our Advantage",
+        "content": {
+          "subHeading": "Our Advantage",
+          "heading": "Why Choose <span class=\"hl\">TSV Global Solutions?</span>",
+          "cards": [
+            {
+              "title": "Global Network",
+              "description": "A powerful web of international partners, agents, and shipping line contracts ensures your\n                            cargo reaches 150+ global destinations with ease.",
+              "icon": "fa-regular fa-globe",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "Secure &amp; Compliant",
+              "description": "ISO-certified processes and rigorous compliance\n                            standards protect your cargo and ensure all customs regulations are meticulously followed.",
+              "icon": "fa-regular fa-shield-check",
+              "accentColor": "#1a1a2e"
+            },
+            {
+              "title": "On-Time Delivery",
+              "description": "We are committed to strict on-time performance — optimizing every route, mode, and schedule\n                            to keep your supply chain running without interruption.",
+              "icon": "fa-regular fa-clock",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "NVOCC Expertise",
+              "description": "As a licensed NVOCC, we issue our own House Bills of Lading for both FCL and LCL shipments,\n                            offering flexible and competitive ocean freight solutions.",
+              "icon": "logis logis-cruise",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "ODC &amp; Project Cargo",
+              "description": "Specialized handling of over-dimensional &amp; heavy-lift cargo with a dedicated project\n                            team, custom equipment, and end-to-end coordination.",
+              "icon": "logis logis-truck-2",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "24/7 Support",
+              "description": "Your dedicated account manager and our support desk are available around the clock to give\n                            you real-time updates and immediate assistance.",
+              "icon": "fa-regular fa-headset",
+              "accentColor": "#c1000a"
+            }
+          ]
+        }
+      },
+      {
+        "type": "handling_process",
+        "label": "Step By Step",
+        "content": {
+          "subHeading": "Step By Step",
+          "heading": "Our Handling <span class=\"hl\">Process</span>",
+          "steps": [
+            {
+              "number": "01",
+              "title": "Consultation",
+              "subLabel": "(Planning)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "We engage with you to understand\n                            your cargo type, volume, origin, destination, and timelines — then recommend the most\n                            efficient and cost-effective logistics solution."
+              ]
+            },
+            {
+              "number": "02",
+              "title": "Documentation",
+              "subLabel": "(Documentation)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "All shipping documents — Bill of\n                            Lading, Commercial Invoice, Packing List, and Customs Declarations — are meticulously\n                            prepared and verified for accuracy before shipment."
+              ]
+            },
+            {
+              "number": "03",
+              "title": "Transit &amp; Tracking",
+              "subLabel": "(Transit)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "Your cargo moves via the most\n                            suitable mode — ocean, air, or road — with live tracking and proactive milestone updates at\n                            every key checkpoint during transit."
+              ]
+            },
+            {
+              "number": "04",
+              "title": "Delivery &amp; Handover",
+              "subLabel": "(Delivery)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "Cargo is safely delivered and\n                            handed over with full documentation. Our customs team ensures swift clearance and seamless\n                            last-mile delivery to your facility."
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "type": "photo_gallery",
+        "label": "Our Work",
+        "content": {
+          "subHeading": "Our Work",
+          "heading": "Photo Gallery",
+          "images": [
+            {
+              "url": "/assets/img/Services/CHEMICAL/WhatsApp%20Image%202026-03-05%20at%201.27.42%20PM.jpeg",
+              "alt": "Chemical Cargo Handling",
+              "caption": "Chemical Cargo Handling"
+            },
+            {
+              "url": "/assets/img/Services/CHEMICAL/WhatsApp%20Image%202026-03-05%20at%201.27.42%20PM%20(1).jpeg",
+              "alt": "Chemical Powder Freight",
+              "caption": "Chemical Powder Freight"
+            },
+            {
+              "url": "/assets/img/Services/CHEMICAL/WhatsApp%20Image%202026-03-05%20at%201.27.42%20PM%20(2).jpeg",
+              "alt": "DG Chemical Shipment",
+              "caption": "DG Chemical Shipment"
+            },
+            {
+              "url": "/assets/img/Services/CHEMICAL/WhatsApp%20Image%202026-03-05%20at%201.27.43%20PM.jpeg",
+              "alt": "IMDG Compliance Operations",
+              "caption": "IMDG Compliance Operations"
+            }
+          ]
+        }
+      },
+      {
+        "type": "faq",
+        "label": "Have Questions?",
+        "content": {
+          "subHeading": "Have Questions?",
+          "heading": "Frequently Asked Questions",
+          "faq": [
+            {
+              "question": "What is NVOCC and how does TSV Global operate as one?",
+              "answer": "NVOCC (Non-Vessel\n                                    Operating Common Carrier) is a licensed freight consolidator that issues its own\n                                    House Bills of Lading without owning physical vessels. TSV Global Solutions is a\n                                    licensed NVOCC, allowing us to consolidate cargo (LCL) and book full containers\n                                    (FCL) with major shipping lines, offering you competitive rates and flexible booking\n                                    options worldwide."
+            },
+            {
+              "question": "What types of cargo does TSV Global handle?",
+              "answer": "We handle a wide range of\n                                    cargo categories including General Cargo, Project Cargo, Over-Dimensional Cargo\n                                    (ODC), Hazardous Materials (Dangerous Goods), Perishable Goods,\n                                    Temperature-Controlled Cargo, and Heavy-Lift Equipment. Our specialized teams ensure\n                                    safe and compliant handling for every cargo type."
+            },
+            {
+              "question": "How can I track my shipment in real-time?",
+              "answer": "Once your shipment is\n                                    booked, you will receive a unique tracking reference number. Our operations team\n                                    provides regular status updates via email or WhatsApp at every key milestone —\n                                    vessel departure, arrival at port, customs clearance, and final delivery. A\n                                    dedicated account manager is also available 24/7 for any queries."
+            },
+            {
+              "question": "Does TSV Global handle customs clearance as well?",
+              "answer": "Yes. TSV Global has an\n                                    in-house customs brokerage team with CHA (Customs House Agent) licensing. We handle\n                                    end-to-end customs documentation for both import and export shipments, ensuring\n                                    compliance with Indian Customs regulations and fast clearance with minimal demurrage\n                                    or detention charges."
+            },
+            {
+              "question": "What are your service coverage areas and ports of operation?",
+              "answer": "We operate out of all\n                                    major Indian seaports including Chennai, Mumbai (JNPT), Kolkata, Mundra, and Vizag,\n                                    as well as key international airports. Our global agent network covers 150+\n                                    destinations across Asia, Europe, the Middle East, Americas, and Africa — ensuring\n                                    comprehensive worldwide coverage."
+            },
+            {
+              "question": "How do I get a freight quote from TSV Global?",
+              "answer": "Getting a quote is\n                                    simple! Use our <a href=\"../contact.html\" style=\"color:#c1000a;font-weight:600;\">Contact Us</a> page to submit your\n                                    enquiry with cargo details (origin, destination, weight, dimensions, and commodity).\n                                    Our sales team will respond within 24 hours with a competitive, customized quotation\n                                    tailored to your specific requirements."
+            }
+          ]
+        }
+      },
+      {
+        "type": "cta",
+        "label": "CTA",
+        "content": {
+          "heading": "Ready to Transport <span class=\"hl\">Your Cargo?</span>",
+          "subHeading": "Get Started Today",
+          "description": "Connect with our\n                            expert logistics team today to get a customized, cost-effective shipping solution designed\n                            around your specific business needs.",
+          "primaryBtnText": "Get a Free Quote",
+          "primaryBtnUrl": "/contact"
+        }
+      }
+    ]
+  },
+  {
+    "title": "TSV GLOBAL SOLUTIONS PVT LTD",
+    "slug": "food-products",
+    "sections": [
+      {
+        "type": "header",
+        "label": "Page Header",
+        "content": {
+          "subHeading": "Food Products Logistics",
+          "heading": "Food Cargo, <br>Shipped with <span>Freshness</span>",
+          "description": "Temperature-controlled and reefer logistics for spices, pulp, and other food commodities — ensuring\n                    quality from origin to destination."
+        }
+      },
+      {
+        "type": "service_overview",
+        "label": "Service Overview",
+        "content": {
+          "image": "/assets/img/Services/FOOD%20PRODUCTS/Food-1.jpeg",
+          "imageAlt": "TSV GLOBAL SOLUTIONS PVT LTD",
+          "badge": "Food Logistics",
+          "badgeIcon": "fa-regular fa-wheat",
+          "subHeading": "Industry Services",
+          "heading": "Food Product Freight Solutions",
+          "paragraphs": [
+            "Food cargo demands strict temperature control, hygiene compliance,\n                        and precise documentation to meet both Indian export regulations and international food safety\n                        standards. TSV Global Solutions provides end-to-end reefer and dry cargo logistics for food\n                        exporters.",
+            "We handle all FSSAI, phytosanitary, and quality certifications\n                        coordination, reefer container bookings, pre-shipment inspections, and customs clearance for\n                        smooth and compliant food shipments."
+          ],
+          "featureList": [
+            {
+              "icon": "fa-solid fa-leaf",
+              "text": "Spices (Dry Cargo &amp;\n                            Temperature Controlled)"
+            },
+            {
+              "icon": "fa-solid fa-bowl-food",
+              "text": "Mango Pulp\n                            (Reefer Container Shipments)"
+            },
+            {
+              "icon": "fa-solid fa-snowflake",
+              "text": "Reefer &amp; Cold\n                            Chain Logistics"
+            },
+            {
+              "icon": "fa-solid fa-file-lines",
+              "text": "FSSAI,\n                            Phytosanitary &amp; Quality Certification Coordination"
+            },
+            {
+              "icon": "fa-solid fa-ship",
+              "text": "FCL &amp; LCL Export\n                            Solutions"
+            }
+          ],
+          "ctaText": "Request a Quote",
+          "ctaUrl": "/contact"
+        }
+      },
+      {
+        "type": "our_advantage",
+        "label": "Our Advantage",
+        "content": {
+          "subHeading": "Our Advantage",
+          "heading": "Why Choose <span class=\"hl\">TSV Global Solutions?</span>",
+          "cards": [
+            {
+              "title": "Global Network",
+              "description": "A powerful web of international partners, agents, and shipping line contracts ensures your\n                            cargo reaches 150+ global destinations with ease.",
+              "icon": "fa-regular fa-globe",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "Secure &amp; Compliant",
+              "description": "ISO-certified processes and rigorous compliance\n                            standards protect your cargo and ensure all customs regulations are meticulously followed.",
+              "icon": "fa-regular fa-shield-check",
+              "accentColor": "#1a1a2e"
+            },
+            {
+              "title": "On-Time Delivery",
+              "description": "We are committed to strict on-time performance — optimizing every route, mode, and schedule\n                            to keep your supply chain running without interruption.",
+              "icon": "fa-regular fa-clock",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "NVOCC Expertise",
+              "description": "As a licensed NVOCC, we issue our own House Bills of Lading for both FCL and LCL shipments,\n                            offering flexible and competitive ocean freight solutions.",
+              "icon": "logis logis-cruise",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "ODC &amp; Project Cargo",
+              "description": "Specialized handling of over-dimensional &amp; heavy-lift cargo with a dedicated project\n                            team, custom equipment, and end-to-end coordination.",
+              "icon": "logis logis-truck-2",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "24/7 Support",
+              "description": "Your dedicated account manager and our support desk are available around the clock to give\n                            you real-time updates and immediate assistance.",
+              "icon": "fa-regular fa-headset",
+              "accentColor": "#c1000a"
+            }
+          ]
+        }
+      },
+      {
+        "type": "handling_process",
+        "label": "Step By Step",
+        "content": {
+          "subHeading": "Step By Step",
+          "heading": "Our Handling <span class=\"hl\">Process</span>",
+          "steps": [
+            {
+              "number": "01",
+              "title": "Consultation",
+              "subLabel": "(Planning)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "We engage with you to understand\n                            your cargo type, volume, origin, destination, and timelines — then recommend the most\n                            efficient and cost-effective logistics solution."
+              ]
+            },
+            {
+              "number": "02",
+              "title": "Documentation",
+              "subLabel": "(Documentation)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "All shipping documents — Bill of\n                            Lading, Commercial Invoice, Packing List, and Customs Declarations — are meticulously\n                            prepared and verified for accuracy before shipment."
+              ]
+            },
+            {
+              "number": "03",
+              "title": "Transit &amp; Tracking",
+              "subLabel": "(Transit)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "Your cargo moves via the most\n                            suitable mode — ocean, air, or road — with live tracking and proactive milestone updates at\n                            every key checkpoint during transit."
+              ]
+            },
+            {
+              "number": "04",
+              "title": "Delivery &amp; Handover",
+              "subLabel": "(Delivery)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "Cargo is safely delivered and\n                            handed over with full documentation. Our customs team ensures swift clearance and seamless\n                            last-mile delivery to your facility."
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "type": "photo_gallery",
+        "label": "Our Work",
+        "content": {
+          "subHeading": "Our Work",
+          "heading": "Photo Gallery",
+          "images": [
+            {
+              "url": "/assets/img/Services/FOOD%20PRODUCTS/Food-1.jpeg",
+              "alt": "Food Cargo Handling",
+              "caption": "Food Cargo Handling"
+            },
+            {
+              "url": "/assets/img/Services/FOOD%20PRODUCTS/Food-2.jpeg",
+              "alt": "Reefer & Perishable Freight",
+              "caption": "Reefer &amp; Perishable Freight"
+            }
+          ]
+        }
+      },
+      {
+        "type": "faq",
+        "label": "Have Questions?",
+        "content": {
+          "subHeading": "Have Questions?",
+          "heading": "Frequently Asked Questions",
+          "faq": [
+            {
+              "question": "What is NVOCC and how does TSV Global operate as one?",
+              "answer": "NVOCC (Non-Vessel\n                                    Operating Common Carrier) is a licensed freight consolidator that issues its own\n                                    House Bills of Lading without owning physical vessels. TSV Global Solutions is a\n                                    licensed NVOCC, allowing us to consolidate cargo (LCL) and book full containers\n                                    (FCL) with major shipping lines, offering you competitive rates and flexible booking\n                                    options worldwide."
+            },
+            {
+              "question": "What types of cargo does TSV Global handle?",
+              "answer": "We handle a wide range of\n                                    cargo categories including General Cargo, Project Cargo, Over-Dimensional Cargo\n                                    (ODC), Hazardous Materials (Dangerous Goods), Perishable Goods,\n                                    Temperature-Controlled Cargo, and Heavy-Lift Equipment. Our specialized teams ensure\n                                    safe and compliant handling for every cargo type."
+            },
+            {
+              "question": "How can I track my shipment in real-time?",
+              "answer": "Once your shipment is\n                                    booked, you will receive a unique tracking reference number. Our operations team\n                                    provides regular status updates via email or WhatsApp at every key milestone —\n                                    vessel departure, arrival at port, customs clearance, and final delivery. A\n                                    dedicated account manager is also available 24/7 for any queries."
+            },
+            {
+              "question": "Does TSV Global handle customs clearance as well?",
+              "answer": "Yes. TSV Global has an\n                                    in-house customs brokerage team with CHA (Customs House Agent) licensing. We handle\n                                    end-to-end customs documentation for both import and export shipments, ensuring\n                                    compliance with Indian Customs regulations and fast clearance with minimal demurrage\n                                    or detention charges."
+            },
+            {
+              "question": "What are your service coverage areas and ports of operation?",
+              "answer": "We operate out of all\n                                    major Indian seaports including Chennai, Mumbai (JNPT), Kolkata, Mundra, and Vizag,\n                                    as well as key international airports. Our global agent network covers 150+\n                                    destinations across Asia, Europe, the Middle East, Americas, and Africa — ensuring\n                                    comprehensive worldwide coverage."
+            },
+            {
+              "question": "How do I get a freight quote from TSV Global?",
+              "answer": "Getting a quote is\n                                    simple! Use our <a href=\"../contact.html\" style=\"color:#c1000a;font-weight:600;\">Contact Us</a> page to submit your\n                                    enquiry with cargo details (origin, destination, weight, dimensions, and commodity).\n                                    Our sales team will respond within 24 hours with a competitive, customized quotation\n                                    tailored to your specific requirements."
+            }
+          ]
+        }
+      },
+      {
+        "type": "cta",
+        "label": "CTA",
+        "content": {
+          "heading": "Ready to Transport <span class=\"hl\">Your Cargo?</span>",
+          "subHeading": "Get Started Today",
+          "description": "Connect with our\n                            expert logistics team today to get a customized, cost-effective shipping solution designed\n                            around your specific business needs.",
+          "primaryBtnText": "Get a Free Quote",
+          "primaryBtnUrl": "/contact"
+        }
+      }
+    ]
+  },
+  {
+    "title": "TSV GLOBAL SOLUTIONS PVT LTD",
+    "slug": "oil-and-gas",
+    "sections": [
+      {
+        "type": "header",
+        "label": "Page Header",
+        "content": {
+          "subHeading": "Oil &amp; Gas Logistics",
+          "heading": "Oil &amp; Gas Freight, <br>Handled with <span>Expertise</span>",
+          "description": "Precision logistics for valves, pumps, compressors, and OEM machinery parts for the oil and gas\n                    industry."
+        }
+      },
+      {
+        "type": "service_overview",
+        "label": "Service Overview",
+        "content": {
+          "image": "/assets/img/Services/OIL&%20GAS/WhatsApp%20Image%202026-03-05%20at%201.20.18%20PM.jpeg",
+          "imageAlt": "TSV GLOBAL SOLUTIONS PVT LTD",
+          "badge": "Oil & Gas Logistics",
+          "badgeIcon": "fa-regular fa-droplet",
+          "subHeading": "Industry Services",
+          "heading": "Oil &amp; Gas Cargo Solutions",
+          "paragraphs": [
+            "TSV Global Solutions delivers specialized freight solutions for the\n                        oil and gas sector — handling critical components that demand careful packaging, crating, and\n                        compliance with hazardous material regulations where applicable.",
+            "From flow control systems to large pumps and compressors, our\n                        experienced team manages all aspects of oil and gas freight — including dimensional surveys,\n                        specialized crating, sea fastening, customs clearance, and final site delivery."
+          ],
+          "featureList": [
+            {
+              "icon": "fa-solid fa-gauge",
+              "text": "Valves &amp; Flow\n                            Control Systems"
+            },
+            {
+              "icon": "fa-solid fa-droplet",
+              "text": "Pumps &amp;\n                            Compressors"
+            },
+            {
+              "icon": "fa-solid fa-gears",
+              "text": "OEM Machinery\n                            Parts"
+            },
+            {
+              "icon": "fa-solid fa-shield-check",
+              "text": "Hazmat / DG\n                            Compliance (where applicable)"
+            },
+            {
+              "icon": "fa-solid fa-file-lines",
+              "text": "Export /\n                            Import Documentation &amp; Customs Clearance"
+            }
+          ],
+          "ctaText": "Request a Quote",
+          "ctaUrl": "/contact"
+        }
+      },
+      {
+        "type": "our_advantage",
+        "label": "Our Advantage",
+        "content": {
+          "subHeading": "Our Advantage",
+          "heading": "Why Choose <span class=\"hl\">TSV Global Solutions?</span>",
+          "cards": [
+            {
+              "title": "Global Network",
+              "description": "A powerful web of international partners, agents, and shipping line contracts ensures your\n                            cargo reaches 150+ global destinations with ease.",
+              "icon": "fa-regular fa-globe",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "Secure &amp; Compliant",
+              "description": "ISO-certified processes and rigorous compliance\n                            standards protect your cargo and ensure all customs regulations are meticulously followed.",
+              "icon": "fa-regular fa-shield-check",
+              "accentColor": "#1a1a2e"
+            },
+            {
+              "title": "On-Time Delivery",
+              "description": "We are committed to strict on-time performance — optimizing every route, mode, and schedule\n                            to keep your supply chain running without interruption.",
+              "icon": "fa-regular fa-clock",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "NVOCC Expertise",
+              "description": "As a licensed NVOCC, we issue our own House Bills of Lading for both FCL and LCL shipments,\n                            offering flexible and competitive ocean freight solutions.",
+              "icon": "logis logis-cruise",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "ODC &amp; Project Cargo",
+              "description": "Specialized handling of over-dimensional &amp; heavy-lift cargo with a dedicated project\n                            team, custom equipment, and end-to-end coordination.",
+              "icon": "logis logis-truck-2",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "24/7 Support",
+              "description": "Your dedicated account manager and our support desk are available around the clock to give\n                            you real-time updates and immediate assistance.",
+              "icon": "fa-regular fa-headset",
+              "accentColor": "#c1000a"
+            }
+          ]
+        }
+      },
+      {
+        "type": "handling_process",
+        "label": "Step By Step",
+        "content": {
+          "subHeading": "Step By Step",
+          "heading": "Our Handling <span class=\"hl\">Process</span>",
+          "steps": [
+            {
+              "number": "01",
+              "title": "Consultation",
+              "subLabel": "(Planning)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "We engage with you to understand\n                            your cargo type, volume, origin, destination, and timelines — then recommend the most\n                            efficient and cost-effective logistics solution."
+              ]
+            },
+            {
+              "number": "02",
+              "title": "Documentation",
+              "subLabel": "(Documentation)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "All shipping documents — Bill of\n                            Lading, Commercial Invoice, Packing List, and Customs Declarations — are meticulously\n                            prepared and verified for accuracy before shipment."
+              ]
+            },
+            {
+              "number": "03",
+              "title": "Transit &amp; Tracking",
+              "subLabel": "(Transit)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "Your cargo moves via the most\n                            suitable mode — ocean, air, or road — with live tracking and proactive milestone updates at\n                            every key checkpoint during transit."
+              ]
+            },
+            {
+              "number": "04",
+              "title": "Delivery &amp; Handover",
+              "subLabel": "(Delivery)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "Cargo is safely delivered and\n                            handed over with full documentation. Our customs team ensures swift clearance and seamless\n                            last-mile delivery to your facility."
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "type": "photo_gallery",
+        "label": "Our Work",
+        "content": {
+          "subHeading": "Our Work",
+          "heading": "Photo Gallery",
+          "images": [
+            {
+              "url": "/assets/img/Services/OIL&%20GAS/WhatsApp%20Image%202026-03-05%20at%201.20.18%20PM.jpeg",
+              "alt": "Oil & Gas Cargo",
+              "caption": "Oil &amp; Gas Cargo"
+            },
+            {
+              "url": "/assets/img/Services/OIL&%20GAS/WhatsApp%20Image%202026-03-05%20at%201.20.18%20PM%20(1).jpeg",
+              "alt": "Valves & Flow Systems",
+              "caption": "Valves &amp; Flow Systems"
+            },
+            {
+              "url": "/assets/img/Services/OIL&%20GAS/WhatsApp%20Image%202026-03-05%20at%201.20.19%20PM.jpeg",
+              "alt": "Pumps & Compressors",
+              "caption": "Pumps &amp; Compressors"
+            }
+          ]
+        }
+      },
+      {
+        "type": "faq",
+        "label": "Have Questions?",
+        "content": {
+          "subHeading": "Have Questions?",
+          "heading": "Frequently Asked Questions",
+          "faq": [
+            {
+              "question": "What is NVOCC and how does TSV Global operate as one?",
+              "answer": "NVOCC (Non-Vessel\n                                    Operating Common Carrier) is a licensed freight consolidator that issues its own\n                                    House Bills of Lading without owning physical vessels. TSV Global Solutions is a\n                                    licensed NVOCC, allowing us to consolidate cargo (LCL) and book full containers\n                                    (FCL) with major shipping lines, offering you competitive rates and flexible booking\n                                    options worldwide."
+            },
+            {
+              "question": "What types of cargo does TSV Global handle?",
+              "answer": "We handle a wide range of\n                                    cargo categories including General Cargo, Project Cargo, Over-Dimensional Cargo\n                                    (ODC), Hazardous Materials (Dangerous Goods), Perishable Goods,\n                                    Temperature-Controlled Cargo, and Heavy-Lift Equipment. Our specialized teams ensure\n                                    safe and compliant handling for every cargo type."
+            },
+            {
+              "question": "How can I track my shipment in real-time?",
+              "answer": "Once your shipment is\n                                    booked, you will receive a unique tracking reference number. Our operations team\n                                    provides regular status updates via email or WhatsApp at every key milestone —\n                                    vessel departure, arrival at port, customs clearance, and final delivery. A\n                                    dedicated account manager is also available 24/7 for any queries."
+            },
+            {
+              "question": "Does TSV Global handle customs clearance as well?",
+              "answer": "Yes. TSV Global has an\n                                    in-house customs brokerage team with CHA (Customs House Agent) licensing. We handle\n                                    end-to-end customs documentation for both import and export shipments, ensuring\n                                    compliance with Indian Customs regulations and fast clearance with minimal demurrage\n                                    or detention charges."
+            },
+            {
+              "question": "What are your service coverage areas and ports of operation?",
+              "answer": "We operate out of all\n                                    major Indian seaports including Chennai, Mumbai (JNPT), Kolkata, Mundra, and Vizag,\n                                    as well as key international airports. Our global agent network covers 150+\n                                    destinations across Asia, Europe, the Middle East, Americas, and Africa — ensuring\n                                    comprehensive worldwide coverage."
+            },
+            {
+              "question": "How do I get a freight quote from TSV Global?",
+              "answer": "Getting a quote is\n                                    simple! Use our <a href=\"../contact.html\" style=\"color:#c1000a;font-weight:600;\">Contact Us</a> page to submit your\n                                    enquiry with cargo details (origin, destination, weight, dimensions, and commodity).\n                                    Our sales team will respond within 24 hours with a competitive, customized quotation\n                                    tailored to your specific requirements."
+            }
+          ]
+        }
+      },
+      {
+        "type": "cta",
+        "label": "CTA",
+        "content": {
+          "heading": "Ready to Transport <span class=\"hl\">Your Cargo?</span>",
+          "subHeading": "Get Started Today",
+          "description": "Connect with our\n                            expert logistics team today to get a customized, cost-effective shipping solution designed\n                            around your specific business needs.",
+          "primaryBtnText": "Get a Free Quote",
+          "primaryBtnUrl": "/contact"
+        }
+      }
+    ]
+  },
+  {
+    "title": "TSV GLOBAL SOLUTIONS PVT LTD",
+    "slug": "project-management",
+    "sections": [
+      {
+        "type": "header",
+        "label": "Page Header",
+        "content": {
+          "subHeading": "Service Details",
+          "heading": "Expert Logistics, <br>Delivered <span>Worldwide</span>",
+          "description": "11+ years of NVOCC, freight forwarding &amp; project cargo expertise — <br>handling every shipment\n                    with precision and care."
+        }
+      },
+      {
+        "type": "service_overview",
+        "label": "Service Overview",
+        "content": {
+          "image": "/assets/img/cargo_operations.png",
+          "imageAlt": "TSV GLOBAL SOLUTIONS PVT LTD",
+          "badge": "Project Management",
+          "badgeIcon": "fa-regular fa-layer-group",
+          "subHeading": "Service Overview",
+          "heading": "Service Description",
+          "paragraphs": [
+            "TSV Global Solutions provides comprehensive, end-to-end logistics\n                        services tailored to meet the unique demands of each client. From international ocean freight\n                        consolidation to project and over-dimensional cargo, we handle every shipment with the highest\n                        levels of care, precision, and professionalism.",
+            "Our expert operations team works 24/7 to ensure your cargo moves\n                        seamlessly across borders, leveraging deep industry relationships, advanced tracking systems,\n                        and an extensive global agent network to guarantee on-time delivery every time."
+          ],
+          "featureList": [
+            {
+              "icon": "fa-solid fa-check",
+              "text": "FCL &amp; LCL Ocean Freight Consolidation"
+            },
+            {
+              "icon": "fa-solid fa-check",
+              "text": "Multi-modal Transport (Air, Sea &amp; Road)"
+            },
+            {
+              "icon": "fa-solid fa-check",
+              "text": "ISO Certified Quality &amp; Compliance"
+            },
+            {
+              "icon": "fa-solid fa-check",
+              "text": "11+ Years of International Expertise"
+            },
+            {
+              "icon": "fa-solid fa-check",
+              "text": "Real-time Shipment Tracking &amp; Updates"
+            }
+          ],
+          "ctaText": "Request a Quote",
+          "ctaUrl": "/contact"
+        }
+      },
+      {
+        "type": "our_advantage",
+        "label": "Our Advantage",
+        "content": {
+          "subHeading": "Our Advantage",
+          "heading": "Why Choose <span class=\"hl\">TSV Global Solutions?</span>",
+          "cards": [
+            {
+              "title": "Global Network",
+              "description": "A powerful web of international partners, agents, and shipping line contracts ensures your\n                            cargo reaches 150+ global destinations with ease.",
+              "icon": "fa-regular fa-globe",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "Secure &amp; Compliant",
+              "description": "ISO-certified processes and rigorous compliance\n                            standards protect your cargo and ensure all customs regulations are meticulously followed.",
+              "icon": "fa-regular fa-shield-check",
+              "accentColor": "#1a1a2e"
+            },
+            {
+              "title": "On-Time Delivery",
+              "description": "We are committed to strict on-time performance — optimizing every route, mode, and schedule\n                            to keep your supply chain running without interruption.",
+              "icon": "fa-regular fa-clock",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "NVOCC Expertise",
+              "description": "As a licensed NVOCC, we issue our own House Bills of Lading for both FCL and LCL shipments,\n                            offering flexible and competitive ocean freight solutions.",
+              "icon": "logis logis-cruise",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "ODC &amp; Project Cargo",
+              "description": "Specialized handling of over-dimensional &amp; heavy-lift cargo with a dedicated project\n                            team, custom equipment, and end-to-end coordination.",
+              "icon": "logis logis-truck-2",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "24/7 Support",
+              "description": "Your dedicated account manager and our support desk are available around the clock to give\n                            you real-time updates and immediate assistance.",
+              "icon": "fa-regular fa-headset",
+              "accentColor": "#c1000a"
+            }
+          ]
+        }
+      },
+      {
+        "type": "handling_process",
+        "label": "Step By Step",
+        "content": {
+          "subHeading": "Step By Step",
+          "heading": "Our Handling <span class=\"hl\">Process</span>",
+          "steps": [
+            {
+              "number": "01",
+              "title": "Consultation",
+              "subLabel": "(Planning)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "We engage with you to understand\n                            your cargo type, volume, origin, destination, and timelines — then recommend the most\n                            efficient and cost-effective logistics solution."
+              ]
+            },
+            {
+              "number": "02",
+              "title": "Documentation",
+              "subLabel": "(Documentation)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "All shipping documents — Bill of\n                            Lading, Commercial Invoice, Packing List, and Customs Declarations — are meticulously\n                            prepared and verified for accuracy before shipment."
+              ]
+            },
+            {
+              "number": "03",
+              "title": "Transit &amp; Tracking",
+              "subLabel": "(Transit)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "Your cargo moves via the most\n                            suitable mode — ocean, air, or road — with live tracking and proactive milestone updates at\n                            every key checkpoint during transit."
+              ]
+            },
+            {
+              "number": "04",
+              "title": "Delivery &amp; Handover",
+              "subLabel": "(Delivery)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "Cargo is safely delivered and\n                            handed over with full documentation. Our customs team ensures swift clearance and seamless\n                            last-mile delivery to your facility."
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "type": "photo_gallery",
+        "label": "Our Work",
+        "content": {
+          "subHeading": "Our Work",
+          "heading": "Photo Gallery",
+          "images": [
+            {
+              "url": "/assets/img/cargo_operations.png",
+              "alt": "Cargo Operations",
+              "caption": "Cargo Operations"
+            },
+            {
+              "url": "/assets/img/port_handling.png",
+              "alt": "Port Handling",
+              "caption": "Port Handling"
+            },
+            {
+              "url": "/assets/img/freight_forwarding.png",
+              "alt": "Freight Forwarding",
+              "caption": "Freight Forwarding"
+            },
+            {
+              "url": "/assets/img/project_cargo.png",
+              "alt": "Project Cargo",
+              "caption": "Project Cargo"
+            },
+            {
+              "url": "/assets/img/custom_clearance.png",
+              "alt": "Custom Clearance",
+              "caption": "Custom Clearance"
+            }
+          ]
+        }
+      },
+      {
+        "type": "faq",
+        "label": "Have Questions?",
+        "content": {
+          "subHeading": "Have Questions?",
+          "heading": "Frequently Asked Questions",
+          "faq": [
+            {
+              "question": "What is NVOCC and how does TSV Global operate as one?",
+              "answer": "NVOCC (Non-Vessel\n                                    Operating Common Carrier) is a licensed freight consolidator that issues its own\n                                    House Bills of Lading without owning physical vessels. TSV Global Solutions is a\n                                    licensed NVOCC, allowing us to consolidate cargo (LCL) and book full containers\n                                    (FCL) with major shipping lines, offering you competitive rates and flexible booking\n                                    options worldwide."
+            },
+            {
+              "question": "What types of cargo does TSV Global handle?",
+              "answer": "We handle a wide range of\n                                    cargo categories including General Cargo, Project Cargo, Over-Dimensional Cargo\n                                    (ODC), Hazardous Materials (Dangerous Goods), Perishable Goods,\n                                    Temperature-Controlled Cargo, and Heavy-Lift Equipment. Our specialized teams ensure\n                                    safe and compliant handling for every cargo type."
+            },
+            {
+              "question": "How can I track my shipment in real-time?",
+              "answer": "Once your shipment is\n                                    booked, you will receive a unique tracking reference number. Our operations team\n                                    provides regular status updates via email or WhatsApp at every key milestone —\n                                    vessel departure, arrival at port, customs clearance, and final delivery. A\n                                    dedicated account manager is also available 24/7 for any queries."
+            },
+            {
+              "question": "Does TSV Global handle customs clearance as well?",
+              "answer": "Yes. TSV Global has an\n                                    in-house customs brokerage team with CHA (Customs House Agent) licensing. We handle\n                                    end-to-end customs documentation for both import and export shipments, ensuring\n                                    compliance with Indian Customs regulations and fast clearance with minimal demurrage\n                                    or detention charges."
+            },
+            {
+              "question": "What are your service coverage areas and ports of operation?",
+              "answer": "We operate out of all\n                                    major Indian seaports including Chennai, Mumbai (JNPT), Kolkata, Mundra, and Vizag,\n                                    as well as key international airports. Our global agent network covers 150+\n                                    destinations across Asia, Europe, the Middle East, Americas, and Africa — ensuring\n                                    comprehensive worldwide coverage."
+            },
+            {
+              "question": "How do I get a freight quote from TSV Global?",
+              "answer": "Getting a quote is\n                                    simple! Use our <a href=\"../contact.html\" style=\"color:#c1000a;font-weight:600;\">Contact Us</a> page to submit your\n                                    enquiry with cargo details (origin, destination, weight, dimensions, and commodity).\n                                    Our sales team will respond within 24 hours with a competitive, customized quotation\n                                    tailored to your specific requirements."
+            }
+          ]
+        }
+      },
+      {
+        "type": "cta",
+        "label": "CTA",
+        "content": {
+          "heading": "Ready to Transport <span class=\"hl\">Your Cargo?</span>",
+          "subHeading": "Get Started Today",
+          "description": "Connect with our\n                            expert logistics team today to get a customized, cost-effective shipping solution designed\n                            around your specific business needs.",
+          "primaryBtnText": "Get a Free Quote",
+          "primaryBtnUrl": "/contact"
+        }
+      }
+    ]
+  },
+  {
+    "title": "TSV GLOBAL SOLUTIONS PVT LTD",
+    "slug": "solar-panel",
+    "sections": [
+      {
+        "type": "header",
+        "label": "Page Header",
+        "content": {
+          "subHeading": "Service Details",
+          "heading": "Expert Logistics, <br>Delivered <span>Worldwide</span>",
+          "description": "11+ years of NVOCC, freight forwarding &amp; project cargo expertise — <br>handling every shipment\n                    with precision and care."
+        }
+      },
+      {
+        "type": "service_overview",
+        "label": "Service Overview",
+        "content": {
+          "image": "/assets/img/Services/SOLAR/WhatsApp%20Image%202026-03-05%20at%201.19.50%20PM.jpeg",
+          "imageAlt": "TSV GLOBAL SOLUTIONS PVT LTD",
+          "badge": "Solar Panel Logistics",
+          "badgeIcon": "fa-regular fa-sun",
+          "subHeading": "Service Overview",
+          "heading": "Service Description",
+          "paragraphs": [
+            "TSV Global Solutions provides comprehensive, end-to-end logistics\n                        services tailored to meet the unique demands of each client. From international ocean freight\n                        consolidation to project and over-dimensional cargo, we handle every shipment with the highest\n                        levels of care, precision, and professionalism.",
+            "Our expert operations team works 24/7 to ensure your cargo moves\n                        seamlessly across borders, leveraging deep industry relationships, advanced tracking systems,\n                        and an extensive global agent network to guarantee on-time delivery every time."
+          ],
+          "featureList": [
+            {
+              "icon": "fa-solid fa-check",
+              "text": "FCL &amp; LCL Ocean Freight Consolidation"
+            },
+            {
+              "icon": "fa-solid fa-check",
+              "text": "Multi-modal Transport (Air, Sea &amp; Road)"
+            },
+            {
+              "icon": "fa-solid fa-check",
+              "text": "ISO Certified Quality &amp; Compliance"
+            },
+            {
+              "icon": "fa-solid fa-check",
+              "text": "11+ Years of International Expertise"
+            },
+            {
+              "icon": "fa-solid fa-check",
+              "text": "Real-time Shipment Tracking &amp; Updates"
+            }
+          ],
+          "ctaText": "Request a Quote",
+          "ctaUrl": "/contact"
+        }
+      },
+      {
+        "type": "our_advantage",
+        "label": "Our Advantage",
+        "content": {
+          "subHeading": "Our Advantage",
+          "heading": "Why Choose <span class=\"hl\">TSV Global Solutions?</span>",
+          "cards": [
+            {
+              "title": "Global Network",
+              "description": "A powerful web of international partners, agents, and shipping line contracts ensures your\n                            cargo reaches 150+ global destinations with ease.",
+              "icon": "fa-regular fa-globe",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "Secure &amp; Compliant",
+              "description": "ISO-certified processes and rigorous compliance\n                            standards protect your cargo and ensure all customs regulations are meticulously followed.",
+              "icon": "fa-regular fa-shield-check",
+              "accentColor": "#1a1a2e"
+            },
+            {
+              "title": "On-Time Delivery",
+              "description": "We are committed to strict on-time performance — optimizing every route, mode, and schedule\n                            to keep your supply chain running without interruption.",
+              "icon": "fa-regular fa-clock",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "NVOCC Expertise",
+              "description": "As a licensed NVOCC, we issue our own House Bills of Lading for both FCL and LCL shipments,\n                            offering flexible and competitive ocean freight solutions.",
+              "icon": "logis logis-cruise",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "ODC &amp; Project Cargo",
+              "description": "Specialized handling of over-dimensional &amp; heavy-lift cargo with a dedicated project\n                            team, custom equipment, and end-to-end coordination.",
+              "icon": "logis logis-truck-2",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "24/7 Support",
+              "description": "Your dedicated account manager and our support desk are available around the clock to give\n                            you real-time updates and immediate assistance.",
+              "icon": "fa-regular fa-headset",
+              "accentColor": "#c1000a"
+            }
+          ]
+        }
+      },
+      {
+        "type": "handling_process",
+        "label": "Step By Step",
+        "content": {
+          "subHeading": "Step By Step",
+          "heading": "Our Handling <span class=\"hl\">Process</span>",
+          "steps": [
+            {
+              "number": "01",
+              "title": "Consultation",
+              "subLabel": "(Planning)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "We engage with you to understand\n                            your cargo type, volume, origin, destination, and timelines — then recommend the most\n                            efficient and cost-effective logistics solution."
+              ]
+            },
+            {
+              "number": "02",
+              "title": "Documentation",
+              "subLabel": "(Documentation)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "All shipping documents — Bill of\n                            Lading, Commercial Invoice, Packing List, and Customs Declarations — are meticulously\n                            prepared and verified for accuracy before shipment."
+              ]
+            },
+            {
+              "number": "03",
+              "title": "Transit &amp; Tracking",
+              "subLabel": "(Transit)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "Your cargo moves via the most\n                            suitable mode — ocean, air, or road — with live tracking and proactive milestone updates at\n                            every key checkpoint during transit."
+              ]
+            },
+            {
+              "number": "04",
+              "title": "Delivery &amp; Handover",
+              "subLabel": "(Delivery)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "Cargo is safely delivered and\n                            handed over with full documentation. Our customs team ensures swift clearance and seamless\n                            last-mile delivery to your facility."
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "type": "photo_gallery",
+        "label": "Our Work",
+        "content": {
+          "subHeading": "Our Work",
+          "heading": "Photo Gallery",
+          "images": [
+            {
+              "url": "/assets/img/Services/SOLAR/WhatsApp%20Image%202026-03-05%20at%201.19.50%20PM.jpeg",
+              "alt": "Solar Panel Handling",
+              "caption": "Solar Panel Handling"
+            },
+            {
+              "url": "/assets/img/Services/SOLAR/WhatsApp%20Image%202026-03-05%20at%201.19.51%20PM.jpeg",
+              "alt": "Solar Freight Operations",
+              "caption": "Solar Freight Operations"
+            },
+            {
+              "url": "/assets/img/Services/SOLAR/WhatsApp%20Image%202026-03-05%20at%201.19.51%20PM%20(1).jpeg",
+              "alt": "Solar Export Logistics",
+              "caption": "Solar Export Logistics"
+            },
+            {
+              "url": "/assets/img/Services/SOLAR/WhatsApp%20Image%202026-03-05%20at%201.19.51%20PM%20(2).jpeg",
+              "alt": "Solar Panel Consolidation",
+              "caption": "Solar Panel Consolidation"
+            },
+            {
+              "url": "/assets/img/Services/SOLAR/WhatsApp%20Image%202026-03-05%20at%201.19.51%20PM%20(3).jpeg",
+              "alt": "Solar Cargo at Port",
+              "caption": "Solar Cargo at Port"
+            }
+          ]
+        }
+      },
+      {
+        "type": "faq",
+        "label": "Have Questions?",
+        "content": {
+          "subHeading": "Have Questions?",
+          "heading": "Frequently Asked Questions",
+          "faq": [
+            {
+              "question": "What is NVOCC and how does TSV Global operate as one?",
+              "answer": "NVOCC (Non-Vessel\n                                    Operating Common Carrier) is a licensed freight consolidator that issues its own\n                                    House Bills of Lading without owning physical vessels. TSV Global Solutions is a\n                                    licensed NVOCC, allowing us to consolidate cargo (LCL) and book full containers\n                                    (FCL) with major shipping lines, offering you competitive rates and flexible booking\n                                    options worldwide."
+            },
+            {
+              "question": "What types of cargo does TSV Global handle?",
+              "answer": "We handle a wide range of\n                                    cargo categories including General Cargo, Project Cargo, Over-Dimensional Cargo\n                                    (ODC), Hazardous Materials (Dangerous Goods), Perishable Goods,\n                                    Temperature-Controlled Cargo, and Heavy-Lift Equipment. Our specialized teams ensure\n                                    safe and compliant handling for every cargo type."
+            },
+            {
+              "question": "How can I track my shipment in real-time?",
+              "answer": "Once your shipment is\n                                    booked, you will receive a unique tracking reference number. Our operations team\n                                    provides regular status updates via email or WhatsApp at every key milestone —\n                                    vessel departure, arrival at port, customs clearance, and final delivery. A\n                                    dedicated account manager is also available 24/7 for any queries."
+            },
+            {
+              "question": "Does TSV Global handle customs clearance as well?",
+              "answer": "Yes. TSV Global has an\n                                    in-house customs brokerage team with CHA (Customs House Agent) licensing. We handle\n                                    end-to-end customs documentation for both import and export shipments, ensuring\n                                    compliance with Indian Customs regulations and fast clearance with minimal demurrage\n                                    or detention charges."
+            },
+            {
+              "question": "What are your service coverage areas and ports of operation?",
+              "answer": "We operate out of all\n                                    major Indian seaports including Chennai, Mumbai (JNPT), Kolkata, Mundra, and Vizag,\n                                    as well as key international airports. Our global agent network covers 150+\n                                    destinations across Asia, Europe, the Middle East, Americas, and Africa — ensuring\n                                    comprehensive worldwide coverage."
+            },
+            {
+              "question": "How do I get a freight quote from TSV Global?",
+              "answer": "Getting a quote is\n                                    simple! Use our <a href=\"../contact.html\" style=\"color:#c1000a;font-weight:600;\">Contact Us</a> page to submit your\n                                    enquiry with cargo details (origin, destination, weight, dimensions, and commodity).\n                                    Our sales team will respond within 24 hours with a competitive, customized quotation\n                                    tailored to your specific requirements."
+            }
+          ]
+        }
+      },
+      {
+        "type": "cta",
+        "label": "CTA",
+        "content": {
+          "heading": "Ready to Transport <span class=\"hl\">Your Cargo?</span>",
+          "subHeading": "Get Started Today",
+          "description": "Connect with our\n                            expert logistics team today to get a customized, cost-effective shipping solution designed\n                            around your specific business needs.",
+          "primaryBtnText": "Get a Free Quote",
+          "primaryBtnUrl": "/contact"
+        }
+      }
+    ]
+  },
+  {
+    "title": "TSV GLOBAL SOLUTIONS PVT LTD",
+    "slug": "air-freight",
+    "sections": [
+      {
+        "type": "header",
+        "label": "Page Header",
+        "content": {
+          "subHeading": "Air Freight Services",
+          "heading": "Fast &amp; Secure, <br>Delivered <span>By Air</span>",
+          "description": "Air freight isn't just about speed, it's about trusting that every detail has been handled before your cargo leaves the ground. We manage the entire process in-house for complete peace of mind."
+        }
+      },
+      {
+        "type": "service_overview",
+        "label": "Service Overview",
+        "content": {
+          "image": "assets/img/air.jpg",
+          "imageAlt": "TSV GLOBAL SOLUTIONS PVT LTD",
+          "badge": "Global Air Transit",
+          "badgeIcon": "fa-regular fa-plane-up",
+          "subHeading": "Service Overview",
+          "heading": "Air Freight Solutions",
+          "paragraphs": [
+            "Air freight isn't just about speed; it's about trusting that every detail has been handled before your cargo leaves the ground. At TSV Global, we manage the entire air freight process in-house: booking, documentation, quality assurance, customs clearance, and last-mile delivery.",
+            "We work with a carefully maintained network of airline partners to secure competitive rates and reliable capacity on key international trade lanes. Whether you're shipping high-value equipment, urgent spare parts, perishables, or time-sensitive commercial goods, we match your cargo to the right carrier, the right route, and the right priority level.",
+            "Our team handles all airway bill preparation, export/import declarations, and customs filings so nothing delays your shipment at the origin or destination. You get a single point of contact, real-time status updates, and the peace of mind that comes from working with a team that's done this thousands of times."
+          ],
+          "featureList": [
+            {
+              "icon": "fa-solid fa-check",
+              "text": "Door-to-door and airport-to-airport options"
+            },
+            {
+              "icon": "fa-solid fa-check",
+              "text": "Full charter and consolidated airfreight solutions"
+            },
+            {
+              "icon": "fa-solid fa-check",
+              "text": "Airway bill preparation and export documentation"
+            },
+            {
+              "icon": "fa-solid fa-check",
+              "text": "Customs clearance at origin and destination"
+            },
+            {
+              "icon": "fa-solid fa-check",
+              "text": "Dangerous goods handling (IATA compliant)"
+            },
+            {
+              "icon": "fa-solid fa-check",
+              "text": "Real-time tracking and milestone updates"
+            },
+            {
+              "icon": "fa-solid fa-check",
+              "text": "Secure &amp; Insured Cargo Handling"
+            },
+            {
+              "icon": "fa-solid fa-check",
+              "text": "Industry Standard Packaging Systems"
+            }
+          ],
+          "ctaText": "Request a Quote",
+          "ctaUrl": "/contact"
+        }
+      },
+      {
+        "type": "our_advantage",
+        "label": "Our Advantage",
+        "content": {
+          "subHeading": "Our Advantage",
+          "heading": "Why Choose <span class=\"hl\">TSV Global Solutions?</span>",
+          "cards": [
+            {
+              "title": "Global Network",
+              "description": "Our carefully maintained network of airline partners ensures secure competitive rates and reliable capacity on all key international trade lanes.",
+              "icon": "fa-regular fa-globe",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "Secure &amp; Compliant",
+              "description": "ISO-certified processes and rigorous compliance\n                            standards protect your cargo and ensure all customs regulations are meticulously followed.",
+              "icon": "fa-regular fa-shield-check",
+              "accentColor": "#1a1a2e"
+            },
+            {
+              "title": "On-Time Delivery",
+              "description": "We are committed to strict on-time performance — optimizing every route, mode, and schedule\n                            to keep your supply chain running without interruption.",
+              "icon": "fa-regular fa-clock",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "Priority Handling",
+              "description": "Whether shipping high-value equipment or urgent spare parts, we match your cargo to the right carrier and priority level for the fastest transit.",
+              "icon": "logis logis-cruise",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "Specialized Cargo",
+              "description": "Specialized handling for perishables, dangerous goods (IATA compliant), and time-sensitive commercial cargo with industry-standard packaging.",
+              "icon": "logis logis-truck-2",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "24/7 Support",
+              "description": "Your dedicated account manager and our support desk are available around the clock to give\n                            you real-time updates and immediate assistance.",
+              "icon": "fa-regular fa-headset",
+              "accentColor": "#c1000a"
+            }
+          ]
+        }
+      },
+      {
+        "type": "handling_process",
+        "label": "Step By Step",
+        "content": {
+          "subHeading": "Step By Step",
+          "heading": "Our Handling <span class=\"hl\">Process</span>",
+          "steps": [
+            {
+              "number": "01",
+              "title": "Consultation",
+              "subLabel": "(Planning)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "We engage with you to understand\n                            your cargo type, volume, origin, destination, and timelines — then recommend the most\n                            efficient and cost-effective logistics solution."
+              ]
+            },
+            {
+              "number": "02",
+              "title": "Documentation",
+              "subLabel": "(Documentation)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "Our team handles all Airway Bill\n                            preparation, export/import declarations, and customs filings so nothing delays your shipment\n                            at the origin or destination."
+              ]
+            },
+            {
+              "number": "03",
+              "title": "Transit &amp; Tracking",
+              "subLabel": "(Transit)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "Your cargo takes flight via the\n                            most efficient route. You get a single point of contact and real-time status updates until\n                            the plane touches down."
+              ]
+            },
+            {
+              "number": "04",
+              "title": "Delivery &amp; Handover",
+              "subLabel": "(Delivery)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "Cargo is safely delivered and\n                            handed over with full documentation. Our customs team ensures swift clearance and seamless\n                            last-mile delivery to your facility."
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "type": "photo_gallery",
+        "label": "Our Work",
+        "content": {
+          "subHeading": "Our Work",
+          "heading": "Photo Gallery",
+          "images": [
+            {
+              "url": "https://via.placeholder.com/600x420/1a1a2e/ffffff?text=Cargo+Operations+%231",
+              "alt": "Cargo Operations",
+              "caption": "Cargo Operations"
+            },
+            {
+              "url": "https://via.placeholder.com/600x420/c1000a/ffffff?text=Port+Handling+%232",
+              "alt": "Port Handling",
+              "caption": "Port Handling"
+            },
+            {
+              "url": "https://via.placeholder.com/600x420/1a1a2e/ffffff?text=Freight+Forwarding+%233",
+              "alt": "Freight Forwarding",
+              "caption": "Freight Forwarding"
+            },
+            {
+              "url": "https://via.placeholder.com/600x420/c1000a/ffffff?text=Project+Cargo+%234",
+              "alt": "Project Cargo",
+              "caption": "Project Cargo"
+            },
+            {
+              "url": "https://via.placeholder.com/600x420/1a1a2e/ffffff?text=Custom+Clearance+%235",
+              "alt": "Custom Clearance",
+              "caption": "Custom Clearance"
+            }
+          ]
+        }
+      },
+      {
+        "type": "faq",
+        "label": "Have Questions?",
+        "content": {
+          "subHeading": "Have Questions?",
+          "heading": "Frequently Asked Questions",
+          "faq": [
+            {
+              "question": "What is NVOCC and how does TSV Global operate as one?",
+              "answer": "NVOCC (Non-Vessel\n                                    Operating Common Carrier) is a licensed freight consolidator that issues its own\n                                    House Bills of Lading without owning physical vessels. TSV Global Solutions is a\n                                    licensed NVOCC, allowing us to consolidate cargo (LCL) and book full containers\n                                    (FCL) with major shipping lines, offering you competitive rates and flexible booking\n                                    options worldwide."
+            },
+            {
+              "question": "What types of cargo does TSV Global handle?",
+              "answer": "We handle a wide range of\n                                    cargo categories including General Cargo, Project Cargo, Over-Dimensional Cargo\n                                    (ODC), Hazardous Materials (Dangerous Goods), Perishable Goods,\n                                    Temperature-Controlled Cargo, and Heavy-Lift Equipment. Our specialized teams ensure\n                                    safe and compliant handling for every cargo type."
+            },
+            {
+              "question": "How can I track my shipment in real-time?",
+              "answer": "Once your shipment is\n                                    booked, you will receive a unique tracking reference number. Our operations team\n                                    provides regular status updates via email or WhatsApp at every key milestone —\n                                    vessel departure, arrival at port, customs clearance, and final delivery. A\n                                    dedicated account manager is also available 24/7 for any queries."
+            },
+            {
+              "question": "Does TSV Global handle customs clearance as well?",
+              "answer": "Yes. TSV Global has an\n                                    in-house customs brokerage team with CHA (Customs House Agent) licensing. We handle\n                                    end-to-end customs documentation for both import and export shipments, ensuring\n                                    compliance with Indian Customs regulations and fast clearance with minimal demurrage\n                                    or detention charges."
+            },
+            {
+              "question": "What are your service coverage areas and ports of operation?",
+              "answer": "We operate out of all\n                                    major Indian seaports including Chennai, Mumbai (JNPT), Kolkata, Mundra, and Vizag,\n                                    as well as key international airports. Our global agent network covers 150+\n                                    destinations across Asia, Europe, the Middle East, Americas, and Africa — ensuring\n                                    comprehensive worldwide coverage."
+            },
+            {
+              "question": "How do I get a freight quote from TSV Global?",
+              "answer": "Getting a quote is\n                                    simple! Use our <a href=\"contact.html\" style=\"color:#c1000a;font-weight:600;\">Contact Us</a> page to submit your\n                                    enquiry with cargo details (origin, destination, weight, dimensions, and commodity).\n                                    Our sales team will respond within 24 hours with a competitive, customized quotation\n                                    tailored to your specific requirements."
+            }
+          ]
+        }
+      },
+      {
+        "type": "cta",
+        "label": "CTA",
+        "content": {
+          "heading": "Ready to Transport <span class=\"hl\">Your Cargo?</span>",
+          "subHeading": "Get Started Today",
+          "description": "Connect with our expert logistics team today to get a customized, cost-effective shipping solution designed around your specific business needs.",
+          "primaryBtnText": "Get a Free Quote",
+          "primaryBtnUrl": "/contact"
+        }
+      }
+    ]
+  },
+  {
+    "title": "TSV GLOBAL SOLUTIONS PVT LTD",
+    "slug": "sea-freight",
+    "sections": [
+      {
+        "type": "header",
+        "label": "Page Header",
+        "content": {
+          "subHeading": "Sea Freight Services",
+          "heading": "Global Reach, <br>Delivered <span>By Ocean</span>",
+          "description": "Ocean freight is the backbone of global trade. As a licensed NVOCC, we issue our own House Bills of Lading and take direct responsibility for your cargo from port to port."
+        }
+      },
+      {
+        "type": "service_overview",
+        "label": "Service Overview",
+        "content": {
+          "image": "assets/img/aerial-view-container-cargo-ship-sea.jpg",
+          "imageAlt": "TSV GLOBAL SOLUTIONS PVT LTD",
+          "badge": "NVOCC Licensed",
+          "badgeIcon": "fa-regular fa-ship",
+          "subHeading": "Service Overview",
+          "heading": "Sea Freight Solutions",
+          "paragraphs": [
+            "Ocean freight is the backbone of global trade — and for most businesses, it's where logistics partnerships are truly tested. TSV Global holds a licensed NVOCC status, which means we don't just book space on vessels; we issue our own House Bills of Lading and take direct responsibility for your cargo from port to port.",
+            "This gives our clients something most freight forwarders can't offer: greater price flexibility, better space availability, and a single accountable partner across the entire ocean leg. Whether you need a full container (FCL) for high-volume shipments or a consolidated solution (LCL) to share container space cost-effectively, we'll structure the right arrangement for your cargo and timeline.",
+            "Our relationships with major shipping lines across all major trade lanes mean we can secure reliable capacity even during peak seasons and our documentation team ensures every Bill of Lading, certificate of origin, and customs declaration is accurate and ready before your vessel departs."
+          ],
+          "featureList": [
+            {
+              "icon": "fa-solid fa-check",
+              "text": "FCL and LCL"
+            },
+            {
+              "icon": "fa-solid fa-check",
+              "text": "House Bill of Lading issuance as a licensed NVOCC"
+            },
+            {
+              "icon": "fa-solid fa-check",
+              "text": "Ocean freight consolidation and deconsolidation"
+            },
+            {
+              "icon": "fa-solid fa-check",
+              "text": "Port-to-port and door-to-door delivery"
+            },
+            {
+              "icon": "fa-solid fa-check",
+              "text": "Break-bulk and project cargo by sea"
+            },
+            {
+              "icon": "fa-solid fa-check",
+              "text": "Pre-shipment documentation and customs filing"
+            },
+            {
+              "icon": "fa-solid fa-check",
+              "text": "Live shipment tracking across all active voyages"
+            }
+          ],
+          "ctaText": "Request a Quote",
+          "ctaUrl": "/contact"
+        }
+      },
+      {
+        "type": "our_advantage",
+        "label": "Our Advantage",
+        "content": {
+          "subHeading": "Our Advantage",
+          "heading": "Why Choose <span class=\"hl\">TSV Global Solutions?</span>",
+          "cards": [
+            {
+              "title": "Global Network",
+              "description": "Our strong relationships with major shipping lines across all key trade lanes ensure we secure reliable capacity even during peak seasons for our clients.",
+              "icon": "fa-regular fa-globe",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "Secure &amp; Compliant",
+              "description": "ISO-certified processes and rigorous compliance\n                            standards protect your cargo and ensure all customs regulations are meticulously followed.",
+              "icon": "fa-regular fa-shield-check",
+              "accentColor": "#1a1a2e"
+            },
+            {
+              "title": "On-Time Delivery",
+              "description": "We are committed to strict on-time performance — optimizing every route, mode, and schedule\n                            to keep your supply chain running without interruption.",
+              "icon": "fa-regular fa-clock",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "Direct Accountability",
+              "description": "As a licensed NVOCC, we issue our own House Bills of Lading, giving you greater price flexibility and a single accountable partner across the ocean leg.",
+              "icon": "logis logis-cruise",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "ODC &amp; Project Cargo",
+              "description": "Expert handling for FCL, LCL, break-bulk, and project cargo by sea, with meticulous attention to consolidation and deconsolidation at ports.",
+              "icon": "logis logis-truck-2",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "24/7 Support",
+              "description": "Your dedicated account manager and our support desk are available around the clock to give\n                            you real-time updates and immediate assistance.",
+              "icon": "fa-regular fa-headset",
+              "accentColor": "#c1000a"
+            }
+          ]
+        }
+      },
+      {
+        "type": "handling_process",
+        "label": "Step By Step",
+        "content": {
+          "subHeading": "Step By Step",
+          "heading": "Our Handling <span class=\"hl\">Process</span>",
+          "steps": [
+            {
+              "number": "01",
+              "title": "Consultation",
+              "subLabel": "(Planning)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "We engage with you to understand\n                            your cargo type, volume, origin, destination, and timelines — then recommend the most\n                            efficient and cost-effective logistics solution."
+              ]
+            },
+            {
+              "number": "02",
+              "title": "Documentation",
+              "subLabel": "(Documentation)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "Our team ensures every Bill of\n                            Lading, certificate of origin, and customs declaration is accurate and ready before your\n                            vessel departs, preventing any delays at the port."
+              ]
+            },
+            {
+              "number": "03",
+              "title": "Transit &amp; Tracking",
+              "subLabel": "(Transit)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "Your cargo moves across major\n                            shipping lanes with live tracking across all active voyages. We manage the entire ocean leg\n                            with proactive milestone updates until port arrival."
+              ]
+            },
+            {
+              "number": "04",
+              "title": "Delivery &amp; Handover",
+              "subLabel": "(Delivery)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "Cargo is safely delivered and\n                            handed over with full documentation. Our customs team ensures swift clearance and seamless\n                            last-mile delivery to your facility."
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "type": "photo_gallery",
+        "label": "Our Work",
+        "content": {
+          "subHeading": "Our Work",
+          "heading": "Photo Gallery",
+          "images": [
+            {
+              "url": "https://via.placeholder.com/600x420/1a1a2e/ffffff?text=Cargo+Operations+%231",
+              "alt": "Cargo Operations",
+              "caption": "Cargo Operations"
+            },
+            {
+              "url": "https://via.placeholder.com/600x420/c1000a/ffffff?text=Port+Handling+%232",
+              "alt": "Port Handling",
+              "caption": "Port Handling"
+            },
+            {
+              "url": "https://via.placeholder.com/600x420/1a1a2e/ffffff?text=Freight+Forwarding+%233",
+              "alt": "Freight Forwarding",
+              "caption": "Freight Forwarding"
+            },
+            {
+              "url": "https://via.placeholder.com/600x420/c1000a/ffffff?text=Project+Cargo+%234",
+              "alt": "Project Cargo",
+              "caption": "Project Cargo"
+            },
+            {
+              "url": "https://via.placeholder.com/600x420/1a1a2e/ffffff?text=Custom+Clearance+%235",
+              "alt": "Custom Clearance",
+              "caption": "Custom Clearance"
+            }
+          ]
+        }
+      },
+      {
+        "type": "faq",
+        "label": "Have Questions?",
+        "content": {
+          "subHeading": "Have Questions?",
+          "heading": "Frequently Asked Questions",
+          "faq": [
+            {
+              "question": "What is NVOCC and how does TSV Global operate as one?",
+              "answer": "NVOCC (Non-Vessel\n                                    Operating Common Carrier) is a licensed freight consolidator that issues its own\n                                    House Bills of Lading without owning physical vessels. TSV Global Solutions is a\n                                    licensed NVOCC, allowing us to consolidate cargo (LCL) and book full containers\n                                    (FCL) with major shipping lines, offering you competitive rates and flexible booking\n                                    options worldwide."
+            },
+            {
+              "question": "What types of cargo does TSV Global handle?",
+              "answer": "We handle a wide range of\n                                    cargo categories including General Cargo, Project Cargo, Over-Dimensional Cargo\n                                    (ODC), Hazardous Materials (Dangerous Goods), Perishable Goods,\n                                    Temperature-Controlled Cargo, and Heavy-Lift Equipment. Our specialized teams ensure\n                                    safe and compliant handling for every cargo type."
+            },
+            {
+              "question": "How can I track my shipment in real-time?",
+              "answer": "Once your shipment is\n                                    booked, you will receive a unique tracking reference number. Our operations team\n                                    provides regular status updates via email or WhatsApp at every key milestone —\n                                    vessel departure, arrival at port, customs clearance, and final delivery. A\n                                    dedicated account manager is also available 24/7 for any queries."
+            },
+            {
+              "question": "Does TSV Global handle customs clearance as well?",
+              "answer": "Yes. TSV Global has an\n                                    in-house customs brokerage team with CHA (Customs House Agent) licensing. We handle\n                                    end-to-end customs documentation for both import and export shipments, ensuring\n                                    compliance with Indian Customs regulations and fast clearance with minimal demurrage\n                                    or detention charges."
+            },
+            {
+              "question": "What are your service coverage areas and ports of operation?",
+              "answer": "We operate out of all\n                                    major Indian seaports including Chennai, Mumbai (JNPT), Kolkata, Mundra, and Vizag,\n                                    as well as key international airports. Our global agent network covers 150+\n                                    destinations across Asia, Europe, the Middle East, Americas, and Africa — ensuring\n                                    comprehensive worldwide coverage."
+            },
+            {
+              "question": "How do I get a freight quote from TSV Global?",
+              "answer": "Getting a quote is\n                                    simple! Use our <a href=\"contact.html\" style=\"color:#c1000a;font-weight:600;\">Contact Us</a> page to submit your\n                                    enquiry with cargo details (origin, destination, weight, dimensions, and commodity).\n                                    Our sales team will respond within 24 hours with a competitive, customized quotation\n                                    tailored to your specific requirements."
+            }
+          ]
+        }
+      },
+      {
+        "type": "cta",
+        "label": "CTA",
+        "content": {
+          "heading": "Ready to Transport <span class=\"hl\">Your Cargo?</span>",
+          "subHeading": "Get Started Today",
+          "description": "Connect with our expert logistics team today to get a customized, cost-effective shipping solution designed around your specific business needs.",
+          "primaryBtnText": "Get a Free Quote",
+          "primaryBtnUrl": "/contact"
+        }
+      }
+    ]
+  },
+  {
+    "title": "TSV GLOBAL SOLUTIONS PVT LTD",
+    "slug": "road-freight",
+    "sections": [
+      {
+        "type": "header",
+        "label": "Page Header",
+        "content": {
+          "subHeading": "Road Freight Services",
+          "heading": "Total Connectivity, <br>Delivered <span>By Road</span>",
+          "description": "The first and last mile often makes or breaks a shipment. TSV Global's transportation team manages ground movement across India with precision, ensuring your cargo reaches its destination safely and on time."
+        }
+      },
+      {
+        "type": "service_overview",
+        "label": "Service Overview",
+        "content": {
+          "image": "assets/img/road-freight-2.jpg",
+          "imageAlt": "TSV GLOBAL SOLUTIONS PVT LTD",
+          "badge": "Domestic & Border Transit",
+          "badgeIcon": "fa-regular fa-truck",
+          "subHeading": "Service Overview",
+          "heading": "Road Freight Solutions",
+          "paragraphs": [
+            "The first and last mile often makes or breaks a shipment. No matter how smoothly an ocean or air leg runs, the cargo isn't truly delivered until it reaches its destination safely and on time. TSV Global's transportation team manages ground movement across India with the same attention to detail we bring to every other part of the journey.",
+            "We operate a fleet of standard and specialist vehicles capable of handling everything from containerised cargo to heavy machinery and over-dimensional loads. Our drivers and operations coordinators are experienced in navigating port procedures, industrial zones, and long-haul inter-city routes ensuring smooth handoffs at every transfer point.",
+            "For clients who need a fully integrated solution, our road transport works seamlessly alongside our ocean, air, and customs clearance services — so there's no gap in accountability between modes, and no chasing multiple vendors to find out where your cargo is."
+          ],
+          "featureList": [
+            {
+              "icon": "fa-solid fa-check",
+              "text": "Port pickup and delivery across all major Indian ports"
+            },
+            {
+              "icon": "fa-solid fa-check",
+              "text": "FTL and LTL"
+            },
+            {
+              "icon": "fa-solid fa-check",
+              "text": "Route Survey &amp; Feasibility Analysis"
+            },
+            {
+              "icon": "fa-solid fa-check",
+              "text": "Specialist vehicles for ODC and heavy-lift cargo"
+            },
+            {
+              "icon": "fa-solid fa-check",
+              "text": "Inter-city and pan-India transportation"
+            },
+            {
+              "icon": "fa-solid fa-check",
+              "text": "Containerised and flat bed transport options"
+            },
+            {
+              "icon": "fa-solid fa-check",
+              "text": "Coordinated handoff with customs clearance and warehousing"
+            },
+            {
+              "icon": "fa-solid fa-check",
+              "text": "GPS-tracked fleet with real-time delivery updates"
+            },
+            {
+              "icon": "fa-solid fa-check",
+              "text": "Escort Vehicle Support"
+            },
+            {
+              "icon": "fa-solid fa-check",
+              "text": "CAPEX Machinery Transportation"
+            }
+          ],
+          "ctaText": "Request a Quote",
+          "ctaUrl": "/contact"
+        }
+      },
+      {
+        "type": "our_advantage",
+        "label": "Our Advantage",
+        "content": {
+          "subHeading": "Our Advantage",
+          "heading": "Why Choose <span class=\"hl\">TSV Global Solutions?</span>",
+          "cards": [
+            {
+              "title": "Global Network",
+              "description": "Our expansive domestic network connects all major Indian ports, industrial corridors, and warehouses, ensuring smooth cargo movement across the entire country.",
+              "icon": "fa-regular fa-globe",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "Secure &amp; Compliant",
+              "description": "ISO-certified processes and rigorous compliance\n                            standards protect your cargo and ensure all customs regulations are meticulously followed.",
+              "icon": "fa-regular fa-shield-check",
+              "accentColor": "#1a1a2e"
+            },
+            {
+              "title": "On-Time Delivery",
+              "description": "We are committed to strict on-time performance — optimizing every route, mode, and schedule\n                            to keep your supply chain running without interruption.",
+              "icon": "fa-regular fa-clock",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "Specialist Fleet",
+              "description": "We operate a versatile fleet of standard and specialist vehicles, including flat-beds and low-beds, to handle everything from containers to CAPEX machinery.",
+              "icon": "logis logis-cruise",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "ODC &amp; Project Cargo",
+              "description": "End-to-end management of over-dimensional cargo with route surveys, feasibility analysis, and escort vehicle support for total safety.",
+              "icon": "logis logis-truck-2",
+              "accentColor": "#c1000a"
+            },
+            {
+              "title": "24/7 Support",
+              "description": "Your dedicated account manager and our support desk are available around the clock to give\n                            you real-time updates and immediate assistance.",
+              "icon": "fa-regular fa-headset",
+              "accentColor": "#c1000a"
+            }
+          ]
+        }
+      },
+      {
+        "type": "handling_process",
+        "label": "Step By Step",
+        "content": {
+          "subHeading": "Step By Step",
+          "heading": "Our Handling <span class=\"hl\">Process</span>",
+          "steps": [
+            {
+              "number": "01",
+              "title": "Consultation",
+              "subLabel": "(Planning)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "We engage with you to understand\n                            your cargo type, volume, origin, destination, and timelines — then recommend the most\n                            efficient and cost-effective logistics solution."
+              ]
+            },
+            {
+              "number": "02",
+              "title": "Documentation",
+              "subLabel": "(Documentation)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "All shipping documents — Bill of\n                            Lading, Commercial Invoice, Packing List, and Customs Declarations — are meticulously\n                            prepared and verified for accuracy before shipment."
+              ]
+            },
+            {
+              "number": "03",
+              "title": "Transit &amp; Tracking",
+              "subLabel": "(Transit)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "Your cargo moves via a GPS-tracked\n                            fleet across optimized inter-city routes. We ensure smooth handoffs at ports and industrial\n                            zones with real-time delivery updates."
+              ]
+            },
+            {
+              "number": "04",
+              "title": "Delivery &amp; Handover",
+              "subLabel": "(Delivery)",
+              "icon": "/assets/img/icons/plan-design.svg",
+              "items": [
+                "Cargo is safely delivered and\n                            handed over with full documentation. Our customs team ensures swift clearance and seamless\n                            last-mile delivery to your facility."
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "type": "photo_gallery",
+        "label": "Our Work",
+        "content": {
+          "subHeading": "Our Work",
+          "heading": "Photo Gallery",
+          "images": [
+            {
+              "url": "https://via.placeholder.com/600x420/1a1a2e/ffffff?text=Cargo+Operations+%231",
+              "alt": "Cargo Operations",
+              "caption": "Cargo Operations"
+            },
+            {
+              "url": "https://via.placeholder.com/600x420/c1000a/ffffff?text=Port+Handling+%232",
+              "alt": "Port Handling",
+              "caption": "Port Handling"
+            },
+            {
+              "url": "https://via.placeholder.com/600x420/1a1a2e/ffffff?text=Freight+Forwarding+%233",
+              "alt": "Freight Forwarding",
+              "caption": "Freight Forwarding"
+            },
+            {
+              "url": "https://via.placeholder.com/600x420/c1000a/ffffff?text=Project+Cargo+%234",
+              "alt": "Project Cargo",
+              "caption": "Project Cargo"
+            },
+            {
+              "url": "https://via.placeholder.com/600x420/1a1a2e/ffffff?text=Custom+Clearance+%235",
+              "alt": "Custom Clearance",
+              "caption": "Custom Clearance"
+            }
+          ]
+        }
+      },
+      {
+        "type": "faq",
+        "label": "Have Questions?",
+        "content": {
+          "subHeading": "Have Questions?",
+          "heading": "Frequently Asked Questions",
+          "faq": [
+            {
+              "question": "What is NVOCC and how does TSV Global operate as one?",
+              "answer": "NVOCC (Non-Vessel\n                                    Operating Common Carrier) is a licensed freight consolidator that issues its own\n                                    House Bills of Lading without owning physical vessels. TSV Global Solutions is a\n                                    licensed NVOCC, allowing us to consolidate cargo (LCL) and book full containers\n                                    (FCL) with major shipping lines, offering you competitive rates and flexible booking\n                                    options worldwide."
+            },
+            {
+              "question": "What types of cargo does TSV Global handle?",
+              "answer": "We handle a wide range of\n                                    cargo categories including General Cargo, Project Cargo, Over-Dimensional Cargo\n                                    (ODC), Hazardous Materials (Dangerous Goods), Perishable Goods,\n                                    Temperature-Controlled Cargo, and Heavy-Lift Equipment. Our specialized teams ensure\n                                    safe and compliant handling for every cargo type."
+            },
+            {
+              "question": "How can I track my shipment in real-time?",
+              "answer": "Once your shipment is\n                                    booked, you will receive a unique tracking reference number. Our operations team\n                                    provides regular status updates via email or WhatsApp at every key milestone —\n                                    vessel departure, arrival at port, customs clearance, and final delivery. A\n                                    dedicated account manager is also available 24/7 for any queries."
+            },
+            {
+              "question": "Does TSV Global handle customs clearance as well?",
+              "answer": "Yes. TSV Global has an\n                                    in-house customs brokerage team with CHA (Customs House Agent) licensing. We handle\n                                    end-to-end customs documentation for both import and export shipments, ensuring\n                                    compliance with Indian Customs regulations and fast clearance with minimal demurrage\n                                    or detention charges."
+            },
+            {
+              "question": "What are your service coverage areas and ports of operation?",
+              "answer": "We operate out of all\n                                    major Indian seaports including Chennai, Mumbai (JNPT), Kolkata, Mundra, and Vizag,\n                                    as well as key international airports. Our global agent network covers 150+\n                                    destinations across Asia, Europe, the Middle East, Americas, and Africa — ensuring\n                                    comprehensive worldwide coverage."
+            },
+            {
+              "question": "How do I get a freight quote from TSV Global?",
+              "answer": "Getting a quote is\n                                    simple! Use our <a href=\"contact.html\" style=\"color:#c1000a;font-weight:600;\">Contact Us</a> page to submit your\n                                    enquiry with cargo details (origin, destination, weight, dimensions, and commodity).\n                                    Our sales team will respond within 24 hours with a competitive, customized quotation\n                                    tailored to your specific requirements."
+            }
+          ]
+        }
+      },
+      {
+        "type": "cta",
+        "label": "CTA",
+        "content": {
+          "heading": "Ready to Transport <span class=\"hl\">Your Cargo?</span>",
+          "subHeading": "Get Started Today",
+          "description": "Connect with our\n                            expert logistics team today to get a customized, cost-effective shipping solution designed\n                            around your specific business needs.",
+          "primaryBtnText": "Get a Free Quote",
+          "primaryBtnUrl": "/contact"
+        }
+      }
+    ]
+  }
+]

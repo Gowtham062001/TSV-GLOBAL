@@ -1,0 +1,38 @@
+[
+  {
+    "url": "/assets/img/wca-conference/IMG_20260312_165137_322.webp",
+    "alt": "Global Logistics Conference",
+    "category": "Logistics",
+    "caption": "Efficient cargo handling discussion."
+  },
+  {
+    "url": "/assets/img/mumbai-branch-office/mumbai-1.webp",
+    "alt": "TSV Navi Mumbai Office",
+    "category": "Branch",
+    "caption": "Our new Navi Mumbai branch."
+  },
+  {
+    "url": "/assets/img/aerial-view-container-cargo-ship-sea.jpg",
+    "alt": "Ocean Freight Vessel",
+    "category": "Sea Freight",
+    "caption": "International shipping routes."
+  },
+  {
+    "url": "/assets/img/air.jpg",
+    "alt": "Air Freight Loading",
+    "category": "Air Freight",
+    "caption": "Priority air cargo handling."
+  },
+  {
+    "url": "/assets/img/wca-conference/IMG_20260311_165822_548.webp",
+    "alt": "Network Partners",
+    "category": "Partnerships",
+    "caption": "Strategic global alliances."
+  },
+  {
+    "url": "/assets/img/project_cargo.png",
+    "alt": "Project Cargo Movement",
+    "category": "Project Cargo",
+    "caption": "End-to-end project cargo optimization."
+  }
+]

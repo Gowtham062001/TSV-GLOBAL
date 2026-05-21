@@ -1,0 +1,1144 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* Premium button hover effects */
+.default-btn {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.default-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.default-btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.default-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================================
+   2. PREMIUM GRADIENT BACKGROUNDS
+   ============================================ */
+
+.gradient-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.gradient-secondary {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.gradient-success {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ============================================
+   3. PREMIUM CARD EFFECTS
+   ============================================ */
+
+.service-card,
+.team-item,
+.post-card {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.service-card:hover,
+.team-item:hover,
+.post-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+/* Glassmorphism effect */
+.glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   4. PREMIUM LOADING ANIMATIONS
+   ============================================ */
+
+/* Page loader */
+.page-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.page-loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader-spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #667eea;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* ============================================
+   5. PREMIUM FLOATING ELEMENTS
+   ============================================ */
+
+/* Call-to-action floating button */
+.cta-float {
+    position: fixed;
+    bottom: 90px;
+    right: 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 50px;
+    padding: 12px 20px;
+    box-shadow: 0 8px 30px rgba(102, 126, 234, 0.4);
+    z-index: 999;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.cta-float:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(102, 126, 234, 0.6);
+    color: white;
+}
+
+/* ============================================
+   6. PREMIUM FORM STYLES
+   ============================================ */
+
+.form-control {
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 12px 20px;
+    transition: all 0.3s ease;
+    font-size: 15px;
+}
+
+.form-control:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+    outline: none;
+}
+
+.form-control::placeholder {
+    color: #999;
+}
+
+/* Floating label effect */
+.form-group-float {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.form-group-float input,
+.form-group-float textarea {
+    width: 100%;
+    padding: 15px 20px 5px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.form-group-float label {
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    color: #999;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.form-group-float input:focus+label,
+.form-group-float input:not(:placeholder-shown)+label,
+.form-group-float textarea:focus+label,
+.form-group-float textarea:not(:placeholder-shown)+label {
+    top: 5px;
+    font-size: 12px;
+    color: #667eea;
+}
+
+/* ============================================
+   7. PREMIUM STATISTICS COUNTER
+   ============================================ */
+
+.stats-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.stats-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="white" opacity="0.1"/></svg>');
+    animation: movePattern 20s linear infinite;
+}
+
+@keyframes movePattern {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+
+    100% {
+        transform: translateX(100px) translateY(100px);
+    }
+}
+
+.stat-item {
+    text-align: center;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.stat-number {
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, #fff, #f0f0f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.stat-label {
+    font-size: 18px;
+    opacity: 0.9;
+    font-weight: 500;
+}
+
+/* ============================================
+   8. PREMIUM TESTIMONIAL CARDS
+   ============================================ */
+
+.testimonial-item {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.testimonial-item::before {
+    content: '"';
+    position: absolute;
+    top: -20px;
+    left: 30px;
+    font-size: 100px;
+    color: #667eea;
+    opacity: 0.1;
+    font-family: inherit;
+}
+
+.testimonial-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* ============================================
+   9. PREMIUM TIMELINE
+   ============================================ */
+
+.timeline {
+    position: relative;
+    padding: 40px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, #667eea, #764ba2);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+    width: calc(50% - 40px);
+}
+
+.timeline-item:nth-child(odd) {
+    margin-left: auto;
+    padding-left: 40px;
+}
+
+.timeline-item:nth-child(even) {
+    text-align: right;
+    padding-right: 40px;
+}
+
+.timeline-year {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 4px solid #667eea;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.2);
+}
+
+.timeline-item:nth-child(odd)::before {
+    left: -50px;
+}
+
+.timeline-item:nth-child(even)::before {
+    right: -50px;
+}
+
+/* ============================================
+   10. PREMIUM BADGES & TAGS
+   ============================================ */
+
+.badge-premium {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-new {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+}
+
+.badge-featured {
+    background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);
+    color: white;
+}
+
+.badge-certified {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+}
+
+/* ============================================
+   11. PREMIUM HOVER EFFECTS FOR IMAGES
+   ============================================ */
+
+.image-hover-zoom {
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.image-hover-zoom img {
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.image-hover-zoom:hover img {
+    transform: scale(1.1);
+}
+
+/* Image overlay effect */
+.image-overlay {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.image-overlay::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.8) 0%, rgba(118, 75, 162, 0.8) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.image-overlay:hover::after {
+    opacity: 1;
+}
+
+/* ============================================
+   12. PREMIUM SCROLL PROGRESS BAR
+   ============================================ */
+
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: linear-gradient(to right, #667eea, #764ba2);
+    z-index: 9999;
+    transition: width 0.1s ease;
+}
+
+/* ============================================
+   13. PREMIUM SECTION DIVIDERS
+   ============================================ */
+
+.section-divider {
+    position: relative;
+    height: 100px;
+    overflow: hidden;
+}
+
+.section-divider svg {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Wave divider */
+.wave-divider {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* ============================================
+   14. PREMIUM PRICING TABLES
+   ============================================ */
+
+.pricing-card {
+    background: white;
+    border-radius: 16px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(to right, #667eea, #764ba2);
+}
+
+.pricing-card.featured {
+    transform: scale(1.05);
+    box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.pricing-price {
+    font-size: 48px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ============================================
+   15. PREMIUM NOTIFICATION TOAST
+   ============================================ */
+
+.toast-notification {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: white;
+    border-radius: 12px;
+    padding: 20px 25px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    z-index: 9999;
+    animation: slideInRight 0.4s ease;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.toast-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+/* ============================================
+   16. PREMIUM ACCESSIBILITY
+   ============================================ */
+
+/* Skip to main content link */
+.skip-to-main {
+    position: absolute;
+    left: -9999px;
+    z-index: 999;
+    padding: 1em;
+    background-color: #667eea;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.skip-to-main:focus {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10px;
+}
+
+/* Focus indicators */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 3px solid #667eea;
+    outline-offset: 2px;
+}
+
+/* ============================================
+   17. PREMIUM MOBILE OPTIMIZATIONS
+   ============================================ */
+
+@media (max-width: 768px) {
+
+    .stat-number {
+        font-size: 40px;
+    }
+
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 60px !important;
+        text-align: left !important;
+    }
+
+    .timeline-item::before {
+        left: 10px !important;
+    }
+}
+
+/* ============================================
+   18. PREMIUM DARK MODE SUPPORT
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
+    .glass-card {
+        background: rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* ============================================
+   19. PREMIUM UTILITY CLASSES
+   ============================================ */
+
+.text-gradient {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.shadow-premium {
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.shadow-premium-hover:hover {
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
+}
+
+.border-gradient {
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    position: relative;
+}
+
+.border-gradient::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: inherit;
+    z-index: -1;
+}
+
+/* ============================================
+   20. PREMIUM PRINT STYLES
+   ============================================ */
+
+@media print {
+
+    .cta-float,
+    .scroll-progress,
+    .toast-notification {
+        display: none !important;
+    }
+
+    * {
+        background: white !important;
+        color: black !important;
+    }
+}
+
+/* ============================================
+   21. PREMIUM MARQUEE EFFECT
+   ============================================ */
+.running-text {
+    background: #c1000a;
+    padding: 25px 0;
+    overflow: hidden;
+}
+
+.premium-marquee {
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: 40px;
+    position: relative;
+}
+
+.marquee-content {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    min-width: 100%;
+    gap: 40px;
+    animation: marquee-scroll 30s linear infinite;
+}
+
+.marquee-content li {
+    list-style: none;
+    font-family: inherit;
+    font-size: 22px;
+    font-weight: 600;
+    color: #ffffff;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+@keyframes marquee-scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.running-text:hover .marquee-content {
+    animation-play-state: paused;
+}
+
+/* ============================================
+   22. GLOBAL HIDES
+   ============================================ */
+.testimonial-area,
+.review-section,
+.promo-item-wrapper {
+    display: none !important;
+}
+/* ============================================
+   23. TSV CUSTOM NAVBAR STYLES
+   ============================================ */
+
+.tsv-navbar {
+    background: #ffffff;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 16px rgba(44, 54, 143, 0.10);
+}
+
+.navbar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo img {
+    height: 60px;
+    width: auto;
+}
+
+.tsv-nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.tsv-nav-links > li {
+    position: relative;
+}
+
+.tsv-nav-links > li > a {
+    color: #2C368F;
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 0;
+    transition: color 0.3s ease;
+}
+
+.tsv-nav-links > li:hover > a {
+    color: #ED2224;
+}
+
+.nav-arrow {
+    font-size: 10px;
+    opacity: 0.6;
+    transition: transform 0.3s ease;
+}
+
+.tsv-nav-links > li:hover .nav-arrow {
+    transform: rotate(180deg);
+}
+
+/* Dropdowns */
+.tsv-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #ffffff;
+    min-width: 240px;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(44, 54, 143, 0.15);
+    border: 1px solid rgba(44, 54, 143, 0.05);
+    padding: 15px 0;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tsv-nav-links > li:hover .tsv-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.tsv-dropdown li {
+    position: relative;
+}
+
+.tsv-dropdown li a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 25px;
+    color: #444;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.tsv-dropdown li a:hover {
+    background: rgba(237, 34, 36, 0.05);
+    color: #ED2224;
+    padding-left: 30px;
+}
+
+/* Submenu */
+.tsv-submenu {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background: #ffffff;
+    min-width: 200px;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(44, 54, 143, 0.15);
+    padding: 15px 0;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(10px);
+    transition: all 0.3s ease;
+}
+
+.has-submenu:hover .tsv-submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+/* CTA */
+.tsv-nav-cta {
+    background: #ED2224;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(237, 34, 36, 0.3);
+}
+
+.tsv-nav-cta:hover {
+    background: #2C368F;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(44, 54, 143, 0.4);
+    color: #ffffff;
+}
+
+/* Hamburger */
+.tsv-hamburger {
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    color: #2C368F;
+    cursor: pointer;
+    padding: 5px;
+}
+
+/* Mobile Drawer */
+.tsv-mobile-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.tsv-mobile-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.tsv-mobile-drawer {
+    position: fixed;
+    top: 0;
+    right: -320px;
+    width: 320px;
+    height: 100%;
+    background: #ffffff;
+    z-index: 2001;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+}
+
+.tsv-mobile-overlay.open .tsv-mobile-drawer {
+    right: 0;
+}
+
+.tsv-mob-header {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.tsv-mob-header img {
+    height: 40px;
+}
+
+.tsv-mob-close {
+    background: #f8f9fa;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2C368F;
+    cursor: pointer;
+}
+
+.tsv-mob-nav {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px 0;
+    list-style: none;
+}
+
+.tsv-mob-nav li a, .tsv-mob-item-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 25px;
+    width: 100%;
+    text-align: left;
+    background: transparent;
+    border: none;
+    color: #2C368F;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.tsv-mob-sub {
+    background: #f8f9fa;
+    list-style: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.tsv-mob-sub.open {
+    max-height: 2000px; /* Increased for nested levels */
+    padding-bottom: 10px;
+}
+
+.tsv-mob-footer {
+    padding: 30px 25px;
+    border-top: 1px solid #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.tsv-mob-footer a {
+    color: #444;
+    text-decoration: none;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tsv-mob-social {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.tsv-mob-cta {
+    background: #ED2224;
+    color: #fff !important;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    justify-content: center !important;
+}
+
+.tsv-body-lock {
+    overflow: hidden;
+}
+
+/* ============================================================
+   FLOATING BUTTONS & PULSE ANIMATIONS
+   ============================================================ */
+
+/* WhatsApp Button */
+.whatsapp-info.pulse2 {
+    position: fixed !important;
+    bottom: 30px !important;
+    left: 30px !important;
+    background: #25d366 !important;
+    color: #fff !important;
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 50% !important;
+    text-align: center;
+    line-height: 60px;
+    font-size: 32px;
+    z-index: 99999 !important;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-info.pulse2:hover {
+    transform: scale(1.1);
+    background: #128c7e;
+}
+
+/* Call Button */
+.phone-call-2.pulse2 {
+    position: fixed !important;
+    bottom: 30px !important;
+    left: 105px !important; /* Positioned next to WhatsApp */
+    background: #1a1a2e !important;
+    color: #fff !important;
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 50% !important;
+    text-align: center;
+    line-height: 60px;
+    font-size: 24px;
+    z-index: 99999 !important;
+    box-shadow: 0 4px 15px rgba(26, 26, 46, 0.4);
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.phone-call-2.pulse2:hover {
+    transform: scale(1.1);
+    background: #c1000a;
+}
+
+/* Pulse Animations */
+.pulse2::before,
+.pulse2::after {
+    content: '';
+    position: absolute;
+    border: 1px solid inherit;
+    left: -10px;
+    right: -10px;
+    top: -10px;
+    bottom: -10px;
+    border-radius: 50%;
+    animation: pulse-ring 2s linear infinite;
+    opacity: 0;
+    z-index: -1;
+}
+
+.pulse2::after {
+    animation-delay: 1s;
+}
+
+.whatsapp-info.pulse2::before, .whatsapp-info.pulse2::after { border-color: #25d366; }
+.phone-call-2.pulse2::before, .phone-call-2.pulse2::after { border-color: #1a1a2e; }
+
+@keyframes pulse-ring {
+    0% { transform: scale(0.5); opacity: 0; }
+    50% { opacity: 0.5; }
+    100% { transform: scale(1.2); opacity: 0; }
+}
+
+/* FOOTER WHITE SPACE FIX */
+footer {
+    position: relative;
+    z-index: 10;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.copyright-area {
+    margin-bottom: 0 !important;
+}
+
+html, body {
+    height: auto !important;
+    min-height: 100vh !important;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.flex-col.min-h-screen {
+    min-height: 100vh;
+}

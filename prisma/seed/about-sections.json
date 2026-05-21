@@ -1,0 +1,178 @@
+{
+  "page_header": {
+    "eyebrow": "About Us",
+    "heading": "Enabling Seamless",
+    "highlight": "Global Trade. Since 2015.",
+    "description": "Leading NVOCC and logistics provider delivering excellence across six continents."
+  },
+  "who_we_are": {
+    "eyebrow": "Who We Are ?",
+    "heading": "Leading Global Logistics &",
+    "highlight": "Transportation Agency",
+    "image": "/img/aerial-view-container-cargo-ship-sea.jpg",
+    "since": "2015",
+    "paragraphs": [
+      "TSV Global Solutions Pvt Ltd is an end-to-end logistics and freight forwarding company. We are a licensed NVOCC operator, a registered Customs House Broker, and a recognised member of leading global freight networks combining the agility of a specialist firm with the global reach of a multinational freight partner.",
+      "Our core strength lies in complex, high-stakes cargo, Over-Dimensional Cargo (ODC), break-bulk, project cargo, and hazardous material shipments where precision engineering, regulatory expertise, and supplier-level trust are non-negotiable."
+    ],
+    "checklist": [
+      "ISO Certified Quality Management System",
+      "Licensed NVOCC: House Bill of Lading issuing rights",
+      "In-house Customs Brokerage",
+      "Specialist ODC & Project Cargo team",
+      "24/7 shipment monitoring"
+    ]
+  },
+  "counters": {
+    "stats": [
+      {
+        "count": "11",
+        "suffix": "+",
+        "label": "Years in Operations"
+      },
+      {
+        "count": "150",
+        "suffix": "+",
+        "label": "Global Destinations"
+      },
+      {
+        "count": "5000",
+        "suffix": "+",
+        "label": "Shipments Delivered"
+      },
+      {
+        "count": "99.2",
+        "suffix": "%",
+        "label": "On-Time Delivery Rate"
+      }
+    ],
+    "dark": true
+  },
+  "vision_mission": {
+    "heading": "Vision & Mission",
+    "subheading": "Our Direction",
+    "vision": {
+      "title": "Our Vision",
+      "text": "To build a future-ready logistics ecosystem by setting new benchmarks in technology, transparency, and operational excellence.",
+      "icon": "fa-solid fa-eye"
+    },
+    "mission": {
+      "title": "Our Mission",
+      "text": "Empowering enterprises, one optimised supply chain at a time.",
+      "icon": "fa-solid fa-bullseye-arrow"
+    }
+  },
+  "core_values": {
+    "heading": "Our",
+    "highlight": "Core Values",
+    "subheading": "Integral to our way of working",
+    "values": [
+      {
+        "title": "Empowerment",
+        "icon": "fa-regular fa-hand-holding-heart",
+        "delay": "100ms"
+      },
+      {
+        "title": "Integrity",
+        "icon": "fa-regular fa-building-columns",
+        "delay": "200ms"
+      },
+      {
+        "title": "Innovation",
+        "icon": "fa-regular fa-chart-pie",
+        "delay": "300ms"
+      },
+      {
+        "title": "Global Reach",
+        "icon": "fa-regular fa-globe",
+        "delay": "400ms"
+      },
+      {
+        "title": "Reliability",
+        "icon": "fa-regular fa-shield-check",
+        "delay": "500ms"
+      },
+      {
+        "title": "Customer First",
+        "icon": "fa-regular fa-user-tie",
+        "delay": "600ms"
+      }
+    ]
+  },
+  "advantage_promo": {
+    "eyebrow": "Our Advantage",
+    "heading": "Why Choose",
+    "highlight": "TSV Global?",
+    "image": "/img/aerial-view-cargo-ship-cargo-container-harbor.webp",
+    "advantages": [
+      {
+        "title": "NVOCC & Freight Forwarding",
+        "text": "Licensed NVOCC operator with direct contracts with major shipping lines.",
+        "icon": "logis logis-cruise"
+      },
+      {
+        "title": "Project & ODC Cargo Specialists",
+        "text": "Expert handling of over-dimensional and overweight cargo.",
+        "icon": "logis logis-truck-2"
+      },
+      {
+        "title": "Customs Expertise",
+        "text": "In-house customs brokerage team ensuring full compliance.",
+        "icon": "fa-regular fa-file-certificate"
+      },
+      {
+        "title": "24/7 Monitoring",
+        "text": "Real-time tracking and dedicated support teams.",
+        "icon": "fa-regular fa-clock"
+      }
+    ]
+  },
+  "cta": {
+    "eyebrow": "Ready to Work With Us?",
+    "heading": "Let's Move Your Cargo",
+    "highlight": "Worldwide!",
+    "description": "Connect with our logistics experts today and get a customized shipping solution designed for your business needs.",
+    "button": {
+      "text": "Get a Free Quote",
+      "link": "/contact"
+    },
+    "promo_items": [
+      {
+        "title": "Road Freight",
+        "description": "Pan-India transport solutions.",
+        "icon": "logis logis-truck-3"
+      },
+      {
+        "title": "Ocean Freight",
+        "description": "FCL & LCL consolidation.",
+        "icon": "logis logis-cruise"
+      },
+      {
+        "title": "Air Freight",
+        "description": "Express worldwide.",
+        "icon": "logis logis-airplane-flying"
+      }
+    ]
+  },
+  "journey_cards": {
+    "cards": [
+      {
+        "title": "Our Milestones",
+        "text": "Explore our major milestones and how we've helped businesses navigate challenges.",
+        "link": "/our-milestones",
+        "btnText": "View Our Journey",
+        "borderColor": "#c1000a",
+        "delay": "100ms"
+      },
+      {
+        "title": "Corporate Chronicles",
+        "text": "Get a glimpse into our office culture, team events, and life at TSV.",
+        "link": "/corporate-chronicles",
+        "btnText": "View Life at TSV",
+        "borderColor": "#1a1a2e",
+        "btnBg": "#1a1a2e",
+        "delay": "200ms"
+      }
+    ]
+  }
+}

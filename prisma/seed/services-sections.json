@@ -1,0 +1,16 @@
+{
+  "hero_section": {
+    "title": "Our Logistics Services",
+    "subtitle": "Comprehensive solutions for your global supply chain needs.",
+    "backgroundImage": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070"
+  },
+  "services_grid": {
+    "title": "What We Offer",
+    "description": "From project cargo to routine freight forwarding, we handle it all with precision."
+  },
+  "cta_section": {
+    "title": "Ready to get started?",
+    "buttonText": "Contact Us Now",
+    "buttonLink": "/contact"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "page_header": {
+    "eyebrow": "Our Milestones",
+    "heading": "Our Journey of",
+    "highlight": "Global Excellence!",
+    "description": "Tracking our milestones and defining moments from 2026 to 2015."
+  },
+  "success_timeline": {
+    "milestones": [
+      {
+        "year": "2026",
+        "title": "Launched Air Division office in Chennai",
+        "description": "Expansion of our dedicated air freight operations with a specialized hub in Chennai to better serve international trade corridors.",
+        "image": "/assets/img/air.jpg"
+      },
+      {
+        "year": "2025",
+        "title": "Strategic Growth & Certifications",
+        "description": "Established SD Charitable Trust, secured FMC, ISO & MCCI certifications, and expanded to 4 new office locations across India.",
+        "image": "/assets/img/hiring-pricing.png"
+      },
+      {
+        "year": "2024",
+        "title": "Expansion & Tech Innovation",
+        "description": "Launched TSV Tech, secured CHA license, and expanded to 3 offices across India, strengthening our logistics infrastructure.",
+        "image": "/assets/img/mumbai-2.webp"
+      },
+      {
+        "year": "2021-23",
+        "title": "Global Network Integration",
+        "description": "Became an active member of WCA & Cross-Ocean networks, significantly expanding our global reach and partner ecosystem.",
+        "image": "/assets/img/wca-4.webp"
+      },
+      {
+        "year": "2016-20",
+        "title": "Operational Scaling",
+        "description": "Expanded into MTO operations, achieved FFFAI certification, and launched sister company TSV Homes.",
+        "image": "/assets/img/aerial-view-cargo-ship-cargo-container-harbor.webp"
+      },
+      {
+        "year": "2015",
+        "title": "Established TSV Global Solutions",
+        "description": "Founded with a vision to simplify complex global trade and provide reliable freight solutions from India.",
+        "image": "/assets/img/freight_forwarding.png"
+      }
+    ]
+  }
+}

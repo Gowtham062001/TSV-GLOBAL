@@ -1,0 +1,449 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* AnyChart Credits Removal */
+.anychart-credits, 
+.anychart-credits-indicator, 
+.anychart-credits-logo, 
+.anychart-unlicensed,
+a[href*="anychart.com"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+
+/* --- Mobile Optimizations --- */
+@media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+  }
+
+  /* Fix oversized headings */
+  h1 { font-size: 32px !important; }
+  h2 { font-size: 28px !important; }
+  .section-heading h2 { font-size: 26px !important; }
+  
+  /* Floating buttons mobile adjustments */
+  .phone-call { bottom: 20px !important; }
+  .phone-call-2 { bottom: 84px !important; }
+
+  /* Hide the broken "error" toast if it's from a specific class */
+  .toast-notification.error, #bw-toast.toast-error {
+    display: none !important;
+  }
+}
+
+/* Ensure all images are responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Fix for horizontal overflow in sections */
+.row {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+.container {
+  padding-right: 15px !important;
+  padding-left: 15px !important;
+}
+
+/* --- Section Specific Mobile Fixes --- */
+@media (max-width: 991px) {
+  /* Hero Slider adjustments */
+  .slider-caption.big { font-size: 38px !important; line-height: 1.1 !important; }
+  .slider-caption.medium { font-size: 16px !important; margin-bottom: 10px !important; }
+  .slider-stats-bar { display: none !important; }
+  .slider-counter { display: none !important; }
+  .slider-img { height: 70vh !important; }
+  
+  /* About Section */
+  .about-experience { 
+    padding: 12px 20px !important; 
+    font-size: 14px !important; 
+    bottom: 20px !important; 
+  }
+  
+  /* Milestones Timeline Mobile */
+  .year-title-main { 
+    font-size: 100px !important; 
+    opacity: 0.1 !important; 
+    top: -20px !important; 
+    left: 20px !important; 
+  }
+  .milestone-label { font-size: 24px !important; }
+  .story-desc { font-size: 16px !important; }
+  .story-marker { left: 20px !important; transform: translateY(-50%) !important; }
+  .story-text { padding-left: 60px !important; }
+  
+  /* Careers / Job Grid */
+  .job-card { padding: 20px !important; }
+  .job-card h3 { font-size: 18px !important; }
+  
+  /* Section Padding */
+  .padding { padding: 60px 0 !important; }
+}
+
+@media (max-width: 576px) {
+  .slider-caption.big { font-size: 32px !important; }
+  .slider-btn { flex-direction: column; gap: 10px; width: 100%; }
+  .slider-btn a { width: 100%; text-align: center; }
+}
+
+/* --- Additional Mobile Polish --- */
+@media (max-width: 768px) {
+  /* Optimize truck animation for mobile */
+  .running-truck { 
+    display: block !important;
+    height: 50px !important;
+    bottom: 0 !important;
+  }
+  .running-truck .truck, 
+  .running-truck .truck-2, 
+  .running-truck .truck-3 {
+    height: 35px !important;
+    width: 80px !important;
+    background-size: contain;
+  }
+  .running-truck .truck-2 {
+    right: auto !important;
+  }
+  .running-truck .truck, 
+  .running-truck .truck-3 {
+    left: auto !important;
+  }
+  
+  /* Footer adjustments */
+  .footer-widget {
+    margin-bottom: 30px;
+    text-align: left;
+  }
+  .footer-contact-info li p {
+    text-align: left;
+  }
+  .social-share {
+    justify-content: flex-start;
+  }
+  
+  /* Branch Section mobile grid */
+  .branch-wrapper {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Services grid on mobile */
+  .services-grid, .service-gallery-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Case studies grid */
+  .case-studies-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Fix for horizontal scroll on mobile */
+body {
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+/* Ensure all columns wrap properly on mobile */
+@media (max-width: 767px) {
+  .col-md-6, .col-lg-4, .col-lg-3 {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+}
+
+/* Fix for WhoWeAre button group on mobile */
+@media (max-width: 576px) {
+  .btn-group {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 20px;
+  }
+  .call-info {
+    margin-left: 0 !important;
+  }
+  .about-img-wrap img {
+    height: 300px !important;
+  }
+  .about-img-info {
+    padding: 10px 15px !important;
+    font-size: 14px !important;
+  }
+}
+
+/* GNP Grid Mobile */
+@media (max-width: 576px) {
+  .gnp-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .gnp-item, .gnp-card-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+    min-height: 80px;
+  }
+  .gnp-item img, .gnp-card-logo img {
+    width: 100% !important;
+    max-width: 280px !important;
+    height: auto !important;
+    object-fit: contain;
+  }
+}
+
+/* --- Admin Panel Global Tokens --- */
+:root {
+  --font-admin: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'SF Mono', 'Fira Code', 'Courier New', monospace;
+}
+
+/* Apply globally inside admin */
+.admin-shell * {
+  font-family: var(--font-admin) !important;
+}
+.admin-shell .mono,
+.admin-shell .slug,
+.admin-shell .admin-list-meta {
+  font-family: var(--font-mono) !important;
+}
+
+/* Page title — same on ALL pages */
+.admin-page-title {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  color: #0f1523 !important;
+  letter-spacing: -0.3px !important;
+  line-height: 1.3 !important;
+  margin: 0 0 4px 0 !important;
+  font-family: var(--font-admin) !important;
+}
+
+/* Subtitle — same on ALL pages */
+.admin-page-subtitle {
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  color: #8a9ab5 !important;
+  margin: 0 !important;
+  font-family: var(--font-admin) !important;
+}
+
+/* KILL any display/serif fonts in admin */
+.admin-shell h1,
+.admin-shell h2,
+.admin-shell h3,
+.admin-shell h4,
+.admin-shell h5 {
+  font-family: var(--font-admin) !important;
+  font-size: unset; /* let class control size */
+}
+
+/* KILL Syne font completely in admin */
+.admin-shell [class*="font-"],
+.admin-shell [style*="Syne"],
+.admin-shell [style*="font-family: Syne"] {
+  font-family: var(--font-admin) !important;
+}
+
+.admin-table th {
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  letter-spacing: 1.2px !important;
+  text-transform: uppercase !important;
+  color: #8a9ab5 !important;
+  padding: 11px 16px !important;
+  font-family: var(--font-admin) !important;
+  background: transparent !important;
+  border-bottom: 1px solid #f0f2f8 !important;
+}
+.admin-table td {
+  font-size: 13px !important;
+  color: #4a5568 !important;
+  padding: 13px 16px !important;
+  border-bottom: 1px solid #f8f9fb !important;
+  vertical-align: middle !important;
+  font-family: var(--font-admin) !important;
+}
+
+/* --- Admin Mobile Responsiveness Override --- */
+@media (max-width: 1024px) {
+  /* Main Container / Padding adjustments */
+  main.p-6, main.p-10 {
+    padding: 16px !important;
+  }
+
+  /* Admin Title and Toolbar Adjustments */
+  .admin-page-title {
+    font-size: 18px !important;
+  }
+  
+  /* Flex items-center gap-6 or similar in top header and pages */
+  header, div[class*="h-[90px]"] {
+    height: 70px !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  /* Page title banner */
+  div[class*="py-10"][class*="px-6"] {
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  
+  /* Flex header blocks stack */
+  div[class*="flex-col"][class*="md:flex-row"],
+  div[class*="editor-toolbar"] {
+    padding: 16px !important;
+    border-radius: 12px !important;
+    gap: 16px !important;
+  }
+
+  /* Grid columns responsive */
+  .grid-cols-2,
+  .grid-cols-3,
+  .grid-cols-4,
+  .lg\:grid-cols-3,
+  .md\:grid-cols-2,
+  .grid-cols-[250px_1fr] {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  /* Tables wrapper responsive */
+  div:has(> .admin-table),
+  .overflow-x-auto {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .admin-table {
+    min-width: 700px !important;
+  }
+
+  /* Admin list rows (Pages, Services, Users, Webhooks) */
+  .admin-list-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+    padding: 16px !important;
+  }
+
+  .admin-list-row > .flex-1,
+  .admin-list-row > div {
+    width: 100% !important;
+  }
+
+  /* List actions container push to bottom right */
+  .admin-list-row .flex.items-center.gap-2,
+  .admin-list-row .flex.items-center.gap-4 {
+    justify-content: flex-end !important;
+    width: 100% !important;
+    border-t: 1px solid #f8f9fb !important;
+    padding-top: 10px !important;
+    margin-top: 4px !important;
+  }
+
+  /* Section rows inside layout editor */
+  .admin-section-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+    padding: 16px !important;
+    position: relative;
+  }
+
+  .admin-section-row > div:first-child {
+    align-self: flex-end;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+  }
+
+  .admin-section-row > .flex-1 {
+    width: 100% !important;
+  }
+
+  .admin-section-row > .flex.items-center.gap-1 {
+    width: 100% !important;
+    justify-content: flex-end !important;
+    border-t: 1px solid #f8f9fb !important;
+    padding-top: 10px !important;
+    margin-top: 4px !important;
+  }
+
+  /* Tab lists wrapping/scrollable */
+  [role="tablist"],
+  div[class*="TabsList"] {
+    flex-wrap: wrap !important;
+    height: auto !important;
+    gap: 8px !important;
+    padding: 6px !important;
+  }
+  
+  [role="tab"] {
+    flex: 1 1 auto !important;
+    text-align: center;
+    padding: 8px 12px !important;
+    font-size: 11px !important;
+  }
+
+  /* Dialogs slide-out responsiveness */
+  .fixed.inset-0.z-\[1000\] > .relative.w-full.max-w-lg {
+    max-width: 100% !important;
+    height: 100% !important;
+  }
+
+  /* Image gallery grid columns */
+  .grid.grid-cols-6,
+  .grid.grid-cols-8,
+  .grid.grid-cols-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+  }
+
+  /* Card paddings */
+  .bg-white.p-10.rounded-\[2\.5rem\],
+  .bg-white.p-8,
+  .bg-white.p-6 {
+    padding: 16px !important;
+    border-radius: 12px !important;
+  }
+}
+

@@ -1,0 +1,550 @@
+/* 
+ * Critical Sections Styling
+ * Reconstructed for TSV Global Solutions Next.js Migration
+ * Purpose: Ensures 100% visual parity for custom CMS-driven sections
+ */
+
+/* Vision & Mission Cards */
+.tsv-vm-container { 
+    margin-top: 30px; 
+}
+.tsv-vm-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    display: flex;
+    gap: 25px;
+    height: 100%;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+.tsv-vm-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+.tsv-vm-card.vision { border-color: #c1000a; }
+.tsv-vm-card.mission { border-color: #1a1a2e; }
+
+.tsv-vm-icon {
+    font-size: 40px;
+    color: #c1000a;
+    flex-shrink: 0;
+}
+.tsv-vm-content h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #1a1a2e;
+}
+.tsv-vm-content p { 
+    margin-bottom: 0; 
+    line-height: 1.6; 
+}
+
+/* Global Network Partners (GNP) Section */
+.gnp-section { 
+    padding: 100px 0; 
+    background: #f8f9fa; 
+    position: relative;
+    overflow: hidden;
+}
+.gnp-header { 
+    text-align: center; 
+    margin-bottom: 60px; 
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.gnp-eyebrow { 
+    color: #c1000a; 
+    font-weight: 700; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    margin-bottom: 15px; 
+    display: block;
+    font-size: 14px;
+}
+.gnp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+.gnp-card {
+    background: #fff;
+    padding: 45px 30px;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: 1px solid #eee;
+    position: relative;
+    z-index: 1;
+}
+.gnp-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+    border-color: #c1000a;
+}
+.gnp-card-logo { 
+    height: 90px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    margin-bottom: 25px; 
+}
+.gnp-card-logo img { 
+    max-height: 100%; 
+    max-width: 200px; 
+    filter: grayscale(0%); 
+    transition: all 0.4s ease;
+    opacity: 1;
+}
+.gnp-card:hover .gnp-card-logo img { 
+    filter: grayscale(0%); 
+    opacity: 1;
+    transform: scale(1.05);
+}
+.gnp-card-divider { 
+    width: 50px; 
+    height: 3px; 
+    background: #c1000a; 
+    margin: 0 auto 25px; 
+    border-radius: 2px;
+}
+.gnp-card h3 { 
+    font-size: 19px; 
+    font-weight: 700; 
+    margin-bottom: 12px; 
+    color: #1a1a2e;
+}
+.gnp-card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+.gnp-badge { 
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 18px; 
+    background: #f8f9fa; 
+    border: 1px solid #eee;
+    border-radius: 30px; 
+    font-size: 12px; 
+    font-weight: 700; 
+    color: #1a1a2e;
+}
+.gnp-badge i { 
+    color: #c1000a; 
+    margin-right: 8px; 
+}
+
+/* Partners Marquee Redesign */
+.partners-marquee-section { 
+    padding: 80px 0; 
+    background: #fff; 
+    overflow: hidden; 
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+.marquee-track {
+    display: flex;
+    width: fit-content;
+    animation: marquee-scroll 40s linear infinite;
+}
+@keyframes marquee-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+.marquee-item { 
+    flex: 0 0 250px; 
+    height: 100px;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 0 45px; 
+}
+.marquee-item img { 
+    max-width: 100%; 
+    max-height: 60px;
+    filter: grayscale(0%); 
+    opacity: 1; 
+    transition: all 0.3s ease; 
+}
+.marquee-item img:hover { 
+    filter: grayscale(0%); 
+    opacity: 1; 
+    transform: scale(1.1);
+}
+
+/* Testimonials (Original TSV Style) */
+.tsv-testi-wrap { 
+    padding: 100px 0; 
+    background: #fff; 
+    position: relative;
+    overflow: hidden;
+}
+
+.tsv-tcard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px; margin-top: 44px;
+}
+.tsv-tc {
+    background: #fff; border-radius: 2px;
+    border-top: 3px solid #ed2224;
+    padding: 32px 32px 26px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; display: flex; flex-direction: column;
+    text-align: left;
+}
+.tsv-tc:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 40px rgba(0,0,0,0.12);
+}
+.tsv-tc-qdrop {
+    position: absolute; top: 20px; right: 24px;
+    font-family: Georgia, serif; font-size: 64px; line-height: 1;
+    color: #ed2224; opacity: 0.07; pointer-events: none; user-select: none;
+}
+.tsv-tc-stars { display: flex; gap: 3px; margin-bottom: 14px; }
+.tsv-tc-stars i { color: #f5a623; font-size: 13px; }
+.tsv-tc-stars i.dim { color: #ddd; }
+.tsv-tc-text {
+    font-family: "Inter", sans-serif;
+    font-size: 14.5px; line-height: 1.8; color: #444;
+    flex: 1; margin-bottom: 24px; position: relative; z-index: 1;
+}
+.tsv-tc-bar { width: 36px; height: 2px; background: #ed2224; border-radius: 2px; margin-bottom: 18px; }
+.tsv-tc-author { display: flex; align-items: center; gap: 14px; }
+.tsv-tc-ava {
+    width: 48px; height: 48px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; font-size: 18px; color: #fff;
+}
+.tsv-tc-name {
+    font-family: "Inter", sans-serif;
+    font-size: 14px; font-weight: 700; color: #000;
+    margin: 0 0 2px; letter-spacing: -0.2px;
+}
+.tsv-tc-co {
+    font-family: "Inter", sans-serif;
+    font-size: 11.5px; color: #888; font-weight: 500;
+}
+.tsv-tc-badge {
+    display: inline-flex; align-items: center; gap: 4px;
+    font-family: "Inter", sans-serif;
+    font-size: 9px; font-weight: 700; letter-spacing: 0.5px;
+    text-transform: uppercase; color: #15803d;
+    background: #f0fdf4; border: 1px solid #bbf7d0;
+    padding: 2px 8px; border-radius: 20px; margin-top: 5px;
+}
+.tsv-tc-badge i { font-size: 9px; color: #15803d !important; margin: 0 !important; }
+
+@media (max-width: 768px) {
+    .tsv-tcard-grid { grid-template-columns: 1fr; max-width: 480px; margin-left: auto; margin-right: auto; }
+    .tsv-tc { padding: 24px 20px 20px; }
+}
+
+/* Animated Elements */
+.animated-dash {
+    height: 3px;
+    width: 100px;
+    background: linear-gradient(90deg, #c1000a 50%, #eee 50%);
+    background-size: 20px 100%;
+    animation: dash-move 0.8s linear infinite;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+@keyframes dash-move {
+    to { background-position: 20px 0; }
+}
+
+.hl { color: #c1000a; }
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+    .tsv-tcard-grid { grid-template-columns: 1fr; }
+    .tsv-vm-card { flex-direction: column; text-align: center; }
+    .tsv-vm-icon { margin: 0 auto; }
+}
+
+/* Milestones / Success Timeline (Original UI) */
+.story-section {
+    background-color: #ffffff;
+    color: #2C368F;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+}
+.story-bg-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: #ffffff;
+    transition: background 1.2s ease;
+    pointer-events: none;
+}
+.story-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: rgba(237, 34, 36, 0.1);
+    transform: translateX(-50%);
+    z-index: 2;
+}
+.story-line-progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0;
+    background: #ED2224;
+    box-shadow: 0 0 15px rgba(237, 34, 36, 0.5);
+    transition: height 0.1s ease-out;
+}
+.year-segment {
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 0;
+    z-index: 5;
+}
+.story-visual {
+    position: relative;
+    z-index: 10;
+}
+.story-img-frame {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.1);
+    background: #f8f9fa;
+    border: 8px solid #fff;
+}
+.story-img-frame img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    display: block;
+    transition: transform 1.5s ease;
+}
+.story-text {
+    position: relative;
+}
+.year-title-main {
+    font-size: 160px;
+    font-weight: 900;
+    color: #ED2224;
+    line-height: 0.8;
+    margin-bottom: 25px;
+    font-family: "Inter", sans-serif;
+    letter-spacing: -6px;
+    opacity: 0.15;
+    display: block;
+    position: absolute;
+    top: -60px;
+    z-index: -1;
+}
+.milestone-label {
+    font-size: 42px;
+    font-weight: 800;
+    color: #2C368F;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+    position: relative;
+}
+.milestone-label::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #ED2224;
+    margin-top: 15px;
+}
+.story-desc {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #666;
+    font-weight: 500;
+    max-width: 500px;
+}
+.story-marker {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border: 4px solid #ED2224;
+    border-radius: 50%;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.story-marker::after {
+    content: '';
+    width: 14px;
+    height: 14px;
+    background: #ED2224;
+    border-radius: 50%;
+}
+@media (max-width: 991px) {
+    .story-line { left: 20px; transform: none; }
+    .year-segment { padding: 40px 0; min-height: auto; flex-direction: column; align-items: flex-start; }
+    .story-visual { padding-right: 0; margin-bottom: 30px; width: 100%; }
+    .story-text { padding-left: 50px; }
+    .year-title-main { font-size: 80px; top: -30px; left: 30px; }
+    .story-marker { left: 20px; transform: translateY(-50%); }
+    .story-desc { font-size: 16px; }
+    .milestone-label { font-size: 32px; }
+}
+
+/* Premium Presence Section (Map & Regions) */
+.premium-presence-section {
+    background: #0b0e14;
+    padding: 120px 0;
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+}
+
+.premium-presence-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(193, 0, 10, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.presence-title {
+    font-size: 52px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 70px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.presence-title span {
+    color: #c1000a;
+}
+
+.region-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.region-card {
+    position: relative;
+    height: 160px;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.region-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: 0.6s;
+}
+
+.region-card:hover {
+    transform: translateX(10px);
+    border-color: #c1000a;
+    box-shadow: 0 10px 30px rgba(193, 0, 10, 0.2);
+}
+
+.region-card-right:hover {
+    transform: translateX(-10px);
+}
+
+.region-card:hover img {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.region-content {
+    position: absolute; inset: 0;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.region-label {
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: #fff;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.region-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #c1000a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    box-shadow: 0 0 15px rgba(193, 0, 10, 0.5);
+    transition: 0.3s;
+}
+
+.region-card:hover .region-icon {
+    transform: rotate(45deg) scale(1.1);
+}
+
+.map-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
+}
+
+.map-overlay-highlight {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(193, 0, 10, 0.1) 0%, transparent 60%);
+    opacity: 0;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+#anychart-map-container {
+    width: 100%;
+    height: 600px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+@media (max-width: 991px) {
+    .presence-title { font-size: 32px; margin-bottom: 40px; }
+    .region-card { height: 120px; }
+    .region-card-wrapper { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 15px; }
+    .region-card { width: calc(50% - 10px); margin: 0; }
+    #anychart-map-container { height: 400px; margin: 30px 0; }
+}

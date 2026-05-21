@@ -1,0 +1,276 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Page {
+  id        String        @id @default(cuid())
+  title     String
+  slug      String        @unique
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+  seoData   Json?
+  status    String        @default("DRAFT")
+  isVisible Boolean       @default(true)
+  sections  PageSection[]
+}
+
+model PageSection {
+  id        String   @id @default(cuid())
+  pageId    String
+  type      String
+  label     String
+  content   Json
+  isVisible Boolean  @default(true)
+  order     Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  page      Page     @relation(fields: [pageId], references: [id], onDelete: Cascade)
+
+  @@index([pageId])
+}
+
+model Service {
+  id          String           @id @default(cuid())
+  title       String
+  slug        String           @unique
+  description String?
+  icon        String?
+  image       String?
+  order       Int              @default(0)
+  status      String           @default("PUBLISHED")
+  isVisible   Boolean          @default(true)
+  seoData     Json?
+  createdAt   DateTime         @default(now())
+  updatedAt   DateTime         @updatedAt
+  sections    ServiceSection[]
+  parentId    String?
+  parent      Service?         @relation("ServiceTree", fields: [parentId], references: [id])
+  children    Service[]        @relation("ServiceTree")
+}
+
+model ServiceSection {
+  id        String   @id @default(cuid())
+  serviceId String
+  type      String
+  label     String
+  content   Json
+  isVisible Boolean  @default(true)
+  order     Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  service   Service  @relation(fields: [serviceId], references: [id], onDelete: Cascade)
+
+  @@index([serviceId])
+}
+
+model CaseStudy {
+  id        String   @id @default(cuid())
+  title     String
+  slug      String   @unique
+  client    String?
+  industry  String?
+  challenge String?
+  solution  String?
+  result    String?
+  metrics   Json? // For key metrics like "Cargo Weight: Heavy Lift"
+  mode      String? // Transport mode
+  route     String? // Route info
+  images    Json?
+  tags      String?
+  status    String   @default("PUBLISHED")
+  isVisible Boolean  @default(true)
+  seoData   Json?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model BlogPost {
+  id          String    @id @default(cuid())
+  title       String
+  slug        String    @unique
+  content     Json
+  excerpt     String?
+  coverImage  String?
+  author      String?
+  category    String?
+  tags        String?
+  status      String    @default("DRAFT")
+  publishedAt DateTime?
+  seoData     Json?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  readTime    Int?
+  isFeatured  Boolean   @default(false)
+}
+
+model GalleryImage {
+  id         String   @id @default(cuid())
+  url        String
+  alt        String?
+  caption    String?
+  category   String?
+  order      Int      @default(0)
+  createdAt  DateTime @default(now())
+  usedIn     Json?
+  fileSize   Int?
+  mimeType   String?
+  status     String   @default("ACTIVE") // "ACTIVE", "ARCHIVED"
+  isArchived Boolean  @default(false)
+  archivedAt DateTime?
+  updatedAt  DateTime @default(now()) @updatedAt
+}
+
+model MenuItem {
+  id        String     @id @default(cuid())
+  label     String
+  url       String
+  parentId  String?
+  order     Int        @default(0)
+  target    String     @default("_self")
+  isActive  Boolean    @default(true)
+  icon      String?
+  parent    MenuItem?  @relation("MenuHierarchy", fields: [parentId], references: [id])
+  children  MenuItem[] @relation("MenuHierarchy")
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @default(now()) @updatedAt
+}
+
+model ContactSubmission {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  phone     String?
+  subject   String?
+  message   String
+  isRead    Boolean  @default(false)
+  createdAt DateTime @default(now())
+  status    String   @default("NEW")
+  updatedAt DateTime @default(now()) @updatedAt
+}
+
+model BrochureDownload {
+  id            String   @id @default(cuid())
+  name          String
+  email         String
+  phone         String?
+  company       String?
+  brochureTitle String
+  createdAt     DateTime @default(now())
+  status        String   @default("DELIVERED")
+  pdfUrl        String?
+}
+
+model SiteSetting {
+  id        String   @id @default(cuid())
+  key       String   @unique
+  value     String
+  group     String   @default("GENERAL")
+  updatedAt DateTime @updatedAt
+}
+
+model Redirect {
+  id       String  @id @default(cuid())
+  from     String  @unique
+  to       String
+  type     Int     @default(301)
+  isActive Boolean @default(true)
+}
+
+model WebhookConfig {
+  id            String    @id @default(cuid())
+  name          String
+  url           String
+  events        Json
+  secret        String?
+  isActive      Boolean   @default(true)
+  lastTriggered DateTime?
+}
+
+model ApiKey {
+  id          String    @id @default(cuid())
+  name        String
+  key         String    @unique
+  permissions Json
+  expiresAt   DateTime?
+  isActive    Boolean   @default(true)
+}
+
+model BackupLog {
+  id        String   @id @default(cuid())
+  filename  String
+  size      Int
+  status    String
+  createdAt DateTime @default(now())
+}
+
+model AdminUser {
+  id           String     @id @default(cuid())
+  name         String
+  email        String     @unique
+  passwordHash String
+  role         String     @default("EDITOR")
+  permissions  Json?
+  avatar       String? // Profile photo
+  lastLogin    DateTime?
+  isActive     Boolean    @default(true)
+  logs         AuditLog[]
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @default(now()) @updatedAt
+}
+
+model AuditLog {
+  id        String    @id @default(cuid())
+  userId    String
+  action    String
+  entity    String
+  entityId  String
+  changes   Json?
+  createdAt DateTime  @default(now())
+  user      AdminUser @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model ProjectTask {
+  id          String   @id @default(cuid())
+  title       String
+  description String?
+  version     String   @default("1.0")
+  category    String   @default("TASK") // TASK, BUG, SECTION, REQUIREMENT
+  percentage  Int      @default(0)
+  status      String   @default("PENDING") // PENDING, IN_PROGRESS, COMPLETED, PARTIAL
+  order       Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Job {
+  id          String   @id @default(cuid())
+  title       String
+  type        String   @default("Full Time")
+  location    String
+  experience  String
+  description String
+  link        String? // Custom application link or email
+  icon        String   @default("fa-briefcase")
+  status      String   @default("PUBLISHED")
+  isExpired   Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model PasswordResetToken {
+  id        String   @id @default(cuid())
+  token     String   @unique
+  userId    String
+  expiresAt DateTime
+  used      Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  @@index([token])
+  @@index([userId])
+}

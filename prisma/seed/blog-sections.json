@@ -1,0 +1,52 @@
+{
+  "page_header": {
+    "eyebrow": "Our Blog",
+    "heading": "Insights and trends in",
+    "highlight": "global logistics!",
+    "description": "Stay updated with the latest news, expert opinions, and industry trends from the world of freight and supply chain."
+  },
+  "blog_grid": {
+    "eyebrow": "Industry Insights",
+    "heading": "Latest",
+    "highlight": "Posts",
+    "posts": [
+      {
+        "title": "The Future of NVOCC in 2026",
+        "slug": "future-of-nvocc-2026",
+        "excerpt": "How technology and green energy are reshaping sea freight.",
+        "coverImage": "/img/blog-1.jpg",
+        "author": "Logistics Expert",
+        "publishedAt": "2026-05-12T00:00:00Z"
+      },
+      {
+        "title": "Optimizing Your Supply Chain",
+        "slug": "optimizing-supply-chain",
+        "excerpt": "5 tips to reduce costs and improve delivery times.",
+        "coverImage": "/img/blog-2.jpg",
+        "author": "Supply Chain Guru",
+        "publishedAt": "2026-05-11T00:00:00Z"
+      }
+    ]
+  },
+  "cta": {
+    "eyebrow": "Never miss an update!",
+    "heading": "Subscribe to our",
+    "highlight": "Newsletter",
+    "button": {
+      "text": "Contact Us",
+      "link": "/contact"
+    },
+    "promo_items": [
+      {
+        "title": "Weekly Insights",
+        "description": "Fresh content every week.",
+        "icon": "fa-regular fa-paper-plane"
+      },
+      {
+        "title": "Expert Opinions",
+        "description": "From industry veterans.",
+        "icon": "fa-regular fa-user-tie"
+      }
+    ]
+  }
+}

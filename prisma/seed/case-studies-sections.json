@@ -1,0 +1,90 @@
+{
+  "page_header": {
+    "eyebrow": "Our Track Record",
+    "heading": "Real Challenges,",
+    "highlight": "Real Results",
+    "description": "Discover how TSV Global solved complex logistics challenges across industries, cargo types, and global trade corridors."
+  },
+  "case_study_stats": {
+    "stats": [
+      {
+        "value": "150+",
+        "label": "Global Destinations"
+      },
+      {
+        "value": "10K+",
+        "label": "Shipments Delivered"
+      },
+      {
+        "value": "99%",
+        "label": "On-Time Delivery Rate"
+      },
+      {
+        "value": "11+",
+        "label": "Years of Expertise"
+      }
+    ]
+  },
+  "case_study_grid": {
+    "eyebrow": "Featured Projects",
+    "heading": "Case",
+    "highlight": "Studies",
+    "items": [
+      {
+        "title": "Industrial Cylinder Movement",
+        "slug": "industrial-cylinder-movement",
+        "tags": "ODC Cargo",
+        "description": "TSV Global successfully transported a massive industrial cylinder, requiring specialized low-bed trailers, detailed route surveys, and police escorts through challenging terrains, achieving a 100% safe, timely delivery.",
+        "images": "/assets/img/Services/ODC%20CARGO/Cylinder/00e48182-0d6d-4c47-9d54-dd2ded53cf34.jpg",
+        "metrics": [
+          { "value": "Heavy Lift", "label": "Cargo Weight" },
+          { "value": "On Schedule", "label": "Transit Time" },
+          { "value": "Optimized", "label": "Cost Savings" }
+        ]
+      },
+      {
+        "title": "Break Bulk: Netherlands to Hyderabad",
+        "slug": "netherlands-to-hyderabad-break-bulk",
+        "tags": "ODC Cargo / Break Bulk",
+        "description": "Executed a seamless end-to-end break bulk operation from the Netherlands to Hyderabad. We coordinated ocean freight, rapid customs pre-filing at Nhava Sheva, and secure long-haul multi-axle road transport.",
+        "images": "/assets/img/Services/ODC%20CARGO/Netherlands%20to%20Hyderabad%20Via%20Mumbai%20Break%20Bulk/21be8a07-cd30-496a-848b-92c11c3eb5bf.jpg",
+        "metrics": [
+          { "value": "Break Bulk", "label": "Cargo Volume" },
+          { "value": "Pre-filed", "label": "Clearance" },
+          { "value": "Zero Days", "label": "Port Delay" }
+        ]
+      },
+      {
+        "title": "Complex Project Cargo Operations",
+        "slug": "complex-project-cargo-operations",
+        "tags": "Project Cargo",
+        "description": "Demonstrated expert project cargo handling by managing simultaneous heavy lifts, custom rigging, and synchronized delivery of delicate yet unwieldy infrastructure components with zero structural stress.",
+        "images": "/assets/img/Services/PROJECT%20CARGO/Project-1.jpeg",
+        "metrics": [
+          { "value": "Project Machinery", "label": "Cargo Type" },
+          { "value": "Multi-trailer", "label": "Coordination" },
+          { "value": "Zero Incidents", "label": "Safety" }
+        ]
+      },
+      {
+        "title": "Heavy Construction Excavators Transport",
+        "slug": "heavy-construction-excavators-transport",
+        "tags": "ODC Cargo",
+        "description": "Facilitated the rapid deployment of massive construction excavators utilizing low-profile heavy-duty trailers with hydraulic ramps, navigating strict overhead limits perfectly safely.",
+        "images": "/assets/img/Services/ODC%20CARGO/Escavators/95bfc45e-70cd-48fa-a323-8fa7a00fdba0.jpg",
+        "metrics": [
+          { "value": "Excavators", "label": "Cargo" },
+          { "value": "Over Dimensional", "label": "Weight" },
+          { "value": "Zero Incidents", "label": "Safety" }
+        ]
+      }
+    ]
+  },
+  "career_cta": {
+    "badge": "Let's Solve Yours",
+    "heading": "Have a Complex Logistics Challenge?",
+    "description": "Our team of logistics experts is ready to design a custom solution for your next shipment, no matter how complex.",
+    "button_text": "Discuss Your Requirement",
+    "email": "cs@tsvglobal.com"
+  }
+}

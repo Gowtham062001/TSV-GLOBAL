@@ -1,0 +1,342 @@
+{
+  "hero_slider": {
+    "slides": [
+      {
+        "image": "/assets/img/aerial-view-container-cargo-ship-sea.jpg",
+        "imageAlt": "Global Delivery Network",
+        "eyebrow": "Global Delivery Network",
+        "captionMedium": "Trusted Path to Global Shipping",
+        "captionBig": "Highest Standards Of",
+        "captionBigSpan": "Transportation",
+        "captionSmall": "11+ years of NVOCC, Project Cargo, ODC & Custom Clearance expertise across 140+ global routes \u2014 delivering excellence every mile.",
+        "primaryBtnText": "Book Shipment",
+        "primaryBtnUrl": "/contact",
+        "secondaryBtnText": "Explore More",
+        "secondaryBtnUrl": "/about",
+        "counterNum": "01"
+      },
+      {
+        "image": "/assets/img/aerial-view-cargo-ship-cargo-container-harbor.webp",
+        "imageAlt": "Global Freight Solutions",
+        "eyebrow": "Premier Freight Solutions",
+        "captionMedium": "End-to-End Logistics Partner",
+        "captionBig": "Your Global Freight",
+        "captionBigSpan": "Solutions Provider",
+        "captionSmall": "From FCL & LCL ocean freight to air cargo and road transport \u2014 TSV Global ensures your cargo reaches its destination safely and on time.",
+        "primaryBtnText": "Get a Quote",
+        "primaryBtnUrl": "/contact",
+        "secondaryBtnText": "Our Services",
+        "secondaryBtnUrl": "/services",
+        "counterNum": "02"
+      },
+      {
+        "image": "/assets/img/global-logistics-transportation-network.webp",
+        "imageAlt": "Custom Clearance Experts",
+        "eyebrow": "Custom Clearance Experts",
+        "captionMedium": "Compliance & Clearance",
+        "captionBig": "Hassle-Free Custom",
+        "captionBigSpan": "Clearance Services",
+        "captionSmall": "Navigate complex import/export regulations with confidence. Our FFFAI-certified experts ensure smooth clearance at all major Indian ports.",
+        "primaryBtnText": "Contact Us",
+        "primaryBtnUrl": "/contact",
+        "secondaryBtnText": "Learn More",
+        "secondaryBtnUrl": "/services/custom-clearance",
+        "counterNum": "03"
+      }
+    ],
+    "stats": [
+      {
+        "icon": "fa-light fa-box-open-full",
+        "value": "2,500+",
+        "label": "Shipments Daily"
+      },
+      {
+        "icon": "fa-light fa-globe-pointer",
+        "value": "140+",
+        "label": "Global Routes"
+      },
+      {
+        "icon": "fa-light fa-timer",
+        "value": "99.8%",
+        "label": "On-Time Delivery"
+      }
+    ]
+  },
+  "about_section": {
+    "image": "/assets/img/hanging-container.png",
+    "imageAlt": "TSV Global Logistics container",
+    "badge": "Since 2015",
+    "subHeading": "About Us",
+    "headingPrefix": "Enabling Seamless",
+    "headingHighlight": "Global Trade",
+    "headingSuffix": "",
+    "headingBreak": true,
+    "heading": "Enabling Seamless   Global Trade",
+    "paragraph1": "TSV Global Solutions Pvt Ltd is a leading logistics and freight forwarding company headquartered in Chennai with a branch office in Navi Mumbai. With over 11 years of industry expertise, we specialize in NVOCC operations, project cargo, ODC shipments, and end-to-end supply chain management.",
+    "paragraph2": "Our core strength lies in our ability to handle complex, oversized, and time-sensitive cargo across sea, air, and road \u2014 backed by a team of seasoned logistics professionals and a robust global network spanning 140+ countries.",
+    "paragraph3": "Our team works with leading manufacturers, EPC contractors, and traders to deliver reliable, compliant, and cost-effective logistics solutions \u2014 from origin to destination.",
+    "vision": {
+      "title": "Our Vision",
+      "text": "To build a future-ready logistics enterprise that sets global standards for reliability, transparency, and sustainable trade facilitation across every continent."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "text": "Empowering enterprises with end-to-end logistics solutions that are agile, technology-driven, and backed by deep domain expertise \u2014 ensuring every shipment is a promise delivered."
+    }
+  },
+  "services_highlight": {
+    "subHeading": "Our Logistics Services!",
+    "headingPrefix": "Offering Cost Efficient  Transport",
+    "headingHighlight": "Shipping!",
+    "headingSuffix": "",
+    "headingBreak": true,
+    "heading": "Offering Cost Efficient  Transport  Shipping!",
+    "description": "TSV Global specializes in managing the full spectrum of logistics services \u2014 from domestic road freight to international ocean and air shipments \u2014 with precision, speed, and compliance.",
+    "items": [
+      {
+        "title": "Road Freight",
+        "icon": "logis logis-truck-2",
+        "image": "/assets/img/road-freight-2.jpg",
+        "description": "Pan-India road freight solutions for all cargo types \u2014 FTL, LTL, ODC and project loads \u2014 with GPS-enabled tracking and experienced drivers.",
+        "link": "/services/transportation/road-freight"
+      },
+      {
+        "title": "Ocean Freight",
+        "icon": "logis logis-cruise",
+        "image": "/assets/img/aerial-view-container-cargo-ship-sea.jpg",
+        "description": "FCL & LCL ocean freight consolidation to 150+ global ports. We partner with leading carriers to offer competitive rates and reliable transit times.",
+        "link": "/services/transportation/sea-freight"
+      },
+      {
+        "title": "Air Freight",
+        "icon": "logis logis-airplane-flying",
+        "image": "/assets/img/air.jpg",
+        "description": "Express and economical air cargo services worldwide. From general cargo to dangerous goods and temperature-sensitive shipments, we handle it all.",
+        "link": "/services/transportation/air-freight"
+      }
+    ]
+  },
+  "running_text": {
+    "items": [
+      "Trusted By All Over The World",
+      "Cost Efficient Transportation",
+      "Leading Global Logistic Company",
+      "100% Safe And Secure Delivery"
+    ]
+  },
+  "case_studies_carousel": {
+    "subHeading": "Discover Our Case Studies!",
+    "headingPrefix": "Real-World Logistics  Success",
+    "headingHighlight": "Stories!",
+    "headingSuffix": "",
+    "headingBreak": true,
+    "heading": "Real-World Logistics  Success  Stories!",
+    "description": "Explore how we solve complex logistics challenges for our clients \u2014 from oversized industrial equipment to intercontinental break-bulk shipments.",
+    "viewAllText": "View All Case Studies",
+    "viewAllUrl": "/case-studies"
+  },
+  "process_section": {
+    "subHeading": "Our Working Process!",
+    "headingPrefix": "How We Deliver  Your",
+    "headingHighlight": "Cargo!",
+    "headingSuffix": "",
+    "headingBreak": true,
+    "heading": "How We Deliver  Your  Cargo!",
+    "description": "We structure every stage of the logistics journey \u2014 from initial planning to post-delivery support \u2014 to ensure flawless execution and complete client satisfaction.",
+    "steps": [
+      {
+        "icon": "/assets/img/icons/plan-design.svg",
+        "title": "PLAN & DESIGN",
+        "subtitle": "(Pre-Shipment)",
+        "items": [
+          "Requirement Understanding",
+          "Solution Design",
+          "Costing & Quotation",
+          "Booking & Coordination"
+        ]
+      },
+      {
+        "icon": "/assets/img/icons/execute-move.svg",
+        "title": "EXECUTE & MOVE",
+        "subtitle": "(Shipment Execution)",
+        "items": [
+          "Documentation & Compliance",
+          "Cargo Handling & Inland Movement",
+          "Port Operations",
+          "Freight & Tracking"
+        ]
+      },
+      {
+        "icon": "/assets/img/icons/deliver-support.svg",
+        "title": "DELIVER & SUPPORT",
+        "subtitle": "(Post-Shipment)",
+        "items": [
+          "Destination Handling",
+          "Last-Mile Delivery",
+          "Post-Shipment Support",
+          "Relationship & Growth"
+        ]
+      }
+    ]
+  },
+  "cta_section": {
+    "subHeading": "Trusted Global Shipping!",
+    "headingPrefix": "Ensure Safe Transportation Fast Delivery",
+    "headingHighlight": "Service!",
+    "headingSuffix": "",
+    "headingBreak": true,
+    "heading": "Ensure Safe Transportation Fast Delivery  Service!",
+    "btnText": "Book Your Cargo",
+    "btnUrl": "/contact",
+    "promoItems": [
+      {
+        "icon": "logis logis-truck-3",
+        "title": "Road Freight",
+        "text": "Pan-India transport solutions for all cargo types."
+      },
+      {
+        "icon": "logis logis-cruise",
+        "title": "Ocean Freight",
+        "text": "FCL & LCL consolidation to 150+ global ports."
+      },
+      {
+        "icon": "logis logis-airplane-flying",
+        "title": "Air Freight",
+        "text": "Express and economical air cargo worldwide."
+      }
+    ]
+  },
+  "global_network_partners": {
+    "eyebrow": "Credibility & Trust",
+    "headingPrefix": "Our Global Network Partners",
+    "headingHighlight": "",
+    "headingSuffix": "",
+    "headingBreak": false,
+    "heading": "Our Global Network  Partners",
+    "description": "We are proud members of globally recognized logistics associations and certification bodies \u2014 ensuring the highest standards of compliance, quality, and professional service.",
+    "partners": [
+      {
+        "name": "FFFAI",
+        "logo": "/assets/img/members/Federation-of-Freight-Forwarders-Associations-in-India-(FFFAI).png",
+        "description": "Federation of Freight Forwarders Associations in India",
+        "badge": "Verified Member"
+      },
+      {
+        "name": "EGLN",
+        "logo": "/assets/img/members/Elite-Global-Logistics-Network.png",
+        "description": "Elite Global Logistics Network",
+        "badge": "Active Member"
+      },
+      {
+        "name": "Cross Ocean",
+        "logo": "/assets/img/members/Cross Ocean Member-1.png",
+        "description": "Cross Ocean Network Partner",
+        "badge": "Active Member"
+      },
+      {
+        "name": "Parnity",
+        "logo": "/assets/img/members/parnity-member.jpg",
+        "description": "Parnity Global Freight Network",
+        "badge": "Certified Partner"
+      },
+      {
+        "name": "IATA",
+        "logo": "/assets/img/members/IATAlogo.svg",
+        "description": "International Air Transport Association",
+        "badge": "Certified"
+      },
+      {
+        "name": "WCA World",
+        "logo": "/assets/img/members/wca-world.png",
+        "description": "World's largest logistics network",
+        "badge": "Active Member"
+      },
+      {
+        "name": "FIATA",
+        "logo": "/assets/img/members/fiata.svg",
+        "description": "International Federation of Freight Forwarders Associations",
+        "badge": "Member"
+      },
+      {
+        "name": "ISO 9001:2015",
+        "logo": "/assets/img/members/ISO_9001-2015.svg",
+        "description": "Quality Management System Certified",
+        "badge": "ISO Certified"
+      }
+    ]
+  },
+  "partners_marquee": {
+    "eyebrow": "Trusted By Industry Leaders",
+    "headingPrefix": "Our Partners",
+    "headingHighlight": "",
+    "headingSuffix": "",
+    "headingBreak": false,
+    "heading": "Our  Partners",
+    "description": "Collaborating with India's leading manufacturers and enterprises to deliver seamless logistics solutions.",
+    "partners": [
+      {
+        "name": "Amara Raja",
+        "logo": "/assets/img/members/Partners/Amara_Raja.png"
+      },
+      {
+        "name": "JK Tyre",
+        "logo": "/assets/img/members/Partners/JK-Tyre-logo.png"
+      },
+      {
+        "name": "NLC India",
+        "logo": "/assets/img/members/Partners/NLC_India_Limited.svg.png"
+      },
+      {
+        "name": "FCL",
+        "logo": "/assets/img/members/Partners/fcl.jpeg"
+      },
+      {
+        "name": "MP Birla",
+        "logo": "/assets/img/members/Partners/mpbirla.jpeg"
+      },
+      {
+        "name": "Ramco",
+        "logo": "/assets/img/members/Partners/ramco.png"
+      },
+      {
+        "name": "Value Ingredients",
+        "logo": "/assets/img/members/Partners/value-ingredients.png"
+      }
+    ]
+  },
+  "testimonials": {
+    "subHeading": "Clients Testimonials!",
+    "headingPrefix": "What Our Clients",
+    "headingHighlight": "Say!",
+    "headingSuffix": "",
+    "headingBreak": false,
+    "heading": "What Our Clients  Say!",
+    "description": "Real feedback from businesses that trust TSV Global Solutions for their critical logistics needs.",
+    "testimonials": [
+      {
+        "name": "Shradha",
+        "company": "Plant Lipids Pvt. Ltd.",
+        "avatarColor": "#ed2224",
+        "avatarIcon": "fa-user-tie",
+        "rating": 5,
+        "text": "We are satisfied with the services and support provided by TSV Global Solutions. Their team is professional, responsive, and consistently delivers on time. Highly recommended for any logistics requirements."
+      },
+      {
+        "name": "Prashant Kunder",
+        "company": "Fineotex Chemical Limited",
+        "avatarColor": "#ed2224",
+        "avatarIcon": "fa-user",
+        "rating": 5,
+        "text": "We are pleased with the quality of services provided by TSV Global Solutions. Their attention to detail, proactive communication, and ability to handle complex shipments make them a reliable logistics partner."
+      },
+      {
+        "name": "JAGAN PUNATHUM KANDIYIL",
+        "company": "S J SPARRE PARTS (MANAGING DIRECTOR)",
+        "avatarColor": "#ed2224",
+        "avatarIcon": "fa-user-tie",
+        "rating": 5,
+        "text": "We thank you for rendering exceptional services always. TSV Global has been our trusted logistics partner for years \u2014 their expertise in ODC cargo and custom clearance is unmatched in the industry."
+      }
+    ]
+  }
+}

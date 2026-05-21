@@ -1,0 +1,112 @@
+{
+  "page_header": {
+    "eyebrow": "Join Our Team",
+    "heading": "Build Your Career",
+    "highlight": "With TSV Global",
+    "description": "Be part of a dynamic team driving global trade. We invest in our people, encourage innovation, and build careers that grow with the world."
+  },
+  "why_us": {
+    "badge": "Why TSV Global?",
+    "heading": "Why Work With Us?",
+    "description": "At TSV Global Solutions, we believe that exceptional logistics starts with exceptional people. We offer a collaborative environment where your ideas are heard, your growth is supported, and your contribution makes a real global impact.\n\nWith offices in Chennai and Navi Mumbai, and operations spanning 150+ countries, a career at TSV Global means working on complex, meaningful logistics challenges every day.",
+    "features": [
+      {
+        "title": "Career Growth",
+        "description": "Structured growth plans & leadership development programs.",
+        "icon": "fa-chart-line-up"
+      },
+      {
+        "title": "Global Exposure",
+        "description": "Work with international partners across 150+ destinations.",
+        "icon": "fa-globe"
+      },
+      {
+        "title": "Great Culture",
+        "description": "Inclusive, ownership-driven team with a collaborative spirit.",
+        "icon": "fa-people-group"
+      },
+      {
+        "title": "Benefits & Perks",
+        "description": "Competitive salaries, health cover, and performance bonuses.",
+        "icon": "fa-hand-holding-heart"
+      }
+    ],
+    "image": "/assets/img/hiring-pricing.png",
+    "experience_years": "11+"
+  },
+  "job_openings": {
+    "badge": "We're Hiring",
+    "heading": "Current Job Openings",
+    "jobs": [
+      {
+        "title": "Freight Operations Executive",
+        "type": "Full Time",
+        "location": "Chennai, TN",
+        "experience": "2–4 Years",
+        "description": "Manage day-to-day freight operations including FCL/LCL shipment coordination, carrier bookings, and documentation compliance.",
+        "icon": "fa-ship"
+      },
+      {
+        "title": "Customs Clearance Officer",
+        "type": "Full Time",
+        "location": "Mumbai, MH",
+        "experience": "3–6 Years",
+        "description": "Handle import/export customs documentation, BOE filing, duty assessment, and coordination with CBIC for smooth clearance.",
+        "icon": "fa-file-lines"
+      },
+      {
+        "title": "Customer Service Executive",
+        "type": "Full Time",
+        "location": "Chennai, TN",
+        "experience": "1–3 Years",
+        "description": "Be the key POC for clients, providing real-time shipment updates, resolving queries, and coordinating with operations for seamless delivery.",
+        "icon": "fa-headset"
+      },
+      {
+        "title": "Sales Manager – Freight",
+        "type": "Full Time",
+        "location": "Mumbai / Chennai",
+        "experience": "5+ Years",
+        "description": "Drive business development in air & ocean freight, build client relationships, manage key accounts, and exceed revenue targets.",
+        "icon": "fa-chart-bar"
+      }
+    ]
+  },
+  "culture": {
+    "badge": "Our Culture",
+    "heading": "Life at TSV Global",
+    "items": [
+      {
+        "title": "Innovation First",
+        "description": "We encourage fresh thinking and creative problem-solving at every level of the organization.",
+        "icon": "fa-lightbulb",
+        "highlight": false
+      },
+      {
+        "title": "Collaborative Team",
+        "description": "A flat hierarchy where everyone's opinion matters and teamwork is the backbone of everything we do.",
+        "icon": "fa-handshake",
+        "highlight": true
+      },
+      {
+        "title": "Rewarded Performance",
+        "description": "Transparent appraisals and merit-based rewards that recognise and celebrate outstanding work.",
+        "icon": "fa-trophy",
+        "highlight": false
+      },
+      {
+        "title": "Continuous Learning",
+        "description": "Regular training programmes, certifications, and access to industry events to keep you ahead.",
+        "icon": "fa-graduation-cap",
+        "highlight": false
+      }
+    ]
+  },
+  "career_cta": {
+    "badge": "Don't See Your Role?",
+    "heading": "We're always looking for talented logistics professionals.",
+    "description": "Drop us an email and we'll reach out when the right opportunity arises.",
+    "button_text": "Send Your CV",
+    "email": "info@tsvglobal.com"
+  }
+}

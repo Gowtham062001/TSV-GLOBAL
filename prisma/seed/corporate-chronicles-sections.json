@@ -1,0 +1,98 @@
+{
+  "page_header": {
+    "eyebrow": "Beyond Logistics",
+    "heading": "Corporate",
+    "highlight": "Chronicles",
+    "description": "A visual odyssey of our global impacts, office culture, and the moments that define TSV Global Solutions."
+  },
+  "chronicles_gallery": {
+    "categories": [
+      {
+        "id": "mumbai",
+        "title": "New Branch Opening in Navi Mumbai",
+        "date": "March 2024",
+        "items": [
+          {
+            "id": "m1",
+            "image": "/assets/img/mumbai-branch-office/mumbai-1.webp",
+            "title": "Inauguration Ceremony"
+          },
+          {
+            "id": "m2",
+            "image": "/assets/img/mumbai-branch-office/mumbai-2.webp",
+            "title": "Team Celebration"
+          },
+          {
+            "id": "m3",
+            "image": "/assets/img/mumbai-branch-office/mumbai-3.webp",
+            "title": "Office Tour"
+          },
+          {
+            "id": "m4",
+            "image": "/assets/img/mumbai-branch-office/mumbai-4.webp",
+            "title": "First Operation"
+          },
+          {
+            "id": "m5",
+            "image": "/assets/img/mumbai-branch-office/mumbai-5.webp",
+            "title": "Branch Highlights"
+          },
+          {
+            "id": "m6",
+            "image": "/assets/img/mumbai-branch-office/mumbai-6.webp",
+            "title": "Our Network"
+          }
+        ]
+      },
+      {
+        "id": "wca",
+        "title": "WCA World Conference",
+        "date": "2024",
+        "items": [
+          {
+            "id": "w1",
+            "image": "/assets/img/wca-conference/IMG_20260312_165137_322.webp",
+            "title": "Conference Meet"
+          },
+          {
+            "id": "w2",
+            "image": "/assets/img/wca-conference/IMG_20260311_114856_255.webp",
+            "title": "Global Networking"
+          },
+          {
+            "id": "w3",
+            "image": "/assets/img/wca-conference/IMG_20260310_174254_928.webp",
+            "title": "Delegates Discussion"
+          },
+          {
+            "id": "w4",
+            "image": "/assets/img/wca-conference/IMG_20260309_100127_079.webp",
+            "title": "TSV Presence"
+          }
+        ]
+      },
+      {
+        "id": "operations",
+        "title": "Ground-breaking Operations",
+        "date": "Ongoing",
+        "items": [
+          {
+            "id": "o1",
+            "image": "/assets/img/project_cargo.png",
+            "title": "Project Cargo Handling"
+          },
+          {
+            "id": "o2",
+            "image": "/assets/img/port_handling.png",
+            "title": "Port Operations"
+          },
+          {
+            "id": "o3",
+            "image": "/assets/img/cargo_operations.png",
+            "title": "Warehousing Excellence"
+          }
+        ]
+      }
+    ]
+  }
+}

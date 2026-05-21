@@ -1,0 +1,33 @@
+{
+  "siteName": "TSV Global Solutions Pvt Ltd",
+  "logo": "/img/logo.png",
+  "favicon": "/favicon.ico",
+  "contactEmail": "cs@tsvglobal.com",
+  "contactPhone": "+91 96001 32975",
+  "address": "No. 101, Ground floor, NSIC STBP Industrial Estate, SIDCO Industrial Estate, Ekkatuthangal, Chennai, Tamil Nadu 600032,INDIA",
+  "socialLinks": [
+    {
+      "platform": "Facebook",
+      "url": "https://www.facebook.com/tsvglobalsolutions/",
+      "icon": "/img/icons/facebook.png"
+    },
+    {
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/tsv_global_solutions/",
+      "icon": "/img/icons/instagram.png"
+    },
+    {
+      "platform": "LinkedIn",
+      "url": "https://www.linkedin.com/company/tsv-global-solutions-pvt-ltd/",
+      "icon": "/img/icons/linkedin.png"
+    },
+    {
+      "platform": "WhatsApp",
+      "url": "https://wa.me/919600132980?text=Hi",
+      "icon": "/img/icons/whatsapp.png"
+    }
+  ],
+  "footerText": "\u00a9 2026 TSV GLOBAL SOLUTIONS PVT LTD , All Rights Reserved.",
+  "gaId": "[YOUR_GA4_MEASUREMENT_ID]",
+  "gtmId": "[YOUR_GTM_CONTAINER_ID]"
+}

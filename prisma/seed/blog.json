@@ -1,0 +1,48 @@
+[
+  {
+    "title": "The Future of NVOCC in 2026",
+    "slug": "future-of-nvocc-2026",
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "The logistics industry is undergoing a massive transformation..."
+            }
+          ]
+        }
+      ]
+    },
+    "excerpt": "How technology and green energy are reshaping sea freight.",
+    "coverImage": "/img/blog-1.jpg",
+    "author": "Logistics Expert",
+    "category": "Industry Insights",
+    "status": "PUBLISHED"
+  },
+  {
+    "title": "Optimizing Your Supply Chain",
+    "slug": "optimizing-supply-chain",
+    "content": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Efficiency is the key to global trade success..."
+            }
+          ]
+        }
+      ]
+    },
+    "excerpt": "5 tips to reduce costs and improve delivery times.",
+    "coverImage": "/img/blog-2.jpg",
+    "author": "Supply Chain Guru",
+    "category": "Operations",
+    "status": "PUBLISHED"
+  }
+]

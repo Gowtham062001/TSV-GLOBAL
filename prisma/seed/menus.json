@@ -1,0 +1,126 @@
+[
+  {
+    "title": "Home",
+    "link": "/"
+  },
+  {
+    "title": "Company",
+    "link": "/about",
+    "items": [
+      {
+        "title": "About Us",
+        "link": "/about",
+        "icon": "fa-regular fa-building"
+      },
+      {
+        "title": "Our Milestones",
+        "link": "/our-milestones",
+        "icon": "fa-regular fa-star"
+      },
+      {
+        "title": "Corporate Chronicles",
+        "link": "/corporate-chronicles",
+        "icon": "fa-regular fa-camera-retro"
+      },
+      {
+        "title": "Associations",
+        "link": "/associations",
+        "icon": "fa-regular fa-handshake"
+      },
+      {
+        "title": "Careers",
+        "link": "/careers",
+        "icon": "fa-regular fa-briefcase"
+      },
+      {
+        "title": "Case Studies",
+        "link": "/case-studies",
+        "icon": "fa-regular fa-folder-open"
+      }
+    ]
+  },
+  {
+    "title": "Services",
+    "link": "/services",
+    "items": [
+      {
+        "title": "NVOCC",
+        "link": "/services/nvocc",
+        "icon": "fa-regular fa-ship"
+      },
+      {
+        "title": "Custom Clearance",
+        "link": "/services/custom-clearance",
+        "icon": "fa-regular fa-file-lines"
+      },
+      {
+        "title": "Project Management",
+        "link": "/services/project-management",
+        "icon": "fa-regular fa-layer-group",
+        "items": [
+          {
+            "title": "Batteries",
+            "link": "/services/batteries",
+            "icon": "fa-regular fa-battery-full"
+          },
+          {
+            "title": "Solar Panel",
+            "link": "/services/solar-panel",
+            "icon": "fa-regular fa-sun"
+          },
+          {
+            "title": "Oil & Gas",
+            "link": "/services/oil-and-gas",
+            "icon": "fa-regular fa-droplet"
+          },
+          {
+            "title": "Food Products",
+            "link": "/services/food-products",
+            "icon": "fa-regular fa-wheat"
+          },
+          {
+            "title": "Chemicals",
+            "link": "/services/chemicals",
+            "icon": "fa-regular fa-flask"
+          }
+        ]
+      },
+      {
+        "title": "Project Cargo",
+        "link": "/services/project-cargo",
+        "icon": "fa-regular fa-boxes-stacked"
+      },
+      {
+        "title": "ODC Cargo",
+        "link": "/services/over-dimensional-cargo",
+        "icon": "fa-regular fa-truck-moving"
+      },
+      {
+        "title": "Transportation",
+        "link": "/services/transportation",
+        "icon": "fa-regular fa-truck",
+        "items": [
+          {
+            "title": "Road Freight",
+            "link": "/services/road-freight",
+            "icon": "fa-regular fa-truck-moving"
+          },
+          {
+            "title": "Sea Freight",
+            "link": "/services/sea-freight",
+            "icon": "fa-regular fa-ship"
+          },
+          {
+            "title": "Air Freight",
+            "link": "/services/air-freight",
+            "icon": "fa-regular fa-plane-up"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Contact",
+    "link": "/contact"
+  }
+]
