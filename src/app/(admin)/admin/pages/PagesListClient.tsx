@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { 
   FileText, 
   Search, 
@@ -13,7 +13,9 @@ import {
   X,
   Trash2,
   Eye,
-  EyeOff
+  EyeOff,
+  List,
+  LayoutGrid
 } from "lucide-react";
 import Link from "next/link";
 import { format } from "date-fns";
@@ -36,11 +38,24 @@ export default function PagesListClient({ initialPages }: { initialPages: PageWi
   const { success: toastSuccess, error: toastError } = useToast();
   const [pages, setPages] = useState<PageWithCount[]>(initialPages);
   const [search, setSearch] = useState("");
+  const [viewMode, setViewMode] = useState<"list" | "grid">("list");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [newTitle, setNewTitle] = useState("");
   const [newSlug, setNewSlug] = useState("");
   const [isCreating, setIsCreating] = useState(false);
   const router = useRouter();
+
+  useEffect(() => {
+    const saved = localStorage.getItem("pages_view_mode") as "list" | "grid";
+    if (saved === "list" || saved === "grid") {
+      setViewMode(saved);
+    }
+  }, []);
+
+  const handleViewModeChange = (mode: "list" | "grid") => {
+    setViewMode(mode);
+    localStorage.setItem("pages_view_mode", mode);
+  };
 
   const filteredPages = pages.filter(page => 
     page.title.toLowerCase().includes(search.toLowerCase()) || 
@@ -129,130 +144,281 @@ export default function PagesListClient({ initialPages }: { initialPages: PageWi
         </button>
       </div>
 
-      <div className="space-y-3">
-        {filteredPages.map((page) => (
-          <div key={page.id} style={{
-            background: '#ffffff',
-            border: '1px solid #f0f2f8',
-            borderRadius: '10px',
-            padding: '14px 20px',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '14px',
-            position: 'relative'
-          }} className="group admin-list-row">
-            
-            <div style={{
-              width: '32px',
-              height: '32px',
-              borderRadius: '50%',
-              background: 'rgba(193,0,10,0.08)',
-              border: '1px solid rgba(193,0,10,0.15)',
+      {/* Search & Layout Toggle Toolbar */}
+      <div className="flex items-center gap-3 mb-4">
+        <div className="relative flex-grow">
+          <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-[#8a9ab5]" />
+          <input
+            type="text"
+            placeholder="Search pages..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            className="w-full pl-9 pr-4 py-2 bg-white border border-[#cbd5e1] rounded-lg outline-none focus:border-[#0f1523] text-[13px]"
+          />
+        </div>
+        <div className="flex border border-[#cbd5e1] rounded-lg p-0.5 bg-white shrink-0">
+          <button
+            onClick={() => handleViewModeChange('list')}
+            className={`p-1.5 rounded-md transition-all ${viewMode === 'list' ? 'bg-[#0f1523] text-white' : 'text-[#8a9ab5] hover:text-[#0f1523]'}`}
+            title="List View"
+          >
+            <List size={16} />
+          </button>
+          <button
+            onClick={() => handleViewModeChange('grid')}
+            className={`p-1.5 rounded-md transition-all ${viewMode === 'grid' ? 'bg-[#0f1523] text-white' : 'text-[#8a9ab5] hover:text-[#0f1523]'}`}
+            title="Grid View"
+          >
+            <LayoutGrid size={16} />
+          </button>
+        </div>
+      </div>
+
+      {viewMode === "list" ? (
+        <div className="space-y-2">
+          {filteredPages.map((page) => (
+            <div key={page.id} style={{
+              background: '#ffffff',
+              border: '1px solid #f0f2f8',
+              borderRadius: '10px',
+              padding: '14px 20px',
               display: 'flex',
               alignItems: 'center',
-              justifyContent: 'center',
-              flexShrink: 0
-            }}>
-              <FileText color="#c1000a" style={{width: '15px', height: '15px', opacity: 0.7}} />
-            </div>
+              gap: '14px',
+              position: 'relative'
+            }} className="group admin-list-row">
+              
+              <div style={{
+                width: '40px',
+                height: '40px',
+                borderRadius: '8px',
+                overflow: 'hidden',
+                flexShrink: 0,
+                background: '#f0f2f8',
+                border: '1px solid #e2e8f0'
+              }}>
+                <img
+                  src={(page as any).seoData?.ogImage || '/assets/img/logo.png'}
+                  alt={page.title}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                  onError={(e) => { (e.target as HTMLImageElement).src = '/assets/img/logo.png'; }}
+                />
+              </div>
 
-            <div className="flex-1 min-w-0 flex items-center gap-4">
-              <div>
-                <div style={{fontSize: '15px', fontWeight: 600, color: '#0f1523', fontFamily: 'var(--font-admin)'}}>
-                  {page.title}
-                </div>
-                <div className="slug" style={{fontSize: '11px', color: '#8a9ab5'}}>
-                  ⊘ /{page.slug}
+              <div className="flex-1 min-w-0 flex items-center gap-4">
+                <div>
+                  <div style={{fontSize: '15px', fontWeight: 600, color: '#0f1523', fontFamily: 'var(--font-admin)'}}>
+                    {page.title}
+                  </div>
+                  <div className="slug" style={{fontSize: '11px', color: '#8a9ab5'}}>
+                    ⊘ /{page.slug}
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div>
-              {page.status === 'PUBLISHED' ? (
+              <div>
+                {page.status === 'PUBLISHED' ? (
+                  <span style={{
+                    fontSize: '11px', fontWeight: 600, color: '#059669',
+                    background: 'rgba(16,185,129,0.08)', padding: '4px 10px',
+                    borderRadius: '20px'
+                  }}>
+                    • {page.status}
+                  </span>
+                ) : (
+                  <span style={{
+                    fontSize: '11px', fontWeight: 600, color: '#d97706',
+                    background: 'rgba(245,158,11,0.08)', padding: '4px 10px',
+                    borderRadius: '20px'
+                  }}>
+                    • {page.status}
+                  </span>
+                )}
+              </div>
+
+              <div>
                 <span style={{
                   fontSize: '11px', fontWeight: 600, color: '#059669',
                   background: 'rgba(16,185,129,0.08)', padding: '4px 10px',
                   borderRadius: '20px'
                 }}>
-                  • {page.status}
+                  • {page._count.sections} SECTIONS
                 </span>
-              ) : (
-                <span style={{
-                  fontSize: '11px', fontWeight: 600, color: '#d97706',
-                  background: 'rgba(245,158,11,0.08)', padding: '4px 10px',
-                  borderRadius: '20px'
-                }}>
-                  • {page.status}
-                </span>
-              )}
-            </div>
+              </div>
 
-            <div>
-              <span style={{
-                fontSize: '11px', fontWeight: 600, color: '#059669',
-                background: 'rgba(16,185,129,0.08)', padding: '4px 10px',
-                borderRadius: '20px'
-              }}>
-                • {page._count.sections} SECTIONS
-              </span>
-            </div>
+              <div>
+                <button
+                  onClick={() => toggleVisibility(page.id, page.isVisible)}
+                  className={`p-2 rounded-xl transition-all ${
+                    page.isVisible 
+                      ? 'text-green-500 hover:bg-green-50' 
+                      : 'text-slate-300 hover:bg-slate-100'
+                  }`}
+                  title={page.isVisible ? "Visible on page" : "Hidden from page"}
+                >
+                  {page.isVisible ? <Eye size={18} /> : <EyeOff size={18} />}
+                </button>
+              </div>
 
-            <div>
-              <button
-                onClick={() => toggleVisibility(page.id, page.isVisible)}
-                className={`p-2 rounded-xl transition-all ${
-                  page.isVisible 
-                    ? 'text-green-500 hover:bg-green-50' 
-                    : 'text-slate-300 hover:bg-slate-100'
-                }`}
-                title={page.isVisible ? "Visible on page" : "Hidden from page"}
-              >
-                {page.isVisible ? <Eye size={18} /> : <EyeOff size={18} />}
-              </button>
+              <div className="flex items-center gap-2">
+                <Link 
+                  href={`/${page.slug}`} 
+                  target="_blank"
+                  style={{
+                    width: '32px', height: '32px', border: '1px solid #f0f2f8', borderRadius: '8px',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center'
+                  }}
+                  className="hover:bg-[#f0f2f8] transition-colors"
+                >
+                  <ExternalLink style={{width: '14px', height: '14px', opacity: 0.5}} color="#0f1523" />
+                </Link>
+                <Link 
+                  href={`/admin/pages/${page.slug || page.id}`} 
+                  style={{
+                    width: '32px', height: '32px', border: '1px solid #f0f2f8', borderRadius: '8px',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center'
+                  }}
+                  className="hover:bg-[#f0f2f8] transition-colors"
+                >
+                  <Edit3 style={{width: '14px', height: '14px', opacity: 0.5}} color="#0f1523" />
+                </Link>
+                <button 
+                  onClick={() => handleDeletePage(page.id)}
+                  style={{
+                    width: '32px', height: '32px', border: '1px solid #f0f2f8', borderRadius: '8px',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center'
+                  }}
+                  className="hover:bg-red-50 hover:border-red-100 transition-colors text-red-600"
+                  title="Delete Page"
+                >
+                  <Trash2 style={{width: '14px', height: '14px', opacity: 0.5}} color="#c1000a" />
+                </button>
+              </div>
             </div>
+          ))}
+          {filteredPages.length === 0 && (
+            <div className="p-10 text-center text-[#8a9ab5] text-[13px] border border-[#f0f2f8] rounded-[10px] bg-white">
+              No pages found.
+            </div>
+          )}
+        </div>
+      ) : (
+        <div className="admin-grid-layout">
+          {filteredPages.map((page) => (
+            <div
+              key={page.id}
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                background: '#fff',
+                border: '2px solid #cbd5e1',
+                borderRadius: 10,
+                overflow: 'hidden',
+                transition: 'border-color 0.15s'
+              }}
+              onMouseEnter={e => (e.currentTarget.style.borderColor = '#0f1523')}
+              onMouseLeave={e => (e.currentTarget.style.borderColor = '#cbd5e1')}
+            >
+              {/* Thumbnail Container */}
+              <div style={{ position: 'relative', width: '100%', height: 140, background: '#f0f2f8', overflow: 'hidden' }}>
+                <img
+                  src={(page as any).seoData?.ogImage || '/assets/img/logo.png'}
+                  alt={page.title}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                  onError={(e) => { (e.target as HTMLImageElement).src = '/assets/img/logo.png'; }}
+                />
+                
+                {/* Visibility overlay button */}
+                <div style={{ position: 'absolute', top: 8, right: 8 }}>
+                  <button
+                    onClick={() => toggleVisibility(page.id, page.isVisible)}
+                    style={{ background: '#fff', boxShadow: '0 2px 4px rgba(0,0,0,0.05)' }}
+                    className={`p-1.5 rounded-lg transition-all ${
+                      page.isVisible 
+                        ? 'text-green-500 hover:bg-green-50' 
+                        : 'text-slate-400 hover:bg-slate-100'
+                    }`}
+                    title={page.isVisible ? "Visible on page" : "Hidden from page"}
+                  >
+                    {page.isVisible ? <Eye size={15} /> : <EyeOff size={15} />}
+                  </button>
+                </div>
+              </div>
 
-            <div className="flex items-center gap-2">
-              <Link 
-                href={`/${page.slug}`} 
-                target="_blank"
-                style={{
-                  width: '32px', height: '32px', border: '1px solid #f0f2f8', borderRadius: '8px',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center'
-                }}
-                className="hover:bg-[#f0f2f8] transition-colors"
-              >
-                <ExternalLink style={{width: '14px', height: '14px', opacity: 0.5}} color="#0f1523" />
-              </Link>
-              <Link 
-                href={`/admin/pages/${page.slug || page.id}`} 
-                style={{
-                  width: '32px', height: '32px', border: '1px solid #f0f2f8', borderRadius: '8px',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center'
-                }}
-                className="hover:bg-[#f0f2f8] transition-colors"
-              >
-                <Edit3 style={{width: '14px', height: '14px', opacity: 0.5}} color="#0f1523" />
-              </Link>
-              <button 
-                onClick={() => handleDeletePage(page.id)}
-                style={{
-                  width: '32px', height: '32px', border: '1px solid #f0f2f8', borderRadius: '8px',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center'
-                }}
-                className="hover:bg-red-50 hover:border-red-100 transition-colors text-red-600"
-                title="Delete Page"
-              >
-                <Trash2 style={{width: '14px', height: '14px', opacity: 0.5}} color="#c1000a" />
-              </button>
+              {/* Details Body */}
+              <div style={{ padding: '14px 16px', flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <div style={{ flex: 1, minHeight: 64 }}>
+                  <p style={{
+                    fontSize: 14, fontWeight: 600, color: '#0f1523',
+                    margin: '0 0 3px', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden', lineHeight: '1.4'
+                  }}>
+                    {page.title}
+                  </p>
+                  <p style={{ fontSize: 11, color: '#8a9ab5', margin: '0 0 6px', fontFamily: 'monospace', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                    /{page.slug}
+                  </p>
+                </div>
+
+                <div className="flex items-center justify-between pt-3 mt-3 border-t border-[#f0f2f8]">
+                  <span style={{
+                    fontSize: 9, fontWeight: 700, padding: '2px 8px',
+                    borderRadius: 20,
+                    background: page.status === 'PUBLISHED' ? 'rgba(16,185,129,0.1)' : 'rgba(245,158,11,0.1)',
+                    color: page.status === 'PUBLISHED' ? '#059669' : '#d97706',
+                    textTransform: 'uppercase'
+                  }}>
+                    {page.status}
+                  </span>
+                  
+                  <span style={{
+                    fontSize: 9, fontWeight: 700, padding: '2px 8px',
+                    borderRadius: 20,
+                    background: 'rgba(59,130,246,0.08)',
+                    color: '#2563eb'
+                  }}>
+                    {page._count.sections} SECTIONS
+                  </span>
+                </div>
+              </div>
+
+              {/* Actions Footer */}
+              <div style={{ display: 'flex', gap: 6, padding: '10px 16px', background: '#fcfdfe', borderTop: '1px solid #f0f2f8' }}>
+                <Link
+                  href={`/${page.slug}`}
+                  target="_blank"
+                  style={{ flex: 1, height: 30, border: '1px solid #f0f2f8', borderRadius: 8, display: 'flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none', background: '#fff', gap: 4 }}
+                  className="hover:bg-[#f0f2f8]"
+                  title="View live page"
+                >
+                  <ExternalLink style={{ width: 12, height: 12, opacity: 0.5 }} color="#0f1523" />
+                  <span style={{ fontSize: 11, fontWeight: 600, color: '#0f1523' }}>View</span>
+                </Link>
+                <Link
+                  href={`/admin/pages/${page.slug || page.id}`}
+                  style={{ flex: 1, height: 30, border: '1px solid #f0f2f8', borderRadius: 8, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 4 }}
+                  className="hover:bg-[#f0f2f8]"
+                >
+                  <Edit3 style={{ width: 12, height: 12, opacity: 0.5 }} color="#0f1523" />
+                  <span style={{ fontSize: 11, fontWeight: 600, color: '#0f1523' }}>Edit</span>
+                </Link>
+                <button
+                  onClick={() => handleDeletePage(page.id)}
+                  style={{ width: 30, height: 30, border: '1px solid #f0f2f8', borderRadius: 8, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#fff', cursor: 'pointer' }}
+                  className="hover:bg-red-50 hover:border-red-100 shrink-0"
+                  title="Delete Page"
+                >
+                  <Trash2 style={{ width: 12, height: 12, opacity: 0.5 }} color="#c1000a" />
+                </button>
+              </div>
             </div>
-          </div>
-        ))}
-        {filteredPages.length === 0 && (
-          <div className="p-10 text-center text-[#8a9ab5] text-[13px] border border-[#f0f2f8] rounded-[10px] bg-white">
-            No pages found.
-          </div>
-        )}
-      </div>
+          ))}
+          {filteredPages.length === 0 && (
+            <div className="col-span-full p-10 text-center text-[#8a9ab5] text-[13px] border border-[#f0f2f8] rounded-[10px] bg-white">
+              No pages found.
+            </div>
+          )}
+        </div>
+      )}
 
       {isModalOpen && (
         <div className="fixed inset-0 z-[1000] flex items-center justify-center p-6 bg-slate-900/40 backdrop-blur-md animate-in fade-in duration-300">

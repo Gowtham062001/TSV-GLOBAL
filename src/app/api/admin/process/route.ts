@@ -56,6 +56,8 @@ export async function POST(req: Request) {
         category: data.category || "TASK",
         percentage: parseInt(data.percentage) || 0,
         status: data.status || "PENDING",
+        priority: data.priority || "MEDIUM",
+        deadline: data.deadline ? new Date(data.deadline) : null,
         order: parseInt(data.order) || 0,
       },
     });

@@ -48,7 +48,6 @@ export default function CaseStudyEditorClient({ cs }: { cs?: CaseStudy }) {
     ...cs,
     images: initialImages,
     metrics: initialMetrics,
-    isVisible: cs.isVisible !== undefined ? cs.isVisible : true,
     seoData: cs.seoData || { metaTitle: "", metaDescription: "", canonicalUrl: "", faq: [] }
   } : {
     title: "",
@@ -64,7 +63,6 @@ export default function CaseStudyEditorClient({ cs }: { cs?: CaseStudy }) {
     images: [],
     tags: "",
     status: "DRAFT",
-    isVisible: true,
     seoData: { metaTitle: "", metaDescription: "", canonicalUrl: "", faq: [] }
   });
 
@@ -388,18 +386,6 @@ export default function CaseStudyEditorClient({ cs }: { cs?: CaseStudy }) {
                   >
                     <option value="DRAFT">Draft</option>
                     <option value="PUBLISHED">Published</option>
-                  </select>
-                </div>
-
-                <div className="space-y-2">
-                  <label className="text-[10px] font-bold text-gray-400 uppercase tracking-widest px-1">Visibility</label>
-                  <select 
-                    value={formData.isVisible ? "true" : "false"}
-                    onChange={(e) => setFormData({ ...formData, isVisible: e.target.value === "true" })}
-                    className="w-full px-4 py-3 bg-gray-50/50 border border-gray-100 rounded-xl focus:ring-2 focus:ring-[#e63946]/10 focus:border-[#e63946] focus:bg-white outline-none text-xs font-bold transition-all"
-                  >
-                    <option value="true">Visible</option>
-                    <option value="false">Hidden</option>
                   </select>
                 </div>
 

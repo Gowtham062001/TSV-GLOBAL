@@ -8,18 +8,18 @@ export async function GET() {
     });
 
     const headers = ["Name", "Email", "Phone", "Company", "Brochure", "Date"];
-    const rows = leads.map(l => [
+    const rows = leads.map((l: { name: string; email: string; phone?: string | null; company?: string | null; brochureTitle: string; createdAt: Date }) => [
       l.name,
       l.email,
       l.phone || "",
       l.company || "",
       l.brochureTitle,
-      l.createdAt.toISOString()
+      l.createdAt.toISOString(),
     ]);
 
     const csvContent = [
       headers.join(","),
-      ...rows.map(r => r.join(","))
+      ...rows.map((r: (string | null | undefined)[]) => r.map((v: string | null | undefined) => `"${String(v ?? '').replace(/"/g, '""')}"`).join(","))
     ].join("\n");
 
     return new Response(csvContent, {
@@ -29,7 +29,7 @@ export async function GET() {
       },
     });
   } catch (error) {
-    console.error("Export Error:", error);
-    return NextResponse.json({ error: "Failed to export leads" }, { status: 500 });
+    console.error("Brochure Export Error:", error);
+    return NextResponse.json({ error: "Failed to export" }, { status: 500 });
   }
 }

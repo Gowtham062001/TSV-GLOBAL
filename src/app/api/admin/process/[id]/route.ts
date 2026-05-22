@@ -13,6 +13,8 @@ export async function PUT(req: Request, { params }: { params: { id: string } }) 
         category: data.category,
         percentage: parseInt(data.percentage),
         status: data.status,
+        priority: data.priority || "MEDIUM",
+        deadline: data.deadline ? new Date(data.deadline) : null,
         order: parseInt(data.order),
       },
     });

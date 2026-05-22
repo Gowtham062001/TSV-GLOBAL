@@ -300,6 +300,25 @@ body {
   font-family: var(--font-admin) !important;
 }
 
+/* --- Admin Grid Layout Override for Lists --- */
+.admin-grid-layout {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 16px !important;
+}
+
+@media (max-width: 1024px) {
+  .admin-grid-layout {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .admin-grid-layout {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 /* --- Admin Mobile Responsiveness Override --- */
 @media (max-width: 1024px) {
   /* Main Container / Padding adjustments */

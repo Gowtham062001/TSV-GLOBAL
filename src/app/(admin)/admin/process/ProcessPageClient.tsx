@@ -29,6 +29,8 @@ interface ProjectTask {
   category: string;
   percentage: number;
   status: string;
+  priority: string;
+  deadline: string | null;
   order: number;
 }
 
@@ -39,6 +41,8 @@ export default function ProcessPageClient() {
   const [isSaving, setIsSaving] = useState(false);
   const [filterVersion, setFilterVersion] = useState("all");
   const [filterCategory, setFilterCategory] = useState("all");
+  const [filterStatus, setFilterStatus] = useState("all");
+  const [search, setSearch] = useState("");
 
   const fetchTasks = async () => {
     setIsLoading(true);
@@ -68,6 +72,8 @@ export default function ProcessPageClient() {
       category: filterCategory === "all" ? "TASK" : filterCategory,
       percentage: 0,
       status: "PENDING",
+      priority: "MEDIUM",
+      deadline: null,
       order: tasks.length,
     };
     setTasks([...tasks, newTask]);
@@ -121,8 +127,22 @@ export default function ProcessPageClient() {
   const filteredTasks = tasks.filter(t => {
     const versionMatch = filterVersion === "all" || t.version === filterVersion;
     const categoryMatch = filterCategory === "all" || t.category === filterCategory;
-    return versionMatch && categoryMatch;
+    const statusMatch = filterStatus === "all" || t.status === filterStatus;
+    const searchMatch = !search || t.title.toLowerCase().includes(search.toLowerCase()) || (t.description || "").toLowerCase().includes(search.toLowerCase());
+    return versionMatch && categoryMatch && statusMatch && searchMatch;
   });
+
+  const stats = {
+    total: tasks.length,
+    completed: tasks.filter(t => t.status === "COMPLETED").length,
+    inProgress: tasks.filter(t => t.status === "IN_PROGRESS" || t.status === "PARTIAL").length,
+    pending: tasks.filter(t => t.status === "PENDING").length,
+    pct: tasks.length ? Math.round(tasks.reduce((s, t) => s + t.percentage, 0) / tasks.length) : 0,
+  };
+
+  const priorityDot: Record<string, string> = {
+    CRITICAL: '#c1000a', HIGH: '#d97706', MEDIUM: '#2563eb', LOW: '#8a9ab5'
+  };
 
   const versions = ["1.0", "2.0", "3.0"]; // Predetermined versions or dynamic
   const categories = ["TASK", "BUG", "SECTION", "REQUIREMENT", "DESIGN"];
@@ -162,6 +182,26 @@ export default function ProcessPageClient() {
         </div>
       </div>
 
+      {/* Stats Row */}
+      <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 4 }}>
+        {[
+          { label: 'Overall', value: `${stats.pct}%`, bg: '#0f1523', color: '#fff' },
+          { label: 'Completed', value: stats.completed, bg: 'rgba(16,185,129,0.08)', color: '#059669' },
+          { label: 'In Progress', value: stats.inProgress, bg: 'rgba(59,130,246,0.08)', color: '#2563eb' },
+          { label: 'Pending', value: stats.pending, bg: 'rgba(245,158,11,0.08)', color: '#d97706' },
+          { label: 'Total', value: stats.total, bg: '#f8f9fb', color: '#4a5568' },
+        ].map(s => (
+          <div key={s.label} style={{
+            padding: '10px 16px', borderRadius: 10,
+            background: s.bg, display: 'flex', gap: 10,
+            alignItems: 'center', border: '1px solid rgba(0,0,0,0.04)'
+          }}>
+            <span style={{ fontSize: 11, fontWeight: 700, color: s.color, opacity: 0.7 }}>{s.label}</span>
+            <span style={{ fontSize: 18, fontWeight: 800, color: s.color }}>{s.value}</span>
+          </div>
+        ))}
+      </div>
+
       <div className="flex flex-wrap gap-4 items-center bg-white p-4 rounded-[10px] border border-[#f0f2f8]">
         <div className="flex items-center gap-2 text-[13px] font-bold text-[#0f1523] px-2 border-r border-[#f0f2f8] pr-4">
           <Filter size={16} className="text-[#8a9ab5]" /> Filters
@@ -190,6 +230,30 @@ export default function ProcessPageClient() {
             {categories.map(c => <option key={c} value={c}>{c}</option>)}
           </select>
         </div>
+
+        <div className="flex items-center gap-2">
+          <span className="text-[11px] font-bold text-[#8a9ab5] uppercase tracking-wider">Status</span>
+          <select 
+            value={filterStatus}
+            onChange={(e) => setFilterStatus(e.target.value)}
+            className="bg-[#f8f9fb] border border-[#f0f2f8] rounded-md px-3 py-1.5 text-[13px] text-[#0f1523] outline-none cursor-pointer"
+          >
+            <option value="all">All</option>
+            <option value="PENDING">Pending</option>
+            <option value="IN_PROGRESS">In Progress</option>
+            <option value="PARTIAL">Partial</option>
+            <option value="COMPLETED">Completed</option>
+          </select>
+        </div>
+
+        <input
+          type="text"
+          value={search}
+          onChange={e => setSearch(e.target.value)}
+          placeholder="Search tasks..."
+          className="bg-[#f8f9fb] border border-[#f0f2f8] rounded-md px-3 py-1.5 text-[13px] text-[#0f1523] outline-none"
+          style={{ minWidth: 180 }}
+        />
 
         <div className="ml-auto flex items-center gap-4">
           {filteredTasks.length === 0 && (
@@ -220,6 +284,15 @@ export default function ProcessPageClient() {
                 <div className="w-10 h-10 bg-[#f8f9fb] rounded-lg flex items-center justify-center text-[13px] font-bold text-[#8a9ab5] border border-[#f0f2f8]">
                   {String(index + 1).padStart(2, '0')}
                 </div>
+                {/* Priority dot */}
+                <div
+                  title={`Priority: ${task.priority}`}
+                  style={{
+                    width: 10, height: 10, borderRadius: '50%',
+                    background: priorityDot[task.priority] || '#8a9ab5',
+                    flexShrink: 0, cursor: 'help'
+                  }}
+                />
                 <button 
                   onClick={() => {
                     const statuses = ["PENDING", "IN_PROGRESS", "PARTIAL", "COMPLETED"];
@@ -301,34 +374,59 @@ export default function ProcessPageClient() {
                 </div>
               </div>
 
-              <div className="flex flex-col justify-between items-end gap-4 h-full lg:min-h-[140px] w-full lg:w-auto">
-                <div className="flex flex-col items-end gap-1">
-                   <span className="text-[11px] font-bold text-[#8a9ab5] uppercase tracking-wider mb-1">Status</span>
-                   <select 
-                    value={task.status}
-                    onChange={(e) => handleUpdateTask(task.id, { status: e.target.value, percentage: e.target.value === 'COMPLETED' ? 100 : task.percentage })}
-                    className={`px-3 py-1.5 rounded-lg text-[11px] font-bold uppercase tracking-wider outline-none cursor-pointer border ${
-                      task.status === 'COMPLETED' ? 'bg-[#10b981]/10 text-[#059669] border-[#10b981]/20' : 
-                      task.status === 'PENDING' ? 'bg-[#f8f9fb] text-[#8a9ab5] border-[#f0f2f8]' :
-                      task.status === 'PARTIAL' ? 'bg-[#f59e0b]/10 text-[#d97706] border-[#f59e0b]/20' :
-                      'bg-[#3b82f6]/10 text-[#2563eb] border-[#3b82f6]/20'
-                    }`}
+                <div className="flex flex-col justify-between items-end gap-4 h-full lg:min-h-[140px] w-full lg:w-auto">
+                  <div className="flex flex-col items-end gap-1">
+                    <span className="text-[11px] font-bold text-[#8a9ab5] uppercase tracking-wider mb-1">Priority</span>
+                    <select
+                      value={task.priority || 'MEDIUM'}
+                      onChange={e => handleUpdateTask(task.id, { priority: e.target.value })}
+                      className="px-3 py-1.5 rounded-lg text-[11px] font-bold uppercase tracking-wider outline-none cursor-pointer border bg-[#f8f9fb] text-[#0f1523] border-[#f0f2f8]"
+                    >
+                      <option value="LOW">Low</option>
+                      <option value="MEDIUM">Medium</option>
+                      <option value="HIGH">High</option>
+                      <option value="CRITICAL">Critical</option>
+                    </select>
+                  </div>
+                  <div className="flex flex-col items-end gap-1">
+                    <span className="text-[11px] font-bold text-[#8a9ab5] uppercase tracking-wider mb-1">Status</span>
+                    <select 
+                      value={task.status}
+                      onChange={(e) => handleUpdateTask(task.id, { status: e.target.value, percentage: e.target.value === 'COMPLETED' ? 100 : task.percentage })}
+                      className={`px-3 py-1.5 rounded-lg text-[11px] font-bold uppercase tracking-wider outline-none cursor-pointer border ${
+                        task.status === 'COMPLETED' ? 'bg-[#10b981]/10 text-[#059669] border-[#10b981]/20' : 
+                        task.status === 'PENDING' ? 'bg-[#f8f9fb] text-[#8a9ab5] border-[#f0f2f8]' :
+                        task.status === 'PARTIAL' ? 'bg-[#f59e0b]/10 text-[#d97706] border-[#f59e0b]/20' :
+                        'bg-[#3b82f6]/10 text-[#2563eb] border-[#3b82f6]/20'
+                      }`}
+                    >
+                      <option value="PENDING">Pending</option>
+                      <option value="IN_PROGRESS">In Progress</option>
+                      <option value="PARTIAL">Partial</option>
+                      <option value="COMPLETED">Completed</option>
+                    </select>
+                  </div>
+                  <div className="flex flex-col items-end gap-1">
+                    <span className="text-[11px] font-bold text-[#8a9ab5] uppercase tracking-wider mb-1">Deadline</span>
+                    <input
+                      type="date"
+                      value={task.deadline ? task.deadline.slice(0, 10) : ''}
+                      onChange={e => handleUpdateTask(task.id, { deadline: e.target.value || null })}
+                      className="px-3 py-1.5 rounded-lg text-[11px] font-bold outline-none cursor-pointer border bg-[#f8f9fb] border-[#f0f2f8]"
+                      style={{
+                        color: task.deadline && new Date(task.deadline) < new Date() && task.status !== 'COMPLETED'
+                          ? '#c1000a' : '#0f1523'
+                      }}
+                    />
+                  </div>
+                  <button 
+                    onClick={() => handleDeleteTask(task.id)}
+                    className="p-2 text-[#8a9ab5] hover:text-[#c1000a] hover:bg-red-50 rounded-lg transition-all border border-transparent hover:border-red-100"
+                    title="Remove Item"
                   >
-                    <option value="PENDING">Pending</option>
-                    <option value="IN_PROGRESS">In Progress</option>
-                    <option value="PARTIAL">Partial</option>
-                    <option value="COMPLETED">Completed</option>
-                  </select>
+                    <Trash2 size={16} />
+                  </button>
                 </div>
-                
-                <button 
-                  onClick={() => handleDeleteTask(task.id)}
-                  className="p-2 text-[#8a9ab5] hover:text-[#c1000a] hover:bg-red-50 rounded-lg transition-all border border-transparent hover:border-red-100"
-                  title="Remove Item"
-                >
-                  <Trash2 size={16} />
-                </button>
-              </div>
             </div>
           </div>
         ))}

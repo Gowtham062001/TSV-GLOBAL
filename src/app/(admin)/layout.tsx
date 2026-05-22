@@ -16,13 +16,11 @@ import {
   Mail, 
   Download, 
   Users, 
-  Search, 
   BarChart3, 
   Settings,
   ChevronRight,
   User,
   LogOut,
-  Bell,
   PanelLeft,
   GitBranch,
   FileText
@@ -45,7 +43,6 @@ const navItems = [
   { type: "label", label: "SYSTEM", roles: ["SUPER_ADMIN", "ADMIN"] },
   { label: "Users", href: "/admin/users", icon: Users, roles: ["SUPER_ADMIN"] },
   { label: "Permissions", href: "/admin/settings/permissions", icon: Settings, roles: ["SUPER_ADMIN"] },
-  { label: "SEO Settings", href: "/admin/settings#seo", icon: Search, roles: ["SUPER_ADMIN", "ADMIN"] },
   { label: "Analytics", href: "/admin/analytics", icon: BarChart3, roles: ["SUPER_ADMIN", "ADMIN"] },
   { type: "label", label: "PROJECT MANAGEMENT" },
   { label: "Dev Process", href: "/admin/process", icon: GitBranch },
@@ -54,6 +51,7 @@ const navItems = [
 
 import { AuthProvider } from "@/components/admin/AuthProvider";
 import { ProfileDropdown } from "@/components/admin/ProfileDropdown";
+import { NotificationBell } from "@/components/admin/NotificationBell";
 import { ToastProvider } from "@/components/shared/Toast";
 
 function AdminLayoutContent({ children }: { children: React.ReactNode }) {
@@ -193,10 +191,7 @@ function AdminLayoutContent({ children }: { children: React.ReactNode }) {
           </div>
 
           <div className="flex items-center gap-4 lg:gap-8">
-            <button className="relative w-10 h-10 flex items-center justify-center text-slate-400 hover:text-slate-900 transition-colors bg-slate-50 rounded-xl hover:bg-slate-100">
-              <Bell size={18} strokeWidth={2} />
-              <span className="absolute top-2 right-2 w-2 h-2 bg-[#c1000a] rounded-full border-2 border-white"></span>
-            </button>
+            <NotificationBell />
             
             <div className="hidden sm:block h-8 w-[1px] bg-slate-100"></div>
 
@@ -285,6 +280,55 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
 
           input, select, textarea {
             font-size: 14px !important;
+          }
+
+          @media (max-width: 768px) {
+            .menu-manager-layout {
+              flex-direction: column !important;
+            }
+            .menu-tree-panel,
+            .menu-add-panel {
+              width: 100% !important;
+              max-width: 100% !important;
+              border-right: none !important;
+              border-bottom: 1px solid #f0f2f8 !important;
+            }
+            .admin-list-item {
+              padding: 12px 14px !important;
+              gap: 10px !important;
+            }
+            .admin-list-title {
+              font-size: 13px !important;
+            }
+            .admin-list-meta {
+              font-size: 10px !important;
+            }
+            .admin-list-actions {
+              flex-shrink: 0 !important;
+              gap: 6px !important;
+            }
+            .admin-icon-btn {
+              width: 30px !important;
+              height: 30px !important;
+            }
+            .menu-add-form {
+              padding: 16px !important;
+            }
+            .menu-add-form input,
+            .menu-add-form select {
+              height: 40px !important;
+              font-size: 13px !important;
+            }
+          }
+
+          @media (max-width: 480px) {
+            .admin-list-meta {
+              display: none !important;
+            }
+            .admin-icon-btn {
+              width: 36px !important;
+              height: 36px !important;
+            }
           }
         `}} />
       </body>

@@ -236,16 +236,29 @@ model AuditLog {
 }
 
 model ProjectTask {
-  id          String   @id @default(cuid())
+  id          String    @id @default(cuid())
   title       String
   description String?
-  version     String   @default("1.0")
-  category    String   @default("TASK") // TASK, BUG, SECTION, REQUIREMENT
-  percentage  Int      @default(0)
-  status      String   @default("PENDING") // PENDING, IN_PROGRESS, COMPLETED, PARTIAL
-  order       Int      @default(0)
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  version     String    @default("1.0")
+  category    String    @default("TASK") // TASK, BUG, FEATURE, SECTION, API
+  percentage  Int       @default(0)
+  status      String    @default("PENDING") // PENDING, IN_PROGRESS, COMPLETED, PARTIAL
+  priority    String    @default("MEDIUM")  // LOW, MEDIUM, HIGH, CRITICAL
+  deadline    DateTime?
+  order       Int       @default(0)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model Notification {
+  id        String   @id @default(cuid())
+  type      String   // LEAD | CONTENT | SYSTEM
+  title     String
+  message   String
+  link      String?
+  isRead    Boolean  @default(false)
+  userId    String?
+  createdAt DateTime @default(now())
 }
 
 model Job {

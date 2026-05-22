@@ -14,6 +14,7 @@ export default async function AdminBlogPage() {
       status: true,
       createdAt: true,
       isFeatured: true,
+      coverImage: true,
     },
   });
 

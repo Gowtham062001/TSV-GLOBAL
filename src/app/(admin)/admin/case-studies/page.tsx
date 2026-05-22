@@ -10,6 +10,17 @@ import { CaseStudiesListClient } from "./CaseStudiesListClient";
 export default async function AdminCaseStudiesPage() {
   const cases = await prisma.caseStudy.findMany({
     orderBy: { createdAt: "desc" },
+    select: {
+      id: true,
+      title: true,
+      slug: true,
+      client: true,
+      industry: true,
+      status: true,
+      isVisible: true,
+      createdAt: true,
+      images: true,
+    }
   });
   return (
     <div className="admin-shell space-y-6">
