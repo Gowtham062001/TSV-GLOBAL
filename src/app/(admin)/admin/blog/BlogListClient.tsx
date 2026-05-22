@@ -310,7 +310,7 @@ export default function BlogListClient({ initialPosts }: { initialPosts: BlogPos
               </span>
 
               {/* Date */}
-              <span className="admin-list-meta" style={{
+              <span className="admin-list-meta" suppressHydrationWarning style={{
                 fontSize: 12, color: '#8a9ab5', flexShrink: 0, minWidth: 80, textAlign: 'right'
               }}>
                 {format(new Date(post.createdAt), "MMM d, yyyy")}
@@ -423,7 +423,7 @@ export default function BlogListClient({ initialPosts }: { initialPosts: BlogPos
                   }}>
                     {post.status}
                   </span>
-                  <span style={{ fontSize: 11, color: '#8a9ab5' }}>
+                  <span suppressHydrationWarning style={{ fontSize: 11, color: '#8a9ab5' }}>
                     {format(new Date(post.createdAt), "MMM d, yyyy")}
                   </span>
                 </div>
