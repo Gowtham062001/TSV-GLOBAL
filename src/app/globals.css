@@ -389,6 +389,17 @@ body {
     width: 100% !important;
   }
 
+  .admin-list-row > div.admin-list-thumb {
+    width: 40px !important;
+    height: 40px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .admin-list-row > div.admin-list-drag-handle {
+    width: auto !important;
+    flex-shrink: 0 !important;
+  }
+
   /* List actions container push to bottom right */
   .admin-list-row .flex.items-center.gap-2,
   .admin-list-row .flex.items-center.gap-4 {

@@ -56,28 +56,48 @@ export function SortableServiceItem({ service, isChild, onDelete, onToggleVisibi
       style={{
         ...style,
         background: '#ffffff',
-        border: '1px solid #f0f2f8',
+        border: isChild ? '2px solid #e2e8f0' : '2px solid #cbd5e1',
+        borderLeft: isChild ? '4px solid #2563eb' : (isChild ? '2px solid #e2e8f0' : '2px solid #cbd5e1'),
         borderRadius: '10px',
         padding: '14px 20px',
         display: 'flex',
         alignItems: 'center',
         gap: '14px',
         position: 'relative',
-        marginLeft: isChild ? '32px' : '0'
+        marginLeft: isChild ? '32px' : '0',
+        transition: 'border-color 0.15s'
       }}
       className="group admin-list-row"
+      onMouseEnter={e => {
+        if (isChild) {
+          e.currentTarget.style.borderTopColor = '#0f1523';
+          e.currentTarget.style.borderRightColor = '#0f1523';
+          e.currentTarget.style.borderBottomColor = '#0f1523';
+        } else {
+          e.currentTarget.style.borderColor = '#0f1523';
+        }
+      }}
+      onMouseLeave={e => {
+        if (isChild) {
+          e.currentTarget.style.borderTopColor = '#e2e8f0';
+          e.currentTarget.style.borderRightColor = '#e2e8f0';
+          e.currentTarget.style.borderBottomColor = '#e2e8f0';
+        } else {
+          e.currentTarget.style.borderColor = '#cbd5e1';
+        }
+      }}
     >
       {!disabled && (
         <div 
           {...attributes} 
           {...listeners} 
-          className="cursor-grab active:cursor-grabbing"
+          className="admin-list-drag-handle cursor-grab active:cursor-grabbing"
         >
           <GripVertical style={{width: '16px', opacity: 0.3}} />
         </div>
       )}
 
-      <div style={{
+      <div className="admin-list-thumb" style={{
         width: '40px',
         height: '40px',
         borderRadius: '8px',

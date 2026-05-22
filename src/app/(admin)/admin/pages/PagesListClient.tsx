@@ -179,16 +179,21 @@ export default function PagesListClient({ initialPages }: { initialPages: PageWi
           {filteredPages.map((page) => (
             <div key={page.id} style={{
               background: '#ffffff',
-              border: '1px solid #f0f2f8',
+              border: '2px solid #cbd5e1',
               borderRadius: '10px',
               padding: '14px 20px',
               display: 'flex',
               alignItems: 'center',
               gap: '14px',
-              position: 'relative'
-            }} className="group admin-list-row">
+              position: 'relative',
+              transition: 'border-color 0.15s'
+            }}
+            className="group admin-list-row"
+            onMouseEnter={e => (e.currentTarget.style.borderColor = '#0f1523')}
+            onMouseLeave={e => (e.currentTarget.style.borderColor = '#cbd5e1')}
+            >
               
-              <div style={{
+              <div className="admin-list-thumb" style={{
                 width: '40px',
                 height: '40px',
                 borderRadius: '8px',

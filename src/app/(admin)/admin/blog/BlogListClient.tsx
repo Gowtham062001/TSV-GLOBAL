@@ -240,21 +240,22 @@ export default function BlogListClient({ initialPosts }: { initialPosts: BlogPos
           {filtered.map((post) => (
             <div
               key={post.id}
+              className="group admin-list-row"
               style={{
                 display: 'flex',
                 alignItems: 'center',
                 gap: 14,
                 padding: '14px 20px',
                 background: '#fff',
-                border: '1px solid #f0f2f8',
+                border: '2px solid #cbd5e1',
                 borderRadius: 10,
                 transition: 'border-color 0.15s'
               }}
-              onMouseEnter={e => (e.currentTarget.style.borderColor = 'rgba(193,0,10,0.15)')}
-              onMouseLeave={e => (e.currentTarget.style.borderColor = '#f0f2f8')}
+              onMouseEnter={e => (e.currentTarget.style.borderColor = '#0f1523')}
+              onMouseLeave={e => (e.currentTarget.style.borderColor = '#cbd5e1')}
             >
               {/* Thumbnail */}
-              <div style={{
+              <div className="admin-list-thumb" style={{
                 width: 40, height: 40, borderRadius: 8, overflow: 'hidden',
                 flexShrink: 0, background: '#f0f2f8', border: '1px solid #e2e8f0'
               }}>
