@@ -22,6 +22,12 @@ export default async function AdminCaseStudiesPage() {
       images: true,
     }
   });
+
+  const serializedCases = cases.map((c) => ({
+    ...c,
+    createdAt: c.createdAt.toISOString(),
+  }));
+
   return (
     <div className="admin-shell space-y-6">
       <div className="flex justify-between items-center mb-6">
@@ -38,7 +44,8 @@ export default async function AdminCaseStudiesPage() {
         </Link>
       </div>
 
-      <CaseStudiesListClient initialCases={cases} />
+      <CaseStudiesListClient initialCases={serializedCases} />
     </div>
   );
 }
+
