@@ -1,16 +1,19 @@
 import { PrismaClient } from '@prisma/client'
 import { PrismaPg } from '@prisma/adapter-pg'
 import { Pool } from 'pg'
+import { parse } from 'pg-connection-string'
 
 const globalForPrisma = globalThis as unknown as {
   prisma: any
 }
 
-const connectionString = process.env.DATABASE_URL;
+const connectionString = process.env.DATABASE_URL || process.env.POSTGRES_PRISMA_URL || process.env.POSTGRES_URL;
 const isLocal = connectionString?.includes('localhost') || connectionString?.includes('127.0.0.1');
 
+const poolConfig = connectionString ? parse(connectionString) : {};
+
 const pool = new Pool({
-  connectionString,
+  ...poolConfig,
   max: 1,
   idleTimeoutMillis: 10000,
   connectionTimeoutMillis: 4000,
