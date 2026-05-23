@@ -1,28 +1,56 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
-import { writeFile } from "fs/promises";
+import { writeFile, mkdir } from "fs/promises";
 import path from "path";
 import { getAdminSession } from "@/lib/auth-check";
 import { writeAuditLog } from "@/lib/audit";
+
+// Allowed image MIME types
+const ALLOWED_TYPES = [
+  "image/jpeg", "image/png", "image/webp",
+  "image/svg+xml", "image/gif"
+];
 
 export async function POST(req: NextRequest) {
   try {
     const formData = await req.formData();
     const file = formData.get("file") as File;
-    const category = formData.get("category") as string || null;
+    const category = (formData.get("category") as string || "uploads").toLowerCase();
     const alt = formData.get("alt") as string || "";
 
     if (!file) {
       return NextResponse.json({ error: "No file uploaded" }, { status: 400 });
     }
 
+    // Validate file type
+    if (!ALLOWED_TYPES.includes(file.type)) {
+      return NextResponse.json(
+        { error: `Invalid file type: ${file.type}. Allowed: jpg, png, webp, svg, gif` },
+        { status: 400 }
+      );
+    }
+
     const bytes = await file.arrayBuffer();
     const buffer = Buffer.from(bytes);
 
-    // Create unique filename
-    const filename = `${Date.now()}-${file.name.replace(/\s+/g, "-")}`;
-    const relativePath = `uploads/${filename}`;
-    const absolutePath = path.join(process.cwd(), "public", relativePath);
+    // Generate safe filename with timestamp
+    const ext = path.extname(file.name).toLowerCase();
+    const safeName = path.basename(file.name, path.extname(file.name))
+      .toLowerCase()
+      .replace(/[^a-z0-9]/g, "-")
+      .replace(/-+/g, "-")
+      .slice(0, 40);
+    const filename = `${Date.now()}-${safeName}${ext}`;
+
+    // CANONICAL upload path: /assets/img/uploads/[category]/
+    const uploadDir = path.join(process.cwd(), "public", "assets", "img", "uploads", category);
+    const absolutePath = path.join(uploadDir, filename);
+
+    // URL path stored in DB (no /public prefix — Next.js serves /public as /)
+    const urlPath = `/assets/img/uploads/${category}/${filename}`;
+
+    // Create directory if it doesn't exist
+    await mkdir(uploadDir, { recursive: true });
 
     // Save to disk
     await writeFile(absolutePath, buffer);
@@ -30,8 +58,8 @@ export async function POST(req: NextRequest) {
     // Save to DB
     const image = await prisma.galleryImage.create({
       data: {
-        url: `/${relativePath}`,
-        alt,
+        url: urlPath,
+        alt: alt || safeName.replace(/-/g, " "),
         category,
         caption: alt,
         order: 0,

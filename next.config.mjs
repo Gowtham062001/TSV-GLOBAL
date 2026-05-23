@@ -20,21 +20,14 @@ const nextConfig = {
         hostname: 'tsvglobal.vercel.app',
       },
     ],
+    // Allow unoptimized local images from /public folder
+    unoptimized: true,
   },
   staticPageGenerationTimeout: 300,
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
-  experimental: {
-    cpus: 1,
-    serverComponentsExternalPackages: ['@prisma/client'],
-    outputFileTracingExcludes: {
-      '*': [
-        'public/assets/img/**',
-        'public/img/**',
-        'public/uploads/**'
-      ]
-    }
-  }
+  // serverExternalPackages is stable in Next.js 14+
+  serverExternalPackages: ['@prisma/client'],
 };
 
 export default nextConfig;
