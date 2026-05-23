@@ -45,14 +45,14 @@ const CARD_CONFIG = [
   {
     // 2015 — bottom left pin
     pinX: 155, pinY: 750,
-    cardX: 20,  cardY: 480,   // card above pin, left side
+    cardX: 20,  cardY: 790,   // card below pin, left side
     cardW: 220,
-    align: 'above-left'
+    align: 'below-left'
   },
   {
     // 2016-20 — second pin
     pinX: 310, pinY: 690,
-    cardX: 170, cardY: 430,   // card above pin
+    cardX: 140, cardY: 430,   // card above pin, shifted left
     cardW: 230,
     align: 'above-right'
   },
@@ -294,7 +294,7 @@ function DesktopRoad({
       position: 'relative'
     }}>
       <svg
-        viewBox="0 0 1400 920"
+        viewBox="0 0 1400 1060"
         preserveAspectRatio="xMidYMid meet"
         style={{
           width: '100%',
@@ -307,7 +307,7 @@ function DesktopRoad({
         <defs>
           {/* Road draw mask */}
           <clipPath id="road-clip">
-            <rect x="0" y="0" width={drawn} height="920" />
+            <rect x="0" y="0" width={drawn} height="1060" />
           </clipPath>
         </defs>
 
