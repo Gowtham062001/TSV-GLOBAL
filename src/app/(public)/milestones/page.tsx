@@ -2,6 +2,7 @@ import { prisma } from "@/lib/db";
 import { SectionRenderer } from "@/components/public/SectionRenderer";
 import { Metadata } from "next";
 import { SeoData } from "@/lib/types";
+import { notFound } from "next/navigation";
 
 export const revalidate = 3600;
 
