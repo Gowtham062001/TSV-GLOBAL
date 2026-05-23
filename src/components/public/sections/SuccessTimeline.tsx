@@ -126,34 +126,9 @@ export const SuccessTimeline: React.FC<SuccessTimelineProps> = ({
         width: "100%",
         minHeight: isMobile ? "auto" : "90vh",
         overflow: "hidden",
-        background: "#f7f6f2",
+        background: "linear-gradient(180deg, #fafafa 0%, #f5f5f0 50%, #fafafa 100%)",
       }}
     >
-      {/* ── BACKGROUND ── */}
-      <div
-        aria-hidden="true"
-        style={{
-          position: "absolute",
-          inset: 0,
-          backgroundImage: "url(/assets/img/banner/banner-3.jpg)",
-          backgroundSize: "cover",
-          backgroundPosition: "center 40%",
-          opacity: 0.07,
-          zIndex: 0,
-        }}
-      />
-      {/* Subtle texture overlay */}
-      <div
-        aria-hidden="true"
-        style={{
-          position: "absolute",
-          inset: 0,
-          background:
-            "linear-gradient(160deg, rgba(255,255,255,0.96) 0%, rgba(247,246,242,0.92) 60%, rgba(240,238,232,0.88) 100%)",
-          zIndex: 1,
-        }}
-      />
-
       {/* ── CONTENT WRAPPER ── */}
       <div
         style={{
@@ -161,9 +136,55 @@ export const SuccessTimeline: React.FC<SuccessTimelineProps> = ({
           zIndex: 2,
           maxWidth: 1400,
           margin: "0 auto",
-          padding: isMobile ? "60px 20px 60px" : "80px 48px 0",
+          padding: isMobile ? "40px 20px 60px" : "40px 48px 80px",
         }}
       >
+        {/* FIX 5 — SECTION HEADING */}
+        <div style={{
+          textAlign: 'center',
+          marginBottom: '50px',
+          paddingTop: '60px'
+        }}>
+          <span style={{
+            display: 'inline-block',
+            fontSize: '11px',
+            fontWeight: 800,
+            letterSpacing: '2.5px',
+            textTransform: 'uppercase',
+            color: '#c1000a',
+            marginBottom: '12px',
+            padding: '5px 16px',
+            border: '1px solid rgba(193,0,10,0.2)',
+            borderRadius: '20px',
+            background: 'rgba(193,0,10,0.04)',
+            fontFamily: "DM Sans, sans-serif"
+          }}>
+            Our Journey
+          </span>
+          <h2 style={{
+            fontSize: 'clamp(32px, 4vw, 52px)',
+            fontWeight: 800,
+            color: '#0f1523',
+            margin: '0 0 16px',
+            letterSpacing: '-1px',
+            lineHeight: 1.1,
+            fontFamily: "DM Sans, sans-serif"
+          }}>
+            Our Milestones
+          </h2>
+          <p style={{
+            fontSize: '15px',
+            color: '#8a9ab5',
+            maxWidth: '480px',
+            margin: '0 auto',
+            lineHeight: 1.7,
+            fontFamily: "DM Sans, sans-serif"
+          }}>
+            A decade of growth, innovation, and global expansion
+            in logistics and freight forwarding.
+          </p>
+        </div>
+
         {/* DESKTOP ROAD */}
         {!isMobile && (
           <DesktopRoad
@@ -228,74 +249,52 @@ function DesktopRoad({
   const drawn = roadProgress * TOTAL_PATH_LEN;
 
   return (
-    <div style={{ position: "relative", width: "100%", paddingBottom: 40 }}>
+    <div style={{ position: "relative", width: "100%", paddingBottom: '80px', overflow: 'visible' }}>
       <svg
-        viewBox="0 0 1400 560"
+        viewBox="-20 -180 1440 780"
         style={{
-          width: "100%",
-          height: "auto",
-          display: "block",
-          overflow: "visible",
+          width: '100%',
+          height: 'auto',
+          overflow: 'visible',
+          display: 'block'
         }}
       >
         <defs>
           {/* Road draw mask */}
           <clipPath id="road-clip">
-            <rect x="0" y="0" width={drawn} height="560" />
+            <rect x="0" y="-180" width={drawn} height="780" />
           </clipPath>
         </defs>
 
-        {/* ── ROAD SHADOW ── */}
+        {/* 1. Road shadow (subtle) */}
         <path
           d={ROAD_PATH}
           fill="none"
           stroke="rgba(0,0,0,0.18)"
-          strokeWidth={54}
+          strokeWidth="56"
           strokeLinecap="round"
           clipPath="url(#road-clip)"
         />
 
-        {/* ── ROAD SURFACE (dark tarmac) ── */}
+        {/* 2. Road surface */}
         <path
           d={ROAD_PATH}
           fill="none"
-          stroke="#1a1a2e"
-          strokeWidth={50}
+          stroke="#1e2235"
+          strokeWidth="52"
           strokeLinecap="round"
           clipPath="url(#road-clip)"
         />
 
-        {/* ── ROAD EDGE — yellow kerb (right side) ── */}
-        <path
-          d={ROAD_PATH}
-          fill="none"
-          stroke="rgba(240,185,60,0.5)"
-          strokeWidth={53}
-          strokeLinecap="round"
-          strokeDasharray="18 14"
-          strokeDashoffset="0"
-          clipPath="url(#road-clip)"
-        />
-
-        {/* ── ROAD SURFACE again (cover yellow inside) ── */}
-        <path
-          d={ROAD_PATH}
-          fill="none"
-          stroke="#1a1a2e"
-          strokeWidth={48}
-          strokeLinecap="round"
-          clipPath="url(#road-clip)"
-        />
-
-        {/* ── CENTER DASHES (animated) ── */}
+        {/* 3. Center dashes only — no edge lines */}
         <path
           className="tsv-road-dashes"
           d={ROAD_PATH}
           fill="none"
-          stroke="rgba(255,255,255,0.65)"
-          strokeWidth={2.5}
-          strokeLinecap="round"
+          stroke="rgba(255,255,255,0.55)"
+          strokeWidth="2"
           strokeDasharray="28 18"
+          strokeLinecap="round"
           clipPath="url(#road-clip)"
         />
 
@@ -305,8 +304,17 @@ function DesktopRoad({
           if (!pos) return null;
           const isActive = activePin === i;
           const isVisible = visiblePins.has(i);
-          const above = CONTENT_ABOVE[i];
+          
+          // Force isAbove logic: first 2 are above to prevent bottom cutoff, then alternate
+          const isAbove = i <= 1 ? true : i % 2 === 0;
+          
           const pts = toPoints(m);
+
+          // Shift x position left for right side cards
+          let cardX = pos.x - 120;
+          if (i === 3) cardX = pos.x - 130;
+          else if (i === 4) cardX = pos.x - 180;
+          else if (i === 5) cardX = pos.x - 220;
 
           return (
             <g
@@ -323,30 +331,40 @@ function DesktopRoad({
               onMouseEnter={() => onPinHover(i)}
               onMouseLeave={() => onPinHover(null)}
             >
-              {/* Dashed stem connecting pin to content box */}
+              {/* Connector line (FIX 4) */}
               <line
                 x1={pos.x}
-                y1={pos.y - 26}
+                y1={pos.y - 14}
                 x2={pos.x}
-                y2={above ? pos.y - 118 : pos.y + 58}
-                stroke={isActive ? "#c1000a" : "rgba(193,0,10,0.35)"}
-                strokeWidth={1.5}
-                strokeDasharray="5 4"
-                style={{ transition: "stroke 0.2s" }}
+                y2={isAbove ? pos.y - 115 : pos.y + 48}
+                stroke="#c1000a"
+                strokeWidth="1"
+                strokeDasharray="3 4"
+                opacity={isActive ? 0.8 : 0.4}
+                style={{ transition: "opacity 0.2s" }}
               />
 
-              {/* Year label — below pin */}
+              {/* Small circle at connector end (FIX 4) */}
+              <circle
+                cx={pos.x}
+                cy={isAbove ? pos.y - 115 : pos.y + 48}
+                r="3"
+                fill="#c1000a"
+                opacity={isActive ? 0.9 : 0.5}
+                style={{ transition: "opacity 0.2s" }}
+              />
+
+              {/* Year label BELOW PIN (outside card) (FIX 1) */}
               <text
                 x={pos.x}
-                y={pos.y + 46}
+                y={pos.y + 36}
                 textAnchor="middle"
                 style={{
-                  fontSize: "14px",
+                  fontSize: "16px",
                   fontWeight: "800",
                   fill: isActive ? "#c1000a" : "#0f1523",
-                  fontFamily: "DM Sans, Inter, sans-serif",
+                  fontFamily: "DM Sans, sans-serif",
                   transition: "fill 0.2s",
-                  letterSpacing: "0.5px",
                 }}
               >
                 {m.year}
@@ -355,25 +373,25 @@ function DesktopRoad({
               {/* Pin icon */}
               <PinIcon cx={pos.x} cy={pos.y} active={isActive} />
 
-              {/* Content card */}
+              {/* Content card (FIX 3) */}
               <foreignObject
-                x={pos.x - 115}
-                y={above ? pos.y - 230 : pos.y + 60}
-                width={230}
-                height={170}
+                x={cardX}
+                y={isAbove ? pos.y - 220 : pos.y + 50}
+                width="240"
+                height="300"
                 style={{ overflow: "visible" }}
               >
                 <div
                   style={{
-                    background: isActive
-                      ? "#ffffff"
-                      : "rgba(255,255,255,0.93)",
-                    border: `1.5px solid ${isActive ? "#c1000a" : "rgba(26,26,46,0.1)"}`,
-                    borderRadius: "12px",
-                    padding: "12px 14px 14px",
+                    background: '#ffffff',
+                    border: `1px solid ${isActive ? "#c1000a" : "rgba(193,0,10,0.12)"}`,
+                    borderTop: '3px solid #c1000a',
+                    borderRadius: '12px',
+                    padding: '16px 18px',
                     boxShadow: isActive
-                      ? "0 10px 28px rgba(193,0,10,0.18), 0 2px 8px rgba(0,0,0,0.06)"
-                      : "0 3px 14px rgba(0,0,0,0.09)",
+                      ? '0 10px 28px rgba(193,0,10,0.18), 0 4px 20px rgba(0,0,0,0.10)'
+                      : '0 4px 20px rgba(0,0,0,0.10)',
+                    width: '100%',
                     backdropFilter: "blur(10px)",
                     transition: "all 0.25s ease",
                     animation: isVisible
@@ -382,33 +400,52 @@ function DesktopRoad({
                     fontFamily: "DM Sans, Inter, sans-serif",
                   }}
                 >
+                  {/* Card title (year label inside card) (FIX 1) */}
                   <p
                     style={{
-                      fontSize: "11px",
-                      fontWeight: "700",
-                      color: "#c1000a",
-                      margin: "0 0 6px",
-                      textTransform: "uppercase",
-                      letterSpacing: "0.6px",
+                      fontSize: '11px',
+                      fontWeight: 800,
+                      color: '#c1000a',
+                      letterSpacing: '1.5px',
+                      textTransform: 'uppercase',
+                      margin: '0 0 6px',
+                    }}
+                  >
+                    {m.year}
+                  </p>
+
+                  {/* Card milestone title (FIX 1) */}
+                  <h4
+                    style={{
+                      fontSize: '14px',
+                      fontWeight: 700,
+                      color: '#0f1523',
+                      margin: '0 0 8px',
+                      lineHeight: 1.3,
                     }}
                   >
                     {m.title}
-                  </p>
+                  </h4>
+
+                  {/* Card bullet points (FIX 1) */}
                   <ul
                     style={{
+                      fontSize: '12px',
+                      color: '#4a5568',
+                      lineHeight: 1.6,
+                      listStyle: 'disc',
+                      paddingLeft: '14px',
                       margin: 0,
-                      padding: "0 0 0 14px",
-                      listStyleType: "disc",
                     }}
                   >
                     {pts.slice(0, 3).map((pt, pi) => (
                       <li
                         key={pi}
                         style={{
-                          fontSize: "11px",
-                          color: "#374151",
-                          lineHeight: "1.55",
-                          marginBottom: "3px",
+                          fontSize: '12px',
+                          color: '#4a5568',
+                          lineHeight: '1.6',
+                          marginBottom: '3px',
                         }}
                       >
                         {pt}
@@ -484,107 +521,103 @@ function PinIcon({
 }
 
 /* ─────────────────────────────────────────────
-   MOBILE VERTICAL TIMELINE
+   MOBILE VERTICAL TIMELINE (FIX 6)
 ───────────────────────────────────────────── */
 function MobileTimeline({ milestones }: { milestones: Milestone[] }) {
   return (
-    <div style={{ position: "relative", paddingLeft: 32 }}>
-      {/* Vertical line */}
-      <div
-        aria-hidden="true"
-        style={{
-          position: "absolute",
-          left: 8,
-          top: 8,
-          bottom: 8,
-          width: 2,
-          background:
-            "linear-gradient(to bottom, #c1000a 0%, rgba(193,0,10,0.15) 100%)",
-          borderRadius: 2,
-        }}
-      />
+    <div style={{
+      display: 'flex',
+      flexDirection: 'column',
+      gap: '0px',
+      position: 'relative',
+      paddingLeft: '24px',
+      marginTop: '20px'
+    }}>
+      {/* Vertical red line */}
+      <div style={{
+        position: 'absolute',
+        left: '7px',
+        top: '12px',
+        bottom: '12px',
+        width: '2px',
+        background: 'linear-gradient(180deg, #c1000a 0%, rgba(193,0,10,0.15) 100%)',
+      }} />
 
       {milestones.map((m, i) => {
         const pts = toPoints(m);
         return (
-          <div
-            key={i}
-            style={{
-              position: "relative",
-              marginBottom: 44,
-              paddingLeft: 24,
-              animation: `cardFade 0.5s ease ${i * 100}ms both`,
-            }}
-          >
-            {/* Pin dot */}
-            <div
-              aria-hidden="true"
-              style={{
-                position: "absolute",
-                left: -25,
-                top: 5,
-                width: 20,
-                height: 20,
-                borderRadius: "50%",
-                background: "#c1000a",
-                border: "3px solid #f7f6f2",
-                boxShadow: "0 0 0 2px #c1000a",
-                zIndex: 2,
-              }}
-            />
+          <div key={i} style={{
+            position: 'relative',
+            marginBottom: '32px',
+          }}>
+            {/* Pin circle */}
+            <div style={{
+              position: 'absolute',
+              left: '-29px',
+              top: '12px',
+              width: '16px',
+              height: '16px',
+              borderRadius: '50%',
+              background: '#c1000a',
+              border: '2.5px solid #fff',
+              boxShadow: '0 0 0 2px #c1000a, 0 2px 8px rgba(193,0,10,0.3)',
+              zIndex: 2
+            }} />
 
-            {/* Year ghost text */}
-            <p
-              style={{
-                fontSize: 48,
-                fontWeight: 900,
-                color: "rgba(193,0,10,0.1)",
-                margin: "0 0 2px",
-                lineHeight: 1,
-                letterSpacing: "-2px",
-                fontFamily: "DM Sans, Inter, sans-serif",
-                pointerEvents: "none",
-              }}
-            >
-              {m.year}
-            </p>
+            {/* Card */}
+            <div style={{
+              background: '#fff',
+              border: '1px solid #f0f2f8',
+              borderTop: '3px solid #c1000a',
+              borderRadius: '10px',
+              padding: '16px 18px',
+              boxShadow: '0 2px 16px rgba(0,0,0,0.07)',
+              fontFamily: "DM Sans, Inter, sans-serif"
+            }}>
+              {/* Year badge */}
+              <span style={{
+                display: 'inline-block',
+                fontSize: '11px',
+                fontWeight: 800,
+                color: '#fff',
+                background: '#c1000a',
+                padding: '3px 10px',
+                borderRadius: '20px',
+                marginBottom: '8px',
+                letterSpacing: '0.5px'
+              }}>
+                {m.year}
+              </span>
 
-            {/* Title */}
-            <h3
-              style={{
-                fontSize: 17,
+              {/* Title */}
+              <h3 style={{
+                fontSize: '15px',
                 fontWeight: 700,
-                color: "#c1000a",
-                margin: "0 0 10px",
-                fontFamily: "DM Sans, Inter, sans-serif",
-              }}
-            >
-              {m.title}
-            </h3>
+                color: '#0f1523',
+                margin: '0 0 10px',
+                lineHeight: 1.3
+              }}>
+                {m.title}
+              </h3>
 
-            {/* Bullet points */}
-            <ul
-              style={{
+              {/* Points */}
+              <ul style={{
                 margin: 0,
-                padding: "0 0 0 18px",
-                listStyleType: "disc",
-              }}
-            >
-              {pts.map((pt, pi) => (
-                <li
-                  key={pi}
-                  style={{
-                    fontSize: 14,
-                    color: "#4b5563",
-                    lineHeight: 1.65,
-                    marginBottom: 5,
-                    fontFamily: "DM Sans, Inter, sans-serif",
-                  }}
-                >
-                  {pt}
-                </li>
-              ))}
-            </ul>
+                padding: '0 0 0 16px',
+                listStyle: 'disc'
+              }}>
+                {pts.map((pt, pi) => (
+                  <li key={pi} style={{
+                    fontSize: '13px',
+                    color: '#4a5568',
+                    lineHeight: '1.65',
+                    marginBottom: '4px'
+                  }}>
+                    {pt}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         );
       })}
