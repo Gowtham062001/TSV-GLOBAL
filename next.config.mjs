@@ -26,8 +26,10 @@ const nextConfig = {
   staticPageGenerationTimeout: 300,
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
-  // serverExternalPackages is stable in Next.js 14+
-  serverExternalPackages: ['@prisma/client'],
+  experimental: {
+    // serverComponentsExternalPackages is the correct key for Next.js 14
+    serverComponentsExternalPackages: ['@prisma/client'],
+  },
 };
 
 export default nextConfig;
