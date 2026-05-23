@@ -233,7 +233,7 @@ export const SuccessTimeline: React.FC<SuccessTimelineProps> = ({
         )}
 
         {/* MOBILE TIMELINE */}
-        {isMobile && <MobileTimeline milestones={ordered} />}
+        {isMobile && <MobileTimeline milestones={milestones} />}
       </div>
 
       {/* ── GLOBAL STYLES ── */}
