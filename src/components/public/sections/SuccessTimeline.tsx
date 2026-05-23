@@ -34,24 +34,57 @@ function toPoints(m: Milestone): string[] {
 }
 
 /* ─────────────────────────────────────────────
-   ROAD PATH (SVG viewBox 1400 × 560)
+   ROAD PATH (SVG viewBox 1400 × 920)
    Rises from bottom-left → top-right
 ───────────────────────────────────────────── */
 const ROAD_PATH =
-  "M -20 530 C 120 530, 220 460, 380 390 S 600 290, 800 230 S 1050 145, 1250 95 S 1370 75, 1420 70";
+  "M 0 840 C 150 840, 250 780, 400 720 S 650 580, 850 460 S 1100 340, 1400 280";
 
-/** 6 pin positions along the road curve, manually tuned */
-const PIN_POSITIONS = [
-  { x: 55,   y: 500 }, // 2015
-  { x: 245,  y: 425 }, // 2016-20
-  { x: 470,  y: 340 }, // 2021-23
-  { x: 710,  y: 255 }, // 2024
-  { x: 970,  y: 178 }, // 2025
-  { x: 1230, y: 110 }, // 2026
+/** 6 pin and card config positions, manually tuned */
+const CARD_CONFIG = [
+  {
+    // 2015 — bottom left pin
+    pinX: 155, pinY: 750,
+    cardX: 20,  cardY: 480,   // card above pin, left side
+    cardW: 220,
+    align: 'above-left'
+  },
+  {
+    // 2016-20 — second pin
+    pinX: 310, pinY: 690,
+    cardX: 170, cardY: 430,   // card above pin
+    cardW: 230,
+    align: 'above-right'
+  },
+  {
+    // 2021-23 — middle-low pin
+    pinX: 495, pinY: 600,
+    cardX: 340, cardY: 310,   // card well above pin
+    cardW: 240,
+    align: 'above-right'
+  },
+  {
+    // 2024 — middle pin
+    pinX: 695, pinY: 510,
+    cardX: 555, cardY: 560,   // card BELOW road
+    cardW: 240,
+    align: 'below-right'
+  },
+  {
+    // 2025 — upper right pin
+    pinX: 910, pinY: 420,
+    cardX: 745, cardY: 185,   // card above pin, space from 2021-23
+    cardW: 240,
+    align: 'above-left'
+  },
+  {
+    // 2026 — top right pin
+    pinX: 1125, pinY: 350,
+    cardX: 930, cardY: 430,   // card below road, right
+    cardW: 250,
+    align: 'below-left'
+  },
 ];
-
-/** Alternating label positions: even pins → content above, odd → below */
-const CONTENT_ABOVE = [true, false, true, false, true, false];
 
 /* ─────────────────────────────────────────────
    MAIN EXPORT  (replaces old SuccessTimeline)
@@ -122,11 +155,12 @@ export const SuccessTimeline: React.FC<SuccessTimelineProps> = ({
     <section
       ref={sectionRef}
       style={{
-        position: "relative",
-        width: "100%",
-        minHeight: isMobile ? "auto" : "90vh",
-        overflow: "hidden",
-        background: "linear-gradient(180deg, #fafafa 0%, #f5f5f0 50%, #fafafa 100%)",
+        position: 'relative',
+        width: '100%',
+        minHeight: '100vh',
+        padding: '0 0 80px 0',
+        overflow: 'visible',
+        background: 'linear-gradient(180deg, #fafaf8 0%, #f5f4f0 100%)',
       }}
     >
       {/* ── CONTENT WRAPPER ── */}
@@ -134,9 +168,11 @@ export const SuccessTimeline: React.FC<SuccessTimelineProps> = ({
         style={{
           position: "relative",
           zIndex: 2,
-          maxWidth: 1400,
+          width: '100%',
+          maxWidth: '1400px',
           margin: "0 auto",
-          padding: isMobile ? "40px 20px 60px" : "40px 48px 80px",
+          padding: isMobile ? "40px 20px 60px" : "0 20px",
+          overflow: "visible",
         }}
       >
         {/* FIX 5 — SECTION HEADING */}
@@ -249,20 +285,29 @@ function DesktopRoad({
   const drawn = roadProgress * TOTAL_PATH_LEN;
 
   return (
-    <div style={{ position: "relative", width: "100%", paddingBottom: '80px', overflow: 'visible' }}>
+    <div style={{
+      width: '100%',
+      maxWidth: '1400px',
+      margin: '0 auto',
+      padding: '0 20px',
+      overflow: 'visible',
+      position: 'relative'
+    }}>
       <svg
-        viewBox="-20 -180 1440 780"
+        viewBox="0 0 1400 920"
+        preserveAspectRatio="xMidYMid meet"
         style={{
           width: '100%',
           height: 'auto',
           overflow: 'visible',
-          display: 'block'
+          display: 'block',
+          marginBottom: '-40px'
         }}
       >
         <defs>
           {/* Road draw mask */}
           <clipPath id="road-clip">
-            <rect x="0" y="-180" width={drawn} height="780" />
+            <rect x="0" y="0" width={drawn} height="920" />
           </clipPath>
         </defs>
 
@@ -300,21 +345,11 @@ function DesktopRoad({
 
         {/* ── MILESTONE PINS ── */}
         {milestones.map((m, i) => {
-          const pos = PIN_POSITIONS[i];
-          if (!pos) return null;
+          const config = CARD_CONFIG[i];
+          if (!config) return null;
           const isActive = activePin === i;
           const isVisible = visiblePins.has(i);
-          
-          // Force isAbove logic: first 2 are above to prevent bottom cutoff, then alternate
-          const isAbove = i <= 1 ? true : i % 2 === 0;
-          
           const pts = toPoints(m);
-
-          // Shift x position left for right side cards
-          let cardX = pos.x - 120;
-          if (i === 3) cardX = pos.x - 130;
-          else if (i === 4) cardX = pos.x - 180;
-          else if (i === 5) cardX = pos.x - 220;
 
           return (
             <g
@@ -331,39 +366,45 @@ function DesktopRoad({
               onMouseEnter={() => onPinHover(i)}
               onMouseLeave={() => onPinHover(null)}
             >
-              {/* Connector line (FIX 4) */}
+              {/* Connector line from pin to card corner */}
               <line
-                x1={pos.x}
-                y1={pos.y - 14}
-                x2={pos.x}
-                y2={isAbove ? pos.y - 115 : pos.y + 48}
+                x1={config.pinX}
+                y1={config.pinY - 14}
+                x2={config.cardX + (config.cardW / 2)}
+                y2={config.cardY + (
+                  config.align.startsWith('above') ? 260 : 0
+                )}
                 stroke="#c1000a"
                 strokeWidth="1"
-                strokeDasharray="3 4"
-                opacity={isActive ? 0.8 : 0.4}
+                strokeDasharray="4 4"
+                opacity={isActive ? 0.8 : 0.35}
                 style={{ transition: "opacity 0.2s" }}
               />
 
-              {/* Small circle at connector end (FIX 4) */}
+              {/* Small circle at connector end (card side) */}
               <circle
-                cx={pos.x}
-                cy={isAbove ? pos.y - 115 : pos.y + 48}
+                cx={config.cardX + (config.cardW / 2)}
+                cy={config.cardY + (config.align.startsWith('above') ? 260 : 0)}
                 r="3"
                 fill="#c1000a"
                 opacity={isActive ? 0.9 : 0.5}
                 style={{ transition: "opacity 0.2s" }}
               />
 
-              {/* Year label BELOW PIN (outside card) (FIX 1) */}
+              {/* Year label — always below pin, off road */}
               <text
-                x={pos.x}
-                y={pos.y + 36}
+                x={config.pinX}
+                y={config.pinY + 42}
                 textAnchor="middle"
                 style={{
-                  fontSize: "16px",
-                  fontWeight: "800",
-                  fill: isActive ? "#c1000a" : "#0f1523",
-                  fontFamily: "DM Sans, sans-serif",
+                  fontSize: '13px',
+                  fontWeight: '800',
+                  fill: isActive ? '#c1000a' : '#0f1523',
+                  fontFamily: "'DM Sans', sans-serif",
+                  paintOrder: 'stroke',
+                  stroke: '#ffffff',
+                  strokeWidth: '4px',
+                  strokeLinejoin: 'round',
                   transition: "fill 0.2s",
                 }}
               >
@@ -371,15 +412,15 @@ function DesktopRoad({
               </text>
 
               {/* Pin icon */}
-              <PinIcon cx={pos.x} cy={pos.y} active={isActive} />
+              <PinIcon cx={config.pinX} cy={config.pinY} active={isActive} />
 
-              {/* Content card (FIX 3) */}
+              {/* Content card */}
               <foreignObject
-                x={cardX}
-                y={isAbove ? pos.y - 220 : pos.y + 50}
-                width="240"
-                height="300"
-                style={{ overflow: "visible" }}
+                x={config.cardX}
+                y={config.cardY}
+                width={config.cardW}
+                height="260"
+                style={{ overflow: 'visible' }}
               >
                 <div
                   style={{
