@@ -54,7 +54,7 @@ function SortableMenuItem({
 
   const style = {
     transform: CSS.Transform.toString(transform),
-    transition,
+    transition: isDragging ? 'none' : transition,
     zIndex: isDragging ? 100 : 0,
     position: 'relative' as const,
   };
@@ -142,7 +142,11 @@ export function MenuBuilderClient({
   const treeItems = buildTree(null);
 
   const sensors = useSensors(
-    useSensor(PointerSensor),
+    useSensor(PointerSensor, {
+      activationConstraint: {
+        distance: 8,
+      },
+    }),
     useSensor(KeyboardSensor, {
       coordinateGetter: sortableKeyboardCoordinates,
     })
@@ -212,18 +216,27 @@ export function MenuBuilderClient({
   async function handleDelete(id: string) {
     if (!confirm("Remove this menu item? Children will also be affected.")) return;
     
+    const previousItems = items;
+    // Optimistically update UI immediately to remove lag
+    setItems(items.filter(i => i.id !== id && i.parentId !== id));
+    
     if (!id.startsWith("temp-")) {
       try {
         const res = await fetch(`/api/admin/menu/${id}`, { method: "DELETE" });
         if (res.ok) {
-          setItems(items.filter(i => i.id !== id && i.parentId !== id));
           success("Item removed");
+        } else {
+          // Revert changes on error
+          setItems(previousItems);
+          const errorData = await res.json().catch(() => ({}));
+          toastError(errorData.error || "Delete failed");
         }
       } catch (error) {
+        setItems(previousItems);
         toastError("Delete failed");
       }
     } else {
-      setItems(items.filter(i => i.id !== id && i.parentId !== id));
+      success("Item removed");
     }
   }
 
