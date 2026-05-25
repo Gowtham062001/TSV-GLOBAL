@@ -157,10 +157,11 @@ export function MenuBuilderClient({
         success("Menu restored successfully!");
         window.location.reload(); 
       } else {
-        toastError("Failed to restore menu.");
+        const errorData = await res.json().catch(() => ({}));
+        toastError(errorData.error || "Failed to restore menu.");
       }
-    } catch (err) {
-      toastError("Error restoring menu.");
+    } catch (err: any) {
+      toastError(err.message || "Error restoring menu.");
     } finally {
       setIsRestoring(false);
     }
@@ -178,10 +179,11 @@ export function MenuBuilderClient({
         success("Navigation synchronized!");
         router.refresh();
       } else {
-        toastError("Sync failed.");
+        const errorData = await res.json().catch(() => ({}));
+        toastError(errorData.error || "Sync failed.");
       }
-    } catch (error) {
-      toastError("Error saving menu.");
+    } catch (error: any) {
+      toastError(error.message || "Error saving menu.");
     } finally {
       setIsSaving(false);
     }

@@ -32,66 +32,69 @@ export async function PUT(req: Request) {
 
     // 1. Get all current item IDs from DB to identify deletions
     const currentItems = await prisma.menuItem.findMany({ select: { id: true } });
-    const currentIds = currentItems.map(i => i.id);
+    const currentIds = currentItems.map((i: { id: string }) => i.id);
 
     // 2. Identify incoming real IDs
     const incomingIds = items
-      .filter(item => item.id && !item.id.startsWith('temp-'))
-      .map(item => item.id);
+      .filter((item: any) => item.id && !item.id.startsWith('temp-'))
+      .map((item: any) => item.id);
 
     // 3. Delete items not in the new array
-    const idsToDelete = currentIds.filter(id => !incomingIds.includes(id));
+    const idsToDelete = currentIds.filter((id: string) => !incomingIds.includes(id));
     if (idsToDelete.length > 0) {
       await prisma.menuItem.deleteMany({
         where: { id: { in: idsToDelete } }
       });
     }
 
-    // 4. Upsert items (handling parents correctly)
-    // We do this in a way that respects the order and parentId provided by the client
-    // Since we might have new items that other items depend on as parents, 
-    // we should ideally upsert them in an order that respects hierarchy or just use a two-pass approach.
+    // 4. Separate new and existing items
+    const newItems = items.filter((item: any) => !item.id || item.id.startsWith('temp-'));
     
-    // First pass: Upsert all items without setting parentId yet (to ensure IDs exist)
+    // First pass: Create all new items in parallel (without parentId set yet to avoid foreign key checks on non-existent records)
     const idMap: Record<string, string> = {};
-    
-    for (const item of items) {
-      const isNew = !item.id || item.id.startsWith('temp-');
-      const saved = await prisma.menuItem.upsert({
-        where: { id: isNew ? 'none' : item.id },
-        update: {
-          label: item.label,
-          url: item.url,
-          order: item.order,
-          icon: item.icon,
-          target: item.target || '_self',
-          isActive: item.isActive !== undefined ? item.isActive : true,
-        },
-        create: {
-          label: item.label,
-          url: item.url,
-          order: item.order,
-          icon: item.icon,
-          target: item.target || '_self',
-          isActive: item.isActive !== undefined ? item.isActive : true,
-        },
-      });
-      if (isNew) idMap[item.id] = saved.id;
-    }
-
-    // Second pass: Update parentIds
-    for (const item of items) {
-      const dbId = idMap[item.id] || item.id;
-      let dbParentId = item.parentId;
-      if (dbParentId && idMap[dbParentId]) {
-        dbParentId = idMap[dbParentId];
-      }
-
-      await prisma.menuItem.update({
-        where: { id: dbId },
-        data: { parentId: dbParentId }
+    if (newItems.length > 0) {
+      const createdItems = await Promise.all(
+        newItems.map((item: any) =>
+          prisma.menuItem.create({
+            data: {
+              label: item.label,
+              url: item.url,
+              order: item.order,
+              icon: item.icon,
+              target: item.target || '_self',
+              isActive: item.isActive !== undefined ? item.isActive : true,
+            },
+          })
+        )
+      );
+      newItems.forEach((item: any, index: number) => {
+        idMap[item.id] = createdItems[index].id;
       });
     }
+
+    // Second pass: Update all items in parallel (updates fields + sets correct parentId)
+    await Promise.all(
+      items.map((item: any) => {
+        const dbId = idMap[item.id] || item.id;
+        let dbParentId = item.parentId;
+        if (dbParentId && idMap[dbParentId]) {
+          dbParentId = idMap[dbParentId];
+        }
+
+        return prisma.menuItem.update({
+          where: { id: dbId },
+          data: {
+            label: item.label,
+            url: item.url,
+            order: item.order,
+            icon: item.icon,
+            target: item.target || '_self',
+            isActive: item.isActive !== undefined ? item.isActive : true,
+            parentId: dbParentId,
+          },
+        });
+      })
+    );
 
     revalidatePath("/", "layout");
 
