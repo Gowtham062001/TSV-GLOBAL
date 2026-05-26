@@ -3,7 +3,11 @@
     "eyebrow": "Legal Information",
     "heading": "Terms &",
     "highlight": "Conditions",
-    "description": "The rules and regulations for using the TSV Global Solutions website and services."
+    "description": "The rules and regulations for using the TSV Global Solutions website and services.",
+    "bgImage": "/assets/img/global-logistics-transportation-network.webp",
+    "textColor": "#ffffff",
+    "subTextColor": "#e63946",
+    "badgeText": "Legal Information"
   },
   "simple_content": {
     "title": "Service Terms",

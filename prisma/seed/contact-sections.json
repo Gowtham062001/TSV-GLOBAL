@@ -3,7 +3,11 @@
     "eyebrow": "Contact Us!",
     "heading": "Your Trusted Partner in",
     "highlight": "Global Logistics!",
-    "description": "11+ years of excellence in international freight forwarding, customs brokerage & project cargo solutions."
+    "description": "11+ years of excellence in international freight forwarding, customs brokerage & project cargo solutions.",
+    "bgImage": "/assets/img/global-logistics-transportation-network.webp",
+    "textColor": "#ffffff",
+    "subTextColor": "#e63946",
+    "badgeText": "Contact Us!"
   },
   "google_map": {
     "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2652.7904457742366!2d80.20593812777972!3d13.018775613931664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267007dff635f%3A0x759fc3f15f047ba2!2sTSV%20Global%20Solutions%20Private%20Limited!5e0!3m2!1sen!2sin!4v1767159390244!5m2!1sen!2sin"

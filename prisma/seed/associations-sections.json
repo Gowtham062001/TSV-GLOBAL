@@ -3,7 +3,11 @@
     "eyebrow": "Associations & Industry Partnerships",
     "heading": "Global Networks,",
     "highlight": "Delivered Worldwide",
-    "description": "Collaborating with local and international freight networks \u2014 to provide secure and reliable logistics services since 2015."
+    "description": "Collaborating with local and international freight networks — to provide secure and reliable logistics services since 2015.",
+    "bgImage": "/assets/img/global-logistics-transportation-network.webp",
+    "textColor": "#ffffff",
+    "subTextColor": "#e63946",
+    "badgeText": "Associations & Industry Partnerships"
   },
   "partners_grid": {
     "eyebrow": "",
@@ -13,13 +17,13 @@
     "partners": [
       {
         "name": "FFFAI",
-        "description": "Federation of Freight Forwarders' Associations in India \u2014 active member since 2022.",
+        "description": "Federation of Freight Forwarders' Associations in India — active member since 2022.",
         "logo": "/assets/img/members/Federation-of-Freight-Forwarders-Associations-in-India-(FFFAI).png",
         "badge": "Verified Member"
       },
       {
         "name": "EGLN",
-        "description": "Elite Global Logistics Network \u2014 premium-tier freight partnerships worldwide.",
+        "description": "Elite Global Logistics Network — premium-tier freight partnerships worldwide.",
         "logo": "/assets/img/members/Elite-Global-Logistics-Network.png",
         "badge": "Elite Network"
       },
@@ -37,7 +41,7 @@
       },
       {
         "name": "IATA",
-        "description": "International Air Transport Association \u2014 certified compliance and air cargo safety.",
+        "description": "International Air Transport Association — certified compliance and air cargo safety.",
         "logo": "/assets/img/members/IATAlogo.svg",
         "badge": "Certified"
       },
@@ -49,7 +53,7 @@
       },
       {
         "name": "FIATA",
-        "description": "International Federation of Freight Forwarders Associations \u2014 global standards body.",
+        "description": "International Federation of Freight Forwarders Associations — global standards body.",
         "logo": "/assets/img/members/fiata.svg",
         "badge": "International Body"
       },
@@ -153,7 +157,7 @@
     "eyebrow": "Client Advantages",
     "heading": "Why Our Associations",
     "highlight": "Matter to Your Business",
-    "description": "Our verified memberships and global partnerships translate directly into measurable benefits for your shipments \u2014 from faster transit times to complete risk mitigation.",
+    "description": "Our verified memberships and global partnerships translate directly into measurable benefits for your shipments — from faster transit times to complete risk mitigation.",
     "features": [
       {
         "title": "Priority Handling",
@@ -162,7 +166,7 @@
       },
       {
         "title": "Vetted & Trusted Networks",
-        "description": "Every international partner is rigorously vetted for financial strength, operational reliability, and compliance \u2014 giving you maximum cargo security.",
+        "description": "Every international partner is rigorously vetted for financial strength, operational reliability, and compliance — giving you maximum cargo security.",
         "icon": "fa-regular fa-shield-check"
       },
       {

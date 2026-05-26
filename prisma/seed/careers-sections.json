@@ -3,7 +3,11 @@
     "eyebrow": "Join Our Team",
     "heading": "Build Your Career",
     "highlight": "With TSV Global",
-    "description": "Be part of a dynamic team driving global trade. We invest in our people, encourage innovation, and build careers that grow with the world."
+    "description": "Be part of a dynamic team driving global trade. We invest in our people, encourage innovation, and build careers that grow with the world.",
+    "bgImage": "/assets/img/global-logistics-transportation-network.webp",
+    "textColor": "#ffffff",
+    "subTextColor": "#e63946",
+    "badgeText": "Join Our Team"
   },
   "why_us": {
     "badge": "Why TSV Global?",

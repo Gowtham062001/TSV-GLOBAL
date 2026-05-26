@@ -84,26 +84,34 @@ export function SectionEditor({ section, onClose, onSave }: SectionEditorProps) 
       text: "TSV Global Solutions • Excellence in Logistics • Air Freight • Ocean Freight • Customs Clearance •"
     },
     header: {
+      eyebrow: "Service Details",
       subHeading: "Service Details",
+      badgeText: "Service Details",
       heading: "Expert Logistics",
+      highlight: "",
       description: "Description about the service",
       bgImage: "/assets/img/global-logistics-transportation-network.webp",
-      badgeText: "Badge Text",
       textColor: "#ffffff",
       subTextColor: "#e63946"
     },
     page_header: {
       eyebrow: "Home / Page",
+      subHeading: "",
+      badgeText: "",
       heading: "Page Title",
+      highlight: "",
       description: "Brief description for the page header.",
       bgImage: "/assets/img/global-logistics-transportation-network.webp",
-      badgeText: "Badge Text",
       textColor: "#ffffff",
       subTextColor: "#e63946"
     },
     breadcrumb: {
+      eyebrow: "",
       subHeading: "Sub Heading",
+      badgeText: "",
       heading: "Page Title",
+      highlight: "",
+      description: "",
       bgImage: "/assets/img/global-logistics-transportation-network.webp",
       textColor: "#ffffff",
       subTextColor: "#e63946"
@@ -131,14 +139,15 @@ export function SectionEditor({ section, onClose, onSave }: SectionEditorProps) 
     // Robust merge specifically for header sections to ensure all fields are initialized
     if (["header", "page_header", "breadcrumb"].includes(section.type)) {
       return {
-        eyebrow: baseContent.eyebrow || baseContent.subHeading || baseContent.badgeText || defaults.eyebrow || defaults.subHeading || defaults.badgeText || "",
-        heading: baseContent.heading || defaults.heading || "",
-        description: baseContent.description || defaults.description || "",
-        bgImage: baseContent.bgImage || defaults.bgImage || "",
-        badgeText: baseContent.badgeText || defaults.badgeText || "",
-        subHeading: baseContent.subHeading || defaults.subHeading || "",
-        textColor: baseContent.textColor || defaults.textColor || "#ffffff",
-        subTextColor: baseContent.subTextColor || defaults.subTextColor || "#e63946"
+        eyebrow:      baseContent.eyebrow      || baseContent.subHeading || baseContent.badgeText || defaults.eyebrow || "",
+        subHeading:   baseContent.subHeading   || baseContent.eyebrow    || defaults.subHeading   || "",
+        badgeText:    baseContent.badgeText    || defaults.badgeText    || "",
+        heading:      baseContent.heading      || defaults.heading      || "",
+        highlight:    baseContent.highlight    || defaults.highlight    || "",
+        description:  baseContent.description  || defaults.description  || "",
+        bgImage:      baseContent.bgImage      || defaults.bgImage      || "",
+        textColor:    baseContent.textColor    || defaults.textColor    || "#ffffff",
+        subTextColor: baseContent.subTextColor || defaults.subTextColor || "#e63946",
       };
     }
     

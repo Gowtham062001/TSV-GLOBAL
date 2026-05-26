@@ -3,7 +3,11 @@
     "eyebrow": "Our Blog",
     "heading": "Insights and trends in",
     "highlight": "global logistics!",
-    "description": "Stay updated with the latest news, expert opinions, and industry trends from the world of freight and supply chain."
+    "description": "Stay updated with the latest news, expert opinions, and industry trends from the world of freight and supply chain.",
+    "bgImage": "/assets/img/global-logistics-transportation-network.webp",
+    "textColor": "#ffffff",
+    "subTextColor": "#e63946",
+    "badgeText": "Our Blog"
   },
   "blog_grid": {
     "eyebrow": "Industry Insights",

@@ -68,9 +68,9 @@ model ServiceSection {
 }
 
 model CaseStudy {
-  id        String   @id @default(cuid())
+  id        String               @id @default(cuid())
   title     String
-  slug      String   @unique
+  slug      String               @unique
   client    String?
   industry  String?
   challenge String?
@@ -81,11 +81,27 @@ model CaseStudy {
   route     String? // Route info
   images    Json?
   tags      String?
-  status    String   @default("PUBLISHED")
-  isVisible Boolean  @default(true)
+  status    String               @default("PUBLISHED")
+  isVisible Boolean              @default(true)
   seoData   Json?
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  sections  CaseStudySection[]
+  createdAt DateTime             @default(now())
+  updatedAt DateTime             @updatedAt
+}
+
+model CaseStudySection {
+  id          String    @id @default(cuid())
+  caseStudyId String
+  type        String
+  label       String
+  content     Json
+  isVisible   Boolean   @default(true)
+  order       Int
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  caseStudy   CaseStudy @relation(fields: [caseStudyId], references: [id], onDelete: Cascade)
+
+  @@index([caseStudyId])
 }
 
 model BlogPost {

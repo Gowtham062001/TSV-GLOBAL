@@ -12,6 +12,11 @@ export default async function AdminEditCaseStudy({ params }: { params: { id: str
         { slug: params.id }
       ]
     },
+    include: {
+      sections: {
+        orderBy: { order: "asc" },
+      },
+    },
   });
   if (!cs) {
     notFound();

@@ -3,7 +3,11 @@
     "eyebrow": "Our Milestones",
     "heading": "Our Journey of",
     "highlight": "Global Excellence!",
-    "description": "Tracking our milestones and defining moments from 2026 to 2015."
+    "description": "Tracking our milestones and defining moments from 2026 to 2015.",
+    "bgImage": "/assets/img/global-logistics-transportation-network.webp",
+    "textColor": "#ffffff",
+    "subTextColor": "#e63946",
+    "badgeText": "Our Milestones"
   },
   "success_timeline": {
     "milestones": [

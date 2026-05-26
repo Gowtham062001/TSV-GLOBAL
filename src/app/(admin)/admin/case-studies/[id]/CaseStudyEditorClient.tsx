@@ -1,18 +1,114 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import Link from "next/link";
 import { RichTextEditor } from "@/components/admin/RichTextEditor";
-import { Save, ChevronLeft, Building2, Target, CheckCircle2, Truck, MapPin, BarChart3, Plus, Trash2, Globe, ExternalLink, Box, Layout, Search } from "lucide-react";
+import { Save, ChevronLeft, Building2, Target, CheckCircle2, Truck, MapPin, BarChart3, Plus, Trash2, Globe, ExternalLink, Box, Layout, Search, GripVertical, Eye, EyeOff, Edit3, X } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { MediaSelector } from "@/components/admin/MediaSelector";
 import { useToast } from "@/components/shared/Toast";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { SeoPreview } from "@/components/admin/SeoPreview";
+import { SectionEditor } from "@/components/admin/SectionEditor";
+import {
+  DndContext,
+  closestCenter,
+  KeyboardSensor,
+  PointerSensor,
+  useSensor,
+  useSensors,
+  DragEndEvent,
+} from "@dnd-kit/core";
+import {
+  arrayMove,
+  SortableContext,
+  sortableKeyboardCoordinates,
+  verticalListSortingStrategy,
+  useSortable,
+} from "@dnd-kit/sortable";
+import { CSS } from "@dnd-kit/utilities";
 
 interface Metric {
   label: string;
   value: string;
+}
+
+interface Section {
+  id: string;
+  type: string;
+  label: string;
+  content: Record<string, any>;
+  isVisible: boolean;
+  order: number;
+}
+
+const AVAILABLE_SECTION_TYPES = [
+  { type: "page_header", label: "Page Header (Breadcrumb)", desc: "Top banner with title, eyebrow text and background image" },
+  { type: "simple_content", label: "Simple Rich Content", desc: "General custom HTML / typography block" },
+  { type: "service_faq", label: "Case Study FAQs", desc: "Expandable accordion questions and answers" },
+  { type: "cta_section", label: "Conversion Banner", desc: "Call to action strip with contact elements" },
+  { type: "case_study_stats", label: "Case Study Stats", desc: "Key performance metrics and result highlights" },
+];
+
+function SortableSectionItem({
+  section,
+  index,
+  onToggle,
+  onEdit,
+  onDelete,
+}: {
+  section: Section;
+  index: number;
+  onToggle: (id: string) => void;
+  onEdit: (section: Section) => void;
+  onDelete: (id: string) => void;
+}) {
+  const { attributes, listeners, setNodeRef, transform, transition, isDragging } = useSortable({ id: section.id });
+  const style = { transform: CSS.Transform.toString(transform), transition, zIndex: isDragging ? 100 : "auto" };
+
+  return (
+    <div
+      ref={setNodeRef}
+      style={style}
+      className={`bg-white rounded-xl border transition-all flex items-center gap-4 p-4 group shadow-sm ${
+        isDragging ? "shadow-xl border-[#e63946] ring-2 ring-red-50" : "hover:border-gray-300"
+      } ${!section.isVisible ? "opacity-50" : ""}`}
+    >
+      <div {...attributes} {...listeners} className="cursor-grab active:cursor-grabbing text-gray-300 hover:text-[#e63946] transition-colors p-2">
+        <GripVertical size={20} />
+      </div>
+      <div className="w-8 h-8 bg-gray-50 rounded-lg flex items-center justify-center text-[10px] font-bold text-gray-400 group-hover:bg-red-50 group-hover:text-[#e63946] transition-all border border-gray-100">
+        {String(index + 1).padStart(2, "0")}
+      </div>
+      <div className="flex-1 min-w-0">
+        <div className="flex items-center gap-2 mb-0.5">
+          <h3 className="font-bold text-gray-800 truncate">{section.label}</h3>
+          <span className="text-[10px] bg-red-50 text-[#e63946] px-2 py-0.5 rounded text-xs font-bold uppercase tracking-wider">
+            {section.type.replace(/_/g, " ")}
+          </span>
+        </div>
+        <p className="text-xs text-gray-400 truncate">{JSON.stringify(section.content).substring(0, 100)}...</p>
+      </div>
+      <div className="flex items-center gap-1">
+        <button
+          type="button"
+          onClick={() => onToggle(section.id)}
+          className={`p-2 rounded-lg transition-all ${
+            section.isVisible ? "text-green-600 hover:bg-green-50" : "text-gray-300 hover:bg-gray-50"
+          }`}
+          title={section.isVisible ? "Visible" : "Hidden"}
+        >
+          {section.isVisible ? <Eye size={18} /> : <EyeOff size={18} />}
+        </button>
+        <button type="button" onClick={() => onEdit(section)} className="p-2 text-gray-400 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all" title="Edit">
+          <Edit3 size={18} />
+        </button>
+        <button type="button" onClick={() => onDelete(section.id)} className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-all" title="Delete">
+          <Trash2 size={18} />
+        </button>
+      </div>
+    </div>
+  );
 }
 
 interface CaseStudy {
@@ -26,9 +122,10 @@ interface CaseStudy {
   challenge: string | null;
   solution: string | null;
   result: string | null;
-  metrics: any; // Metric[] stored as Json
+  metrics: any;
   images: any;
   status: string;
+  sections?: Section[];
   seoData?: {
     metaTitle?: string;
     metaDescription?: string;
@@ -66,7 +163,56 @@ export default function CaseStudyEditorClient({ cs }: { cs?: CaseStudy }) {
     seoData: { metaTitle: "", metaDescription: "", canonicalUrl: "", faq: [] }
   });
 
+  const [sections, setSections] = useState<Section[]>(cs?.sections || []);
   const [isSaving, setIsSaving] = useState(false);
+  const [editingSection, setEditingSection] = useState<Section | null>(null);
+  const [isAddingSection, setIsAddingSection] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const sensors = useSensors(
+    useSensor(PointerSensor, { activationConstraint: { distance: 8 } }),
+    useSensor(KeyboardSensor, { coordinateGetter: sortableKeyboardCoordinates })
+  );
+
+  const handleDragEnd = (event: DragEndEvent) => {
+    const { active, over } = event;
+    if (over && active.id !== over.id) {
+      setSections((items) => {
+        const oldIndex = items.findIndex((i) => i.id === active.id);
+        const newIndex = items.findIndex((i) => i.id === over.id);
+        return arrayMove(items, oldIndex, newIndex).map((item, idx) => ({ ...item, order: idx }));
+      });
+    }
+  };
+
+  const handleToggleVisibility = (id: string) => {
+    setSections((prev) => prev.map((s) => (s.id === id ? { ...s, isVisible: !s.isVisible } : s)));
+  };
+
+  const handleUpdateSection = (updatedSection: Section) => {
+    if (!sections.find((s) => s.id === updatedSection.id)) {
+      setSections([...sections, updatedSection]);
+    } else {
+      setSections((prev) => prev.map((s) => (s.id === updatedSection.id ? updatedSection : s)));
+    }
+    setEditingSection(null);
+  };
+
+  const handleDeleteSection = (id: string) => {
+    if (confirm("Are you sure you want to delete this section?")) {
+      setSections((prev) => prev.filter((s) => s.id !== id));
+    }
+  };
+
+  const filteredSectionTypes = useMemo(() => {
+    return AVAILABLE_SECTION_TYPES.filter(
+      (item) =>
+        item.label.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        item.type.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        item.desc.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  }, [searchTerm]);
+
 
   const faqSchema = React.useMemo(() => {
     if (!formData.seoData?.faq || formData.seoData.faq.length === 0) return null;
@@ -126,32 +272,43 @@ export default function CaseStudyEditorClient({ cs }: { cs?: CaseStudy }) {
       
       const payload = {
         ...formData,
-        seoData: {
-          ...formData.seoData,
-          faqSchema: faqSchema
-        }
+        seoData: { ...formData.seoData, faqSchema: faqSchema }
       };
 
+      // 1. Save general case study metadata
       const response = await fetch(url, {
         method,
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
 
-      if (response.ok) {
+      if (!response.ok) throw new Error("Failed to save case study metadata");
+
+      const savedCs = await response.json();
+      const actualId = cs?.id || savedCs.id;
+
+      // 2. Save sections
+      const sectionsRes = await fetch(`/api/admin/case-studies/${actualId}/sections`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ sections }),
+      });
+
+      if (sectionsRes.ok) {
         success("Case study synchronized successfully!");
         router.push("/admin/case-studies");
         router.refresh();
       } else {
-        toastError("Failed to save case study.");
+        toastError("Metadata saved but sections sync failed.");
       }
-    } catch (error) {
+    } catch (error: any) {
       console.error(error);
-      toastError("Failed to save case study.");
+      toastError(error.message || "Failed to save case study.");
     } finally {
       setIsSaving(false);
     }
   };
+
 
   return (
     <div className="space-y-6 pb-20">
@@ -200,10 +357,13 @@ export default function CaseStudyEditorClient({ cs }: { cs?: CaseStudy }) {
       <Tabs defaultValue="content" className="w-full">
         <TabsList className="bg-gray-100/50 p-1 rounded-xl mb-6 flex w-fit border border-gray-100">
           <TabsTrigger value="content" className="px-6 py-2 rounded-lg flex items-center gap-2 data-[state=active]:bg-white data-[state=active]:text-[#e63946] data-[state=active]:shadow-sm transition-all font-bold text-sm text-gray-400">
-            <Layout size={16} /> Basic Info & SEO
+            <Layout size={16} /> Basic Info &amp; SEO
           </TabsTrigger>
           <TabsTrigger value="details" className="px-6 py-2 rounded-lg flex items-center gap-2 data-[state=active]:bg-white data-[state=active]:text-[#e63946] data-[state=active]:shadow-sm transition-all font-bold text-sm text-gray-400">
             <Layout size={16} /> Case Study Details
+          </TabsTrigger>
+          <TabsTrigger value="sections" className="px-6 py-2 rounded-lg flex items-center gap-2 data-[state=active]:bg-white data-[state=active]:text-[#e63946] data-[state=active]:shadow-sm transition-all font-bold text-sm text-gray-400">
+            <Box size={16} /> Page Sections
           </TabsTrigger>
         </TabsList>
 
@@ -585,7 +745,124 @@ export default function CaseStudyEditorClient({ cs }: { cs?: CaseStudy }) {
             </div>
           </div>
         </TabsContent>
+
+        <TabsContent value="sections" className="space-y-6">
+          <div className="flex items-center justify-between px-2">
+            <div>
+              <h3 className="font-bold text-gray-900">Page Sections</h3>
+              <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest mt-0.5">Drag to reorder · click Eye to hide/show · click Edit to configure</p>
+            </div>
+            <button
+              type="button"
+              onClick={() => setIsAddingSection(true)}
+              className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 text-gray-700 rounded-xl text-xs font-bold hover:bg-gray-50 transition-all shadow-sm"
+            >
+              <Plus size={16} className="text-[#e63946]" /> Append Node
+            </button>
+          </div>
+
+          <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
+            <SortableContext items={sections.map((s) => s.id)} strategy={verticalListSortingStrategy}>
+              <div className="space-y-3">
+                {sections.length === 0 ? (
+                  <div className="text-center p-20 bg-white border-2 border-dashed border-gray-100 rounded-2xl text-gray-400">
+                    No layout sections appended yet. Click &quot;Append Node&quot; to begin.
+                  </div>
+                ) : (
+                  sections.map((section, index) => (
+                    <SortableSectionItem
+                      key={section.id}
+                      section={section}
+                      index={index}
+                      onToggle={handleToggleVisibility}
+                      onEdit={setEditingSection}
+                      onDelete={handleDeleteSection}
+                    />
+                  ))
+                )}
+              </div>
+            </SortableContext>
+          </DndContext>
+        </TabsContent>
       </Tabs>
+
+      {/* Append Layout Node Modal */}
+      {isAddingSection && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-6 bg-slate-900/60 backdrop-blur-md animate-in fade-in duration-300">
+          <div className="bg-white rounded-2xl w-full max-w-4xl max-h-[85vh] flex flex-col shadow-2xl border border-slate-100 overflow-hidden animate-in zoom-in-95 duration-300">
+            <div className="p-6 border-b border-slate-100 flex items-center justify-between">
+              <div>
+                <h3 className="text-xl font-bold text-slate-900">Append Section</h3>
+                <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest mt-1">Select a modular layout node to append</p>
+              </div>
+              <button
+                type="button"
+                onClick={() => { setIsAddingSection(false); setSearchTerm(""); }}
+                className="w-8 h-8 bg-slate-50 hover:bg-red-50 text-slate-400 hover:text-[#e63946] rounded-lg flex items-center justify-center transition-all border border-slate-100"
+              >
+                <X size={16} />
+              </button>
+            </div>
+
+            <div className="p-6 border-b border-slate-100 bg-slate-50/50">
+              <div className="relative">
+                <Search size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" />
+                <input
+                  type="text"
+                  placeholder="Search layout modules..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full pl-12 pr-4 py-2.5 bg-white border border-slate-200 rounded-xl focus:border-[#e63946] focus:ring-2 focus:ring-red-100 outline-none text-xs font-medium transition-all"
+                />
+              </div>
+            </div>
+
+            <div className="flex-1 overflow-y-auto p-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+              {filteredSectionTypes.length === 0 ? (
+                <div className="col-span-2 text-center py-20 text-slate-400 font-bold uppercase tracking-widest text-[10px]">No matching modules found</div>
+              ) : (
+                filteredSectionTypes.map((item) => (
+                  <button
+                    key={item.type}
+                    type="button"
+                    onClick={() => {
+                      const newSection: Section = {
+                        id: `temp_${Date.now()}`,
+                        type: item.type,
+                        label: item.label,
+                        content: {},
+                        isVisible: true,
+                        order: sections.length,
+                      };
+                      setSections([...sections, newSection]);
+                      setIsAddingSection(false);
+                      setSearchTerm("");
+                      setEditingSection(newSection);
+                    }}
+                    className="flex items-start text-left p-4 bg-white hover:bg-red-50/30 border border-slate-100 hover:border-red-200 rounded-xl transition-all group hover:shadow-sm"
+                  >
+                    <div className="w-8 h-8 bg-slate-50 group-hover:bg-[#e63946]/10 text-slate-400 group-hover:text-[#e63946] rounded-lg flex items-center justify-center transition-all border border-slate-100 group-hover:border-transparent mr-3 flex-shrink-0">
+                      <Plus size={14} />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-slate-800 text-xs mb-0.5 group-hover:text-[#e63946] transition-all">{item.label}</h4>
+                      <p className="text-[11px] text-slate-400 font-medium leading-relaxed">{item.desc}</p>
+                    </div>
+                  </button>
+                ))
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {editingSection && (
+        <SectionEditor
+          section={editingSection as any}
+          onClose={() => setEditingSection(null)}
+          onSave={handleUpdateSection as any}
+        />
+      )}
     </div>
   );
 }

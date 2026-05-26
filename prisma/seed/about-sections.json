@@ -3,7 +3,11 @@
     "eyebrow": "About Us",
     "heading": "Enabling Seamless",
     "highlight": "Global Trade. Since 2015.",
-    "description": "Leading NVOCC and logistics provider delivering excellence across six continents."
+    "description": "Leading NVOCC and logistics provider delivering excellence across six continents.",
+    "bgImage": "/assets/img/global-logistics-transportation-network.webp",
+    "textColor": "#ffffff",
+    "subTextColor": "#e63946",
+    "badgeText": "About Us"
   },
   "who_we_are": {
     "eyebrow": "Who We Are ?",

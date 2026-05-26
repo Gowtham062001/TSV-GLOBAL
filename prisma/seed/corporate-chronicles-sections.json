@@ -3,7 +3,11 @@
     "eyebrow": "Beyond Logistics",
     "heading": "Corporate",
     "highlight": "Chronicles",
-    "description": "A visual odyssey of our global impacts, office culture, and the moments that define TSV Global Solutions."
+    "description": "A visual odyssey of our global impacts, office culture, and the moments that define TSV Global Solutions.",
+    "bgImage": "/assets/img/global-logistics-transportation-network.webp",
+    "textColor": "#ffffff",
+    "subTextColor": "#e63946",
+    "badgeText": "Beyond Logistics"
   },
   "chronicles_gallery": {
     "categories": [

@@ -3,7 +3,11 @@
     "eyebrow": "Legal Information",
     "heading": "Privacy",
     "highlight": "Policy",
-    "description": "How we handle and protect your data at TSV Global Solutions."
+    "description": "How we handle and protect your data at TSV Global Solutions.",
+    "bgImage": "/assets/img/global-logistics-transportation-network.webp",
+    "textColor": "#ffffff",
+    "subTextColor": "#e63946",
+    "badgeText": "Legal Information"
   },
   "simple_content": {
     "title": "Data Protection & Privacy",
