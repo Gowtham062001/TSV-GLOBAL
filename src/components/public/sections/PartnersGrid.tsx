@@ -8,7 +8,7 @@ export interface PartnerItem {
 }
 
 export interface PartnersGridProps {
-  eyebrow: string;
+  eyebrow?: string;
   heading: string;
   highlight: string;
   description: string;
@@ -26,7 +26,7 @@ export const PartnersGrid: React.FC<PartnersGridProps> = ({
     <section className="gnp-section">
       <div className="container">
         <div className="gnp-header wow fade-in-bottom">
-          <div className="gnp-eyebrow">{eyebrow}</div>
+          {eyebrow && <div className="gnp-eyebrow">{eyebrow}</div>}
           <h2>{heading} <span style={{ color: "#c1000a" }}>{highlight}</span></h2>
           <p>{description}</p>
         </div>
