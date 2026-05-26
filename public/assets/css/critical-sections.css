@@ -24,7 +24,7 @@
     box-shadow: 0 15px 40px rgba(0,0,0,0.1);
 }
 .tsv-vm-card.vision { border-color: #c1000a; }
-.tsv-vm-card.mission { border-color: #1a1a2e; }
+.tsv-vm-card.mission { border-color: #c1000a; }
 
 .tsv-vm-icon {
     font-size: 40px;

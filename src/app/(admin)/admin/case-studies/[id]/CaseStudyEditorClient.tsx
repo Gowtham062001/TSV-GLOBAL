@@ -252,6 +252,62 @@ export default function CaseStudyEditorClient({ cs }: { cs?: CaseStudy }) {
                 </div>
               </div>
 
+              {/* Header Style Configuration */}
+              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 space-y-6">
+                <div className="flex items-center gap-2 text-sm font-bold text-gray-800 uppercase tracking-widest border-b border-gray-50 pb-4">
+                  <Layout size={18} className="text-[#e63946]" /> Header Style & Presentation
+                </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="space-y-4">
+                    <MediaSelector 
+                      value={formData.seoData?.bgImage || ""} 
+                      onChange={(url) => setFormData({ ...formData, seoData: { ...formData.seoData, bgImage: url } })} 
+                      label="Header Background Image"
+                    />
+                  </div>
+                  <div className="space-y-4">
+                    <div className="space-y-1.5">
+                      <label className="text-[10px] font-bold text-gray-400 uppercase tracking-widest px-1">Header Title Color</label>
+                      <div className="flex items-center gap-3">
+                        <input
+                          type="color"
+                          value={formData.seoData?.textColor || "#ffffff"}
+                          onChange={(e) => setFormData({ ...formData, seoData: { ...formData.seoData, textColor: e.target.value } })}
+                          className="w-10 h-10 border border-gray-200 rounded-xl cursor-pointer bg-transparent"
+                        />
+                        <input
+                          type="text"
+                          value={formData.seoData?.textColor || ""}
+                          onChange={(e) => setFormData({ ...formData, seoData: { ...formData.seoData, textColor: e.target.value } })}
+                          className="flex-1 px-4 py-2 bg-gray-50 border border-gray-100 rounded-xl focus:bg-white focus:border-[#e63946] outline-none text-sm transition-all font-medium"
+                          placeholder="#ffffff"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="space-y-1.5">
+                      <label className="text-[10px] font-bold text-gray-400 uppercase tracking-widest px-1">Header Tag/Subtext Color</label>
+                      <div className="flex items-center gap-3">
+                        <input
+                          type="color"
+                          value={formData.seoData?.subTextColor || "#c1000a"}
+                          onChange={(e) => setFormData({ ...formData, seoData: { ...formData.seoData, subTextColor: e.target.value } })}
+                          className="w-10 h-10 border border-gray-200 rounded-xl cursor-pointer bg-transparent"
+                        />
+                        <input
+                          type="text"
+                          value={formData.seoData?.subTextColor || ""}
+                          onChange={(e) => setFormData({ ...formData, seoData: { ...formData.seoData, subTextColor: e.target.value } })}
+                          className="flex-1 px-4 py-2 bg-gray-50 border border-gray-100 rounded-xl focus:bg-white focus:border-[#e63946] outline-none text-sm transition-all font-medium"
+                          placeholder="#c1000a"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               {/* SEO Content */}
               <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 space-y-6">
                 <div className="flex items-center gap-2 text-sm font-bold text-gray-800 uppercase tracking-widest border-b border-gray-50 pb-4">

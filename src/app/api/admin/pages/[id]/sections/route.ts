@@ -52,6 +52,7 @@ export async function PUT(
     } else {
       revalidatePath(`/${targetPage.slug}`);
     }
+    revalidatePath("/", "layout");
 
     return NextResponse.json({ success: true });
   } catch (error) {

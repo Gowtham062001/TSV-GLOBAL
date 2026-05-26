@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Save, Loader2, Database, Upload, Download, AlertTriangle } from "lucide-react";
+import { Save, Loader2, Database, Upload, Download, AlertTriangle, Trash2, Image as ImageIcon } from "lucide-react";
 import { useToast } from "@/components/shared/Toast";
 interface SettingsClientProps {
   initialSettings: Record<string, any>;
@@ -19,6 +19,57 @@ export default function SettingsClient({ initialSettings, initialGlobalSeo }: Se
   const [isRestoring, setIsRestoring] = useState(false);
   const [restoreFile, setRestoreFile] = useState<File | null>(null);
   const [restoreConfirmed, setRestoreConfirmed] = useState(false);
+
+  const [logoVersion, setLogoVersion] = useState(Date.now());
+  const [isUploadingLogo, setIsUploadingLogo] = useState(false);
+
+  const handleLogoUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    setIsUploadingLogo(true);
+    const formData = new FormData();
+    formData.append("file", file);
+
+    try {
+      const res = await fetch("/api/admin/settings/logo", {
+        method: "POST",
+        body: formData
+      });
+      const data = await res.json();
+      if (res.ok) {
+        success("Logo updated successfully!");
+        setLogoVersion(data.timestamp);
+      } else {
+        toastError(data.error || "Failed to update logo");
+      }
+    } catch (e) {
+      toastError("Error uploading logo");
+    } finally {
+      setIsUploadingLogo(false);
+    }
+  };
+
+  const handleLogoRestore = async () => {
+    if (!confirm("Are you sure you want to restore the default logo?")) return;
+    setIsUploadingLogo(true);
+    try {
+      const res = await fetch("/api/admin/settings/logo", {
+        method: "DELETE"
+      });
+      const data = await res.json();
+      if (res.ok) {
+        success("Default logo restored!");
+        setLogoVersion(data.timestamp);
+      } else {
+        toastError(data.error || "Failed to restore logo");
+      }
+    } catch (e) {
+      toastError("Error restoring logo");
+    } finally {
+      setIsUploadingLogo(false);
+    }
+  };
 
   const fetchBackupStatus = async () => {
     try {
@@ -100,11 +151,56 @@ export default function SettingsClient({ initialSettings, initialGlobalSeo }: Se
 
         <div className="max-w-4xl">
           <TabsContent value="general" className="mt-0 outline-none">
-            <div className="bg-white rounded-[10px] border border-[#f0f2f8] p-6 space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <label className="text-[11px] font-bold text-[#8a9ab5] uppercase tracking-wider">Brand Identity</label>
-                  <input 
+            <div className="space-y-6">
+              
+              {/* Primary Logo Manager */}
+              <div className="bg-white rounded-[10px] border border-[#f0f2f8] p-6">
+                <h3 className="text-[13px] font-bold text-[#0f1523] mb-4 flex items-center gap-2">
+                  <ImageIcon size={16} className="text-[#8a9ab5]" />
+                  Company Primary Logo
+                </h3>
+                <div className="flex flex-col sm:flex-row gap-6 items-start sm:items-center">
+                  <div className="w-40 h-20 bg-slate-50 border border-[#f0f2f8] rounded-lg flex items-center justify-center p-2 relative group overflow-hidden">
+                    <img 
+                      src={`/img/logo.png?v=${logoVersion}`} 
+                      alt="Primary Logo" 
+                      className="max-w-full max-h-full object-contain"
+                      onError={(e) => { (e.target as HTMLImageElement).src = '/assets/img/logo.png'; }}
+                    />
+                    {isUploadingLogo && (
+                      <div className="absolute inset-0 bg-white/80 flex items-center justify-center">
+                        <Loader2 className="animate-spin text-[#0f1523]" size={20} />
+                      </div>
+                    )}
+                  </div>
+                  <div className="space-y-2">
+                    <p className="text-[11px] text-[#8a9ab5]">
+                      This logo is used across the website, admin panel, and email templates. Recommended size: 200x60px.
+                    </p>
+                    <div className="flex items-center gap-3">
+                      <label className="cursor-pointer px-4 py-2 bg-[#0f1523] text-white rounded-lg text-[11px] font-bold hover:bg-black transition-all flex items-center gap-2">
+                        <Upload size={14} />
+                        Update Logo
+                        <input type="file" accept="image/png, image/jpeg, image/svg+xml" className="hidden" onChange={handleLogoUpload} disabled={isUploadingLogo} />
+                      </label>
+                      <button 
+                        onClick={handleLogoRestore}
+                        disabled={isUploadingLogo}
+                        className="px-4 py-2 bg-red-50 text-red-600 rounded-lg text-[11px] font-bold hover:bg-red-100 transition-all flex items-center gap-2"
+                      >
+                        <Trash2 size={14} />
+                        Restore Default
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-[10px] border border-[#f0f2f8] p-6 space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <label className="text-[11px] font-bold text-[#8a9ab5] uppercase tracking-wider">Brand Name</label>
+                    <input 
                     type="text" 
                     value={settings.siteName || ""}
                     onChange={(e) => handleSettingChange("siteName", e.target.value)}
@@ -190,6 +286,7 @@ export default function SettingsClient({ initialSettings, initialGlobalSeo }: Se
                   />
                 </div>
               </div>
+            </div>
             </div>
           </TabsContent>
 

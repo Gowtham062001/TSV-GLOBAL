@@ -55,7 +55,8 @@ const AVAILABLE_SECTION_TYPES = [
   { type: "service_faq", label: "Service Accordion FAQs", desc: "Expandable questions & answers for logistics" },
   { type: "who_we_are", label: "Who We Are Block", desc: "Core identity block to outline brand capabilities" },
   { type: "cta_section", label: "Conversion Banner", desc: "High conversion CTA banner strip" },
-  { type: "simple_content", label: "Simple Rich Text Block", desc: "General purpose typography and markdown editor block" }
+  { type: "simple_content", label: "Simple Rich Text Block", desc: "General purpose typography and markdown editor block" },
+  { type: "header", label: "Service Page Header (Breadcrumb)", desc: "Top Header banner with title and description" }
 ];
 
 function SortableSectionItem({ 

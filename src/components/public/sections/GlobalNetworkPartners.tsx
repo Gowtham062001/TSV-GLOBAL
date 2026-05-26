@@ -12,7 +12,7 @@ interface Partner {
 }
 
 interface GlobalNetworkPartnersProps {
-  eyebrow?: string;
+
   heading?: string; // Fallback
   headingPrefix?: string;
   headingHighlight?: string;
@@ -23,7 +23,7 @@ interface GlobalNetworkPartnersProps {
 }
 
 export const GlobalNetworkPartners: React.FC<GlobalNetworkPartnersProps> = ({
-  eyebrow = "Credibility & Trust",
+
   heading,
   headingPrefix,
   headingHighlight,
@@ -38,7 +38,7 @@ export const GlobalNetworkPartners: React.FC<GlobalNetworkPartnersProps> = ({
     <section className="gnp-section padding">
       <div className="container">
         <div className="gnp-header wow fade-in-bottom">
-          <div className="gnp-eyebrow">{eyebrow}</div>
+
           
           {(headingPrefix || headingHighlight) ? (
             <TSVHeading 

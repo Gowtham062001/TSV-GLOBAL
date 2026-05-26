@@ -92,6 +92,8 @@ const sectionMap: Record<string, any> = {
   contact_info: ContactInfo,
   contact_form: ContactForm,
   page_header: PageHeader,
+  header: PageHeader,
+  breadcrumb: PageHeader,
   vision_mission: VisionMission,
   core_values: CoreValues,
   advantage_promo: AdvantagePromo,

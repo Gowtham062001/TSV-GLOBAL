@@ -64,11 +64,31 @@ export default async function CaseStudyDetailPage({ params }: { params: { slug: 
         />
       )}
       {/* Page Header */}
-      <section className="page-header relative py-24 bg-[#1a1a2e] text-white overflow-hidden">
+      <section 
+        className="page-header relative py-24 bg-[#1a1a2e] text-white overflow-hidden"
+        style={{
+          ...(seo?.bgImage ? {
+            backgroundImage: `linear-gradient(rgba(14, 14, 32, 0.7), rgba(14, 14, 32, 0.85)), url(${seo.bgImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          } : {}),
+          color: seo?.textColor || undefined
+        }}
+      >
         <div className="container relative z-10">
           <div className="max-w-4xl">
-            <h4 className="text-[#c1000a] font-bold uppercase tracking-[3px] text-sm mb-5">{cs.tags || "Case Study"}</h4>
-            <h1 className="text-4xl md:text-6xl font-black leading-tight tracking-tight text-white">{cs.title}</h1>
+            <h4 
+              style={seo?.subTextColor ? { color: seo.subTextColor } : undefined} 
+              className="text-[#c1000a] font-bold uppercase tracking-[3px] text-sm mb-5"
+            >
+              {cs.tags || "Case Study"}
+            </h4>
+            <h1 
+              style={seo?.textColor ? { color: seo.textColor } : undefined} 
+              className="text-4xl md:text-6xl font-black leading-tight tracking-tight text-white"
+            >
+              {cs.title}
+            </h1>
           </div>
         </div>
       </section>

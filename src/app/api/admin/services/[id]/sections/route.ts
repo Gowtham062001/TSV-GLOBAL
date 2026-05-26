@@ -35,6 +35,7 @@ export async function PUT(req: Request, { params }: { params: { id: string } }) 
       revalidatePath(`/services/${service.slug}`);
     }
     revalidatePath("/services");
+    revalidatePath("/", "layout");
 
     return NextResponse.json({ message: "Sections updated successfully" });
   } catch (error: any) {

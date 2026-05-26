@@ -687,7 +687,7 @@ select:focus {
     display: flex;
     overflow: hidden;
     user-select: none;
-    gap: 40px;
+    gap: 50px;
     position: relative;
 }
 
@@ -696,7 +696,7 @@ select:focus {
     display: flex;
     justify-content: space-around;
     min-width: 100%;
-    gap: 40px;
+    gap: 50px;
     animation: marquee-scroll 30s linear infinite;
 }
 
@@ -711,7 +711,11 @@ select:focus {
     white-space: nowrap;
     display: flex;
     align-items: center;
-    gap: 40px;
+}
+
+.marquee-content li:before {
+    right: -25px !important;
+    transform: translate(50%, -50%) !important;
 }
 
 @keyframes marquee-scroll {
