@@ -14,7 +14,8 @@ export interface Milestone {
 }
 
 export interface SuccessTimelineProps {
-  milestones: Milestone[];
+  milestones?: Milestone[];
+  image?: string;
 }
 
 /* ─────────────────────────────────────────────
@@ -90,7 +91,8 @@ const CARD_CONFIG = [
    MAIN EXPORT  (replaces old SuccessTimeline)
 ───────────────────────────────────────────── */
 export const SuccessTimeline: React.FC<SuccessTimelineProps> = ({
-  milestones,
+  milestones = [],
+  image = "/assets/img/milestones-bg.png",
 }) => {
   const [activePin, setActivePin] = useState<number | null>(null);
   const [visiblePins, setVisiblePins] = useState<Set<number>>(new Set());
@@ -157,10 +159,10 @@ export const SuccessTimeline: React.FC<SuccessTimelineProps> = ({
       style={{
         position: 'relative',
         width: '100%',
-        minHeight: '100vh',
-        padding: '0 0 80px 0',
+        minHeight: 'auto',
+        padding: '0 0 40px 0',
         overflow: 'visible',
-        background: 'linear-gradient(180deg, #fafaf8 0%, #f5f4f0 100%)',
+        background: 'transparent',
       }}
     >
       {/* ── CONTENT WRAPPER ── */}
@@ -221,8 +223,19 @@ export const SuccessTimeline: React.FC<SuccessTimelineProps> = ({
           </p>
         </div>
 
-        {/* DESKTOP ROAD */}
-        {!isMobile && (
+        {/* FULL VIEW IMAGE */}
+        {image && (
+          <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+            <img 
+              src={image} 
+              alt="Roadmap" 
+              style={{ width: '100%', maxWidth: '1400px', height: 'auto' }} 
+            />
+          </div>
+        )}
+
+        {/* DESKTOP ROAD (Hidden as requested) */}
+        {/* {!isMobile && (
           <DesktopRoad
             milestones={ordered}
             activePin={activePin}
@@ -230,10 +243,10 @@ export const SuccessTimeline: React.FC<SuccessTimelineProps> = ({
             roadProgress={roadProgress}
             visiblePins={visiblePins}
           />
-        )}
+        )} */}
 
-        {/* MOBILE TIMELINE */}
-        {isMobile && <MobileTimeline milestones={milestones} />}
+        {/* MOBILE TIMELINE (Hidden as requested) */}
+        {/* {isMobile && <MobileTimeline milestones={milestones} />} */}
       </div>
 
       {/* ── GLOBAL STYLES ── */}

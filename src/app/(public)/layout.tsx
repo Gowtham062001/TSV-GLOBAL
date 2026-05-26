@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { SpeedInsights } from '@vercel/speed-insights/next';
+
 import "../globals.css";
 import { getAnalyticsConfig } from "@/lib/analytics";
 import { GoogleTagManager } from "@/components/shared/GoogleTagManager";
@@ -169,7 +169,7 @@ export default async function PublicLayout({
         <Navbar menuItems={menuItems} />
         {children}
         <Footer />
-        <SpeedInsights />
+
 
 
         {/* ── JS: All vendor scripts in exact order from original HTML ── */}

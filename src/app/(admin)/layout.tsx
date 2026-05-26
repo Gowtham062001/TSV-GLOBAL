@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useSession } from "next-auth/react";
-import { SpeedInsights } from '@vercel/speed-insights/next';
+
 import { 
   LayoutDashboard, 
   Layout, 
@@ -246,7 +246,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       <body className="bg-[#f1f5f9] text-slate-800 antialiased relative font-inter">
         <AuthProvider>
           <ToastProvider>
-            <SpeedInsights />
+
             <AdminLayoutContent>
               {children}
             </AdminLayoutContent>

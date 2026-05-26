@@ -246,8 +246,6 @@ export async function SectionRenderer({
       console.error("[SectionRenderer] Failed to fetch blog posts:", e);
     }
   }
-
-
   return (
     <div data-section-type={type} id={`section-${type.replace(/_/g, '-')}`}>
       <Component {...cleanContent} />

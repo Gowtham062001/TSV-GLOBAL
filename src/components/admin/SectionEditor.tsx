@@ -140,6 +140,9 @@ export function SectionEditor({ section, onClose, onSave }: SectionEditorProps) 
       items: [
         { question: "What is your main transit route?", answer: "We cover over 140+ global shipping routes." }
       ]
+    },
+    success_timeline: {
+      image: "/assets/img/roadmap-image.png"
     }
   };
 
