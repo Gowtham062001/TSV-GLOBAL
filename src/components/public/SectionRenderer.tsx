@@ -14,6 +14,7 @@ import { Testimonials } from "./sections/Testimonials";
 import { GoogleMap } from "./sections/GoogleMap";
 import { ContactGrid } from "./sections/ContactGrid";
 import { PageHeader } from "./sections/PageHeader";
+import { BreadcrumbStrip } from "./sections/BreadcrumbStrip";
 import { WhoWeAre } from "./sections/WhoWeAre";
 import { VisionMission } from "./sections/VisionMission";
 import { CoreValues } from "./sections/CoreValues";
@@ -94,6 +95,7 @@ const sectionMap: Record<string, any> = {
   page_header: PageHeader,
   header: PageHeader,
   breadcrumb: PageHeader,
+  breadcrumb_strip: BreadcrumbStrip,
   vision_mission: VisionMission,
   core_values: CoreValues,
   advantage_promo: AdvantagePromo,

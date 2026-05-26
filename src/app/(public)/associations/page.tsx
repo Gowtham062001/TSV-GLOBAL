@@ -34,7 +34,6 @@ export default async function AssociationsPage() {
     where: { slug: "associations" },
     include: {
       sections: {
-        where: { isVisible: true },
         orderBy: { order: "asc" },
       },
     },
@@ -42,22 +41,24 @@ export default async function AssociationsPage() {
 
   const seo = page?.seoData as any;
 
-  // Load fallback data from JSON to ensure parity
-  let sectionsToRender = page?.sections.map(s => ({ type: s.type, content: s.content as Record<string, unknown> })) || [];
-
-  try {
-    const filePath = path.join(process.cwd(), "prisma/seed/associations-sections.json");
-    const seedData = JSON.parse(fs.readFileSync(filePath, "utf-8"));
-    const seedSectionTypes = Object.keys(seedData);
-    
-    // If DB has fewer sections than the seed file, or we want to force seed file contents
-    // we use the seed file as the source of truth for the structure
-    sectionsToRender = seedSectionTypes.map(type => ({
-      type,
-      content: seedData[type]
-    }));
-  } catch (err) {
-    console.error("Failed to load associations seed data:", err);
+  // Load fallback data from JSON only if DB has NO sections
+  let sectionsToRender: Array<{ type: string; content: Record<string, unknown> }> = [];
+  
+  if (page && page.sections && page.sections.length > 0) {
+    sectionsToRender = page.sections
+      .filter((s: any) => s.isVisible)
+      .map((s: any) => ({ type: s.type, content: s.content as Record<string, unknown> }));
+  } else {
+    try {
+      const filePath = path.join(process.cwd(), "prisma/seed/associations-sections.json");
+      const seedData = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+      sectionsToRender = Object.keys(seedData).map(type => ({
+        type,
+        content: seedData[type]
+      }));
+    } catch (err) {
+      console.error("Failed to load associations seed data:", err);
+    }
   }
 
   if (sectionsToRender.length === 0) {

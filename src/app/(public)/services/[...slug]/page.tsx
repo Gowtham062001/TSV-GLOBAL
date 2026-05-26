@@ -11,6 +11,7 @@ import ServiceCTA from "@/components/public/services/ServiceCTA";
 import Link from "next/link";
 import { safeFetch } from "@/lib/safe-fetch";
 import { decodeHTML } from "@/lib/utils";
+import { SectionRenderer } from "@/components/public/SectionRenderer";
 
 export const revalidate = 0;
 
@@ -77,9 +78,6 @@ export default async function ServicePage({ params }: { params: { slug: string[]
   const getSection = (type: string) =>
     service.sections.find((s) => s.type === type && s.isVisible);
 
-  const headerSection = service.sections.find((s) => s.type === "header");
-  const showHeader = headerSection ? headerSection.isVisible : true;
-
   return (
     <main className="bg-white">
       {/* FAQ Schema */}
@@ -91,36 +89,14 @@ export default async function ServicePage({ params }: { params: { slug: string[]
         />
       )}
 
-      {/* Section 00 | Page Header (Legacy Breadcrumb) */}
-      {showHeader && (
-        <section 
-          className="page-header"
-          style={{
-            ...(headerSection?.content?.bgImage ? {
-              backgroundImage: `linear-gradient(rgba(14, 14, 32, 0.7), rgba(14, 14, 32, 0.85)), url(${headerSection.content.bgImage})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center'
-            } : {}),
-            color: headerSection?.content?.textColor || undefined
-          }}
-        >
-          <div className="container">
-            <div className="page-header-info">
-              <h4 style={headerSection?.content?.subTextColor ? { color: headerSection.content.subTextColor } : undefined}>
-                {headerSection ? (headerSection.content as any).subHeading : "Service Details"}
-              </h4>
-              <h2 
-                style={headerSection?.content?.textColor ? { color: headerSection.content.textColor } : undefined}
-                dangerouslySetInnerHTML={{ __html: decodeHTML(headerSection ? (headerSection.content as any).heading : "Expert Logistics, <br />Delivered <span>Worldwide</span>") }}
-              />
-              <p 
-                style={headerSection?.content?.textColor ? { color: headerSection.content.textColor, opacity: 0.9 } : undefined}
-                dangerouslySetInnerHTML={{ __html: decodeHTML(headerSection ? (headerSection.content as any).description : "11+ years of NVOCC, freight forwarding & project cargo expertise — handling every shipment with precision and care.") }}
-              />
-            </div>
-          </div>
-        </section>
-      )}
+      {/* Dynamic Header & Breadcrumb Sections */}
+      {service.sections?.filter((s: any) => s.type === "page_header" || s.type === "header" || s.type === "breadcrumb" || s.type === "breadcrumb_strip").map((section: any) => (
+        <SectionRenderer 
+          key={section.id} 
+          type={section.type} 
+          content={section.content as Record<string, unknown>} 
+        />
+      ))}
 
       {/* Exact 6 Section Order */}
       {/* Section 01 | Service Overview */}
@@ -152,6 +128,17 @@ export default async function ServicePage({ params }: { params: { slug: string[]
       {getSection("cta") && (
         <ServiceCTA data={getSection("cta")!.content as any} />
       )}
+
+      {/* Dynamic Sections AFTER Main Content */}
+      {service.sections?.filter((s: any) => 
+        !["page_header", "header", "breadcrumb", "breadcrumb_strip", "service_overview", "our_advantage", "handling_process", "photo_gallery", "faq", "cta"].includes(s.type)
+      ).map((section: any) => (
+        <SectionRenderer 
+          key={section.id} 
+          type={section.type} 
+          content={section.content as Record<string, unknown>} 
+        />
+      ))}
     </main>
   );
 }

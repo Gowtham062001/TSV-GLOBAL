@@ -6,6 +6,7 @@ import Link from "next/link";
 import CaseStudyGallery from "@/components/public/CaseStudyGallery";
 import CaseStudyMetrics from "@/components/public/CaseStudyMetrics";
 import { safeFetch } from "@/lib/safe-fetch";
+import { SectionRenderer } from "@/components/public/SectionRenderer";
 
 export const revalidate = 0; // Set to 0 for real-time updates while we finish the site
 
@@ -39,6 +40,12 @@ export default async function CaseStudyDetailPage({ params }: { params: { slug: 
   const cs = await safeFetch(
     () => prisma.caseStudy.findUnique({
       where: { slug: params.slug },
+      include: {
+        sections: {
+          where: { isVisible: true },
+          orderBy: { order: "asc" }
+        }
+      }
     }),
     null,
     "case-study_detail"
@@ -63,48 +70,14 @@ export default async function CaseStudyDetailPage({ params }: { params: { slug: 
           dangerouslySetInnerHTML={{ __html: seo.faqSchema }}
         />
       )}
-      {/* Page Header */}
-      <section 
-        className="page-header relative py-24 bg-[#1a1a2e] text-white overflow-hidden"
-        style={{
-          ...(seo?.bgImage ? {
-            backgroundImage: `linear-gradient(rgba(14, 14, 32, 0.7), rgba(14, 14, 32, 0.85)), url(${seo.bgImage})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center'
-          } : {}),
-          color: seo?.textColor || undefined
-        }}
-      >
-        <div className="container relative z-10">
-          <div className="max-w-4xl">
-            <h4 
-              style={seo?.subTextColor ? { color: seo.subTextColor } : undefined} 
-              className="text-[#c1000a] font-bold uppercase tracking-[3px] text-sm mb-5"
-            >
-              {cs.tags || "Case Study"}
-            </h4>
-            <h1 
-              style={seo?.textColor ? { color: seo.textColor } : undefined} 
-              className="text-4xl md:text-6xl font-black leading-tight tracking-tight text-white"
-            >
-              {cs.title}
-            </h1>
-          </div>
-        </div>
-      </section>
-
-      {/* Breadcrumb Strip - Legacy Style */}
-      <div className="bg-[#1a1a2e] py-4 border-t border-white/5">
-        <div className="container">
-          <div className="flex items-center gap-2 text-[14px]">
-            <Link href="/" className="text-white/70 font-semibold hover:text-white transition-colors">Home</Link>
-            <i className="fa-regular fa-chevron-right text-white/30 text-[10px]"></i>
-            <Link href="/case-studies" className="text-white/70 font-semibold hover:text-white transition-colors">Case Studies</Link>
-            <i className="fa-regular fa-chevron-right text-white/30 text-[10px]"></i>
-            <span className="text-[#c1000a] font-bold truncate">{cs.title}</span>
-          </div>
-        </div>
-      </div>
+      {/* Dynamic Header & Breadcrumb Sections */}
+      {cs.sections?.filter((s: any) => s.type === "page_header" || s.type === "header" || s.type === "breadcrumb" || s.type === "breadcrumb_strip").map((section: any) => (
+        <SectionRenderer 
+          key={section.id} 
+          type={section.type} 
+          content={section.content as Record<string, unknown>} 
+        />
+      ))}
 
       {/* Main Content Area */}
       <section className="py-24">
@@ -189,6 +162,15 @@ export default async function CaseStudyDetailPage({ params }: { params: { slug: 
           </div>
         </div>
       </section>
+
+      {/* Dynamic Sections AFTER Main Content */}
+      {cs.sections?.filter((s: any) => s.type !== "page_header" && s.type !== "header" && s.type !== "breadcrumb" && s.type !== "breadcrumb_strip").map((section: any) => (
+        <SectionRenderer 
+          key={section.id} 
+          type={section.type} 
+          content={section.content as Record<string, unknown>} 
+        />
+      ))}
 
       {/* Dynamic Swiper Gallery */}
       {images.length > 0 && (

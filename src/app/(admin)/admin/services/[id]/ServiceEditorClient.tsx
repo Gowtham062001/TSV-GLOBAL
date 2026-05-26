@@ -56,7 +56,8 @@ const AVAILABLE_SECTION_TYPES = [
   { type: "who_we_are", label: "Who We Are Block", desc: "Core identity block to outline brand capabilities" },
   { type: "cta_section", label: "Conversion Banner", desc: "High conversion CTA banner strip" },
   { type: "simple_content", label: "Simple Rich Text Block", desc: "General purpose typography and markdown editor block" },
-  { type: "header", label: "Service Page Header (Breadcrumb)", desc: "Top Header banner with title and description" }
+  { type: "page_header", label: "Page Header Banner", desc: "Top hero banner with background image and main title" },
+  { type: "breadcrumb_strip", label: "Breadcrumb Strip", desc: "Thin navigation strip (Home > Section > Page)" }
 ];
 
 function SortableSectionItem({ 

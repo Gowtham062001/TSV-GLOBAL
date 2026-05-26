@@ -43,7 +43,8 @@ interface Section {
 }
 
 const AVAILABLE_SECTION_TYPES = [
-  { type: "page_header", label: "Page Header (Breadcrumb)", desc: "Top banner with title, eyebrow text and background image" },
+  { type: "page_header", label: "Page Header Banner", desc: "Top hero banner with background image and main title" },
+  { type: "breadcrumb_strip", label: "Breadcrumb Strip", desc: "Thin navigation strip (Home > Section > Page)" },
   { type: "simple_content", label: "Simple Rich Content", desc: "General custom HTML / typography block" },
   { type: "service_faq", label: "Case Study FAQs", desc: "Expandable accordion questions and answers" },
   { type: "cta_section", label: "Conversion Banner", desc: "Call to action strip with contact elements" },

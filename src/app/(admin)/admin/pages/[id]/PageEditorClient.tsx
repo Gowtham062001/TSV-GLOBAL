@@ -69,6 +69,7 @@ const AVAILABLE_SECTION_TYPES = [
   { type: "who_we_are", label: "Who We Are", desc: "Premium introductory layout with list features" },
   { type: "marquee", label: "Marquee Scroll", desc: "Horizontal scrolling keywords banner block" },
   { type: "page_header", label: "Page Header Banner", desc: "Page title header with custom background image" },
+  { type: "breadcrumb_strip", label: "Breadcrumb Strip", desc: "Thin navigation strip (Home > Section > Page)" },
   { type: "simple_content", label: "Simple Rich Content", desc: "General custom HTML / typography block" },
   { type: "google_map", label: "Google Map Embed", desc: "Dynamic interactive Google Map iframe" },
   { type: "service_faq", label: "Accordion Page FAQs", desc: "Expandable accordions for general page FAQs" },

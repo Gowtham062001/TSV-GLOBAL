@@ -8,6 +8,7 @@ export interface PageHeaderProps {
   highlight?: string;
   description?: string;
   bgImage?: string;
+  bgSize?: string;
   textColor?: string;
   subTextColor?: string;
 }
@@ -20,6 +21,7 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
   highlight, 
   description, 
   bgImage,
+  bgSize,
   textColor,
   subTextColor
 }) => {
@@ -31,8 +33,9 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
       style={{
         ...(bgImage ? { 
           backgroundImage: `linear-gradient(rgba(14, 14, 32, 0.7), rgba(14, 14, 32, 0.85)), url(${bgImage})`, 
-          backgroundSize: 'cover', 
-          backgroundPosition: 'center' 
+          backgroundSize: bgSize || 'cover', 
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
         } : {}),
         color: textColor || undefined
       }}

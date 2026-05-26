@@ -116,6 +116,17 @@ export function SectionEditor({ section, onClose, onSave }: SectionEditorProps) 
       textColor: "#ffffff",
       subTextColor: "#e63946"
     },
+    breadcrumb_strip: {
+      bgColor: "#1a1a2e",
+      borderColor: "rgba(255, 255, 255, 0.05)",
+      textColor: "rgba(255, 255, 255, 0.7)",
+      highlightColor: "#c1000a",
+      items: [
+        { label: "Home", link: "/" },
+        { label: "Section", link: "/section" },
+        { label: "Current Page", link: "" }
+      ]
+    },
     simple_content: {
       heading: "New Heading",
       content: "<p>Write your section content here...</p>",
