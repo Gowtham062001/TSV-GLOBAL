@@ -73,9 +73,12 @@ export default async function ServicePage({ params }: { params: { slug: string[]
 
   const seo = service.seoData as any;
 
-  // Helper to get section data
+  // Helper to get section data ONLY if it is visible
   const getSection = (type: string) =>
-    service.sections.find((s) => s.type === type);
+    service.sections.find((s) => s.type === type && s.isVisible);
+
+  const headerSection = service.sections.find((s) => s.type === "header");
+  const showHeader = headerSection ? headerSection.isVisible : true;
 
   return (
     <main className="bg-white">
@@ -89,15 +92,35 @@ export default async function ServicePage({ params }: { params: { slug: string[]
       )}
 
       {/* Section 00 | Page Header (Legacy Breadcrumb) */}
-      <section className="page-header">
-        <div className="container">
-          <div className="page-header-info">
-            <h4>{getSection("header") ? (getSection("header")!.content as any).subHeading : "Service Details"}</h4>
-            <h2 dangerouslySetInnerHTML={{ __html: decodeHTML(getSection("header") ? (getSection("header")!.content as any).heading : "Expert Logistics, <br />Delivered <span>Worldwide</span>") }}></h2>
-            <p dangerouslySetInnerHTML={{ __html: decodeHTML(getSection("header") ? (getSection("header")!.content as any).description : "11+ years of NVOCC, freight forwarding & project cargo expertise — handling every shipment with precision and care.") }}></p>
+      {showHeader && (
+        <section 
+          className="page-header"
+          style={{
+            ...(headerSection?.content?.bgImage ? {
+              backgroundImage: `linear-gradient(rgba(14, 14, 32, 0.7), rgba(14, 14, 32, 0.85)), url(${headerSection.content.bgImage})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center'
+            } : {}),
+            color: headerSection?.content?.textColor || undefined
+          }}
+        >
+          <div className="container">
+            <div className="page-header-info">
+              <h4 style={headerSection?.content?.subTextColor ? { color: headerSection.content.subTextColor } : undefined}>
+                {headerSection ? (headerSection.content as any).subHeading : "Service Details"}
+              </h4>
+              <h2 
+                style={headerSection?.content?.textColor ? { color: headerSection.content.textColor } : undefined}
+                dangerouslySetInnerHTML={{ __html: decodeHTML(headerSection ? (headerSection.content as any).heading : "Expert Logistics, <br />Delivered <span>Worldwide</span>") }}
+              />
+              <p 
+                style={headerSection?.content?.textColor ? { color: headerSection.content.textColor, opacity: 0.9 } : undefined}
+                dangerouslySetInnerHTML={{ __html: decodeHTML(headerSection ? (headerSection.content as any).description : "11+ years of NVOCC, freight forwarding & project cargo expertise — handling every shipment with precision and care.") }}
+              />
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Exact 6 Section Order */}
       {/* Section 01 | Service Overview */}

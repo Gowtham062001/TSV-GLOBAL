@@ -6,10 +6,12 @@ import { MediaSelector } from "./MediaSelector";
 
 interface SectionEditorProps {
   section: {
-    id: string;
-    type: string;
-    label: string;
-    content: Record<string, any>;
+    id:        string;
+    type:      string;
+    label:     string;
+    content:   Record<string, any>;
+    isVisible: boolean;
+    order:     number;
   };
   onClose: () => void;
   onSave: (updatedSection: any) => void;
@@ -81,12 +83,30 @@ export function SectionEditor({ section, onClose, onSave }: SectionEditorProps) 
     running_text: {
       text: "TSV Global Solutions • Excellence in Logistics • Air Freight • Ocean Freight • Customs Clearance •"
     },
+    header: {
+      subHeading: "Service Details",
+      heading: "Expert Logistics",
+      description: "Description about the service",
+      bgImage: "/assets/img/global-logistics-transportation-network.webp",
+      badgeText: "Badge Text",
+      textColor: "#ffffff",
+      subTextColor: "#e63946"
+    },
     page_header: {
-      title: "New Page Title",
-      breadcrumbs: [
-        { label: "Home", href: "/" },
-        { label: "About" }
-      ]
+      eyebrow: "Home / Page",
+      heading: "Page Title",
+      description: "Brief description for the page header.",
+      bgImage: "/assets/img/global-logistics-transportation-network.webp",
+      badgeText: "Badge Text",
+      textColor: "#ffffff",
+      subTextColor: "#e63946"
+    },
+    breadcrumb: {
+      subHeading: "Sub Heading",
+      heading: "Page Title",
+      bgImage: "/assets/img/global-logistics-transportation-network.webp",
+      textColor: "#ffffff",
+      subTextColor: "#e63946"
     },
     simple_content: {
       heading: "New Heading",
@@ -107,6 +127,21 @@ export function SectionEditor({ section, onClose, onSave }: SectionEditorProps) 
   const [content, setContent] = useState(() => {
     const baseContent = section.content || {};
     const defaults = DEFAULT_CONTENT[section.type] || {};
+    
+    // Robust merge specifically for header sections to ensure all fields are initialized
+    if (["header", "page_header", "breadcrumb"].includes(section.type)) {
+      return {
+        eyebrow: baseContent.eyebrow || baseContent.subHeading || baseContent.badgeText || defaults.eyebrow || defaults.subHeading || defaults.badgeText || "",
+        heading: baseContent.heading || defaults.heading || "",
+        description: baseContent.description || defaults.description || "",
+        bgImage: baseContent.bgImage || defaults.bgImage || "",
+        badgeText: baseContent.badgeText || defaults.badgeText || "",
+        subHeading: baseContent.subHeading || defaults.subHeading || "",
+        textColor: baseContent.textColor || defaults.textColor || "#ffffff",
+        subTextColor: baseContent.subTextColor || defaults.subTextColor || "#e63946"
+      };
+    }
+    
     return { ...defaults, ...baseContent };
   });
   const [isOpen, setIsOpen] = useState(false);
@@ -136,7 +171,14 @@ export function SectionEditor({ section, onClose, onSave }: SectionEditorProps) 
   };
 
   const handleSave = () => {
-    onSave({ ...section, content });
+    onSave({
+      id:        section.id,
+      type:      section.type,
+      label:     section.label,
+      order:     section.order,
+      isVisible: section.isVisible,
+      content:   content,
+    });
     handleClose();
   };
 
@@ -151,6 +193,29 @@ export function SectionEditor({ section, onClose, onSave }: SectionEditorProps) 
             onChange={(url) => updateField(path, url)} 
             label={label}
           />
+        </div>
+      );
+    }
+
+    if (key.toLowerCase().includes("color")) {
+      return (
+        <div key={path} className="space-y-1.5 py-1">
+          <label className="text-[10px] font-bold text-gray-400 uppercase tracking-widest px-1">{label}</label>
+          <div className="flex items-center gap-3">
+            <input
+              type="color"
+              value={value || "#ffffff"}
+              onChange={(e) => updateField(path, e.target.value)}
+              className="w-10 h-10 border border-gray-200 rounded-xl cursor-pointer bg-transparent"
+            />
+            <input
+              type="text"
+              value={value || ""}
+              onChange={(e) => updateField(path, e.target.value)}
+              className="flex-1 px-4 py-2.5 bg-gray-50/50 border border-gray-100 rounded-xl focus:ring-2 focus:ring-[#e63946]/10 focus:border-[#e63946] focus:bg-white outline-none transition-all text-sm font-medium"
+              placeholder="#ffffff"
+            />
+          </div>
         </div>
       );
     }
