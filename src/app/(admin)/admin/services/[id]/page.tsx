@@ -23,7 +23,7 @@ export default async function EditServicePage({ params }: { params: { id: string
     notFound();
   }
 
-  // Convert Date objects to strings for Client Component if necessary, 
-  // though Next.js handles simple Date objects fine now.
-  return <ServiceEditorClient service={service as any} />;
+  // Convert Date objects to strings for Client Component
+  const serializedService = JSON.parse(JSON.stringify(service));
+  return <ServiceEditorClient service={serializedService} />;
 }

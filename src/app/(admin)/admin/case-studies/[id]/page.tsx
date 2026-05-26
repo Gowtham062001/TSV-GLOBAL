@@ -3,6 +3,7 @@ export const dynamic = "force-dynamic";
 import { prisma } from "@/lib/db";
 import { notFound } from "next/navigation";
 import CaseStudyEditorClient from "./CaseStudyEditorClient";
+
 export default async function AdminEditCaseStudy({ params }: { params: { id: string } }) {
   const cs = await prisma.caseStudy.findFirst({
     where: {
@@ -15,5 +16,7 @@ export default async function AdminEditCaseStudy({ params }: { params: { id: str
   if (!cs) {
     notFound();
   }
-  return <CaseStudyEditorClient cs={cs} />;
+  
+  const serializedCs = JSON.parse(JSON.stringify(cs));
+  return <CaseStudyEditorClient cs={serializedCs} />;
 }
