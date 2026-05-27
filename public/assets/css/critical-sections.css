@@ -157,8 +157,8 @@
     100% { transform: translateX(-50%); }
 }
 .marquee-item { 
-    flex: 0 0 250px; 
-    height: 100px;
+    flex: 0 0 350px; 
+    height: 150px;
     display: flex; 
     align-items: center; 
     justify-content: center; 
@@ -166,7 +166,7 @@
 }
 .marquee-item img { 
     max-width: 100%; 
-    max-height: 60px;
+    max-height: 110px;
     filter: grayscale(0%); 
     opacity: 1; 
     transition: all 0.3s ease; 

@@ -56,7 +56,7 @@ export const PartnersMarquee: React.FC<PartnersMarqueeProps> = ({
       <style jsx>{`
         @media (max-width: 768px) {
           h2 { font-size: 28px !important; }
-          .marquee-item img { height: 50px !important; }
+          .marquee-item img { height: 80px !important; max-height: 80px !important; }
           .marquee-track { gap: 40px !important; padding-right: 40px !important; }
           .partners-marquee-section { padding: 40px 0 !important; }
         }
