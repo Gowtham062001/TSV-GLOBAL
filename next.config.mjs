@@ -10,6 +10,16 @@ const nextConfig = {
     ];
   },
   images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**.supabase.co',
+      },
+      {
+        protocol: 'https',
+        hostname: 'tsvglobal.vercel.app',
+      },
+    ],
     // Allow unoptimized local images from /public folder
     unoptimized: true,
   },

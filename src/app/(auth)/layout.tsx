@@ -1,4 +1,5 @@
 import React from "react";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import "../globals.css";
 import { ToastProvider } from "@/components/shared/Toast";
@@ -42,6 +43,7 @@ export default async function AuthLayout({ children }: { children: React.ReactNo
         <ToastProvider>
           {children}
         </ToastProvider>
+        <SpeedInsights />
 
       </body>
     </html>

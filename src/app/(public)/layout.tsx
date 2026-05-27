@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import "../globals.css";
 import { getAnalyticsConfig } from "@/lib/analytics";
@@ -169,6 +170,7 @@ export default async function PublicLayout({
         <Navbar menuItems={menuItems} />
         {children}
         <Footer />
+        <SpeedInsights />
 
 
 
