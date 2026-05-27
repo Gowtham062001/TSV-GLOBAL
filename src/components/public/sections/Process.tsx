@@ -85,8 +85,8 @@ export const Process: React.FC<ProcessProps> = ({
             <div className="col-lg-4 col-md-6" key={index}>
               <div className="process-item wow fade-in-bottom text-center" data-wow-delay={`${(index * 200) + 100}ms`} style={{ background: "transparent", boxShadow: "none", padding: 0, minHeight: "auto" }}>
                 <div className="process-icon-new mb-4 mx-auto" style={{ width: "150px", height: "150px", borderRadius: "50%", background: "#fff", border: "8px solid #323c92", boxShadow: "0 15px 30px rgba(0,0,0,0.15)", display: "flex", alignItems: "center", justifyContent: "center", position: "relative", zIndex: 1, overflow: "hidden" }}>
-                  <div style={{ position: "relative", width: "60px", height: "60px" }}>
-                    <Image src={step.icon} alt={step.title} fill style={{ objectFit: "contain" }} />
+                  <div style={{ position: "relative", width: "60px", height: "60px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    <img src={step.icon} alt={step.title} style={{ width: "100%", height: "100%", objectFit: "contain" }} />
                   </div>
                 </div>
                 <div className="process-content mt-4">
