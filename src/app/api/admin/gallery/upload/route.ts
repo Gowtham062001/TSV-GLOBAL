@@ -1,9 +1,15 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
-import { writeFile, mkdir } from "fs/promises";
-import path from "path";
 import { getAdminSession } from "@/lib/auth-check";
 import { writeAuditLog } from "@/lib/audit";
+import { v2 as cloudinary } from "cloudinary";
+
+// Configure Cloudinary
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
+});
 
 // Allowed image MIME types
 const ALLOWED_TYPES = [
@@ -34,26 +40,29 @@ export async function POST(req: NextRequest) {
     const buffer = Buffer.from(bytes);
 
     // Generate safe filename with timestamp
-    const ext = path.extname(file.name).toLowerCase();
-    const safeName = path.basename(file.name, path.extname(file.name))
+    const safeName = file.name
       .toLowerCase()
+      .replace(/\.[^/.]+$/, "") // Remove extension
       .replace(/[^a-z0-9]/g, "-")
       .replace(/-+/g, "-")
       .slice(0, 40);
-    const filename = `${Date.now()}-${safeName}${ext}`;
 
-    // CANONICAL upload path: /assets/img/uploads/[category]/
-    const uploadDir = path.join(process.cwd(), "public", "assets", "img", "uploads", category);
-    const absolutePath = path.join(uploadDir, filename);
+    // Upload to Cloudinary using a Promise to handle the stream
+    const uploadResponse = await new Promise((resolve, reject) => {
+      cloudinary.uploader.upload_stream(
+        {
+          folder: `tsvglobal/gallery/${category}`,
+          public_id: `${Date.now()}-${safeName}`,
+          resource_type: "auto",
+        },
+        (error, result) => {
+          if (error) reject(error);
+          else resolve(result);
+        }
+      ).end(buffer);
+    }) as any;
 
-    // URL path stored in DB (no /public prefix — Next.js serves /public as /)
-    const urlPath = `/assets/img/uploads/${category}/${filename}`;
-
-    // Create directory if it doesn't exist
-    await mkdir(uploadDir, { recursive: true });
-
-    // Save to disk
-    await writeFile(absolutePath, buffer);
+    const urlPath = uploadResponse.secure_url;
 
     // Save to DB
     const image = await prisma.galleryImage.create({
@@ -63,6 +72,8 @@ export async function POST(req: NextRequest) {
         category,
         caption: alt,
         order: 0,
+        fileSize: file.size,
+        mimeType: file.type,
       },
     });
 
@@ -84,3 +95,4 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 }
+

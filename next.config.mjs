@@ -19,6 +19,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'tsvglobal.vercel.app',
       },
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+      },
     ],
     // Allow unoptimized local images from /public folder
     unoptimized: true,
