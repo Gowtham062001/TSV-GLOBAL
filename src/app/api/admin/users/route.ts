@@ -149,7 +149,6 @@ export async function PUT(request: Request) {
     if (name !== undefined) data.name = name;
     if (email !== undefined) data.email = email;
     if (role !== undefined) data.role = role;
-    if (permissions !== undefined) data.permissions = permissions;
     if (isActive !== undefined) data.isActive = isActive;
 
     // Only hash and update password if a non-empty value was sent
