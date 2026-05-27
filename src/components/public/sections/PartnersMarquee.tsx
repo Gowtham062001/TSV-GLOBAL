@@ -24,13 +24,13 @@ export const PartnersMarquee: React.FC<PartnersMarqueeProps> = ({
 }) => {
   // Use provided partners or default to the known ones if empty
   const displayPartners = partners.length > 0 ? partners : [
-    { name: "Amara Raja", logo: "/assets/img/members/Partners/Amara_Raja.png" },
-    { name: "JK Tyre", logo: "/assets/img/members/Partners/JK-Tyre-logo.png" },
-    { name: "NLC India", logo: "/assets/img/members/Partners/NLC_India_Limited.svg.png" },
-    { name: "FCL", logo: "/assets/img/members/Partners/fcl.jpeg" },
-    { name: "MP Birla", logo: "/assets/img/members/Partners/mpbirla.jpeg" },
-    { name: "Ramco", logo: "/assets/img/members/Partners/ramco.png" },
-    { name: "Value Ingredients", logo: "/assets/img/members/Partners/value-ingredients.png" }
+    { name: "Amara Raja", logo: "https://res.cloudinary.com/dpjfe67wh/image/upload/v1779862628/tsvglobal/gallery/partners/1779862628437-amara-raja.png" },
+    { name: "JK Tyre", logo: "https://res.cloudinary.com/dpjfe67wh/image/upload/v1779862630/tsvglobal/gallery/partners/1779862629547-jk-tyre-logo.png" },
+    { name: "NLC India", logo: "https://res.cloudinary.com/dpjfe67wh/image/upload/v1779862631/tsvglobal/gallery/partners/1779862630800-nlc-india-limited-svg.png" },
+    { name: "FCL", logo: "https://res.cloudinary.com/dpjfe67wh/image/upload/v1779862632/tsvglobal/gallery/partners/1779862632089-fcl.jpg" },
+    { name: "MP Birla", logo: "https://res.cloudinary.com/dpjfe67wh/image/upload/v1779862633/tsvglobal/gallery/partners/1779862633156-mpbirla.jpg" },
+    { name: "Ramco", logo: "https://res.cloudinary.com/dpjfe67wh/image/upload/v1779862634/tsvglobal/gallery/partners/1779862634226-ramco.webp" },
+    { name: "Value Ingredients", logo: "https://res.cloudinary.com/dpjfe67wh/image/upload/v1779862635/tsvglobal/gallery/partners/1779862635193-value-ingredients.png" }
   ];
 
   return (
