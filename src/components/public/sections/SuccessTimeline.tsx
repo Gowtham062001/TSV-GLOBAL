@@ -183,22 +183,7 @@ export const SuccessTimeline: React.FC<SuccessTimelineProps> = ({
           marginBottom: '50px',
           paddingTop: '60px'
         }}>
-          <span style={{
-            display: 'inline-block',
-            fontSize: '11px',
-            fontWeight: 800,
-            letterSpacing: '2.5px',
-            textTransform: 'uppercase',
-            color: '#c1000a',
-            marginBottom: '12px',
-            padding: '5px 16px',
-            border: '1px solid rgba(193,0,10,0.2)',
-            borderRadius: '20px',
-            background: 'rgba(193,0,10,0.04)',
-            fontFamily: "DM Sans, sans-serif"
-          }}>
-            Our Journey
-          </span>
+
           <h2 style={{
             fontSize: 'clamp(32px, 4vw, 52px)',
             fontWeight: 800,
