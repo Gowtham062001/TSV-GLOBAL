@@ -35,10 +35,10 @@ export async function PUT(request: Request) {
       }
     }
 
-    // 3. Revalidate the entire site so changes appear immediately
+    // 3. Revalidate public site and admin pages so changes appear immediately
     revalidatePath('/', 'layout');
-    revalidatePath('/contact');
-    revalidatePath('/about');
+    revalidatePath('/admin/settings');
+    revalidatePath('/admin/analytics');
 
     return NextResponse.json({ success: true });
   } catch (error) {
