@@ -22,8 +22,6 @@ interface AnalyticsClientProps {
   gtmId: string | null;
 }
 
-const GA4_STREAM_ID = process.env.NEXT_PUBLIC_GA4_STREAM_ID || "14953317322";
-
 // Build GA4 console deep-link URLs
 function ga4Url(path: string) {
   return `https://analytics.google.com/analytics/web/#/${path}`;
@@ -31,7 +29,8 @@ function ga4Url(path: string) {
 
 export default function AnalyticsClient({ ga4Id, gtmId }: AnalyticsClientProps) {
   const isGA4Configured = !!ga4Id && ga4Id.startsWith("G-");
-  const isGTMConfigured = !!gtmId && gtmId.startsWith("GTM-");
+  // Google Tag containers use either "GTM-" (classic) or "GT-" (newer format)
+  const isGTMConfigured = !!gtmId && (gtmId.startsWith("GTM-") || gtmId.startsWith("GT-"));
 
   const quickLinks = [
     {
@@ -164,7 +163,7 @@ export default function AnalyticsClient({ ga4Id, gtmId }: AnalyticsClientProps) 
           { label: "Stream Name", value: "TSV Global Solutions" },
           { label: "Stream URL", value: "tsvglobal.com" },
           { label: "Measurement ID", value: ga4Id || "—" },
-          { label: "Stream ID", value: GA4_STREAM_ID },
+          { label: "GTM Container ID", value: gtmId || "—" },
         ].map((item) => (
           <div key={item.label}>
             <p className="text-[10px] font-bold text-[#8a9ab5] uppercase tracking-widest mb-1">{item.label}</p>
@@ -181,7 +180,7 @@ export default function AnalyticsClient({ ga4Id, gtmId }: AnalyticsClientProps) 
         </div>
         <div className={`flex items-center gap-2 px-4 py-2 rounded-xl border text-sm font-bold ${isGTMConfigured ? "bg-green-50 border-green-200 text-green-700" : "bg-gray-50 border-gray-200 text-gray-400"}`}>
           {isGTMConfigured ? <CheckCircle2 size={15} /> : <Info size={15} />}
-          GTM: {gtmId && gtmId.startsWith("GTM-") ? gtmId : "Not configured"}
+          GTM: {isGTMConfigured ? gtmId : "Not configured"}
         </div>
         <div className="flex items-center gap-2 px-4 py-2 rounded-xl border bg-blue-50 border-blue-200 text-blue-700 text-sm font-bold">
           <Zap size={15} />
