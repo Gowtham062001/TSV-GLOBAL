@@ -33,7 +33,7 @@ export function PremiumCTA({
         background: "radial-gradient(ellipse at 70% 50%, rgba(193,0,10,0.12) 0%, transparent 60%)",
         pointerEvents: "none",
       }} />
-      <div className="container" style={{ position: "relative", zIndex: 1 }}>
+      <div className="container-fluid px-4 px-lg-5" style={{ position: "relative", zIndex: 1 }}>
         <div className="row align-items-center gy-4">
           <div className="col-lg-8">
             {subHeading && <h4 className="sub-heading" style={{ color: "#c1000a", marginBottom: "16px" }}>{subHeading}</h4>}

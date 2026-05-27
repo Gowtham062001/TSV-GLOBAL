@@ -55,7 +55,7 @@ export const CTA: React.FC<CTAProps> = ({
 
   return (
     <section className="cta-section padding">
-      <div className="container">
+      <div className="container-fluid px-4 px-lg-0">
         <div className="row cta-wrapper gx-0">
           <div className="col-lg-6">
             <div className="section-heading white">
