@@ -74,9 +74,6 @@ export default async function AssociationsPage() {
         />
       )}
       {sectionsToRender.map((section, idx) => {
-        if (process.env.NODE_ENV === "development") {
-          console.log(`[AssociationsPage] Rendering section ${idx}: ${section.type}`);
-        }
         return (
           <SectionRenderer 
             key={idx} 

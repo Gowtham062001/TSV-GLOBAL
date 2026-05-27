@@ -23,7 +23,6 @@ async function walkDir(dir: string, callback: (path: string) => Promise<void>) {
 
 export async function POST(req: NextRequest) {
   try {
-    console.log("🚀 Starting legacy media sync via API...");
     const ROOT_DIR = path.join(process.cwd(), "public", "assets", "img");
     
     if (!fs.existsSync(ROOT_DIR)) {

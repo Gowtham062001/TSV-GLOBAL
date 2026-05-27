@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "migrate-images": "npx ts-node scripts/migrate-images.ts",
+    "db:migrate-cloudinary": "npx tsx scripts/migrate-to-cloudinary.ts",
     "postinstall": "prisma generate",
     "db:push": "prisma db push",
     "db:migrate": "prisma migrate deploy",

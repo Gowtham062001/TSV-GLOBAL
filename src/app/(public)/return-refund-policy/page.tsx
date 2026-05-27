@@ -1,10 +1,3 @@
-/*
- * PAGE: refund-policy.html → app/(public)/return-refund-policy/page.tsx
- * ══════════════════════════════════════════════════════════
- * Section 01 | Page Header     → page_header
- * Section 02 | Policy Content  → simple_content
- * ══════════════════════════════════════════════════════════
- */
 import { prisma } from "@/lib/db";
 import { SectionRenderer } from "@/components/public/SectionRenderer";
 import { Metadata } from "next";

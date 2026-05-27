@@ -1,12 +1,3 @@
-/*
- * PAGE: services/project-management → Project Management Overview
- * ══════════════════════════════════════════════════════════
- * Section 01 | Page Header  → page_header
- * Section 02 | Services Grid → services_grid (sub-services)
- * Section 03 | CTA          → cta_section
- * ══════════════════════════════════════════════════════════
- * HTML SECTIONS : 3  |  OUTPUT SECTIONS: 3  ✅ MATCH
- */
 import { prisma } from "@/lib/db";
 import { SectionRenderer } from "@/components/public/SectionRenderer";
 import { Metadata } from "next";

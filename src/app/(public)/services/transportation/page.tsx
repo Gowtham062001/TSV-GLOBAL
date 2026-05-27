@@ -1,11 +1,3 @@
-/*
- * PAGE: services/transportation → services-transportation.html
- * ══════════════════════════════════════════════════════════
- * Section 01 | Page Header        → page_header
- * Section 02 | Services Grid      → services_grid
- * ══════════════════════════════════════════════════════════
- * HTML SECTIONS : 2  |  OUTPUT SECTIONS: 2  ✅ MATCH
- */
 import { prisma } from "@/lib/db";
 import { SectionRenderer } from "@/components/public/SectionRenderer";
 import { Metadata } from "next";

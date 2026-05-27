@@ -45,7 +45,7 @@ export async function sendLeadNotification(data: {
   return transporter.sendMail({
     from: `"TSV Leads" <${process.env.SMTP_USER}>`,
     to: notifyEmail,
-    subject: `🚀 New Lead: ${data.type} (${data.name})`,
+    subject: `New Lead: ${data.type} (${data.name})`,
     html,
   });
 }

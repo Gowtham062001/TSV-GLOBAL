@@ -1,14 +1,3 @@
-/*
- * PAGE: services/project-management/[vertical] 
- * → batteries | solar-panel | oil-gas | food-products | chemicals
- * ══════════════════════════════════════════════════════════
- * Section 01 | Page Header          → page_header
- * Section 02 | Service Detail Body  → simple_content
- * Section 03 | Service Gallery      → service_gallery
- * Section 04 | CTA Section          → cta_section
- * ══════════════════════════════════════════════════════════
- * HTML SECTIONS : 4  |  OUTPUT SECTIONS: 4  ✅ MATCH
- */
 import { prisma } from "@/lib/db";
 import { SectionRenderer } from "@/components/public/SectionRenderer";
 import { notFound } from "next/navigation";
