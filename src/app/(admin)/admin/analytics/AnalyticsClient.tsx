@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import {
   BarChart3,
   ExternalLink,
@@ -14,6 +14,7 @@ import {
   AlertCircle,
   CheckCircle2,
   Info,
+  Zap,
 } from "lucide-react";
 
 interface AnalyticsClientProps {
@@ -21,66 +22,63 @@ interface AnalyticsClientProps {
   gtmId: string | null;
 }
 
-export default function AnalyticsClient({ ga4Id, gtmId }: AnalyticsClientProps) {
-  const [activeTab, setActiveTab] = useState<"overview" | "realtime" | "behavior">("overview");
+const GA4_STREAM_ID = process.env.NEXT_PUBLIC_GA4_STREAM_ID || "14953317322";
 
+// Build GA4 console deep-link URLs
+function ga4Url(path: string) {
+  return `https://analytics.google.com/analytics/web/#/${path}`;
+}
+
+export default function AnalyticsClient({ ga4Id, gtmId }: AnalyticsClientProps) {
   const isGA4Configured = !!ga4Id && ga4Id.startsWith("G-");
   const isGTMConfigured = !!gtmId && gtmId.startsWith("GTM-");
-
-  const ga4ReportUrl = ga4Id
-    ? `https://analytics.google.com/analytics/web/#/p${ga4Id.replace("G-", "")}/reports/`
-    : "https://analytics.google.com/";
 
   const quickLinks = [
     {
       label: "Traffic Overview",
-      desc: "Sessions, users, pageviews for last 30 days",
+      desc: "Sessions, users & pageviews — last 30 days",
       icon: <TrendingUp size={18} />,
-      url: ga4Id
-        ? `https://analytics.google.com/analytics/web/#/p${ga4Id.replace("G-", "")}/reports/reportinghub?params=_u..nav%3Dmaui`
-        : "https://analytics.google.com/",
+      url: ga4Url("p475892583/reports/reportinghub"),
+      badge: null,
     },
     {
-      label: "Realtime Users",
-      desc: "Active users on site right now",
+      label: "Realtime",
+      desc: "Active users on tsvglobal.com right now",
       icon: <Activity size={18} />,
-      url: ga4Id
-        ? `https://analytics.google.com/analytics/web/#/p${ga4Id.replace("G-", "")}/reports/realtime`
-        : "https://analytics.google.com/",
+      url: ga4Url("p475892583/reports/realtime"),
+      badge: "Live",
     },
     {
       label: "Top Pages",
-      desc: "Most viewed pages and sessions",
+      desc: "Most viewed pages by sessions",
       icon: <Eye size={18} />,
-      url: ga4Id
-        ? `https://analytics.google.com/analytics/web/#/p${ga4Id.replace("G-", "")}/reports/explorer?params=_u..nav%3Dmaui%26_r.explorerCard..dimensions%3D%5B%7B%22type%22%3A%22SIMPLE%22%2C%22dimensionName%22%3A%22pagePath%22%7D%5D`
-        : "https://analytics.google.com/",
+      url: ga4Url("p475892583/reports/explorer?params=_u..nav%3Dmaui"),
+      badge: null,
     },
     {
       label: "Audience",
-      desc: "Demographics, device, and location data",
+      desc: "Demographics, devices & locations",
       icon: <Users size={18} />,
-      url: ga4Id
-        ? `https://analytics.google.com/analytics/web/#/p${ga4Id.replace("G-", "")}/reports/user-demographics-overview`
-        : "https://analytics.google.com/",
+      url: ga4Url("p475892583/reports/user-demographics-overview"),
+      badge: null,
     },
     {
-      label: "Traffic Sources",
-      desc: "Organic, direct, referral, social breakdown",
+      label: "Acquisition",
+      desc: "Organic, direct, referral & social sources",
       icon: <Globe size={18} />,
-      url: ga4Id
-        ? `https://analytics.google.com/analytics/web/#/p${ga4Id.replace("G-", "")}/reports/acquisition-overview`
-        : "https://analytics.google.com/",
+      url: ga4Url("p475892583/reports/acquisition-overview"),
+      badge: null,
     },
     {
       label: "Full Dashboard",
-      desc: "Open the complete Google Analytics 4 console",
+      desc: "Open complete Google Analytics 4 console",
       icon: <BarChart3 size={18} />,
-      url: ga4ReportUrl,
+      url: "https://analytics.google.com/analytics/web/",
+      badge: null,
     },
   ];
 
-  // Not configured at all
+  // ── Not configured at all ──────────────────────────────────────────────────
   if (!isGA4Configured && !isGTMConfigured) {
     return (
       <div className="space-y-6">
@@ -96,8 +94,7 @@ export default function AnalyticsClient({ ga4Id, gtmId }: AnalyticsClientProps) 
           <div>
             <h3 className="font-bold text-amber-800 text-sm mb-1">Analytics Not Configured</h3>
             <p className="text-amber-700 text-sm">
-              You need to add your GA4 Measurement ID and/or GTM Container ID in Settings to enable
-              analytics tracking and see data here.
+              Add your GA4 Measurement ID in Settings → Integrations to enable analytics tracking.
             </p>
           </div>
         </div>
@@ -105,31 +102,14 @@ export default function AnalyticsClient({ ga4Id, gtmId }: AnalyticsClientProps) 
         <div className="bg-white rounded-2xl border border-gray-100 p-8 space-y-6">
           <h3 className="font-bold text-[#1a1a2e] text-sm flex items-center gap-2">
             <Settings size={16} className="text-[#c1000a]" />
-            How to Set Up Google Analytics 4
+            Setup Steps
           </h3>
-
           <ol className="space-y-4">
             {[
-              {
-                step: "1",
-                title: "Create a GA4 Property",
-                desc: 'Go to analytics.google.com → Admin → Create Property → select "Web" and add your domain tsvglobal.com',
-              },
-              {
-                step: "2",
-                title: "Copy your Measurement ID",
-                desc: 'After creating, you\'ll see a Measurement ID starting with "G-" (e.g. G-XXXXXXXXXX). Copy it.',
-              },
-              {
-                step: "3",
-                title: "Paste it in Settings",
-                desc: 'Go to Admin → Settings → Integrations tab → GA4 Measurement ID field → paste and click Save Settings.',
-              },
-              {
-                step: "4",
-                title: "Verify it's working",
-                desc: "Visit your live website and check the Realtime report in GA4 — you should see yourself as an active user within 30 seconds.",
-              },
+              { step: "1", title: "Create a GA4 Property", desc: "Go to analytics.google.com → Admin → Create Property → Web → add tsvglobal.com" },
+              { step: "2", title: "Copy the Measurement ID", desc: 'After creating, copy the ID starting with "G-" from the data stream settings.' },
+              { step: "3", title: "Paste in Settings", desc: "Admin → Settings → Integrations → GA4 Measurement ID → Save." },
+              { step: "4", title: "Verify tracking", desc: "Visit your live site and check Realtime in GA4 — you'll appear as an active user within 30 seconds." },
             ].map((item) => (
               <li key={item.step} className="flex gap-4 items-start">
                 <span className="w-7 h-7 rounded-full bg-[#1a1a2e] text-white text-xs font-black flex items-center justify-center flex-shrink-0">
@@ -142,23 +122,12 @@ export default function AnalyticsClient({ ga4Id, gtmId }: AnalyticsClientProps) 
               </li>
             ))}
           </ol>
-
           <div className="flex gap-3 pt-2">
-            <a
-              href="/admin/settings#integrations"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#c1000a] text-white text-sm font-bold rounded-xl hover:bg-red-700 transition-all"
-            >
-              <Settings size={15} />
-              Go to Settings
+            <a href="/admin/settings" className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#c1000a] text-white text-sm font-bold rounded-xl hover:bg-red-700 transition-all">
+              <Settings size={15} /> Go to Settings
             </a>
-            <a
-              href="https://analytics.google.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-gray-100 text-[#1a1a2e] text-sm font-bold rounded-xl hover:bg-gray-200 transition-all"
-            >
-              <ExternalLink size={15} />
-              Open Google Analytics
+            <a href="https://analytics.google.com/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-gray-100 text-[#1a1a2e] text-sm font-bold rounded-xl hover:bg-gray-200 transition-all">
+              <ExternalLink size={15} /> Open Google Analytics
             </a>
           </div>
         </div>
@@ -166,60 +135,68 @@ export default function AnalyticsClient({ ga4Id, gtmId }: AnalyticsClientProps) 
     );
   }
 
-  // Configured — show status + quick links + embedded report
+  // ── Configured ─────────────────────────────────────────────────────────────
   return (
     <div className="space-y-8">
+
       {/* Header */}
       <div className="flex flex-col sm:flex-row justify-between sm:items-end gap-4">
         <div>
           <h2 className="text-2xl font-black text-[#1a1a2e]">Analytics</h2>
           <p className="text-xs text-gray-400 font-bold uppercase tracking-widest mt-1">
-            Google Analytics 4 Live Dashboard
+            Google Analytics 4 — TSV Global Solutions
           </p>
         </div>
         <a
-          href={ga4ReportUrl}
+          href="https://analytics.google.com/analytics/web/"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#1a1a2e] text-white text-sm font-bold rounded-xl hover:bg-black transition-all whitespace-nowrap"
         >
           <ExternalLink size={15} />
-          Open Full GA4 Console
+          Open GA4 Console
         </a>
+      </div>
+
+      {/* Property Info Card */}
+      <div className="bg-white border border-gray-100 rounded-2xl p-6 grid grid-cols-2 md:grid-cols-4 gap-6">
+        {[
+          { label: "Stream Name", value: "TSV Global Solutions" },
+          { label: "Stream URL", value: "tsvglobal.com" },
+          { label: "Measurement ID", value: ga4Id || "—" },
+          { label: "Stream ID", value: GA4_STREAM_ID },
+        ].map((item) => (
+          <div key={item.label}>
+            <p className="text-[10px] font-bold text-[#8a9ab5] uppercase tracking-widest mb-1">{item.label}</p>
+            <p className="text-sm font-bold text-[#1a1a2e] font-mono truncate">{item.value}</p>
+          </div>
+        ))}
       </div>
 
       {/* Status Badges */}
       <div className="flex flex-wrap gap-3">
-        <div
-          className={`flex items-center gap-2 px-4 py-2 rounded-xl border text-sm font-bold ${
-            isGA4Configured
-              ? "bg-green-50 border-green-200 text-green-700"
-              : "bg-amber-50 border-amber-200 text-amber-700"
-          }`}
-        >
+        <div className={`flex items-center gap-2 px-4 py-2 rounded-xl border text-sm font-bold ${isGA4Configured ? "bg-green-50 border-green-200 text-green-700" : "bg-amber-50 border-amber-200 text-amber-700"}`}>
           {isGA4Configured ? <CheckCircle2 size={15} /> : <AlertCircle size={15} />}
           GA4: {ga4Id || "Not configured"}
         </div>
-        <div
-          className={`flex items-center gap-2 px-4 py-2 rounded-xl border text-sm font-bold ${
-            isGTMConfigured
-              ? "bg-green-50 border-green-200 text-green-700"
-              : "bg-gray-50 border-gray-200 text-gray-500"
-          }`}
-        >
+        <div className={`flex items-center gap-2 px-4 py-2 rounded-xl border text-sm font-bold ${isGTMConfigured ? "bg-green-50 border-green-200 text-green-700" : "bg-gray-50 border-gray-200 text-gray-400"}`}>
           {isGTMConfigured ? <CheckCircle2 size={15} /> : <Info size={15} />}
-          GTM: {gtmId || "Not configured"}
+          GTM: {gtmId && gtmId.startsWith("GTM-") ? gtmId : "Not configured"}
+        </div>
+        <div className="flex items-center gap-2 px-4 py-2 rounded-xl border bg-blue-50 border-blue-200 text-blue-700 text-sm font-bold">
+          <Zap size={15} />
+          Tracking Active on tsvglobal.com
         </div>
       </div>
 
       {/* Info Banner */}
       <div className="bg-blue-50 border border-blue-100 rounded-2xl p-5 flex gap-3 items-start">
         <Info className="text-blue-500 flex-shrink-0 mt-0.5" size={18} />
-        <div className="text-sm text-blue-700">
-          <strong>How this works:</strong> Your GA4 tag ({ga4Id}) is injected on every public page
-          of tsvglobal.com. All visitor data is collected in Google&apos;s secure servers. Click any
-          report below to open it directly in your Google Analytics 4 dashboard.
-        </div>
+        <p className="text-sm text-blue-700">
+          Your GA4 tag <strong>{ga4Id}</strong> is injected on every public page of tsvglobal.com.
+          All visitor data is collected securely in Google Analytics. Click any report below to
+          open it directly in your GA4 dashboard.
+        </p>
       </div>
 
       {/* Quick Report Links */}
@@ -243,10 +220,14 @@ export default function AnalyticsClient({ ga4Id, gtmId }: AnalyticsClientProps) 
               <div className="flex-1 min-w-0">
                 <div className="flex items-center justify-between gap-2">
                   <p className="font-bold text-[#1a1a2e] text-sm">{link.label}</p>
-                  <ChevronRight
-                    size={14}
-                    className="text-gray-300 group-hover:text-[#c1000a] transition-colors flex-shrink-0"
-                  />
+                  <div className="flex items-center gap-1.5">
+                    {link.badge && (
+                      <span className="text-[9px] font-black bg-green-100 text-green-700 px-1.5 py-0.5 rounded-full uppercase tracking-wide">
+                        {link.badge}
+                      </span>
+                    )}
+                    <ChevronRight size={14} className="text-gray-300 group-hover:text-[#c1000a] transition-colors flex-shrink-0" />
+                  </div>
                 </div>
                 <p className="text-[11px] text-gray-400 mt-0.5">{link.desc}</p>
               </div>
@@ -255,68 +236,34 @@ export default function AnalyticsClient({ ga4Id, gtmId }: AnalyticsClientProps) 
         </div>
       </div>
 
-      {/* Embedded GA4 via iframe */}
-      <div className="bg-white rounded-2xl border border-gray-100 overflow-hidden">
-        <div className="px-6 py-4 border-b border-gray-100 flex items-center justify-between">
-          <h3 className="font-bold text-[#1a1a2e] text-sm flex items-center gap-2">
-            <TrendingUp size={15} className="text-[#c1000a]" />
-            Embedded Analytics Console
-          </h3>
-          <a
-            href={ga4ReportUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-xs text-[#c1000a] font-bold hover:underline flex items-center gap-1"
-          >
-            Open Full Screen <ExternalLink size={11} />
-          </a>
+      {/* Open GA4 CTA */}
+      <div className="bg-gradient-to-br from-[#1a1a2e] to-[#0f1523] rounded-2xl p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div>
+          <h3 className="font-black text-white text-lg">View Full Analytics Dashboard</h3>
+          <p className="text-gray-400 text-sm mt-1">
+            Session trends, funnel reports, custom events, conversions — all in your GA4 console.
+          </p>
         </div>
-        <div className="relative bg-gray-50" style={{ height: "600px" }}>
-          <iframe
-            src={ga4ReportUrl}
-            className="w-full h-full border-0"
-            title="Google Analytics 4 Dashboard"
-            sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-top-navigation"
-          />
-          {/* Overlay fallback — GA4 may block embedding due to X-Frame-Options */}
-          <div className="absolute inset-0 flex flex-col items-center justify-center bg-gray-50/95 pointer-events-none">
-            <div className="text-center px-8 max-w-md pointer-events-auto">
-              <div className="w-16 h-16 rounded-2xl bg-[#1a1a2e] text-white flex items-center justify-center mx-auto mb-5">
-                <BarChart3 size={28} />
-              </div>
-              <h4 className="font-black text-[#1a1a2e] text-lg mb-2">
-                Open Google Analytics Directly
-              </h4>
-              <p className="text-gray-500 text-sm mb-6">
-                Google Analytics prevents embedding for security reasons. Click the button below to
-                open your full live dashboard in a new tab.
-              </p>
-              <a
-                href={ga4ReportUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-[#c1000a] text-white font-bold rounded-xl hover:bg-red-700 transition-all"
-              >
-                <ExternalLink size={16} />
-                Open GA4 Dashboard
-              </a>
-              <p className="text-[11px] text-gray-400 mt-4">
-                Property ID: {ga4Id}
-              </p>
-            </div>
-          </div>
-        </div>
+        <a
+          href="https://analytics.google.com/analytics/web/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-6 py-3 bg-[#c1000a] text-white font-bold rounded-xl hover:bg-red-700 transition-all whitespace-nowrap flex-shrink-0"
+        >
+          <ExternalLink size={16} />
+          Open GA4 Dashboard
+        </a>
       </div>
 
-      {/* GTM Note */}
+      {/* GTM optional note */}
       {!isGTMConfigured && (
         <div className="bg-gray-50 border border-gray-100 rounded-2xl p-5 flex gap-3 items-start">
           <Info className="text-gray-400 flex-shrink-0 mt-0.5" size={16} />
-          <div className="text-sm text-gray-500">
-            <strong className="text-gray-700">Optional:</strong> You can also add a GTM Container
-            ID (GTM-XXXXXXX) in Settings → Integrations to manage tracking tags via Google Tag
-            Manager for more advanced event tracking.
-          </div>
+          <p className="text-sm text-gray-500">
+            <strong className="text-gray-700">Optional:</strong> Add a GTM Container ID
+            (GTM-XXXXXXX) in Settings → Integrations for advanced tag management and custom event
+            tracking via Google Tag Manager.
+          </p>
         </div>
       )}
     </div>
