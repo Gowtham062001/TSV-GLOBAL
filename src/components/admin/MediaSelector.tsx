@@ -52,7 +52,7 @@ export function MediaSelector({ value, onChange, label = "Featured Image" }: Med
       const res = await fetch("/api/admin/gallery");
       if (res.ok) {
         const data = await res.json();
-        setImages(data);
+        setImages(data.images || data || []);
       }
     } catch (err) {
       console.error(err);
