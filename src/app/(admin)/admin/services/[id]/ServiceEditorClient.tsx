@@ -93,23 +93,23 @@ function SortableSectionItem({
       ref={setNodeRef}
       style={style}
       className={`bg-white rounded-xl border transition-all flex items-center gap-4 p-4 group shadow-sm admin-section-row ${
-        isDragging ? 'shadow-xl border-[#e63946] ring-2 ring-red-50' : 'hover:border-gray-300'
+        isDragging ? 'shadow-xl border-[#c1000a] ring-2 ring-red-50' : 'hover:border-gray-300'
       } ${!section.isVisible ? 'opacity-50' : ''}`}
     >
       <div 
         {...attributes} 
         {...listeners} 
-        className="cursor-grab active:cursor-grabbing text-gray-300 hover:text-[#e63946] transition-colors p-2"
+        className="cursor-grab active:cursor-grabbing text-gray-300 hover:text-[#c1000a] transition-colors p-2"
       >
         <GripVertical size={20} />
       </div>
-      <div className="w-8 h-8 bg-gray-50 rounded-lg flex items-center justify-center text-[10px] font-bold text-gray-400 group-hover:bg-red-50 group-hover:text-[#e63946] transition-all border border-gray-100">
+      <div className="w-8 h-8 bg-gray-50 rounded-lg flex items-center justify-center text-[10px] font-bold text-gray-400 group-hover:bg-red-50 group-hover:text-[#c1000a] transition-all border border-gray-100">
         {String(index + 1).padStart(2, '0')}
       </div>
       <div className="flex-1 min-w-0">
         <div className="flex items-center gap-2 mb-0.5">
           <h3 className="font-bold text-gray-800 truncate">{section.label}</h3>
-          <span className="text-[10px] bg-red-50 text-[#e63946] px-2 py-0.5 rounded text-xs font-bold uppercase tracking-wider">
+          <span className="text-[10px] bg-red-50 text-[#c1000a] px-2 py-0.5 rounded text-xs font-bold uppercase tracking-wider">
             {section.type.replace(/_/g, ' ')}
           </span>
         </div>
@@ -294,7 +294,7 @@ export default function ServiceEditorClient({ service }: { service?: Service }) 
   return (
     <div className="space-y-6 max-w-7xl mx-auto pb-24">
       {/* Editor Toolbar */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-white p-6 rounded-[10px] border border-gray-100 shadow-sm">
         <div className="flex items-center gap-4">
           <Link 
             href="/admin/services" 
@@ -327,7 +327,7 @@ export default function ServiceEditorClient({ service }: { service?: Service }) 
             type="button"
             onClick={handleSave}
             disabled={isSaving}
-            className="flex items-center gap-2 px-6 py-2.5 bg-[#e63946] text-white rounded-xl text-xs font-bold hover:bg-red-700 disabled:opacity-50 transition-all shadow-md"
+            className="flex items-center gap-2 px-6 py-2.5 bg-[#c1000a] text-white rounded-xl text-xs font-bold hover:bg-red-700 disabled:opacity-50 transition-all shadow-md"
           >
             {isSaving ? (
               <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
@@ -341,10 +341,10 @@ export default function ServiceEditorClient({ service }: { service?: Service }) 
 
       <Tabs defaultValue="general" className="w-full">
         <TabsList className="bg-gray-100/60 p-1 rounded-xl mb-6 flex w-fit border border-gray-200/50">
-          <TabsTrigger value="general" className="px-6 py-2 rounded-lg flex items-center gap-2 data-[state=active]:bg-white data-[state=active]:text-[#e63946] data-[state=active]:shadow-sm transition-all font-bold text-xs text-gray-500">
+          <TabsTrigger value="general" className="px-6 py-2 rounded-lg flex items-center gap-2 data-[state=active]:bg-white data-[state=active]:text-[#c1000a] data-[state=active]:shadow-sm transition-all font-bold text-xs text-gray-500">
             <Layout size={14} /> Overview Settings
           </TabsTrigger>
-          <TabsTrigger value="sections" className="px-6 py-2 rounded-lg flex items-center gap-2 data-[state=active]:bg-white data-[state=active]:text-[#e63946] data-[state=active]:shadow-sm transition-all font-bold text-xs text-gray-500">
+          <TabsTrigger value="sections" className="px-6 py-2 rounded-lg flex items-center gap-2 data-[state=active]:bg-white data-[state=active]:text-[#c1000a] data-[state=active]:shadow-sm transition-all font-bold text-xs text-gray-500">
             <Box size={14} /> Page Sections
           </TabsTrigger>
         </TabsList>
@@ -353,7 +353,7 @@ export default function ServiceEditorClient({ service }: { service?: Service }) 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             <div className="lg:col-span-2 space-y-6">
               {/* General Settings */}
-              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 space-y-6">
+              <div className="bg-white p-6 rounded-[10px] shadow-sm border border-gray-100 space-y-6">
                 <div className="space-y-2">
                   <label className="text-[10px] font-bold text-gray-400 uppercase tracking-widest px-1">Service Title</label>
                   <input 
@@ -368,7 +368,7 @@ export default function ServiceEditorClient({ service }: { service?: Service }) 
                         slug: service?.id ? formData.slug : slug 
                       });
                     }}
-                    className="w-full px-4 py-3 bg-gray-50/50 border border-gray-100 rounded-xl focus:ring-2 focus:ring-[#e63946]/10 focus:border-[#e63946] focus:bg-white outline-none text-lg font-bold transition-all"
+                    className="w-full px-4 py-3 bg-gray-50/50 border border-gray-100 rounded-xl focus:ring-2 focus:ring-[#c1000a]/10 focus:border-[#c1000a] focus:bg-white outline-none text-lg font-bold transition-all"
                     placeholder="e.g. Sea Freight Forwarding"
                   />
                 </div>
@@ -383,9 +383,9 @@ export default function ServiceEditorClient({ service }: { service?: Service }) 
               </div>
 
               {/* SEO Content */}
-              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 space-y-6">
+              <div className="bg-white p-6 rounded-[10px] shadow-sm border border-gray-100 space-y-6">
                 <div className="flex items-center gap-2 text-sm font-bold text-gray-800 uppercase tracking-widest border-b border-gray-50 pb-4">
-                  <Globe size={18} className="text-[#e63946]" /> SEO Configuration
+                  <Globe size={18} className="text-[#c1000a]" /> SEO Configuration
                 </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -396,7 +396,7 @@ export default function ServiceEditorClient({ service }: { service?: Service }) 
                         type="text" 
                         value={formData.seoData?.metaTitle || ""}
                         onChange={(e) => setFormData({ ...formData, seoData: { ...formData.seoData, metaTitle: e.target.value } })}
-                        className="w-full px-4 py-2.5 bg-gray-50 border border-gray-100 rounded-xl focus:bg-white focus:border-[#e63946] outline-none text-sm transition-all"
+                        className="w-full px-4 py-2.5 bg-gray-50 border border-gray-100 rounded-xl focus:bg-white focus:border-[#c1000a] outline-none text-sm transition-all"
                         placeholder="Optimized Title for Search"
                       />
                     </div>
@@ -406,7 +406,7 @@ export default function ServiceEditorClient({ service }: { service?: Service }) 
                         type="text" 
                         value={formData.seoData?.canonicalUrl || ""}
                         onChange={(e) => setFormData({ ...formData, seoData: { ...formData.seoData, canonicalUrl: e.target.value } })}
-                        className="w-full px-4 py-2.5 bg-gray-50 border border-gray-100 rounded-xl focus:bg-white focus:border-[#e63946] outline-none text-sm transition-all font-mono"
+                        className="w-full px-4 py-2.5 bg-gray-50 border border-gray-100 rounded-xl focus:bg-white focus:border-[#c1000a] outline-none text-sm transition-all font-mono"
                         placeholder="https://tsvglobal.com/services/..."
                       />
                     </div>
@@ -416,7 +416,7 @@ export default function ServiceEditorClient({ service }: { service?: Service }) 
                     <textarea 
                       value={formData.seoData?.metaDescription || ""}
                       onChange={(e) => setFormData({ ...formData, seoData: { ...formData.seoData, metaDescription: e.target.value } })}
-                      className="w-full px-4 py-2.5 bg-gray-50 border border-gray-100 rounded-xl focus:bg-white focus:border-[#e63946] outline-none text-sm transition-all min-h-[105px]"
+                      className="w-full px-4 py-2.5 bg-gray-50 border border-gray-100 rounded-xl focus:bg-white focus:border-[#c1000a] outline-none text-sm transition-all min-h-[105px]"
                       placeholder="Short summary for search results (150-160 chars)"
                     />
                   </div>
@@ -446,9 +446,9 @@ export default function ServiceEditorClient({ service }: { service?: Service }) 
             </div>
 
             <div className="space-y-6">
-              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 space-y-6">
+              <div className="bg-white p-6 rounded-[10px] shadow-sm border border-gray-100 space-y-6">
                 <h3 className="text-sm font-bold text-gray-800 border-b border-gray-50 pb-4 flex items-center gap-2">
-                  <Box size={18} className="text-[#e63946]" /> Settings
+                  <Box size={18} className="text-[#c1000a]" /> Settings
                 </h3>
                 
                 <div className="space-y-2">
@@ -457,7 +457,7 @@ export default function ServiceEditorClient({ service }: { service?: Service }) 
                     type="text" 
                     value={formData.slug}
                     onChange={(e) => setFormData({ ...formData, slug: e.target.value })}
-                    className="w-full px-4 py-3 bg-gray-50/50 border border-gray-100 rounded-xl focus:ring-2 focus:ring-[#e63946]/10 focus:border-[#e63946] focus:bg-white outline-none font-mono text-xs font-bold transition-all"
+                    className="w-full px-4 py-3 bg-gray-50/50 border border-gray-100 rounded-xl focus:ring-2 focus:ring-[#c1000a]/10 focus:border-[#c1000a] focus:bg-white outline-none font-mono text-xs font-bold transition-all"
                   />
                 </div>
 
@@ -467,7 +467,7 @@ export default function ServiceEditorClient({ service }: { service?: Service }) 
                     type="text" 
                     value={formData.icon || ""}
                     onChange={(e) => setFormData({ ...formData, icon: e.target.value })}
-                    className="w-full px-4 py-3 bg-gray-50/50 border border-gray-100 rounded-xl focus:ring-2 focus:ring-[#e63946]/10 focus:border-[#e63946] focus:bg-white outline-none text-xs font-bold transition-all"
+                    className="w-full px-4 py-3 bg-gray-50/50 border border-gray-100 rounded-xl focus:ring-2 focus:ring-[#c1000a]/10 focus:border-[#c1000a] focus:bg-white outline-none text-xs font-bold transition-all"
                   />
                 </div>
 
@@ -482,7 +482,7 @@ export default function ServiceEditorClient({ service }: { service?: Service }) 
                   <select 
                     value={formData.status}
                     onChange={(e) => setFormData({ ...formData, status: e.target.value })}
-                    className="w-full px-4 py-3 bg-gray-50/50 border border-gray-100 rounded-xl focus:ring-2 focus:ring-[#e63946]/10 focus:border-[#e63946] focus:bg-white outline-none text-xs font-bold transition-all"
+                    className="w-full px-4 py-3 bg-gray-50/50 border border-gray-100 rounded-xl focus:ring-2 focus:ring-[#c1000a]/10 focus:border-[#c1000a] focus:bg-white outline-none text-xs font-bold transition-all"
                   >
                     <option value="DRAFT">Draft</option>
                     <option value="PUBLISHED">Published</option>
@@ -504,7 +504,7 @@ export default function ServiceEditorClient({ service }: { service?: Service }) 
               onClick={() => setIsAddingSection(true)}
               className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 text-gray-700 rounded-xl text-xs font-bold hover:bg-gray-50 transition-all shadow-sm"
             >
-              <Plus size={16} className="text-[#e63946]" /> Append Node
+              <Plus size={16} className="text-[#c1000a]" /> Append Node
             </button>
           </div>
 
@@ -519,7 +519,7 @@ export default function ServiceEditorClient({ service }: { service?: Service }) 
             >
               <div className="space-y-3">
                 {sections.length === 0 ? (
-                  <div className="text-center p-20 bg-white border-2 border-dashed border-gray-100 rounded-2xl text-gray-400">
+                  <div className="text-center p-20 bg-white border-2 border-dashed border-gray-100 rounded-[10px] text-gray-400">
                     No layout sections appended yet. Click "Append Node" to begin.
                   </div>
                 ) : (
@@ -543,7 +543,7 @@ export default function ServiceEditorClient({ service }: { service?: Service }) 
       {/* Append Layout Node Modal */}
       {isAddingSection && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-6 bg-slate-900/60 backdrop-blur-md animate-in fade-in duration-300">
-          <div className="bg-white rounded-2xl w-full max-w-4xl max-h-[85vh] flex flex-col shadow-2xl border border-slate-100 overflow-hidden animate-in zoom-in-95 duration-300">
+          <div className="bg-white rounded-[10px] w-full max-w-4xl max-h-[85vh] flex flex-col shadow-2xl border border-slate-100 overflow-hidden animate-in zoom-in-95 duration-300">
             <div className="p-6 border-b border-slate-100 flex items-center justify-between">
               <div>
                 <h3 className="text-xl font-bold text-slate-900">Append Section</h3>
@@ -555,7 +555,7 @@ export default function ServiceEditorClient({ service }: { service?: Service }) 
                   setIsAddingSection(false);
                   setSearchTerm("");
                 }}
-                className="w-8 h-8 bg-slate-50 hover:bg-red-50 text-slate-400 hover:text-[#e63946] rounded-lg flex items-center justify-center transition-all border border-slate-100"
+                className="w-8 h-8 bg-slate-50 hover:bg-red-50 text-slate-400 hover:text-[#c1000a] rounded-lg flex items-center justify-center transition-all border border-slate-100"
               >
                 <X size={16} />
               </button>
@@ -569,7 +569,7 @@ export default function ServiceEditorClient({ service }: { service?: Service }) 
                   placeholder="Search layout modules..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-12 pr-4 py-2.5 bg-white border border-slate-200 rounded-xl focus:border-[#e63946] focus:ring-2 focus:ring-red-100 outline-none text-xs font-medium transition-all"
+                  className="w-full pl-12 pr-4 py-2.5 bg-white border border-slate-200 rounded-xl focus:border-[#c1000a] focus:ring-2 focus:ring-red-100 outline-none text-xs font-medium transition-all"
                 />
               </div>
             </div>
@@ -600,11 +600,11 @@ export default function ServiceEditorClient({ service }: { service?: Service }) 
                     }}
                     className="flex items-start text-left p-4 bg-white hover:bg-red-50/30 border border-slate-100 hover:border-red-200 rounded-xl transition-all group hover:shadow-sm"
                   >
-                    <div className="w-8 h-8 bg-slate-50 group-hover:bg-[#e63946]/10 text-slate-400 group-hover:text-[#e63946] rounded-lg flex items-center justify-center transition-all border border-slate-100 group-hover:border-transparent mr-3 flex-shrink-0">
+                    <div className="w-8 h-8 bg-slate-50 group-hover:bg-[#c1000a]/10 text-slate-400 group-hover:text-[#c1000a] rounded-lg flex items-center justify-center transition-all border border-slate-100 group-hover:border-transparent mr-3 flex-shrink-0">
                       <Plus size={14} />
                     </div>
                     <div>
-                      <h4 className="font-bold text-slate-800 text-xs mb-0.5 group-hover:text-[#e63946] transition-all">{item.label}</h4>
+                      <h4 className="font-bold text-slate-800 text-xs mb-0.5 group-hover:text-[#c1000a] transition-all">{item.label}</h4>
                       <p className="text-[11px] text-slate-400 font-medium leading-relaxed">{item.desc}</p>
                     </div>
                   </button>

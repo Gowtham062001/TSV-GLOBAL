@@ -72,19 +72,19 @@ function SortableSectionItem({
       ref={setNodeRef}
       style={style}
       className={`bg-white rounded-xl border transition-all flex items-center gap-4 p-4 group shadow-sm ${
-        isDragging ? "shadow-xl border-[#e63946] ring-2 ring-red-50" : "hover:border-gray-300"
+        isDragging ? "shadow-xl border-[#c1000a] ring-2 ring-red-50" : "hover:border-gray-300"
       } ${!section.isVisible ? "opacity-50" : ""}`}
     >
-      <div {...attributes} {...listeners} className="cursor-grab active:cursor-grabbing text-gray-300 hover:text-[#e63946] transition-colors p-2">
+      <div {...attributes} {...listeners} className="cursor-grab active:cursor-grabbing text-gray-300 hover:text-[#c1000a] transition-colors p-2">
         <GripVertical size={20} />
       </div>
-      <div className="w-8 h-8 bg-gray-50 rounded-lg flex items-center justify-center text-[10px] font-bold text-gray-400 group-hover:bg-red-50 group-hover:text-[#e63946] transition-all border border-gray-100">
+      <div className="w-8 h-8 bg-gray-50 rounded-lg flex items-center justify-center text-[10px] font-bold text-gray-400 group-hover:bg-red-50 group-hover:text-[#c1000a] transition-all border border-gray-100">
         {String(index + 1).padStart(2, "0")}
       </div>
       <div className="flex-1 min-w-0">
         <div className="flex items-center gap-2 mb-0.5">
           <h3 className="font-bold text-gray-800 truncate">{section.label}</h3>
-          <span className="text-[10px] bg-red-50 text-[#e63946] px-2 py-0.5 rounded text-xs font-bold uppercase tracking-wider">
+          <span className="text-[10px] bg-red-50 text-[#c1000a] px-2 py-0.5 rounded text-xs font-bold uppercase tracking-wider">
             {section.type.replace(/_/g, " ")}
           </span>
         </div>
@@ -314,9 +314,9 @@ export default function CaseStudyEditorClient({ cs }: { cs?: CaseStudy }) {
   return (
     <div className="space-y-6 pb-20">
       {/* Header Toolbar */}
-      <div className="flex flex-col md:flex-row justify-between items-center bg-white p-6 rounded-2xl shadow-sm border border-gray-100 gap-4">
+      <div className="flex flex-col md:flex-row justify-between items-center bg-white p-6 rounded-[10px] shadow-sm border border-gray-100 gap-4">
         <div className="flex items-center gap-4">
-          <Link href="/admin/case-studies" className="w-10 h-10 bg-gray-50 text-gray-400 hover:text-[#e63946] hover:bg-red-50 rounded-xl flex items-center justify-center transition-all">
+          <Link href="/admin/case-studies" className="w-10 h-10 bg-gray-50 text-gray-400 hover:text-[#c1000a] hover:bg-red-50 rounded-xl flex items-center justify-center transition-all">
             <ChevronLeft size={20} />
           </Link>
           <div>
@@ -339,7 +339,7 @@ export default function CaseStudyEditorClient({ cs }: { cs?: CaseStudy }) {
           <button 
             onClick={handleSave}
             disabled={isSaving}
-            className="flex-1 md:flex-none bg-[#e63946] text-white px-6 py-2.5 rounded-xl font-bold hover:bg-red-700 disabled:opacity-50 transition-all shadow-lg shadow-red-900/10 flex items-center justify-center gap-2"
+            className="flex-1 md:flex-none bg-[#c1000a] text-white px-6 py-2.5 rounded-xl font-bold hover:bg-red-700 disabled:opacity-50 transition-all shadow-lg shadow-red-900/10 flex items-center justify-center gap-2"
           >
             {isSaving ? (
               <>
@@ -357,13 +357,13 @@ export default function CaseStudyEditorClient({ cs }: { cs?: CaseStudy }) {
 
       <Tabs defaultValue="content" className="w-full">
         <TabsList className="bg-gray-100/50 p-1 rounded-xl mb-6 flex w-fit border border-gray-100">
-          <TabsTrigger value="content" className="px-6 py-2 rounded-lg flex items-center gap-2 data-[state=active]:bg-white data-[state=active]:text-[#e63946] data-[state=active]:shadow-sm transition-all font-bold text-sm text-gray-400">
+          <TabsTrigger value="content" className="px-6 py-2 rounded-lg flex items-center gap-2 data-[state=active]:bg-white data-[state=active]:text-[#c1000a] data-[state=active]:shadow-sm transition-all font-bold text-sm text-gray-400">
             <Layout size={16} /> Basic Info &amp; SEO
           </TabsTrigger>
-          <TabsTrigger value="details" className="px-6 py-2 rounded-lg flex items-center gap-2 data-[state=active]:bg-white data-[state=active]:text-[#e63946] data-[state=active]:shadow-sm transition-all font-bold text-sm text-gray-400">
+          <TabsTrigger value="details" className="px-6 py-2 rounded-lg flex items-center gap-2 data-[state=active]:bg-white data-[state=active]:text-[#c1000a] data-[state=active]:shadow-sm transition-all font-bold text-sm text-gray-400">
             <Layout size={16} /> Case Study Details
           </TabsTrigger>
-          <TabsTrigger value="sections" className="px-6 py-2 rounded-lg flex items-center gap-2 data-[state=active]:bg-white data-[state=active]:text-[#e63946] data-[state=active]:shadow-sm transition-all font-bold text-sm text-gray-400">
+          <TabsTrigger value="sections" className="px-6 py-2 rounded-lg flex items-center gap-2 data-[state=active]:bg-white data-[state=active]:text-[#c1000a] data-[state=active]:shadow-sm transition-all font-bold text-sm text-gray-400">
             <Box size={16} /> Page Sections
           </TabsTrigger>
         </TabsList>
@@ -372,7 +372,7 @@ export default function CaseStudyEditorClient({ cs }: { cs?: CaseStudy }) {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             <div className="lg:col-span-2 space-y-6">
               {/* Basic Content */}
-              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 space-y-6">
+              <div className="bg-white p-6 rounded-[10px] shadow-sm border border-gray-100 space-y-6">
                 <div className="space-y-2">
                   <label className="text-[10px] font-bold text-gray-400 uppercase tracking-widest px-1">Project Title</label>
                   <input 
@@ -382,7 +382,7 @@ export default function CaseStudyEditorClient({ cs }: { cs?: CaseStudy }) {
                       setFormData({ ...formData, title: e.target.value });
                       if (!cs?.id) setFormData((prev: any) => ({ ...prev, slug: e.target.value.toLowerCase().replace(/ /g, "-").replace(/[^\w-]+/g, "") }));
                     }}
-                    className="w-full px-4 py-3 bg-gray-50/50 border border-gray-100 rounded-xl focus:ring-2 focus:ring-[#e63946]/10 focus:border-[#e63946] focus:bg-white outline-none text-lg font-bold transition-all"
+                    className="w-full px-4 py-3 bg-gray-50/50 border border-gray-100 rounded-xl focus:ring-2 focus:ring-[#c1000a]/10 focus:border-[#c1000a] focus:bg-white outline-none text-lg font-bold transition-all"
                     placeholder="Industrial Machinery Export..."
                   />
                 </div>
@@ -396,7 +396,7 @@ export default function CaseStudyEditorClient({ cs }: { cs?: CaseStudy }) {
                       type="text" 
                       value={formData.client || ""}
                       onChange={(e) => setFormData({ ...formData, client: e.target.value })}
-                      className="w-full px-4 py-2.5 bg-gray-50 border border-gray-100 rounded-xl focus:bg-white focus:border-[#e63946] outline-none text-sm transition-all"
+                      className="w-full px-4 py-2.5 bg-gray-50 border border-gray-100 rounded-xl focus:bg-white focus:border-[#c1000a] outline-none text-sm transition-all"
                       placeholder="Macro Dynamics Ltd"
                     />
                   </div>
@@ -406,7 +406,7 @@ export default function CaseStudyEditorClient({ cs }: { cs?: CaseStudy }) {
                       type="text" 
                       value={formData.industry || ""}
                       onChange={(e) => setFormData({ ...formData, industry: e.target.value })}
-                      className="w-full px-4 py-2.5 bg-gray-50 border border-gray-100 rounded-xl focus:bg-white focus:border-[#e63946] outline-none text-sm transition-all"
+                      className="w-full px-4 py-2.5 bg-gray-50 border border-gray-100 rounded-xl focus:bg-white focus:border-[#c1000a] outline-none text-sm transition-all"
                       placeholder="Renewable Energy"
                     />
                   </div>
@@ -414,9 +414,9 @@ export default function CaseStudyEditorClient({ cs }: { cs?: CaseStudy }) {
               </div>
 
               {/* Header Style Configuration */}
-              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 space-y-6">
+              <div className="bg-white p-6 rounded-[10px] shadow-sm border border-gray-100 space-y-6">
                 <div className="flex items-center gap-2 text-sm font-bold text-gray-800 uppercase tracking-widest border-b border-gray-50 pb-4">
-                  <Layout size={18} className="text-[#e63946]" /> Header Style & Presentation
+                  <Layout size={18} className="text-[#c1000a]" /> Header Style & Presentation
                 </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -441,7 +441,7 @@ export default function CaseStudyEditorClient({ cs }: { cs?: CaseStudy }) {
                           type="text"
                           value={formData.seoData?.textColor || ""}
                           onChange={(e) => setFormData({ ...formData, seoData: { ...formData.seoData, textColor: e.target.value } })}
-                          className="flex-1 px-4 py-2 bg-gray-50 border border-gray-100 rounded-xl focus:bg-white focus:border-[#e63946] outline-none text-sm transition-all font-medium"
+                          className="flex-1 px-4 py-2 bg-gray-50 border border-gray-100 rounded-xl focus:bg-white focus:border-[#c1000a] outline-none text-sm transition-all font-medium"
                           placeholder="#ffffff"
                         />
                       </div>
@@ -460,7 +460,7 @@ export default function CaseStudyEditorClient({ cs }: { cs?: CaseStudy }) {
                           type="text"
                           value={formData.seoData?.subTextColor || ""}
                           onChange={(e) => setFormData({ ...formData, seoData: { ...formData.seoData, subTextColor: e.target.value } })}
-                          className="flex-1 px-4 py-2 bg-gray-50 border border-gray-100 rounded-xl focus:bg-white focus:border-[#e63946] outline-none text-sm transition-all font-medium"
+                          className="flex-1 px-4 py-2 bg-gray-50 border border-gray-100 rounded-xl focus:bg-white focus:border-[#c1000a] outline-none text-sm transition-all font-medium"
                           placeholder="#c1000a"
                         />
                       </div>
@@ -470,9 +470,9 @@ export default function CaseStudyEditorClient({ cs }: { cs?: CaseStudy }) {
               </div>
 
               {/* SEO Content */}
-              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 space-y-6">
+              <div className="bg-white p-6 rounded-[10px] shadow-sm border border-gray-100 space-y-6">
                 <div className="flex items-center gap-2 text-sm font-bold text-gray-800 uppercase tracking-widest border-b border-gray-50 pb-4">
-                  <Globe size={18} className="text-[#e63946]" /> SEO Configuration
+                  <Globe size={18} className="text-[#c1000a]" /> SEO Configuration
                 </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -483,7 +483,7 @@ export default function CaseStudyEditorClient({ cs }: { cs?: CaseStudy }) {
                         type="text" 
                         value={formData.seoData?.metaTitle || ""}
                         onChange={(e) => setFormData({ ...formData, seoData: { ...formData.seoData, metaTitle: e.target.value } })}
-                        className="w-full px-4 py-2.5 bg-gray-50 border border-gray-100 rounded-xl focus:bg-white focus:border-[#e63946] outline-none text-sm transition-all"
+                        className="w-full px-4 py-2.5 bg-gray-50 border border-gray-100 rounded-xl focus:bg-white focus:border-[#c1000a] outline-none text-sm transition-all"
                         placeholder="Optimized Title for Search"
                       />
                     </div>
@@ -493,7 +493,7 @@ export default function CaseStudyEditorClient({ cs }: { cs?: CaseStudy }) {
                         type="text" 
                         value={formData.seoData?.canonicalUrl || ""}
                         onChange={(e) => setFormData({ ...formData, seoData: { ...formData.seoData, canonicalUrl: e.target.value } })}
-                        className="w-full px-4 py-2.5 bg-gray-50 border border-gray-100 rounded-xl focus:bg-white focus:border-[#e63946] outline-none text-sm transition-all font-mono"
+                        className="w-full px-4 py-2.5 bg-gray-50 border border-gray-100 rounded-xl focus:bg-white focus:border-[#c1000a] outline-none text-sm transition-all font-mono"
                         placeholder="https://tsvglobal.com/case-studies/..."
                       />
                     </div>
@@ -503,7 +503,7 @@ export default function CaseStudyEditorClient({ cs }: { cs?: CaseStudy }) {
                     <textarea 
                       value={formData.seoData?.metaDescription || ""}
                       onChange={(e) => setFormData({ ...formData, seoData: { ...formData.seoData, metaDescription: e.target.value } })}
-                      className="w-full px-4 py-2.5 bg-gray-50 border border-gray-100 rounded-xl focus:bg-white focus:border-[#e63946] outline-none text-sm transition-all min-h-[105px]"
+                      className="w-full px-4 py-2.5 bg-gray-50 border border-gray-100 rounded-xl focus:bg-white focus:border-[#c1000a] outline-none text-sm transition-all min-h-[105px]"
                       placeholder="Short summary for search results (150-160 chars)"
                     />
                   </div>
@@ -527,7 +527,7 @@ export default function CaseStudyEditorClient({ cs }: { cs?: CaseStudy }) {
                         const newFaq = [...(formData.seoData?.faq || []), { question: "", answer: "" }];
                         setFormData({ ...formData, seoData: { ...formData.seoData, faq: newFaq } });
                       }}
-                      className="text-[#e63946] hover:text-red-700 text-[10px] font-bold uppercase flex items-center gap-1"
+                      className="text-[#c1000a] hover:text-red-700 text-[10px] font-bold uppercase flex items-center gap-1"
                     >
                       <Plus size={14} /> Add FAQ
                     </button>
@@ -553,7 +553,7 @@ export default function CaseStudyEditorClient({ cs }: { cs?: CaseStudy }) {
                             newFaq[idx].question = e.target.value;
                             setFormData({ ...formData, seoData: { ...formData.seoData, faq: newFaq } });
                           }}
-                          className="w-full px-3 py-2 bg-white border border-gray-100 rounded-lg text-xs font-bold focus:border-[#e63946] outline-none"
+                          className="w-full px-3 py-2 bg-white border border-gray-100 rounded-lg text-xs font-bold focus:border-[#c1000a] outline-none"
                           placeholder="Question"
                         />
                         <textarea 
@@ -563,7 +563,7 @@ export default function CaseStudyEditorClient({ cs }: { cs?: CaseStudy }) {
                             newFaq[idx].answer = e.target.value;
                             setFormData({ ...formData, seoData: { ...formData.seoData, faq: newFaq } });
                           }}
-                          className="w-full px-3 py-2 bg-white border border-gray-100 rounded-lg text-xs focus:border-[#e63946] outline-none min-h-[60px]"
+                          className="w-full px-3 py-2 bg-white border border-gray-100 rounded-lg text-xs focus:border-[#c1000a] outline-none min-h-[60px]"
                           placeholder="Answer"
                         />
                       </div>
@@ -579,9 +579,9 @@ export default function CaseStudyEditorClient({ cs }: { cs?: CaseStudy }) {
             </div>
 
             <div className="space-y-6">
-              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 space-y-6">
+              <div className="bg-white p-6 rounded-[10px] shadow-sm border border-gray-100 space-y-6">
                 <h3 className="text-sm font-bold text-gray-800 border-b border-gray-50 pb-4 flex items-center gap-2">
-                  <Box size={18} className="text-[#e63946]" /> Settings
+                  <Box size={18} className="text-[#c1000a]" /> Settings
                 </h3>
                 
                 <div className="space-y-2">
@@ -590,7 +590,7 @@ export default function CaseStudyEditorClient({ cs }: { cs?: CaseStudy }) {
                     type="text" 
                     value={formData.slug}
                     onChange={(e) => setFormData({ ...formData, slug: e.target.value })}
-                    className="w-full px-4 py-3 bg-gray-50/50 border border-gray-100 rounded-xl focus:ring-2 focus:ring-[#e63946]/10 focus:border-[#e63946] focus:bg-white outline-none font-mono text-xs font-bold transition-all"
+                    className="w-full px-4 py-3 bg-gray-50/50 border border-gray-100 rounded-xl focus:ring-2 focus:ring-[#c1000a]/10 focus:border-[#c1000a] focus:bg-white outline-none font-mono text-xs font-bold transition-all"
                   />
                 </div>
 
@@ -599,7 +599,7 @@ export default function CaseStudyEditorClient({ cs }: { cs?: CaseStudy }) {
                   <select 
                     value={formData.status}
                     onChange={(e) => setFormData({ ...formData, status: e.target.value })}
-                    className="w-full px-4 py-3 bg-gray-50/50 border border-gray-100 rounded-xl focus:ring-2 focus:ring-[#e63946]/10 focus:border-[#e63946] focus:bg-white outline-none text-xs font-bold transition-all"
+                    className="w-full px-4 py-3 bg-gray-50/50 border border-gray-100 rounded-xl focus:ring-2 focus:ring-[#c1000a]/10 focus:border-[#c1000a] focus:bg-white outline-none text-xs font-bold transition-all"
                   >
                     <option value="DRAFT">Draft</option>
                     <option value="PUBLISHED">Published</option>
@@ -635,10 +635,10 @@ export default function CaseStudyEditorClient({ cs }: { cs?: CaseStudy }) {
         <TabsContent value="details">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             <div className="lg:col-span-2 space-y-6">
-              <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 space-y-8">
+              <div className="bg-white p-8 rounded-[10px] shadow-sm border border-gray-100 space-y-8">
                 <div className="space-y-4">
                   <div className="flex items-center gap-2 text-gray-800 font-bold uppercase tracking-widest text-xs">
-                    <Target size={16} className="text-[#e63946]" /> The Challenge
+                    <Target size={16} className="text-[#c1000a]" /> The Challenge
                   </div>
                   <RichTextEditor 
                     content={formData.challenge || ""} 
@@ -648,7 +648,7 @@ export default function CaseStudyEditorClient({ cs }: { cs?: CaseStudy }) {
 
                 <div className="space-y-4">
                   <div className="flex items-center gap-2 text-gray-800 font-bold uppercase tracking-widest text-xs">
-                    <CheckCircle2 size={16} className="text-[#e63946]" /> Our Solution
+                    <CheckCircle2 size={16} className="text-[#c1000a]" /> Our Solution
                   </div>
                   <RichTextEditor 
                     content={formData.solution || ""} 
@@ -658,7 +658,7 @@ export default function CaseStudyEditorClient({ cs }: { cs?: CaseStudy }) {
 
                 <div className="space-y-4">
                   <div className="flex items-center gap-2 text-gray-800 font-bold uppercase tracking-widest text-xs">
-                    <BarChart3 size={16} className="text-[#e63946]" /> The Result
+                    <BarChart3 size={16} className="text-[#c1000a]" /> The Result
                   </div>
                   <RichTextEditor 
                     content={formData.result || ""} 
@@ -669,9 +669,9 @@ export default function CaseStudyEditorClient({ cs }: { cs?: CaseStudy }) {
             </div>
 
             <div className="space-y-6">
-              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 space-y-6">
+              <div className="bg-white p-6 rounded-[10px] shadow-sm border border-gray-100 space-y-6">
                 <h3 className="text-sm font-bold text-gray-800 border-b border-gray-50 pb-4 flex items-center gap-2">
-                  <Truck size={18} className="text-[#e63946]" /> Logistics Data
+                  <Truck size={18} className="text-[#c1000a]" /> Logistics Data
                 </h3>
                 
                 <div className="space-y-4">
@@ -683,7 +683,7 @@ export default function CaseStudyEditorClient({ cs }: { cs?: CaseStudy }) {
                         type="text" 
                         value={formData.mode || ""}
                         onChange={(e) => setFormData({ ...formData, mode: e.target.value })}
-                        className="w-full pl-10 pr-4 py-2.5 bg-gray-50 border border-gray-100 rounded-xl focus:bg-white focus:border-[#e63946] outline-none text-sm transition-all"
+                        className="w-full pl-10 pr-4 py-2.5 bg-gray-50 border border-gray-100 rounded-xl focus:bg-white focus:border-[#c1000a] outline-none text-sm transition-all"
                         placeholder="e.g. Road Freight — ODC"
                       />
                     </div>
@@ -696,7 +696,7 @@ export default function CaseStudyEditorClient({ cs }: { cs?: CaseStudy }) {
                         type="text" 
                         value={formData.route || ""}
                         onChange={(e) => setFormData({ ...formData, route: e.target.value })}
-                        className="w-full pl-10 pr-4 py-2.5 bg-gray-50 border border-gray-100 rounded-xl focus:bg-white focus:border-[#e63946] outline-none text-sm transition-all"
+                        className="w-full pl-10 pr-4 py-2.5 bg-gray-50 border border-gray-100 rounded-xl focus:bg-white focus:border-[#c1000a] outline-none text-sm transition-all"
                         placeholder="e.g. Factory to Port"
                       />
                     </div>
@@ -708,7 +708,7 @@ export default function CaseStudyEditorClient({ cs }: { cs?: CaseStudy }) {
                     <label className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Key Metrics</label>
                     <button 
                       onClick={handleAddMetric}
-                      className="text-[#e63946] hover:text-red-700 text-[10px] font-bold uppercase flex items-center gap-1"
+                      className="text-[#c1000a] hover:text-red-700 text-[10px] font-bold uppercase flex items-center gap-1"
                     >
                       <Plus size={14} /> Add
                     </button>
@@ -758,7 +758,7 @@ export default function CaseStudyEditorClient({ cs }: { cs?: CaseStudy }) {
               onClick={() => setIsAddingSection(true)}
               className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 text-gray-700 rounded-xl text-xs font-bold hover:bg-gray-50 transition-all shadow-sm"
             >
-              <Plus size={16} className="text-[#e63946]" /> Append Node
+              <Plus size={16} className="text-[#c1000a]" /> Append Node
             </button>
           </div>
 
@@ -766,7 +766,7 @@ export default function CaseStudyEditorClient({ cs }: { cs?: CaseStudy }) {
             <SortableContext items={sections.map((s) => s.id)} strategy={verticalListSortingStrategy}>
               <div className="space-y-3">
                 {sections.length === 0 ? (
-                  <div className="text-center p-20 bg-white border-2 border-dashed border-gray-100 rounded-2xl text-gray-400">
+                  <div className="text-center p-20 bg-white border-2 border-dashed border-gray-100 rounded-[10px] text-gray-400">
                     No layout sections appended yet. Click &quot;Append Node&quot; to begin.
                   </div>
                 ) : (
@@ -790,7 +790,7 @@ export default function CaseStudyEditorClient({ cs }: { cs?: CaseStudy }) {
       {/* Append Layout Node Modal */}
       {isAddingSection && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-6 bg-slate-900/60 backdrop-blur-md animate-in fade-in duration-300">
-          <div className="bg-white rounded-2xl w-full max-w-4xl max-h-[85vh] flex flex-col shadow-2xl border border-slate-100 overflow-hidden animate-in zoom-in-95 duration-300">
+          <div className="bg-white rounded-[10px] w-full max-w-4xl max-h-[85vh] flex flex-col shadow-2xl border border-slate-100 overflow-hidden animate-in zoom-in-95 duration-300">
             <div className="p-6 border-b border-slate-100 flex items-center justify-between">
               <div>
                 <h3 className="text-xl font-bold text-slate-900">Append Section</h3>
@@ -799,7 +799,7 @@ export default function CaseStudyEditorClient({ cs }: { cs?: CaseStudy }) {
               <button
                 type="button"
                 onClick={() => { setIsAddingSection(false); setSearchTerm(""); }}
-                className="w-8 h-8 bg-slate-50 hover:bg-red-50 text-slate-400 hover:text-[#e63946] rounded-lg flex items-center justify-center transition-all border border-slate-100"
+                className="w-8 h-8 bg-slate-50 hover:bg-red-50 text-slate-400 hover:text-[#c1000a] rounded-lg flex items-center justify-center transition-all border border-slate-100"
               >
                 <X size={16} />
               </button>
@@ -813,7 +813,7 @@ export default function CaseStudyEditorClient({ cs }: { cs?: CaseStudy }) {
                   placeholder="Search layout modules..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-12 pr-4 py-2.5 bg-white border border-slate-200 rounded-xl focus:border-[#e63946] focus:ring-2 focus:ring-red-100 outline-none text-xs font-medium transition-all"
+                  className="w-full pl-12 pr-4 py-2.5 bg-white border border-slate-200 rounded-xl focus:border-[#c1000a] focus:ring-2 focus:ring-red-100 outline-none text-xs font-medium transition-all"
                 />
               </div>
             </div>
@@ -842,11 +842,11 @@ export default function CaseStudyEditorClient({ cs }: { cs?: CaseStudy }) {
                     }}
                     className="flex items-start text-left p-4 bg-white hover:bg-red-50/30 border border-slate-100 hover:border-red-200 rounded-xl transition-all group hover:shadow-sm"
                   >
-                    <div className="w-8 h-8 bg-slate-50 group-hover:bg-[#e63946]/10 text-slate-400 group-hover:text-[#e63946] rounded-lg flex items-center justify-center transition-all border border-slate-100 group-hover:border-transparent mr-3 flex-shrink-0">
+                    <div className="w-8 h-8 bg-slate-50 group-hover:bg-[#c1000a]/10 text-slate-400 group-hover:text-[#c1000a] rounded-lg flex items-center justify-center transition-all border border-slate-100 group-hover:border-transparent mr-3 flex-shrink-0">
                       <Plus size={14} />
                     </div>
                     <div>
-                      <h4 className="font-bold text-slate-800 text-xs mb-0.5 group-hover:text-[#e63946] transition-all">{item.label}</h4>
+                      <h4 className="font-bold text-slate-800 text-xs mb-0.5 group-hover:text-[#c1000a] transition-all">{item.label}</h4>
                       <p className="text-[11px] text-slate-400 font-medium leading-relaxed">{item.desc}</p>
                     </div>
                   </button>

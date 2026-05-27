@@ -1,270 +1,233 @@
 "use client";
 
 import React from "react";
-import {
-  BarChart3,
-  ExternalLink,
-  Settings,
-  Globe,
-  TrendingUp,
-  Users,
-  Eye,
-  Activity,
-  ChevronRight,
-  AlertCircle,
-  CheckCircle2,
-  Info,
-  Zap,
-} from "lucide-react";
+import { CheckCircle2, AlertCircle, Info, Zap, BarChart3, TrendingUp, Users, MousePointerClick, Activity, ExternalLink } from "lucide-react";
+import { 
+  AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
+  BarChart, Bar,
+  PieChart, Pie, Cell, Legend
+} from 'recharts';
 
 interface AnalyticsClientProps {
   ga4Id: string | null;
   gtmId: string | null;
 }
 
-// Build GA4 console deep-link URLs
-function ga4Url(path: string) {
-  return `https://analytics.google.com/analytics/web/#/${path}`;
-}
+// Simulated data for charts (since no Service Account is configured)
+const sessionsData = [
+  { date: 'May 01', sessions: 420 },
+  { date: 'May 05', sessions: 480 },
+  { date: 'May 10', sessions: 650 },
+  { date: 'May 15', sessions: 580 },
+  { date: 'May 20', sessions: 890 },
+  { date: 'May 25', sessions: 1100 },
+  { date: 'May 27', sessions: 950 },
+];
+
+const topPagesData = [
+  { path: '/', views: 2450 },
+  { path: '/services', views: 1840 },
+  { path: '/case-studies', views: 1250 },
+  { path: '/contact', views: 980 },
+  { path: '/about', views: 760 },
+];
+
+const trafficSourceData = [
+  { name: 'Organic Search', value: 4500, color: '#0f1523' },
+  { name: 'Direct', value: 2100, color: '#c1000a' },
+  { name: 'Referral', value: 1200, color: '#64748b' },
+  { name: 'Social', value: 800, color: '#94a3b8' },
+];
 
 export default function AnalyticsClient({ ga4Id, gtmId }: AnalyticsClientProps) {
   const isGA4Configured = !!ga4Id && ga4Id.startsWith("G-");
-  // Google Tag containers use either "GTM-" (classic) or "GT-" (newer format)
   const isGTMConfigured = !!gtmId && (gtmId.startsWith("GTM-") || gtmId.startsWith("GT-"));
 
-  const quickLinks = [
-    {
-      label: "Traffic Overview",
-      desc: "Sessions, users & pageviews — last 30 days",
-      icon: <TrendingUp size={18} />,
-      url: ga4Url("p475892583/reports/reportinghub"),
-      badge: null,
-    },
-    {
-      label: "Realtime",
-      desc: "Active users on tsvglobal.com right now",
-      icon: <Activity size={18} />,
-      url: ga4Url("p475892583/reports/realtime"),
-      badge: "Live",
-    },
-    {
-      label: "Top Pages",
-      desc: "Most viewed pages by sessions",
-      icon: <Eye size={18} />,
-      url: ga4Url("p475892583/reports/explorer?params=_u..nav%3Dmaui"),
-      badge: null,
-    },
-    {
-      label: "Audience",
-      desc: "Demographics, devices & locations",
-      icon: <Users size={18} />,
-      url: ga4Url("p475892583/reports/user-demographics-overview"),
-      badge: null,
-    },
-    {
-      label: "Acquisition",
-      desc: "Organic, direct, referral & social sources",
-      icon: <Globe size={18} />,
-      url: ga4Url("p475892583/reports/acquisition-overview"),
-      badge: null,
-    },
-    {
-      label: "Full Dashboard",
-      desc: "Open complete Google Analytics 4 console",
-      icon: <BarChart3 size={18} />,
-      url: "https://analytics.google.com/analytics/web/",
-      badge: null,
-    },
-  ];
-
-  // ── Not configured at all ──────────────────────────────────────────────────
-  if (!isGA4Configured && !isGTMConfigured) {
-    return (
-      <div className="space-y-6">
-        <div>
-          <h2 className="text-2xl font-black text-[#1a1a2e]">Analytics</h2>
-          <p className="text-xs text-gray-400 font-bold uppercase tracking-widest mt-1">
-            Google Analytics 4 Integration
-          </p>
-        </div>
-
-        <div className="bg-amber-50 border border-amber-200 rounded-2xl p-6 flex gap-4 items-start">
-          <AlertCircle className="text-amber-600 mt-0.5 flex-shrink-0" size={22} />
-          <div>
-            <h3 className="font-bold text-amber-800 text-sm mb-1">Analytics Not Configured</h3>
-            <p className="text-amber-700 text-sm">
-              Add your GA4 Measurement ID in Settings → Integrations to enable analytics tracking.
-            </p>
-          </div>
-        </div>
-
-        <div className="bg-white rounded-2xl border border-gray-100 p-8 space-y-6">
-          <h3 className="font-bold text-[#1a1a2e] text-sm flex items-center gap-2">
-            <Settings size={16} className="text-[#c1000a]" />
-            Setup Steps
-          </h3>
-          <ol className="space-y-4">
-            {[
-              { step: "1", title: "Create a GA4 Property", desc: "Go to analytics.google.com → Admin → Create Property → Web → add tsvglobal.com" },
-              { step: "2", title: "Copy the Measurement ID", desc: 'After creating, copy the ID starting with "G-" from the data stream settings.' },
-              { step: "3", title: "Paste in Settings", desc: "Admin → Settings → Integrations → GA4 Measurement ID → Save." },
-              { step: "4", title: "Verify tracking", desc: "Visit your live site and check Realtime in GA4 — you'll appear as an active user within 30 seconds." },
-            ].map((item) => (
-              <li key={item.step} className="flex gap-4 items-start">
-                <span className="w-7 h-7 rounded-full bg-[#1a1a2e] text-white text-xs font-black flex items-center justify-center flex-shrink-0">
-                  {item.step}
-                </span>
-                <div>
-                  <p className="font-bold text-[#1a1a2e] text-sm">{item.title}</p>
-                  <p className="text-gray-500 text-xs mt-0.5">{item.desc}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
-          <div className="flex gap-3 pt-2">
-            <a href="/admin/settings" className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#c1000a] text-white text-sm font-bold rounded-xl hover:bg-red-700 transition-all">
-              <Settings size={15} /> Go to Settings
-            </a>
-            <a href="https://analytics.google.com/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-gray-100 text-[#1a1a2e] text-sm font-bold rounded-xl hover:bg-gray-200 transition-all">
-              <ExternalLink size={15} /> Open Google Analytics
-            </a>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  // ── Configured ─────────────────────────────────────────────────────────────
   return (
-    <div className="space-y-8">
-
-      {/* Header */}
-      <div className="flex flex-col sm:flex-row justify-between sm:items-end gap-4">
+    <div className="space-y-6 animate-in fade-in duration-500 pb-20">
+      
+      {/* Missing Service Account Banner */}
+      <div className="bg-amber-50 border border-amber-200 rounded-[10px] p-4 flex gap-3 items-start">
+        <AlertCircle className="text-amber-600 shrink-0 mt-0.5" size={18} />
         <div>
-          <h2 className="text-2xl font-black text-[#1a1a2e]">Analytics</h2>
-          <p className="text-xs text-gray-400 font-bold uppercase tracking-widest mt-1">
-            Google Analytics 4 — TSV Global Solutions
+          <h4 className="text-sm font-bold text-amber-900">Google Cloud Service Account Required for Live Data</h4>
+          <p className="text-xs text-amber-700 mt-1 leading-relaxed">
+            Your tracking IDs ({ga4Id || "none"}, {gtmId || "none"}) are active and collecting data on the live site. However, to display real-time charts within this admin panel, you must configure a Google Cloud Service Account and grant it Viewer access to your GA4 property. Currently displaying simulated data to demonstrate the UI.
           </p>
         </div>
-        <a
-          href="https://analytics.google.com/analytics/web/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#1a1a2e] text-white text-sm font-bold rounded-xl hover:bg-black transition-all whitespace-nowrap"
-        >
-          <ExternalLink size={15} />
-          Open GA4 Console
-        </a>
       </div>
 
-      {/* Property Info Card */}
-      <div className="bg-white border border-gray-100 rounded-2xl p-6 grid grid-cols-2 md:grid-cols-4 gap-6">
-        {[
-          { label: "Stream Name", value: "TSV Global Solutions" },
-          { label: "Stream URL", value: "tsvglobal.com" },
-          { label: "Measurement ID", value: ga4Id || "—" },
-          { label: "GTM Container ID", value: gtmId || "—" },
-        ].map((item) => (
-          <div key={item.label}>
-            <p className="text-[10px] font-bold text-[#8a9ab5] uppercase tracking-widest mb-1">{item.label}</p>
-            <p className="text-sm font-bold text-[#1a1a2e] font-mono truncate">{item.value}</p>
+      {/* KPI Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="bg-white rounded-[10px] border border-[#f0f2f8] p-6 shadow-sm">
+          <div className="flex items-center justify-between mb-4">
+            <h3 className="text-[11px] font-bold text-[#8a9ab5] uppercase tracking-wider">Total Sessions</h3>
+            <div className="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center">
+              <Activity size={16} />
+            </div>
           </div>
-        ))}
+          <p className="text-2xl font-bold text-[#0f1523]">8,452</p>
+          <div className="flex items-center gap-1 text-xs font-medium text-emerald-600 mt-2">
+            <TrendingUp size={14} /> <span>+12.5% this month</span>
+          </div>
+        </div>
+
+        <div className="bg-white rounded-[10px] border border-[#f0f2f8] p-6 shadow-sm">
+          <div className="flex items-center justify-between mb-4">
+            <h3 className="text-[11px] font-bold text-[#8a9ab5] uppercase tracking-wider">Active Users</h3>
+            <div className="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center">
+              <Users size={16} />
+            </div>
+          </div>
+          <p className="text-2xl font-bold text-[#0f1523]">5,120</p>
+          <div className="flex items-center gap-1 text-xs font-medium text-emerald-600 mt-2">
+            <TrendingUp size={14} /> <span>+8.2% this month</span>
+          </div>
+        </div>
+
+        <div className="bg-white rounded-[10px] border border-[#f0f2f8] p-6 shadow-sm">
+          <div className="flex items-center justify-between mb-4">
+            <h3 className="text-[11px] font-bold text-[#8a9ab5] uppercase tracking-wider">Avg. Engagement Time</h3>
+            <div className="w-8 h-8 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center">
+              <BarChart3 size={16} />
+            </div>
+          </div>
+          <p className="text-2xl font-bold text-[#0f1523]">1m 45s</p>
+          <div className="flex items-center gap-1 text-xs font-medium text-amber-600 mt-2">
+            <TrendingUp size={14} className="rotate-180" /> <span>-2s this month</span>
+          </div>
+        </div>
+
+        <div className="bg-white rounded-[10px] border border-[#f0f2f8] p-6 shadow-sm">
+          <div className="flex items-center justify-between mb-4">
+            <h3 className="text-[11px] font-bold text-[#8a9ab5] uppercase tracking-wider">Event Count</h3>
+            <div className="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center">
+              <MousePointerClick size={16} />
+            </div>
+          </div>
+          <p className="text-2xl font-bold text-[#0f1523]">24,892</p>
+          <div className="flex items-center gap-1 text-xs font-medium text-emerald-600 mt-2">
+            <TrendingUp size={14} /> <span>+18.4% this month</span>
+          </div>
+        </div>
       </div>
 
-      {/* Status Badges */}
-      <div className="flex flex-wrap gap-3">
-        <div className={`flex items-center gap-2 px-4 py-2 rounded-xl border text-sm font-bold ${isGA4Configured ? "bg-green-50 border-green-200 text-green-700" : "bg-amber-50 border-amber-200 text-amber-700"}`}>
-          {isGA4Configured ? <CheckCircle2 size={15} /> : <AlertCircle size={15} />}
-          GA4: {ga4Id || "Not configured"}
+      {/* Main Charts */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        {/* Sessions Area Chart */}
+        <div className="lg:col-span-2 bg-white rounded-[10px] border border-[#f0f2f8] p-6 shadow-sm">
+          <h3 className="text-sm font-bold text-[#0f1523] mb-6">Traffic Overview (Last 30 Days)</h3>
+          <div className="h-[300px] w-full">
+            <ResponsiveContainer width="100%" height="100%">
+              <AreaChart data={sessionsData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
+                <defs>
+                  <linearGradient id="colorSessions" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="5%" stopColor="#c1000a" stopOpacity={0.2}/>
+                    <stop offset="95%" stopColor="#c1000a" stopOpacity={0}/>
+                  </linearGradient>
+                </defs>
+                <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#f0f2f8" />
+                <XAxis dataKey="date" axisLine={false} tickLine={false} tick={{ fontSize: 11, fill: '#8a9ab5' }} dy={10} />
+                <YAxis axisLine={false} tickLine={false} tick={{ fontSize: 11, fill: '#8a9ab5' }} />
+                <Tooltip 
+                  contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 20px rgba(0,0,0,0.08)' }}
+                  itemStyle={{ color: '#0f1523', fontWeight: 600 }}
+                />
+                <Area type="monotone" dataKey="sessions" stroke="#c1000a" strokeWidth={3} fillOpacity={1} fill="url(#colorSessions)" />
+              </AreaChart>
+            </ResponsiveContainer>
+          </div>
         </div>
-        <div className={`flex items-center gap-2 px-4 py-2 rounded-xl border text-sm font-bold ${isGTMConfigured ? "bg-green-50 border-green-200 text-green-700" : "bg-gray-50 border-gray-200 text-gray-400"}`}>
-          {isGTMConfigured ? <CheckCircle2 size={15} /> : <Info size={15} />}
-          GTM: {isGTMConfigured ? gtmId : "Not configured"}
-        </div>
-        <div className="flex items-center gap-2 px-4 py-2 rounded-xl border bg-blue-50 border-blue-200 text-blue-700 text-sm font-bold">
-          <Zap size={15} />
-          Tracking Active on tsvglobal.com
+
+        {/* Traffic Sources Pie Chart */}
+        <div className="bg-white rounded-[10px] border border-[#f0f2f8] p-6 shadow-sm flex flex-col">
+          <h3 className="text-sm font-bold text-[#0f1523] mb-2">Traffic Sources</h3>
+          <div className="flex-1 min-h-[300px]">
+            <ResponsiveContainer width="100%" height="100%">
+              <PieChart>
+                <Pie
+                  data={trafficSourceData}
+                  cx="50%"
+                  cy="50%"
+                  innerRadius={60}
+                  outerRadius={80}
+                  paddingAngle={5}
+                  dataKey="value"
+                  stroke="none"
+                >
+                  {trafficSourceData.map((entry, index) => (
+                    <Cell key={`cell-${index}`} fill={entry.color} />
+                  ))}
+                </Pie>
+                <Tooltip 
+                  contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 20px rgba(0,0,0,0.08)' }}
+                  itemStyle={{ fontWeight: 600 }}
+                />
+                <Legend 
+                  verticalAlign="bottom" 
+                  height={36}
+                  iconType="circle"
+                  formatter={(value) => <span className="text-xs font-medium text-[#0f1523] ml-1">{value}</span>}
+                />
+              </PieChart>
+            </ResponsiveContainer>
+          </div>
         </div>
       </div>
 
-      {/* Info Banner */}
-      <div className="bg-blue-50 border border-blue-100 rounded-2xl p-5 flex gap-3 items-start">
-        <Info className="text-blue-500 flex-shrink-0 mt-0.5" size={18} />
-        <p className="text-sm text-blue-700">
-          Your GA4 tag <strong>{ga4Id}</strong> is injected on every public page of tsvglobal.com.
-          All visitor data is collected securely in Google Analytics. Click any report below to
-          open it directly in your GA4 dashboard.
-        </p>
-      </div>
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        {/* Top Pages Bar Chart */}
+        <div className="lg:col-span-2 bg-white rounded-[10px] border border-[#f0f2f8] p-6 shadow-sm">
+          <h3 className="text-sm font-bold text-[#0f1523] mb-6">Top Pages by Views</h3>
+          <div className="h-[300px] w-full">
+            <ResponsiveContainer width="100%" height="100%">
+              <BarChart data={topPagesData} layout="vertical" margin={{ top: 0, right: 30, left: 20, bottom: 0 }}>
+                <CartesianGrid strokeDasharray="3 3" horizontal={false} stroke="#f0f2f8" />
+                <XAxis type="number" axisLine={false} tickLine={false} tick={{ fontSize: 11, fill: '#8a9ab5' }} />
+                <YAxis dataKey="path" type="category" axisLine={false} tickLine={false} tick={{ fontSize: 11, fill: '#0f1523', fontWeight: 500 }} width={100} />
+                <Tooltip 
+                  cursor={{ fill: '#f8fafc' }}
+                  contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 20px rgba(0,0,0,0.08)' }}
+                />
+                <Bar dataKey="views" fill="#0f1523" radius={[0, 4, 4, 0]} barSize={24} />
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
+        </div>
 
-      {/* Quick Report Links */}
-      <div>
-        <h3 className="font-black text-[#1a1a2e] text-sm mb-4 flex items-center gap-2">
-          <BarChart3 size={16} className="text-[#c1000a]" />
-          Quick Access Reports
-        </h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {quickLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.url}
+        {/* Info Sidebar */}
+        <div className="space-y-6">
+          <div className="bg-white rounded-[10px] border border-[#f0f2f8] p-6 shadow-sm">
+            <h3 className="text-sm font-bold text-[#0f1523] mb-4">Property Identity</h3>
+            <div className="space-y-4">
+              <div>
+                <p className="text-[10px] font-bold text-[#8a9ab5] uppercase tracking-wider mb-1">Measurement ID</p>
+                <div className="flex items-center justify-between bg-slate-50 px-3 py-2 rounded-lg border border-slate-100">
+                  <code className="text-xs font-bold text-slate-800">{ga4Id || "Not Configured"}</code>
+                  {isGA4Configured ? <CheckCircle2 size={16} className="text-emerald-500" /> : <Info size={16} className="text-amber-500" />}
+                </div>
+              </div>
+              <div>
+                <p className="text-[10px] font-bold text-[#8a9ab5] uppercase tracking-wider mb-1">GTM Container</p>
+                <div className="flex items-center justify-between bg-slate-50 px-3 py-2 rounded-lg border border-slate-100">
+                  <code className="text-xs font-bold text-slate-800">{gtmId || "Not Configured"}</code>
+                  {isGTMConfigured ? <CheckCircle2 size={16} className="text-emerald-500" /> : <Info size={16} className="text-amber-500" />}
+                </div>
+              </div>
+            </div>
+            
+            <a 
+              href="https://analytics.google.com/analytics/web/"
               target="_blank"
               rel="noopener noreferrer"
-              className="group bg-white border border-gray-100 rounded-2xl p-5 hover:border-[#c1000a] hover:shadow-md transition-all flex items-start gap-4"
+              className="mt-6 w-full flex items-center justify-center gap-2 bg-[#0f1523] text-white px-4 py-2.5 rounded-lg text-[13px] font-medium hover:bg-slate-800 transition-all"
             >
-              <div className="w-10 h-10 rounded-xl bg-gray-50 group-hover:bg-red-50 flex items-center justify-center text-[#8a9ab5] group-hover:text-[#c1000a] transition-colors flex-shrink-0">
-                {link.icon}
-              </div>
-              <div className="flex-1 min-w-0">
-                <div className="flex items-center justify-between gap-2">
-                  <p className="font-bold text-[#1a1a2e] text-sm">{link.label}</p>
-                  <div className="flex items-center gap-1.5">
-                    {link.badge && (
-                      <span className="text-[9px] font-black bg-green-100 text-green-700 px-1.5 py-0.5 rounded-full uppercase tracking-wide">
-                        {link.badge}
-                      </span>
-                    )}
-                    <ChevronRight size={14} className="text-gray-300 group-hover:text-[#c1000a] transition-colors flex-shrink-0" />
-                  </div>
-                </div>
-                <p className="text-[11px] text-gray-400 mt-0.5">{link.desc}</p>
-              </div>
+              Open Full GA4 Console <ExternalLink size={14} />
             </a>
-          ))}
+          </div>
         </div>
       </div>
 
-      {/* Open GA4 CTA */}
-      <div className="bg-gradient-to-br from-[#1a1a2e] to-[#0f1523] rounded-2xl p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
-        <div>
-          <h3 className="font-black text-white text-lg">View Full Analytics Dashboard</h3>
-          <p className="text-gray-400 text-sm mt-1">
-            Session trends, funnel reports, custom events, conversions — all in your GA4 console.
-          </p>
-        </div>
-        <a
-          href="https://analytics.google.com/analytics/web/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-6 py-3 bg-[#c1000a] text-white font-bold rounded-xl hover:bg-red-700 transition-all whitespace-nowrap flex-shrink-0"
-        >
-          <ExternalLink size={16} />
-          Open GA4 Dashboard
-        </a>
-      </div>
-
-      {/* GTM optional note */}
-      {!isGTMConfigured && (
-        <div className="bg-gray-50 border border-gray-100 rounded-2xl p-5 flex gap-3 items-start">
-          <Info className="text-gray-400 flex-shrink-0 mt-0.5" size={16} />
-          <p className="text-sm text-gray-500">
-            <strong className="text-gray-700">Optional:</strong> Add a GTM Container ID
-            (GTM-XXXXXXX) in Settings → Integrations for advanced tag management and custom event
-            tracking via Google Tag Manager.
-          </p>
-        </div>
-      )}
     </div>
   );
 }
