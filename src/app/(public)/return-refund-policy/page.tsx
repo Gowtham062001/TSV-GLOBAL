@@ -4,7 +4,6 @@
  * Section 01 | Page Header     → page_header
  * Section 02 | Policy Content  → simple_content
  * ══════════════════════════════════════════════════════════
- * HTML SECTIONS : 2  |  OUTPUT SECTIONS: 2  ✅ MATCH
  */
 import { prisma } from "@/lib/db";
 import { SectionRenderer } from "@/components/public/SectionRenderer";

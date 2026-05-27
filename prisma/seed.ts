@@ -83,6 +83,7 @@ async function main() {
     { slug: "corporate-chronicles", title: "Corporate Chronicles", file: "corporate-chronicles-sections.json" },
     { slug: "privacy-policy", title: "Privacy Policy", file: "privacy-policy-sections.json" },
     { slug: "terms-and-conditions", title: "Terms & Conditions", file: "terms-sections.json" },
+    { slug: "return-refund-policy", title: "Return & Refund Policy", file: "return-refund-policy-sections.json" },
   ];
 
   for (const pInfo of pagesToSeed) {

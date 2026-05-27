@@ -58,7 +58,7 @@ export default async function TermsPage() {
 <h3>5. Governing Law</h3>
 <p>These terms are governed by the laws of India and subject to the jurisdiction of courts in Chennai, Tamil Nadu.</p>`;
 
-  if (!page) {
+  if (!page || page.sections.length === 0) {
     return (
       <>
         <section className="page-header" style={{ background: "#1a1a2e", padding: "80px 0" }}>

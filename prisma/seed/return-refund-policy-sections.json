@@ -1,0 +1,16 @@
+{
+  "page_header": {
+    "eyebrow": "Legal Information",
+    "heading": "Return & Refund",
+    "highlight": "Policy",
+    "description": "Understand TSV Global Solutions' return and refund policy for freight and logistics services.",
+    "bgImage": "/assets/img/global-logistics-transportation-network.webp",
+    "textColor": "#ffffff",
+    "subTextColor": "#e63946",
+    "badgeText": "Legal Information"
+  },
+  "simple_content": {
+    "title": "Return & Refund Policy",
+    "content": "<p>This policy outlines the return and refund procedures for services provided by TSV Global Solutions Pvt Ltd.</p><h3>1. Service Cancellations</h3><p>Cancellation requests must be submitted in writing. Cancellation charges may apply depending on the stage of service delivery.</p><h3>2. Refund Eligibility</h3><p>Refunds are considered on a case-by-case basis for services not yet rendered. Services already in progress may not be eligible for full refund.</p><h3>3. Processing Time</h3><p>Approved refunds will be processed within 7-14 business days to the original payment method.</p><h3>4. Non-Refundable Items</h3><p>Government fees, customs duties, port charges, and third-party service charges are non-refundable once incurred.</p><h3>5. Disputes</h3><p>For disputes or refund requests, please contact our customer service at cs@tsvglobal.com with your service reference number.</p>"
+  }
+}

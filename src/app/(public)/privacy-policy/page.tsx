@@ -58,7 +58,7 @@ export default async function PrivacyPolicyPage() {
 <h3>5. Contact Us</h3>
 <p>For privacy-related queries, please contact us at cs@tsvglobal.com or call +91 96001 32975.</p>`;
 
-  if (!page) {
+  if (!page || page.sections.length === 0) {
     return (
       <>
         <section className="page-header" style={{ background: "#1a1a2e", padding: "80px 0" }}>
