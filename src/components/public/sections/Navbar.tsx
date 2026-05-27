@@ -159,13 +159,13 @@ export const Navbar: React.FC<NavbarProps> = ({ menuItems }) => {
                         {item.children.map((child) => (
                           <li key={child.id} className={child.children && child.children.length > 0 ? "has-submenu" : ""}>
                             <Link href={child.url}>
-                              {child.label}
                               {child.icon && (
                                 <i
                                   className={child.icon}
-                                  style={{ marginLeft: "8px", color: "#ED2224", width: "16px" }}
+                                  style={{ marginRight: "8px", color: "#ED2224", width: "16px", textAlign: "center" }}
                                 ></i>
                               )}
+                              {child.label}
                               {child.children && child.children.length > 0 && (
                                 <i className="fa-solid fa-chevron-right" style={{ fontSize: "10px", color: "#999" }}></i>
                               )}
@@ -175,13 +175,13 @@ export const Navbar: React.FC<NavbarProps> = ({ menuItems }) => {
                                 {child.children.map((subChild) => (
                                   <li key={subChild.id}>
                                     <Link href={subChild.url}>
-                                      {subChild.label}
                                       {subChild.icon && (
                                         <i
                                           className={subChild.icon}
-                                          style={{ marginLeft: "8px", color: "#ED2224" }}
+                                          style={{ marginRight: "8px", color: "#ED2224", width: "16px", textAlign: "center" }}
                                         ></i>
                                       )}
+                                      {subChild.label}
                                     </Link>
                                   </li>
                                 ))}
