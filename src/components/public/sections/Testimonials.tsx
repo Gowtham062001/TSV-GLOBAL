@@ -60,7 +60,7 @@ export const Testimonials: React.FC<TestimonialsProps> = ({
                 {heading || "What Our Clients Say!"}
               </h2>
             )}
-            <p>{description || "Real feedback from businesses that trust TSV Global Solutions."}</p>
+
           </div>
 
           <div className="testimonials-slider-wrapper">
