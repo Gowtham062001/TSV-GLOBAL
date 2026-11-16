@@ -1,3 +1,17 @@
+// Safeguard NEXTAUTH_URL during build/prerender if placeholder or unexpanded domain is set
+if (process.env.NEXTAUTH_URL) {
+  try {
+    const candidate = process.env.NEXTAUTH_URL.startsWith("http")
+      ? process.env.NEXTAUTH_URL
+      : `https://${process.env.NEXTAUTH_URL}`;
+    new URL(candidate);
+  } catch {
+    process.env.NEXTAUTH_URL = process.env.RAILWAY_PUBLIC_DOMAIN
+      ? `https://${process.env.RAILWAY_PUBLIC_DOMAIN}`
+      : "https://www.tsvglobal.com";
+  }
+}
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   async rewrites() {
