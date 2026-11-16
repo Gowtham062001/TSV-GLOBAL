@@ -39,3 +39,4 @@ Thumbs.db
 temp-query-db.js
 scripts/query-db.js
 
+.env*
