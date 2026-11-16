@@ -9,6 +9,9 @@ interface WhatsAppPulseButtonProps {
 export const WhatsAppPulseButton: React.FC<WhatsAppPulseButtonProps> = ({ 
   phoneNumber = "919600132980" 
 }) => {
+  // Temporarily hidden
+  return null;
+  /*
   return (
     <a 
       style={{ color: "#fff" }} 
@@ -23,4 +26,5 @@ export const WhatsAppPulseButton: React.FC<WhatsAppPulseButtonProps> = ({
       </span>
     </a>
   );
+  */
 };
